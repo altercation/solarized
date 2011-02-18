@@ -5,6 +5,7 @@
 " Download the latest release and see screenshots/details on use:
 " http://ethanschoonover.com/solarized
 "
+" Licensed under the OSI certified MIT license (see end of this file)
 "
 " ---------------------------------------------------------------------
 " QUICKSTART:
@@ -385,7 +386,7 @@ let s:c                 = ",undercurl"
 let s:r                 = ",reverse"
 let s:s                 = ",standout"
 "}}}
-" Alternate light colorscheme"{{{
+" Alternate light schemes "{{{
 " ---------------------------------------------------------------------
 if g:solarized_style == "light"
     let s:c_temp03      = s:c_base03
@@ -416,7 +417,7 @@ if g:solarized_style == "light"
     let s:g_back        = s:g_base03
 endif
 "}}}
-" Optional high contrast     "{{{
+" Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
 if g:solarized_contrast == "high"
     let s:g_base03      = s:g_base03
@@ -657,4 +658,27 @@ exe "hi PmenuSel"       . s:fg_base1  .s:bg_base01 .s:fmt_none
 exe "hi PmenuSbar"      . s:fg_base00 .s:bg_base2  .s:fmt_none
 exe "hi PmenuThumb"     . s:fg_base03 .s:bg_base00 .s:fmt_none
 endif
+"}}}
+" License "{{{
+" ---------------------------------------------------------------------
+" Copyright (c) 2011 Ethan Schoonover
+" 
+" Permission is hereby granted, free of charge, to any person obtaining a copy
+" of this software and associated documentation files (the "Software"), to deal
+" in the Software without restriction, including without limitation the rights
+" to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+" copies of the Software, and to permit persons to whom the Software is
+" furnished to do so, subject to the following conditions:
+" 
+" The above copyright notice and this permission notice shall be included in
+" all copies or substantial portions of the Software.
+" 
+" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+" IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+" FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+" AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+" LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+" OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+" THE SOFTWARE.
+" 
 "}}}
