@@ -1,0 +1,20 @@
+GIMP Palette
+Name: solarized
+Columns: 16
+#
+  0  20  27	solarized-base03
+ 19  36  42	solarized-base02
+ 63  78  83	solarized-base01
+ 94 109 115	solarized-base00
+119 135 140	solarized-base0
+155 169 167	solarized-base1
+216 219 212	solarized-base2
+247 240 221	solarized-base3
+181 137   0	solarized-yellow
+187  62   7	solarized-orange
+189   0  15	solarized-red
+196  35 118	solarized-magenta
+108 113 196	solarized-violet
+  0 127 196	solarized-blue
+ 42 161 152	solarized-cyan
+133 153   0	solarized-green

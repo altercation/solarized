@@ -1,0 +1,28 @@
+Mac OS X Terminal.app
+Solarized Color Settings
+
+Installation:
+
+Hack color support for Snow Leopard required or not?
+
+1. Install SIMBL from:
+http://www.culater.net/software/SIMBL/SIMBL.php
+
+2. Install updated "TerminalColors" SIMBL plugin
+https://github.com/timmfin/terminalcolours
+http://github.com/timmfin/terminalcolours/raw/master/TerminalColours-SL-64bit.zip
+
+( see blog post here for details:
+http://www.byteengine.net/custom-colors-in-snow-leopard-terminal-64-bit )
+
+
+The above runs in both 64 bit and 32 bit mode. If you have trouble using it, 
+you can also try the older 32-bit mode only TerminalColors plugin below:
+
+http://blog.fallingsnow.net/2009/08/28/fixing-colors-in-terminal-app-on-10-6/
+http://cloud.github.com/downloads/evanphx/terminalcolours/TerminalColours-SL.tar.gz
+and open in 32 bit mode
+cf
+https://github.com/evanphx/terminalcolours
+
+
