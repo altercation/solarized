@@ -5,7 +5,7 @@
 " Download the latest release and see screenshots/details on use:
 " http://ethanschoonover.com/solarized
 "
-" Licensed under the OSI certified MIT license (see end of this file)
+" Licensed under the OSI approved MIT license (see end of this file)
 "
 " ---------------------------------------------------------------------
 " QUICKSTART:
@@ -31,13 +31,8 @@
 " color terminal mode using the g:solarized_termcolors="16" option detailed 
 " below. The ANSI color map is specified in the table below and terminal color 
 " themes are available for download from the web page listed at the top of this 
-" file, including xorg defaul color values and themes for OS X Terminal.app and 
-" iTerm 2.
-"
-"
-" ---------------------------------------------------------------------
-" LICENSE
-" ---------------------------------------------------------------------
+" file, including xorg Xdefaults/Xresources color values and themes for OS 
+" X Terminal.app and iTerm 2.
 "
 "
 " ---------------------------------------------------------------------
@@ -118,6 +113,18 @@
 " Set these in your vimrc file prior to calling the colorscheme.
 "
 " option name               default     optional
+" ------------------------------------------------
+" g:solarized_style     =   "dark"  |   "light"
+" g:solarized_contrast  =   "normal"|   "high"
+" g:solarized_termtrans =   0       |   1
+" g:solarized_termcolors=   16      |   256
+" g:solarized_degrade   =   0       |   1
+" g:solarized_bold      =   1       |   0
+" g:solarized_underline =   1       |   0
+" g:solarized_italic    =   0       |   1
+" ------------------------------------------------
+"
+" OPTION DETAILS
 "
 " ------------------------------------------------
 " g:solarized_style     =   "dark"  |   "light"
