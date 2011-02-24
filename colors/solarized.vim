@@ -203,7 +203,9 @@
 " Useful commands for testing colorschemes:
 " :source $VIMRUNTIME/syntax/hitest.vim
 " :help highlight-groups
-" 
+" :help cterm-colors
+" :help group-name
+"
 " Useful links for developing colorschemes:
 " http://www.vim.org/scripts/script.php?script_id=2937
 " http://vimcasts.org/episodes/creating-colorschemes-for-vim/
@@ -525,9 +527,12 @@ exe "let s:sp_cyan      = ' guisp=".s:g_cyan   ."'"
 exe "let s:fmt_none     = ' cterm=NONE".    " gui=NONE".    " term=NONE".    "'"
 exe "let s:fmt_bold     = ' cterm=NONE".s:b." gui=NONE".s:b." term=NONE".s:b."'"
 exe "let s:fmt_undr     = ' cterm=NONE".s:u." gui=NONE".s:u." term=NONE".s:u."'"
-exe "let s:fmt_undb     = ' cterm=NONE".s:u.s:b." gui=NONE".s:u.s:b." term=NONE".s:u.s:b."'"
-exe "let s:fmt_uopt     = ' cterm=NONE".s:ou." gui=NONE".s:ou." term=NONE".s:ou."'"
-exe "let s:fmt_bopt     = ' cterm=NONE".s:ob." gui=NONE".s:ob." term=NONE".s:ob."'"
+exe "let s:fmt_undb     = ' cterm=NONE".s:u.s:b." gui=NONE".s:u.s:b.
+            \" term=NONE".s:u.s:b."'"
+exe "let s:fmt_uopt     = ' cterm=NONE".s:ou." gui=NONE".s:ou.
+            \" term=NONE".s:ou."'"
+exe "let s:fmt_bopt     = ' cterm=NONE".s:ob." gui=NONE".s:ob.
+            \" term=NONE".s:ob."'"
 exe "let s:fmt_curl     = ' cterm=NONE".s:c." gui=NONE".s:c." term=NONE".s:c."'"
 exe "let s:fmt_ital     = ' cterm=NONE".s:i." gui=NONE".s:i." term=NONE".s:i."'"
 exe "let s:fmt_revr     = ' cterm=NONE".s:r." gui=NONE".s:r." term=NONE".s:r."'"
@@ -579,18 +584,20 @@ exe "hi StorageClass"   . s:fg_magenta.s:bg_none   .s:fmt_none
 exe "hi Structure"      . s:fg_magenta.s:bg_none   .s:fmt_none
 exe "hi Typedef"        . s:fg_magenta.s:bg_none   .s:fmt_none
 
+exe "hi Delimiter"      . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Special"        . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi SpecialChar"    . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi SpecialComment" . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Debug"          . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Tag"            . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi Conditional"    . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Repeat"         . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi ErrorMsg"       . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Search"         . s:fg_red    .s:bg_yellow .s:fmt_bold
 exe "hi IncSearch"      . s:fg_red    .s:bg_yellow .s:fmt_bold
+
+exe "hi Conditional"    . s:fg_violet .s:bg_none   .s:fmt_none
 
 exe "hi Identifier"     .s:fg_violet  .s:bg_none   .s:fmt_none
 
@@ -641,6 +648,56 @@ exe "hi htmlEndTag"     . s:fg_red    .s:bg_none   .s:fmt_none
 " ---------------------------------------------------------------------
 " perl highlighting
 exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
+"}}}
+" Haskell extended highlighting"{{{
+" ---------------------------------------------------------------------
+" For use with syntax/haskell.vim : Haskell Syntax File 
+" http://www.vim.org/scripts/script.php?script_id=3034
+" See also Steffen Siering's github repository:
+" http://github.com/urso/dotrc/blob/master/vim/syntax/haskell.vim
+" ---------------------------------------------------------------------
+" Haskell - core highlighting
+" ['hs_DeclareFunction', 'hs_FunctionName', 'hs_hlFunctionName']
+"
+" Treat True and False specially
+let hs_highlight_boolean=1
+let hs_highlight_delimiters=1
+
+" core options 1
+exe "hi hsType"         . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi String"         . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi Delimiter"      . s:fg_base1  .s:bg_none   .s:fmt_none
+
+" core options 2
+exe "hi String"         . s:fg_base1  .s:bg_none   .s:fmt_none
+exe "hi Delimiter"      . s:fg_red    .s:bg_none   .s:fmt_none
+exe "hi hsType"         . s:fg_yellow .s:bg_none   .s:fmt_none
+
+" core options 3
+exe "hi String"         . s:fg_base1  .s:bg_none   .s:fmt_none
+exe "hi Delimiter"      . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi Delimiter"      . s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi Delimiter"      . s:fg_red    .s:bg_none   .s:fmt_none
+exe "hi hsType"         . s:fg_yellow .s:bg_none   .s:fmt_none
+
+exe "hi hsStructure"    . s:fg_green  .s:bg_none   .s:fmt_none
+exe "hi hsModuleName"   . s:fg_magenta.s:bg_none   .s:fmt_undr
+exe "hi hsModuleName"   . s:fg_violet .s:bg_none   .s:fmt_undr
+exe "hi hsModuleStartLabel"   . s:fg_magenta.s:bg_none   .s:fmt_none
+hi link hsModuleStartLabel hsStructure
+hi link hsModuleWhereLabel hsModuleStartLabel
+exe "hi hs_hlFunctionName".s:fg_blue  .s:bg_none   .s:fmt_none
+exe "hi VarId"          . s:fg_base00 .s:bg_none   .s:fmt_none
+exe "hi hsVarSym"       . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hsStatement"    . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hsImportLabel"  . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi hsImportParams" . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi hs_OpFunctionName".s:fg_yellow.s:bg_none   .s:fmt_none
+exe "hi hs_DeclareFunction".s:fg_orange.s:bg_none  .s:fmt_none
+
+"exe "hi hs_hlFunctionName"  .   s:fg_cyan   .s:bg_none   .s:fmt_none
+"exe "hi VarId"          . s:fg_blue   .s:bg_none   .s:fmt_none
+
 "}}}
 " Cursor line/column and similar modern vim features"{{{
 " ---------------------------------------------------------------------
