@@ -1,12 +1,11 @@
-" Solarized vim theme"{{{
 "
-" Ethan Schoonover <es@ethanschoonover.com>
+" Name:     Solarized vim colorscheme
+" Author:   Ethan Schoonover <es@ethanschoonover.com>
+" URL:      http://ethanschoonover.com/solarized
+"           (see this url for latest release & screenshots)
+" License:  OSI approved MIT license (see end of this file)
 "
-" Download the latest release and see screenshots/details on use:
-" http://ethanschoonover.com/solarized
-"
-" Licensed under the OSI approved MIT license (see end of this file)
-"
+" Usage "{{{
 " ---------------------------------------------------------------------
 " QUICKSTART:
 " ---------------------------------------------------------------------
@@ -19,6 +18,13 @@
 "
 "   set background=light
 "   colorscheme solarized
+"
+" pathogen users can install to:
+"
+"   (your vim directory)/bundle/vim-solarized/colors/solarized.vim
+"
+" (note that vim-solarized could be just solarized, it's up to you, but
+" if you pull from git you'll get this directory name unless you change it)
 "
 " Other options are detailed below.
 "
@@ -213,6 +219,7 @@
 "
 "
 " }}}
+"
 " Default option values"{{{
 " ---------------------------------------------------------------------
 if !exists("g:solarized_termtrans")
@@ -241,6 +248,7 @@ if !exists("g:solarized_contrast")
     let g:solarized_contrast = "normal"
 endif
 "}}}
+"
 " Colorscheme basic settings"{{{
 " ---------------------------------------------------------------------
 if g:solarized_style == "dark"
@@ -264,6 +272,7 @@ let colors_name = "solarized"
 "    let colors_name = &background
 "endif
 "}}}
+"
 " GUI & CSApprox hexadecimal palettes"{{{
 " ---------------------------------------------------------------------
 "
@@ -317,6 +326,7 @@ else
     let s:g_green       = "#5f8700"
 endif
 "}}}
+"
 " 256 Terminal (no CSApprox) and 16 color fallback palettes"{{{
 " ---------------------------------------------------------------------
 " We also set this if gui is running as we use the optional formatting
@@ -385,6 +395,7 @@ else " must be in an 8 color or less terminal
     let s:ob            = ",bold"
 endif
 "}}}
+"
 " Formatting options and null values for passthrough effect"{{{
 " ---------------------------------------------------------------------
 let s:g_none            = "NONE"
@@ -395,6 +406,7 @@ let s:c                 = ",undercurl"
 let s:r                 = ",reverse"
 let s:s                 = ",standout"
 "}}}
+"
 " Alternate light schemes "{{{
 " ---------------------------------------------------------------------
 if g:solarized_style == "light"
@@ -426,6 +438,7 @@ if g:solarized_style == "light"
     let s:g_back        = s:g_base03
 endif
 "}}}
+"
 " Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
 if g:solarized_contrast == "high"
@@ -440,6 +453,7 @@ if g:solarized_contrast == "high"
     let s:g_back        = s:g_back
 endif
 "}}}
+"
 " Overrides dependent on user specified values"{{{
 " ---------------------------------------------------------------------
 if g:solarized_termtrans == 1
@@ -464,6 +478,7 @@ else
     let s:i             = ""
 endif
 "}}}
+"
 " Highlighting primitives"{{{
 " ---------------------------------------------------------------------
 
@@ -538,6 +553,7 @@ exe "let s:fmt_ital     = ' cterm=NONE".s:i." gui=NONE".s:i." term=NONE".s:i."'"
 exe "let s:fmt_revr     = ' cterm=NONE".s:r." gui=NONE".s:r." term=NONE".s:r."'"
 exe "let s:fmt_stnd     = ' cterm=NONE".s:s." gui=NONE".s:s." term=NONE".s:s."'"
 "}}}
+"
 " Basic highlighting"{{{
 " ---------------------------------------------------------------------
 " note that link syntax to avoid duplicate configuration doesn't work with the
@@ -561,14 +577,14 @@ exe "hi PreCondit"      . s:fg_base00 .s:bg_back   .s:fmt_none
 exe "hi VertSplit"      . s:fg_base00 .s:bg_base02 .s:fmt_none
 exe "hi SignColumn"     . s:fg_base00 .s:bg_base02 .s:fmt_none
 
+exe "hi String"         . s:fg_base0  .s:bg_none   .s:fmt_none
+exe "hi Folded"         . s:fg_base0  .s:bg_base01 .s:fmt_none
+
+exe "hi Delimiter"      . s:fg_base1  .s:bg_none   .s:fmt_none
 exe "hi Underlined"     . s:fg_base1  .s:bg_none   .s:fmt_none
 exe "hi Title"          . s:fg_base1  .s:bg_none   .s:fmt_none
-exe "hi String"         . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi WildMenu"       . s:fg_base1  .s:bg_base02 .s:fmt_none
-
 exe "hi Conceal"        . s:fg_base1  .s:bg_base01 .s:fmt_none
-
-exe "hi Folded"         . s:fg_base0  .s:bg_base01 .s:fmt_none
 exe "hi FoldColumn"     . s:fg_base1  .s:bg_base01 .s:fmt_none
 exe "hi StatusLineNC"   . s:fg_base1  .s:bg_base02 .s:fmt_none
 
@@ -584,7 +600,6 @@ exe "hi StorageClass"   . s:fg_magenta.s:bg_none   .s:fmt_none
 exe "hi Structure"      . s:fg_magenta.s:bg_none   .s:fmt_none
 exe "hi Typedef"        . s:fg_magenta.s:bg_none   .s:fmt_none
 
-exe "hi Delimiter"      . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Special"        . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi SpecialChar"    . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi SpecialComment" . s:fg_red    .s:bg_none   .s:fmt_none
@@ -597,7 +612,7 @@ exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Search"         . s:fg_red    .s:bg_yellow .s:fmt_bold
 exe "hi IncSearch"      . s:fg_red    .s:bg_yellow .s:fmt_bold
 
-exe "hi Conditional"    . s:fg_violet .s:bg_none   .s:fmt_none
+exe "hi Conditional"    . s:fg_magenta.s:bg_none   .s:fmt_none
 
 exe "hi Identifier"     .s:fg_violet  .s:bg_none   .s:fmt_none
 
@@ -612,8 +627,9 @@ exe "hi ModeMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi MoreMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
 
 exe "hi Operator"       . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi VarId"          . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi VarId"          . s:fg_base00 .s:bg_none   .s:fmt_none
 "}}}
+"
 " Special highlighting"{{{
 " ---------------------------------------------------------------------
 
@@ -634,9 +650,17 @@ exe "hi SpellLocal"     . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_yellow
 " ---------------------------------------------------------------------
 " vim highlighting
 exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi vimVar"         . s:fg_green  .s:bg_none   .s:fmt_none
-exe "hi helpExample"    . s:fg_green  .s:bg_none   .s:fmt_none
+exe "hi vimVar"         . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
+exe "hi helpSpecial"    . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi helpVim"       . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi helpHyperTextJump".s:fg_blue  .s:bg_none   .s:fmt_undr
+exe "hi helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
 exe "hi vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
+exe "hi vimSynMtchOpt". s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 
 " ---------------------------------------------------------------------
 " html highlighting
@@ -649,6 +673,7 @@ exe "hi htmlEndTag"     . s:fg_red    .s:bg_none   .s:fmt_none
 " perl highlighting
 exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
 "}}}
+"
 " Haskell extended highlighting"{{{
 " ---------------------------------------------------------------------
 " For use with syntax/haskell.vim : Haskell Syntax File 
@@ -656,49 +681,36 @@ exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
 " See also Steffen Siering's github repository:
 " http://github.com/urso/dotrc/blob/master/vim/syntax/haskell.vim
 " ---------------------------------------------------------------------
-" Haskell - core highlighting
-" ['hs_DeclareFunction', 'hs_FunctionName', 'hs_hlFunctionName']
 "
-" Treat True and False specially
+" Treat True and False specially, see the plugin referenced above
 let hs_highlight_boolean=1
+" highlight delims, see the plugin referenced above
 let hs_highlight_delimiters=1
 
-" core options 1
-exe "hi hsType"         . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi String"         . s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi Delimiter"      . s:fg_base1  .s:bg_none   .s:fmt_none
+exe "hi hsStructure"        . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hs_hlFunctionName"  . s:fg_blue   .s:bg_none
+exe "hi hsStatement"        . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hsImportLabel"      . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hs_OpFunctionName"  . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi hs_DeclareFunction" . s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi hsVarSym"           . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hsType"             . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi hsTypedef"          . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hsModuleName"       . s:fg_violet .s:bg_none   .s:fmt_undr
+exe "hi hsModuleStartLabel" . s:fg_magenta.s:bg_none   .s:fmt_none
+hi link hsImportParams      Delimiter
+hi link hsDelimTypeExport   Delimiter
+hi link hsModuleStartLabel  hsStructure
+hi link hsModuleWhereLabel  hsModuleStartLabel
 
-" core options 2
-exe "hi String"         . s:fg_base1  .s:bg_none   .s:fmt_none
-exe "hi Delimiter"      . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi hsType"         . s:fg_yellow .s:bg_none   .s:fmt_none
-
-" core options 3
-exe "hi String"         . s:fg_base1  .s:bg_none   .s:fmt_none
-exe "hi Delimiter"      . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi Delimiter"      . s:fg_orange .s:bg_none   .s:fmt_none
-exe "hi Delimiter"      . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi hsType"         . s:fg_yellow .s:bg_none   .s:fmt_none
-
-exe "hi hsStructure"    . s:fg_green  .s:bg_none   .s:fmt_none
-exe "hi hsModuleName"   . s:fg_magenta.s:bg_none   .s:fmt_undr
-exe "hi hsModuleName"   . s:fg_violet .s:bg_none   .s:fmt_undr
-exe "hi hsModuleStartLabel"   . s:fg_magenta.s:bg_none   .s:fmt_none
-hi link hsModuleStartLabel hsStructure
-hi link hsModuleWhereLabel hsModuleStartLabel
-exe "hi hs_hlFunctionName".s:fg_blue  .s:bg_none   .s:fmt_none
-exe "hi VarId"          . s:fg_base00 .s:bg_none   .s:fmt_none
-exe "hi hsVarSym"       . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi hsStatement"    . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi hsImportLabel"  . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi hsImportParams" . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi hs_OpFunctionName".s:fg_yellow.s:bg_none   .s:fmt_none
-exe "hi hs_DeclareFunction".s:fg_orange.s:bg_none  .s:fmt_none
-
-"exe "hi hs_hlFunctionName"  .   s:fg_cyan   .s:bg_none   .s:fmt_none
-"exe "hi VarId"          . s:fg_blue   .s:bg_none   .s:fmt_none
+" following is for the haskell-conceal plugin
+" the first two items don't have an impact, but better safe
+exe "hi hsNiceOperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi hsniceoperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi Conceal"            . s:fg_cyan   .s:bg_none   .s:fmt_none
 
 "}}}
+"
 " Cursor line/column and similar modern vim features"{{{
 " ---------------------------------------------------------------------
 if version >= 700
@@ -723,8 +735,10 @@ exe "hi PmenuSbar"      . s:fg_base00 .s:bg_base2  .s:fmt_none
 exe "hi PmenuThumb"     . s:fg_base03 .s:bg_base00 .s:fmt_none
 endif
 "}}}
+"
 " License "{{{
 " ---------------------------------------------------------------------
+"
 " Copyright (c) 2011 Ethan Schoonover
 " 
 " Permission is hereby granted, free of charge, to any person obtaining a copy
