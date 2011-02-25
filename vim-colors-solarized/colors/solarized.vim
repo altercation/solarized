@@ -696,7 +696,7 @@ exe "hi hs_DeclareFunction" . s:fg_orange .s:bg_none   .s:fmt_none
 exe "hi hsVarSym"           . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi hsType"             . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi hsTypedef"          . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi hsModuleName"       . s:fg_violet .s:bg_none   .s:fmt_undr
+exe "hi hsModuleName"       . s:fg_green  .s:bg_none   .s:fmt_undr
 exe "hi hsModuleStartLabel" . s:fg_magenta.s:bg_none   .s:fmt_none
 hi link hsImportParams      Delimiter
 hi link hsDelimTypeExport   Delimiter
