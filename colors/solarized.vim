@@ -235,7 +235,7 @@ if !exists("g:solarized_underline")
     let g:solarized_underline = 1
 endif
 if !exists("g:solarized_italic")
-    let g:solarized_italic    = 0
+    let g:solarized_italic    = 1
 endif
 if !exists("g:solarized_termcolors")
     let g:solarized_termcolors = 256
@@ -708,6 +708,41 @@ hi link hsModuleWhereLabel  hsModuleStartLabel
 exe "hi hsNiceOperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi hsniceoperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi Conceal"            . s:fg_cyan   .s:bg_none   .s:fmt_none
+
+"}}}
+"
+" Markdown syntax highlighting "{{{
+" ---------------------------------------------------------------------
+
+exe "hi markdownHeadingDelimiter" . s:fg_yellow   .s:bg_none   .s:fmt_bold
+exe "hi markdownHeadingRule" . s:fg_yellow   .s:bg_none   .s:fmt_bold
+exe "hi markdownH1"     . s:fg_orange   .s:bg_none   .s:fmt_bold
+exe "hi markdownH2"     . s:fg_orange   .s:bg_none   .s:fmt_none
+exe "hi markdownBold"     . s:fg_base1   .s:bg_none   .s:fmt_bold
+exe "hi markdownItalic"     . s:fg_base1   .s:bg_none   .s:fmt_ital
+exe "hi markdownCodeDelimiter"  . s:fg_yellow   .s:bg_none   .s:fmt_none
+exe "hi markdownCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
+exe "hi markdownCodeBlock"     . s:fg_yellow   .s:bg_none  .s:fmt_none
+
+exe "hi pandocCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
+exe "hi pandocHTML"     . s:fg_red   .s:bg_none   .s:fmt_undr
+
+
+hi link pandocHeading markdownH1
+hi link pandocHeadingMarker markdownHeadingDelimiter
+hi link pandocHeadingRule markdownHeadingRule
+hi link pandocH1 markdownH1
+hi link pandocH2 markdownH2
+hi link pandocBold markdownBold
+hi link pandocItalic markdownItalic
+hi link pandocCodeDelimiter markdownCodeDelimiter
+"hi link pandocCode markdownCode
+hi link pandocCodeBlock markdownCodeBlock
+hi link pandocVerbatimBlock markdownCodeBlock
+
+exe "hi pandocDefinitions"     . s:fg_yellow   .s:bg_none   .s:fmt_none
+exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
+exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
 
 "}}}
 "
