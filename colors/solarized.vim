@@ -609,8 +609,8 @@ exe "hi Repeat"         . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi ErrorMsg"       . s:fg_red    .s:bg_none   .s:fmt_none
 exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi Search"         . s:fg_red    .s:bg_yellow .s:fmt_bold
-exe "hi IncSearch"      . s:fg_red    .s:bg_yellow .s:fmt_bold
+exe "hi Search"         . s:fg_base03 .s:bg_yellow .s:fmt_bold
+exe "hi IncSearch"      . s:fg_base03 .s:bg_yellow .s:fmt_bold
 
 exe "hi Conditional"    . s:fg_magenta.s:bg_none   .s:fmt_none
 
@@ -724,21 +724,30 @@ exe "hi markdownCodeDelimiter"  . s:fg_yellow   .s:bg_none   .s:fmt_none
 exe "hi markdownCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
 exe "hi markdownCodeBlock"     . s:fg_yellow   .s:bg_none  .s:fmt_none
 
+exe "hi pandocVerbatimColumn"     . s:fg_red   .s:bg_yellow  .s:fmt_none
+
 exe "hi pandocCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
 exe "hi pandocHTML"     . s:fg_red   .s:bg_none   .s:fmt_undr
-
 
 hi link pandocHeading markdownH1
 hi link pandocHeadingMarker markdownHeadingDelimiter
 hi link pandocHeadingRule markdownHeadingRule
 hi link pandocH1 markdownH1
 hi link pandocH2 markdownH2
-hi link pandocBold markdownBold
-hi link pandocItalic markdownItalic
+hi link pandocStrongEmphasis markdownBold
+hi link pandocEmphasis markdownItalic
 hi link pandocCodeDelimiter markdownCodeDelimiter
 "hi link pandocCode markdownCode
 hi link pandocCodeBlock markdownCodeBlock
 hi link pandocVerbatimBlock markdownCodeBlock
+hi link pandocVerbatimInline markdownCodeBlock
+hi link pandocComment Comment
+hi link pandocTitleBlock Structure
+"hi link pandocEscapedCharacter Special
+exe "hi pandocEscapePair"     . s:fg_red   .s:bg_none   .s:fmt_none
+exe "hi pandocEscapedCharacter"     . s:fg_red   .s:bg_none   .s:fmt_none
+exe "hi pandocNonBreakingSpace"     . s:fg_red   .s:bg_none  .s:fmt_revr
+exe "hi pandocStrikeout"     .s:fmt_revr
 
 exe "hi pandocDefinitions"     . s:fg_yellow   .s:bg_none   .s:fmt_none
 exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
