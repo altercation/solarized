@@ -741,6 +741,7 @@ hi link pandocCodeDelimiter markdownCodeDelimiter
 hi link pandocCodeBlock markdownCodeBlock
 hi link pandocVerbatimBlock markdownCodeBlock
 hi link pandocVerbatimInline markdownCodeBlock
+hi link pandocHTMLComment Comment
 hi link pandocComment Comment
 hi link pandocTitleBlock Structure
 "hi link pandocEscapedCharacter Special
