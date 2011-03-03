@@ -751,6 +751,9 @@ exe "hi pandocBlock"     . s:fg_none   .s:bg_red  .s:fmt_none
 exe "hi pandocIndentBlock" . s:fg_none   .s:bg_yellow .s:fmt_none
 exe "hi pandocBlankLine" . s:fg_none   .s:bg_blue .s:fmt_none
 exe "hi pandocStyleDelim" . s:fg_base03 .s:bg_blue .s:fmt_none
+exe "hi pandocMath" . s:fg_base03 .s:bg_red .s:fmt_none
+exe "hi pandocHeadingSection" . s:fg_base03 .s:bg_cyan .s:fmt_none
+exe "hi pandocHeadingSection2" . s:fg_base03 .s:bg_orange .s:fmt_none
 exe "hi pandocStrikeout"     .s:fmt_revr
 
 exe "hi pandocDefinitions"     . s:fg_yellow   .s:bg_none   .s:fmt_none
