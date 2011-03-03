@@ -749,12 +749,21 @@ exe "hi pandocEscapePair"     . s:fg_red   .s:bg_none   .s:fmt_none
 exe "hi pandocEscapedCharacter"     . s:fg_red   .s:bg_none   .s:fmt_none
 exe "hi pandocNonBreakingSpace"     . s:fg_red   .s:bg_none  .s:fmt_revr
 exe "hi pandocBlock"     . s:fg_none   .s:bg_red  .s:fmt_none
-exe "hi pandocIndentBlock" . s:fg_none   .s:bg_yellow .s:fmt_none
+exe "hi pandocVerbatimBlock" . s:fg_yellow .s:bg_none .s:fmt_none
+hi link pandocCodeBlock pandocVerbatimBlock
+exe "hi pandocCodeBlockDelim" . s:fg_back .s:bg_yellow .s:fmt_none
 exe "hi pandocBlankLine" . s:fg_none   .s:bg_blue .s:fmt_none
-exe "hi pandocStyleDelim" . s:fg_base03 .s:bg_blue .s:fmt_none
 exe "hi pandocMath" . s:fg_base03 .s:bg_red .s:fmt_none
 exe "hi pandocLink" . s:fg_blue .s:bg_none .s:fmt_none
+exe "hi pandocLinkDelim" . s:fg_blue .s:bg_none .s:fmt_none
+exe "hi pandocImageLink" . s:fg_violet .s:bg_none .s:fmt_none
+exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocLinkURL" . s:fg_cyan .s:bg_none .s:fmt_none
+exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
+
+exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
+
+hi link pandocSuperscript pandocSubscript
 exe "hi pandocStrikeout"     .s:fmt_revr
 
 exe "hi pandocDefinitions"     . s:fg_yellow   .s:bg_none   .s:fmt_none
