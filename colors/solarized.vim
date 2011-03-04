@@ -775,6 +775,7 @@ exe "hi pandocDefinitionIndicator" . s:fg_back .s:bg_cyan .s:fmt_none
 exe "hi pandocRule" . s:fg_back .s:bg_blue .s:fmt_none
 exe "hi pandocTable" . s:fg_green .s:bg_none .s:fmt_none
 exe "hi pandocTableHeader" . s:fg_green .s:bg_none .s:fmt_none
+exe "hi pandocTableStructure" . s:fg_violet .s:bg_none .s:fmt_none
 
 exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
 hi link pandocVerbatimBlockDeep pandocVerbatimBlock
