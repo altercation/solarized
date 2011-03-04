@@ -760,6 +760,7 @@ exe "hi pandocImageLink" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocLinkURL" . s:fg_cyan .s:bg_none .s:fmt_none
 exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
+exe "hi pandocListDelim" . s:fg_green .s:bg_none .s:fmt_none
 
 exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
 
