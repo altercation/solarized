@@ -761,7 +761,7 @@ exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocLinkURL" . s:fg_cyan .s:bg_none .s:fmt_none
 exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
 exe "hi pandocListDelim" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocList" . s:fg_green .s:bg_none .s:fmt_undr
+exe "hi pandocList" . s:fg_back .s:bg_green .s:fmt_undr
 
 exe "hi hakyllMetadata" . s:fg_magenta .s:bg_none .s:fmt_none
 exe "hi hakyllMetadataDelim" . s:fg_base01 .s:bg_none .s:fmt_none
