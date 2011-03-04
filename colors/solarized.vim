@@ -768,8 +768,16 @@ exe "hi hakyllMetadataDelim" . s:fg_base01 .s:bg_none .s:fmt_none
 exe "hi hakyllKeyValuePair" . s:fg_yellow .s:bg_none .s:fmt_none
 exe "hi hakyllKeyName" . s:fg_magenta .s:bg_none .s:fmt_none
 
-exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
+exe "hi pandocDefinitionTerm" . s:fg_back .s:bg_cyan .s:fmt_none
+exe "hi pandocDefinitionBlock" . s:fg_green .s:bg_none .s:fmt_none
+exe "hi pandocDefinitionIndicator" . s:fg_back .s:bg_cyan .s:fmt_none
 
+exe "hi pandocRule" . s:fg_back .s:bg_blue .s:fmt_none
+exe "hi pandocTable" . s:fg_green .s:bg_none .s:fmt_none
+exe "hi pandocTableHeader" . s:fg_green .s:bg_none .s:fmt_none
+
+exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
+hi link pandocVerbatimBlockDeep pandocVerbatimBlock
 hi link pandocSuperscript pandocSubscript
 exe "hi pandocStrikeout"     .s:fmt_revr
 
