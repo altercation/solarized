@@ -762,8 +762,7 @@ exe "hi pandocImageLink" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocLinkURL" . s:fg_cyan .s:bg_none .s:fmt_none
 exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
-exe "hi pandocListDelim" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocList" . s:fg_back .s:bg_green .s:fmt_undr
+exe "hi pandocListMarker" . s:fg_green .s:bg_none .s:fmt_none
 
 exe "hi hakyllMetadata" . s:fg_magenta .s:bg_none .s:fmt_none
 exe "hi hakyllMetadataDelim" . s:fg_base01 .s:bg_none .s:fmt_none
@@ -783,10 +782,15 @@ exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
 hi link pandocVerbatimBlockDeep pandocVerbatimBlock
 hi link pandocSuperscript pandocSubscript
 exe "hi pandocStrikeout"     .s:fmt_revr
+hi link pandocListReference pandocListMarker
 
 exe "hi pandocDefinitions"     . s:fg_yellow   .s:bg_none   .s:fmt_none
 exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
 exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
+exe "hi pandocBlockIndicator1"      . s:fg_blue  .s:bg_none   .s:fmt_none
+exe "hi pandocBlockIndicator2"      . s:fg_cyan  .s:bg_none   .s:fmt_none
+exe "hi pandocBlockIndicator3"      . s:fg_yellow  .s:bg_none   .s:fmt_none
+exe "hi pandocBlockIndicator4"      . s:fg_red  .s:bg_none   .s:fmt_none
 
 "}}}
 "
