@@ -729,8 +729,10 @@ exe "hi pandocVerbatimColumn"     . s:fg_red   .s:bg_yellow  .s:fmt_none
 exe "hi pandocCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
 exe "hi pandocHTML"     . s:fg_red   .s:bg_none   .s:fmt_undr
 
-hi link pandocHeading markdownH1
-hi link pandocHeadingMarker markdownHeadingDelimiter
+"hi link pandocHeading markdownH1
+"hi link pandocHeadingMarker markdownHeadingDelimiter
+exe "hi pandocHeading"     . s:fg_orange   .s:bg_none   .s:fmt_bold
+exe "hi pandocHeadingMarker"     . s:fg_yellow   .s:bg_none   .s:fmt_bold
 hi link pandocHeadingRule markdownHeadingRule
 hi link pandocH1 markdownH1
 hi link pandocH2 markdownH2
