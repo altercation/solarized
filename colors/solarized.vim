@@ -756,11 +756,8 @@ hi link pandocCodeBlock pandocVerbatimBlock
 exe "hi pandocCodeBlockDelim" . s:fg_back .s:bg_yellow .s:fmt_none
 exe "hi pandocBlankLine" . s:fg_none   .s:bg_blue .s:fmt_none
 exe "hi pandocMath" . s:fg_base03 .s:bg_red .s:fmt_none
-exe "hi pandocLink" . s:fg_blue .s:bg_none .s:fmt_none
-exe "hi pandocLinkDelim" . s:fg_blue .s:bg_none .s:fmt_none
 exe "hi pandocImageLink" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
-exe "hi pandocLinkURL" . s:fg_cyan .s:bg_none .s:fmt_none
 exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
 exe "hi pandocListMarker" . s:fg_green .s:bg_none .s:fmt_none
 
@@ -791,6 +788,17 @@ exe "hi pandocBlockIndicator1"      . s:fg_blue  .s:bg_none   .s:fmt_none
 exe "hi pandocBlockIndicator2"      . s:fg_cyan  .s:bg_none   .s:fmt_none
 exe "hi pandocBlockIndicator3"      . s:fg_yellow  .s:bg_none   .s:fmt_none
 exe "hi pandocBlockIndicator4"      . s:fg_red  .s:bg_none   .s:fmt_none
+
+exe "hi pandocLink" . s:fg_blue  .s:bg_none .s:fmt_none
+exe "hi pandocLinkText" . s:fg_blue   .s:bg_none .s:fmt_none
+exe "hi pandocLinkLabel" . s:fg_cyan  .s:bg_none .s:fmt_none
+exe "hi pandocImageCaption" . s:fg_violet  .s:bg_none .s:fmt_none
+exe "hi pandocLinkURL" . s:fg_green .s:bg_none .s:fmt_none
+exe "hi pandocLinkDefinition" . s:fg_green .s:bg_none .s:fmt_none
+exe "hi pandocLinkTitle" . s:fg_green .s:bg_none .s:fmt_ital
+exe "hi pandocLinkDelim" . s:fg_green   .s:bg_none .s:fmt_none
+exe "hi pandocFootnoteLink" . s:fg_cyan  .s:bg_none .s:fmt_undr
+exe "hi pandocFootnoteInline" . s:fg_cyan  .s:bg_none .s:fmt_undr
 
 "}}}
 "
