@@ -558,6 +558,65 @@ exe "let s:fmt_stnd     = ' cterm=NONE".s:s." gui=NONE".s:s." term=NONE".s:s."'"
 " ---------------------------------------------------------------------
 " note that link syntax to avoid duplicate configuration doesn't work with the
 " exe compiled formats
+"
+"" 	*Comment	any comment
+"
+"	*Constant	any constant
+"	 String		a string constant: "this is a string"
+"	 Character	a character constant: 'c', '\n'
+"	 Number		a number constant: 234, 0xff
+"	 Boolean	a boolean constant: TRUE, false
+"	 Float		a floating point constant: 2.3e10
+"
+"	*Identifier	any variable name
+"	 Function	function name (also: methods for classes)
+"
+"	*Statement	any statement
+"	 Conditional	if, then, else, endif, switch, etc.
+"	 Repeat		for, do, while, etc.
+"	 Label		case, default, etc.
+"	 Operator	"sizeof", "+", "*", etc.
+"	 Keyword	any other keyword
+"	 Exception	try, catch, throw
+"
+"	*PreProc	generic Preprocessor
+"	 Include	preprocessor #include
+"	 Define		preprocessor #define
+"	 Macro		same as Define
+"	 PreCondit	preprocessor #if, #else, #endif, etc.
+"
+"	*Type		int, long, char, etc.
+"	 StorageClass	static, register, volatile, etc.
+"	 Structure	struct, union, enum, etc.
+"	 Typedef	A typedef
+"
+"	*Special	any special symbol
+"	 SpecialChar	special character in a constant
+"	 Tag		you can use CTRL-] on this
+"	 Delimiter	character that needs attention
+"	 SpecialComment	special things inside a comment
+"	 Debug		debugging statements
+"
+"	*Underlined	text that stands out, HTML links
+"
+"	*Ignore		left blank, hidden  |hl-Ignore|
+"
+"	*Error		any erroneous construct
+"
+"	*Todo		anything that needs extra attention; mostly the
+"			keywords TODO FIXME and XXX
+"
+"term={attr-list}			*attr-list* *highlight-term* *E418*
+"	attr-list is a comma separated list (without spaces) of the
+"	following items (in any order):
+"		bold
+"		underline
+"		undercurl	not always available
+"		reverse
+"		inverse		same as reverse
+"		italic
+"		standout
+"		NONE		no attributes used (used to reset it)
 
 exe "hi NonText"        . s:fg_base02 .s:bg_none   .s:fmt_none
 exe "hi SpecialKey"     . s:fg_base02 .s:bg_none   .s:fmt_none
@@ -569,7 +628,8 @@ exe "hi Normal"         . s:fg_base00 .s:bg_back   .s:fmt_none
 exe "hi TODO"           . s:fg_base1  .s:bg_back   .s:fmt_none
 exe "hi StatusLine"     . s:fg_base00 .s:bg_base02 .s:fmt_bopt
 
-exe "hi PreProc"        . s:fg_cyan   .s:bg_back   .s:fmt_none
+"exe "hi PreProc"        . s:fg_cyan   .s:bg_back   .s:fmt_none
+exe "hi PreProc"        . s:fg_yellow .s:bg_back   .s:fmt_none
 exe "hi Define"         . s:fg_base00 .s:bg_back   .s:fmt_none
 exe "hi Include"        . s:fg_base00 .s:bg_back   .s:fmt_none
 exe "hi Macro"          . s:fg_base00 .s:bg_back   .s:fmt_none
@@ -714,6 +774,14 @@ exe "hi Conceal"            . s:fg_cyan   .s:bg_none   .s:fmt_none
 " Markdown syntax highlighting "{{{
 " ---------------------------------------------------------------------
 
+exe "hi pandocNonBreakingSpace"     . s:fg_red   .s:bg_none  .s:fmt_revr
+" pandocEmphasis
+" pandocStrongEmphasis
+"exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
+
+
+
+
 exe "hi markdownHeadingDelimiter" . s:fg_yellow   .s:bg_none   .s:fmt_bold
 exe "hi markdownHeadingRule" . s:fg_yellow   .s:bg_none   .s:fmt_bold
 exe "hi markdownH1"     . s:fg_orange   .s:bg_none   .s:fmt_bold
@@ -729,15 +797,8 @@ exe "hi pandocVerbatimColumn"     . s:fg_red   .s:bg_yellow  .s:fmt_none
 exe "hi pandocCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
 exe "hi pandocHTML"     . s:fg_red   .s:bg_none   .s:fmt_undr
 
-"hi link pandocHeading markdownH1
-"hi link pandocHeadingMarker markdownHeadingDelimiter
-exe "hi pandocHeading"     . s:fg_orange   .s:bg_none   .s:fmt_bold
-exe "hi pandocHeadingMarker"     . s:fg_yellow   .s:bg_none   .s:fmt_bold
-hi link pandocHeadingRule markdownHeadingRule
-hi link pandocH1 markdownH1
-hi link pandocH2 markdownH2
-hi link pandocStrongEmphasis markdownBold
-hi link pandocEmphasis markdownItalic
+"hi link pandocStrongEmphasis markdownBold
+"hi link pandocEmphasis markdownItalic
 hi link pandocCodeDelimiter markdownCodeDelimiter
 "hi link pandocCode markdownCode
 hi link pandocCodeBlock markdownCodeBlock
@@ -747,9 +808,6 @@ hi link pandocHTMLComment Comment
 hi link pandocComment Comment
 hi link pandocTitleBlock Structure
 "hi link pandocEscapedCharacter Special
-exe "hi pandocEscapePair"     . s:fg_red   .s:bg_none   .s:fmt_none
-exe "hi pandocEscapedCharacter"     . s:fg_red   .s:bg_none   .s:fmt_none
-exe "hi pandocNonBreakingSpace"     . s:fg_red   .s:bg_none  .s:fmt_revr
 exe "hi pandocBlock"     . s:fg_none   .s:bg_red  .s:fmt_none
 exe "hi pandocVerbatimBlock" . s:fg_yellow .s:bg_none .s:fmt_none
 hi link pandocCodeBlock pandocVerbatimBlock
@@ -758,7 +816,7 @@ exe "hi pandocBlankLine" . s:fg_none   .s:bg_blue .s:fmt_none
 exe "hi pandocMath" . s:fg_base03 .s:bg_red .s:fmt_none
 exe "hi pandocImageLink" . s:fg_violet .s:bg_none .s:fmt_none
 exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
-exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
+exe "hi pandocListMarker" . s:fg_green .s:bg_yellow .s:fmt_none
 exe "hi pandocListMarker" . s:fg_green .s:bg_none .s:fmt_none
 
 exe "hi hakyllMetadata" . s:fg_magenta .s:bg_none .s:fmt_none
