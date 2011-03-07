@@ -768,7 +768,7 @@ exe "hi hakyllKeyName" . s:fg_magenta .s:bg_none .s:fmt_none
 
 exe "hi pandocDefinitionTerm" . s:fg_back .s:bg_cyan .s:fmt_none
 exe "hi pandocDefinitionBlock" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocDefinitionIndicator" . s:fg_back .s:bg_cyan .s:fmt_none
+exe "hi pandocDefinitionIndctr" . s:fg_back .s:bg_cyan .s:fmt_none
 
 exe "hi pandocRule" . s:fg_back .s:bg_blue .s:fmt_none
 exe "hi pandocTable" . s:fg_green .s:bg_none .s:fmt_none
@@ -799,6 +799,12 @@ exe "hi pandocLinkTitle" . s:fg_green .s:bg_none .s:fmt_ital
 exe "hi pandocLinkDelim" . s:fg_green   .s:bg_none .s:fmt_none
 exe "hi pandocFootnoteLink" . s:fg_cyan  .s:bg_none .s:fmt_undr
 exe "hi pandocFootnoteInline" . s:fg_cyan  .s:bg_none .s:fmt_undr
+exe "hi pandocFootnote" . s:fg_cyan    .s:bg_none .s:fmt_none
+exe "hi pandocFootnoteIndctr" . s:fg_violet.s:bg_none   .s:fmt_none
+exe "hi pandocCitation" . s:fg_yellow  .s:bg_cyan .s:fmt_none
+exe "hi pandocCitationInline" . s:fg_yellow  .s:bg_orange .s:fmt_none
+exe "hi pandocCitationRef" . s:fg_red     .s:bg_blue .s:fmt_none
+exe "hi pandocCitationLink" . s:fg_violet.s:bg_cyan .s:fmt_none
 
 "}}}
 "
