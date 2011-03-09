@@ -219,7 +219,6 @@
 "
 "
 " }}}
-"
 " Default option values"{{{
 " ---------------------------------------------------------------------
 if !exists("g:solarized_termtrans")
@@ -248,7 +247,6 @@ if !exists("g:solarized_contrast")
     let g:solarized_contrast = "normal"
 endif
 "}}}
-"
 " Colorscheme basic settings"{{{
 " ---------------------------------------------------------------------
 if g:solarized_style == "dark"
@@ -272,7 +270,6 @@ let colors_name = "solarized"
 "    let colors_name = &background
 "endif
 "}}}
-"
 " GUI & CSApprox hexadecimal palettes"{{{
 " ---------------------------------------------------------------------
 "
@@ -326,7 +323,6 @@ else
     let s:g_green       = "#5f8700"
 endif
 "}}}
-"
 " 256 Terminal (no CSApprox) and 16 color fallback palettes"{{{
 " ---------------------------------------------------------------------
 " We also set this if gui is running as we use the optional formatting
@@ -395,7 +391,6 @@ else " must be in an 8 color or less terminal
     let s:ob            = ",bold"
 endif
 "}}}
-"
 " Formatting options and null values for passthrough effect"{{{
 " ---------------------------------------------------------------------
 let s:g_none            = "NONE"
@@ -406,7 +401,6 @@ let s:c                 = ",undercurl"
 let s:r                 = ",reverse"
 let s:s                 = ",standout"
 "}}}
-"
 " Alternate light schemes "{{{
 " ---------------------------------------------------------------------
 if g:solarized_style == "light"
@@ -438,7 +432,6 @@ if g:solarized_style == "light"
     let s:g_back        = s:g_base03
 endif
 "}}}
-"
 " Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
 if g:solarized_contrast == "high"
@@ -453,7 +446,6 @@ if g:solarized_contrast == "high"
     let s:g_back        = s:g_back
 endif
 "}}}
-"
 " Overrides dependent on user specified values"{{{
 " ---------------------------------------------------------------------
 if g:solarized_termtrans == 1
@@ -478,7 +470,6 @@ else
     let s:i             = ""
 endif
 "}}}
-"
 " Highlighting primitives"{{{
 " ---------------------------------------------------------------------
 
@@ -541,6 +532,7 @@ exe "let s:sp_cyan      = ' guisp=".s:g_cyan   ."'"
 
 exe "let s:fmt_none     = ' cterm=NONE".    " gui=NONE".    " term=NONE".    "'"
 exe "let s:fmt_bold     = ' cterm=NONE".s:b." gui=NONE".s:b." term=NONE".s:b."'"
+exe "let s:fmt_bldi     = ' cterm=NONE".s:b.s:i." gui=NONE".s:b.s:i." term=NONE".s:b.s:i."'"
 exe "let s:fmt_undr     = ' cterm=NONE".s:u." gui=NONE".s:u." term=NONE".s:u."'"
 exe "let s:fmt_undb     = ' cterm=NONE".s:u.s:b." gui=NONE".s:u.s:b.
             \" term=NONE".s:u.s:b."'"
@@ -553,187 +545,252 @@ exe "let s:fmt_ital     = ' cterm=NONE".s:i." gui=NONE".s:i." term=NONE".s:i."'"
 exe "let s:fmt_revr     = ' cterm=NONE".s:r." gui=NONE".s:r." term=NONE".s:r."'"
 exe "let s:fmt_stnd     = ' cterm=NONE".s:s." gui=NONE".s:s." term=NONE".s:s."'"
 "}}}
-"
 " Basic highlighting"{{{
 " ---------------------------------------------------------------------
 " note that link syntax to avoid duplicate configuration doesn't work with the
 " exe compiled formats
-"
-"" 	*Comment	any comment
-"
-"	*Constant	any constant
-"	 String		a string constant: "this is a string"
-"	 Character	a character constant: 'c', '\n'
-"	 Number		a number constant: 234, 0xff
-"	 Boolean	a boolean constant: TRUE, false
-"	 Float		a floating point constant: 2.3e10
-"
-"	*Identifier	any variable name
-"	 Function	function name (also: methods for classes)
-"
-"	*Statement	any statement
-"	 Conditional	if, then, else, endif, switch, etc.
-"	 Repeat		for, do, while, etc.
-"	 Label		case, default, etc.
-"	 Operator	"sizeof", "+", "*", etc.
-"	 Keyword	any other keyword
-"	 Exception	try, catch, throw
-"
-"	*PreProc	generic Preprocessor
-"	 Include	preprocessor #include
-"	 Define		preprocessor #define
-"	 Macro		same as Define
-"	 PreCondit	preprocessor #if, #else, #endif, etc.
-"
-"	*Type		int, long, char, etc.
-"	 StorageClass	static, register, volatile, etc.
-"	 Structure	struct, union, enum, etc.
-"	 Typedef	A typedef
-"
-"	*Special	any special symbol
-"	 SpecialChar	special character in a constant
-"	 Tag		you can use CTRL-] on this
-"	 Delimiter	character that needs attention
-"	 SpecialComment	special things inside a comment
-"	 Debug		debugging statements
-"
-"	*Underlined	text that stands out, HTML links
-"
-"	*Ignore		left blank, hidden  |hl-Ignore|
-"
-"	*Error		any erroneous construct
-"
-"	*Todo		anything that needs extra attention; mostly the
-"			keywords TODO FIXME and XXX
-"
-"term={attr-list}			*attr-list* *highlight-term* *E418*
-"	attr-list is a comma separated list (without spaces) of the
-"	following items (in any order):
-"		bold
-"		underline
-"		undercurl	not always available
-"		reverse
-"		inverse		same as reverse
-"		italic
-"		standout
-"		NONE		no attributes used (used to reset it)
-
-exe "hi NonText"        . s:fg_base02 .s:bg_none   .s:fmt_none
-exe "hi SpecialKey"     . s:fg_base02 .s:bg_none   .s:fmt_none
-exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_none
-
-exe "hi LineNr"         . s:fg_base01 .s:bg_base02 .s:fmt_none
 
 exe "hi Normal"         . s:fg_base00 .s:bg_back   .s:fmt_none
-exe "hi TODO"           . s:fg_base1  .s:bg_back   .s:fmt_none
-exe "hi StatusLine"     . s:fg_base00 .s:bg_base02 .s:fmt_bopt
 
-"exe "hi PreProc"        . s:fg_cyan   .s:bg_back   .s:fmt_none
-exe "hi PreProc"        . s:fg_yellow .s:bg_back   .s:fmt_none
-exe "hi Define"         . s:fg_base00 .s:bg_back   .s:fmt_none
-exe "hi Include"        . s:fg_base00 .s:bg_back   .s:fmt_none
-exe "hi Macro"          . s:fg_base00 .s:bg_back   .s:fmt_none
-exe "hi PreCondit"      . s:fg_base00 .s:bg_back   .s:fmt_none
-exe "hi VertSplit"      . s:fg_base00 .s:bg_base02 .s:fmt_none
-exe "hi SignColumn"     . s:fg_base00 .s:bg_base02 .s:fmt_none
+" *Comment      any comment
+exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_none
 
-exe "hi String"         . s:fg_base0  .s:bg_none   .s:fmt_none
-exe "hi Folded"         . s:fg_base0  .s:bg_base01 .s:fmt_none
-
-exe "hi Delimiter"      . s:fg_base1  .s:bg_none   .s:fmt_none
-exe "hi Underlined"     . s:fg_base1  .s:bg_none   .s:fmt_none
-exe "hi Title"          . s:fg_base1  .s:bg_none   .s:fmt_none
-exe "hi WildMenu"       . s:fg_base1  .s:bg_base02 .s:fmt_none
-exe "hi Conceal"        . s:fg_base1  .s:bg_base01 .s:fmt_none
-exe "hi FoldColumn"     . s:fg_base1  .s:bg_base01 .s:fmt_none
-exe "hi StatusLineNC"   . s:fg_base1  .s:bg_base02 .s:fmt_none
-
-exe "hi Boolean"        . s:fg_green  .s:bg_none   .s:fmt_none
+" *Constant             any constant
 exe "hi Constant"       . s:fg_green  .s:bg_none   .s:fmt_none
-exe "hi Character"      . s:fg_green  .s:bg_none   .s:fmt_none
-exe "hi Structure"      . s:fg_green  .s:bg_none   .s:fmt_none
-exe "hi Number"         . s:fg_green  .s:bg_none   .s:fmt_none
-exe "hi Float"          . s:fg_green  .s:bg_none   .s:fmt_none
+"  String               a string constant: "this is a string"
+"  Character    a character constant: 'c', '\n'
+"  Number               a number constant: 234, 0xff
+"  Boolean      a boolean constant: TRUE, false
+"  Float                a floating point constant: 2.3e10
 
-exe "hi Type"           . s:fg_orange .s:bg_none   .s:fmt_none
-exe "hi StorageClass"   . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi Structure"      . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi Typedef"        . s:fg_magenta.s:bg_none   .s:fmt_none
-
-exe "hi Special"        . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi SpecialChar"    . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi SpecialComment" . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi Debug"          . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi Tag"            . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi Repeat"         . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi ErrorMsg"       . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi Search"         . s:fg_base03 .s:bg_yellow .s:fmt_bold
-exe "hi IncSearch"      . s:fg_base03 .s:bg_yellow .s:fmt_bold
-
-exe "hi Conditional"    . s:fg_magenta.s:bg_none   .s:fmt_none
-
-exe "hi Identifier"     .s:fg_violet  .s:bg_none   .s:fmt_none
-
-exe "hi Directory"      . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi Question"       . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi Statement"      . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi Label"          . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi Exception"      . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi Function"       . s:fg_blue   .s:bg_none   .s:fmt_none
-
-exe "hi ModeMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi MoreMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
-
-exe "hi Operator"       . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi VarId"          . s:fg_base00 .s:bg_none   .s:fmt_none
-"}}}
+" *Identifier           any variable name
+exe "hi Identifier"     . s:fg_blue   .s:bg_none   .s:fmt_none
+"        Function       function name (also: methods for classes)
 "
+" *Statement            any statement
+exe "hi Statement"      . s:fg_cyan   .s:bg_none   .s:fmt_none
+"        Conditional    if, then, else, endif, switch, etc.
+"        Repeat         for, do, while, etc.
+"        Label          case, default, etc.
+"        Operator       "sizeof", "+", "*", etc.
+"        Keyword        any other keyword
+"        Exception      try, catch, throw
+
+" *PreProc              generic Preprocessor
+exe "hi PreProc"        . s:fg_yellow .s:bg_none   .s:fmt_none
+"        Include        preprocessor #include
+"        Define         preprocessor #define
+"        Macro          same as Define
+"        PreCondit      preprocessor #if, #else, #endif, etc.
+
+" *Type                 int, long, char, etc.
+exe "hi Type"           . s:fg_orange .s:bg_none   .s:fmt_none
+"        StorageClass   static, register, volatile, etc.
+"        Structure      struct, union, enum, etc.
+"        Typedef        A typedef
+
+" *Special              any special symbol
+exe "hi Special"        . s:fg_red    .s:bg_none   .s:fmt_none
+"        SpecialChar    special character in a constant
+"        Tag            you can use CTRL-] on this
+"        Delimiter      character that needs attention
+"        SpecialComment special things inside a comment
+"        Debug          debugging statements
+
+" *Underlined           text that stands out, HTML links
+exe "hi Underlined"     . s:fg_violet .s:bg_none   .s:fmt_none
+
+" *Ignore               left blank, hidden  |hl-Ignore|
+exe "hi Ignore"         . s:fg_none   .s:bg_none   .s:fmt_none
+
+" *Error                any erroneous construct
+exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_none
+
+" *Todo                 anything that needs extra attention; mostly the
+exe "hi Todo"           . s:fg_magenta.s:bg_none   .s:fmt_none
+"                       keywords TODO FIXME and XXX
+"
+"Highlighting groups for various occasions
+"-----------------------------------------
+exe "hi SpecialKey"     . s:fg_base02 .s:bg_none   .s:fmt_none
+exe "hi NonText"        . s:fg_base02 .s:bg_none   .s:fmt_bold
+exe "hi Directory"      . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi ErrorMsg"       . s:fg_red    .s:bg_none   .s:fmt_revr
+exe "hi IncSearch"      . s:fg_yellow .s:bg_none   .s:fmt_revr
+exe "hi Search"         . s:fg_yellow .s:bg_none   .s:fmt_stnd
+exe "hi MoreMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi ModeMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi LineNr"         . s:fg_base01 .s:bg_base02 .s:fmt_none
+exe "hi Question"       . s:fg_cyan   .s:bg_none   .s:fmt_bold
+exe "hi StatusLine"     . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi StatusLineNC"   . s:fg_base1  .s:bg_base02 .s:fmt_none
+exe "hi VertSplit"      . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi Title"          . s:fg_orange .s:bg_none   .s:fmt_bold
+exe "hi Visual"         . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi VisualNOS"      . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_bold
+exe "hi WildMenu"       . s:fg_base1  .s:bg_base02 .s:fmt_none
+exe "hi Folded"         . s:fg_base1  .s:bg_base01 .s:fmt_none
+exe "hi FoldColumn"     . s:fg_base1  .s:bg_base01 .s:fmt_none
+exe "hi DiffAdd"        . s:fg_green  .s:bg_none   .s:fmt_revr
+exe "hi DiffChange"     . s:fg_yellow .s:bg_none   .s:fmt_revr
+exe "hi DiffDelete"     . s:fg_red    .s:bg_none   .s:fmt_revr
+exe "hi DiffText"       . s:fg_blue   .s:bg_none   .s:fmt_revr
+exe "hi SignColumn"     . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi Conceal"        . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi SpellBad"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_red
+exe "hi SpellCap"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_violet
+exe "hi SpellRare"      . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_cyan
+exe "hi SpellLocal"     . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_yellow
+exe "hi Pmenu"          . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi PmenuSel"       . s:fg_base1  .s:bg_base01 .s:fmt_none
+exe "hi PmenuSbar"      . s:fg_base00 .s:bg_base2  .s:fmt_none
+exe "hi PmenuThumb"     . s:fg_base03 .s:bg_base00 .s:fmt_none
+exe "hi TabLine"        . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
+exe "hi TabLineSel"     . s:fg_base1  .s:bg_base01 .s:fmt_undr   .s:sp_base00
+exe "hi TabLineFill"    . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
+exe "hi CursorColumn"   . s:fg_none   .s:bg_base02 .s:fmt_none
+exe "hi CursorLine"     . s:fg_none   .s:bg_base02 .s:fmt_uopt
+exe "hi ColorColumn"    . s:fg_none   .s:bg_base02 .s:fmt_none
+exe "hi Cursor"         . s:fg_none   .s:bg_none   .s:fmt_revr
+
+exe "hi lCursor"        . s:fg_none   .s:bg_none   .s:fmt_stnd
+exe "hi MatchParen"     . s:fg_red    .s:bg_base01 .s:fmt_bold
+"
+"Syntax highlighting groups
+"--------------------------
+"lCursor        lCursor
+"MatchParen     MatchParen
+"Normal Normal vimUserFunc cssMediaComma
+
+"term={attr-list}                       *attr-list* *highlight-term* *E418*
+"       attr-list is a comma separated list (without spaces) of the
+"       following items (in any order):
+"               bold
+"               underline
+"               undercurl       not always available
+"               reverse
+"               inverse         same as reverse
+"               italic
+"               standout
+"               NONE            no attributes used (used to reset it)
+
+"exe "hi NonText"        . s:fg_base02 .s:bg_none   .s:fmt_none
+"exe "hi SpecialKey"     . s:fg_base02 .s:bg_none   .s:fmt_none
+"exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_none
+"
+"exe "hi LineNr"         . s:fg_base01 .s:bg_base02 .s:fmt_none
+"
+"exe "hi Normal"         . s:fg_base0  .s:bg_back   .s:fmt_none
+"exe "hi Normal"         . s:fg_base00 .s:bg_back   .s:fmt_none
+"exe "hi TODO"           . s:fg_base1  .s:bg_back   .s:fmt_none
+"exe "hi StatusLine"     . s:fg_base00 .s:bg_base02 .s:fmt_bopt
+"
+"exe "hi PreProc"        . s:fg_cyan   .s:bg_back   .s:fmt_none
+""exe "hi PreProc"        . s:fg_yellow .s:bg_back   .s:fmt_none
+"exe "hi Define"         . s:fg_base00 .s:bg_back   .s:fmt_none
+"exe "hi Include"        . s:fg_base00 .s:bg_back   .s:fmt_none
+"exe "hi Macro"          . s:fg_base00 .s:bg_back   .s:fmt_none
+"exe "hi PreCondit"      . s:fg_base00 .s:bg_back   .s:fmt_none
+"exe "hi VertSplit"      . s:fg_base00 .s:bg_base02 .s:fmt_none
+"exe "hi SignColumn"     . s:fg_base00 .s:bg_base02 .s:fmt_none
+"
+"exe "hi String"         . s:fg_base0  .s:bg_none   .s:fmt_none
+"exe "hi Folded"         . s:fg_base0  .s:bg_base01 .s:fmt_none
+"exe "hi Folded"         . s:fg_base1  .s:bg_base01 .s:fmt_none
+"
+"exe "hi Delimiter"      . s:fg_base1  .s:bg_none   .s:fmt_none
+"exe "hi Underlined"     . s:fg_base1  .s:bg_none   .s:fmt_none
+"exe "hi Title"          . s:fg_base1  .s:bg_none   .s:fmt_none
+"exe "hi WildMenu"       . s:fg_base1  .s:bg_base02 .s:fmt_none
+"exe "hi Conceal"        . s:fg_base1  .s:bg_base01 .s:fmt_none
+"exe "hi FoldColumn"     . s:fg_base1  .s:bg_base01 .s:fmt_none
+"exe "hi StatusLineNC"   . s:fg_base1  .s:bg_base02 .s:fmt_none
+"
+"exe "hi Boolean"        . s:fg_green  .s:bg_none   .s:fmt_none
+"exe "hi Constant"       . s:fg_green  .s:bg_none   .s:fmt_none
+"exe "hi Character"      . s:fg_green  .s:bg_none   .s:fmt_none
+"exe "hi Structure"      . s:fg_green  .s:bg_none   .s:fmt_none
+"exe "hi Number"         . s:fg_green  .s:bg_none   .s:fmt_none
+"exe "hi Float"          . s:fg_green  .s:bg_none   .s:fmt_none
+"
+"exe "hi Type"           . s:fg_orange .s:bg_none   .s:fmt_none
+"exe "hi StorageClass"   . s:fg_magenta.s:bg_none   .s:fmt_none
+"exe "hi Structure"      . s:fg_magenta.s:bg_none   .s:fmt_none
+"exe "hi Typedef"        . s:fg_magenta.s:bg_none   .s:fmt_none
+"
+"exe "hi Special"        . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi SpecialChar"    . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi SpecialComment" . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi Debug"          . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi Tag"            . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi Repeat"         . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi ErrorMsg"       . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi Search"         . s:fg_base03 .s:bg_yellow .s:fmt_bold
+"exe "hi IncSearch"      . s:fg_base03 .s:bg_yellow .s:fmt_bold
+"
+"exe "hi Conditional"    . s:fg_magenta.s:bg_none   .s:fmt_none
+"
+"exe "hi Identifier"     .s:fg_violet  .s:bg_none   .s:fmt_none
+"
+"exe "hi Directory"      . s:fg_blue   .s:bg_none   .s:fmt_none
+"exe "hi Question"       . s:fg_blue   .s:bg_none   .s:fmt_none
+"exe "hi Statement"      . s:fg_blue   .s:bg_none   .s:fmt_none
+"exe "hi Label"          . s:fg_blue   .s:bg_none   .s:fmt_none
+"exe "hi Exception"      . s:fg_blue   .s:bg_none   .s:fmt_none
+"exe "hi Function"       . s:fg_blue   .s:bg_none   .s:fmt_none
+"
+"exe "hi ModeMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
+"exe "hi MoreMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
+"
+"exe "hi Operator"       . s:fg_cyan   .s:bg_none   .s:fmt_none
+"exe "hi VarId"          . s:fg_base00 .s:bg_none   .s:fmt_none
+"}}}
 " Special highlighting"{{{
 " ---------------------------------------------------------------------
 
 " ---------------------------------------------------------------------
 " diff
-exe "hi DiffAdd"        . s:fg_base03 .s:bg_green  .s:fmt_bold
-exe "hi DiffChange"     . s:fg_base03 .s:bg_yellow .s:fmt_bold
-exe "hi DiffDelete"     . s:fg_base03 .s:bg_red    .s:fmt_bold
-exe "hi DiffText"       . s:fg_base03 .s:bg_blue   .s:fmt_bold
+"exe "hi DiffAdd"        . s:fg_base03 .s:bg_green  .s:fmt_bold
+"exe "hi DiffChange"     . s:fg_base03 .s:bg_yellow .s:fmt_bold
+"exe "hi DiffDelete"     . s:fg_base03 .s:bg_red    .s:fmt_bold
+"exe "hi DiffText"       . s:fg_base03 .s:bg_blue   .s:fmt_bold
 
 " ---------------------------------------------------------------------
 " spelling
-exe "hi SpellBad"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_red
-exe "hi SpellCap"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_violet
-exe "hi SpellRare"      . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_cyan
-exe "hi SpellLocal"     . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_yellow
+"exe "hi SpellBad"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_red
+"exe "hi SpellCap"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_violet
+"exe "hi SpellRare"      . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_cyan
+"exe "hi SpellLocal"     . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_yellow
 
 " ---------------------------------------------------------------------
 " vim highlighting
-exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi vimVar"         . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
-exe "hi helpSpecial"    . s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi helpVim"       . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi helpHyperTextJump".s:fg_blue  .s:bg_none   .s:fmt_undr
-exe "hi helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
-exe "hi vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
-exe "hi vimSynMtchOpt". s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+"exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_none
+"exe "hi vimVar"         . s:fg_cyan   .s:bg_none   .s:fmt_none
+"exe "hi helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
+"exe "hi helpSpecial"    . s:fg_yellow .s:bg_none   .s:fmt_none
+"exe "hi helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+"exe "hi helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
+"exe "hi helpVim"       . s:fg_magenta.s:bg_none   .s:fmt_none
+"exe "hi helpHyperTextJump".s:fg_blue  .s:bg_none   .s:fmt_undr
+"exe "hi helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
+"exe "hi vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
+"exe "hi vimSynMtchOpt". s:fg_yellow .s:bg_none   .s:fmt_none
+"exe "hi vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 
 " ---------------------------------------------------------------------
 " html highlighting
-exe "hi htmlTag"        . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi htmlTagN"       . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi htmlTagName"    . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi htmlEndTag"     . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi htmlTag"        . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi htmlTagN"       . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi htmlTagName"    . s:fg_red    .s:bg_none   .s:fmt_none
+"exe "hi htmlEndTag"     . s:fg_red    .s:bg_none   .s:fmt_none
 
 " ---------------------------------------------------------------------
 " perl highlighting
-exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
+"exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
 "}}}
-"
 " Haskell extended highlighting"{{{
 " ---------------------------------------------------------------------
 " For use with syntax/haskell.vim : Haskell Syntax File 
@@ -767,130 +824,124 @@ hi link hsModuleWhereLabel  hsModuleStartLabel
 " the first two items don't have an impact, but better safe
 exe "hi hsNiceOperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi hsniceoperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi Conceal"            . s:fg_cyan   .s:bg_none   .s:fmt_none
 
 "}}}
-"
 " Markdown syntax highlighting "{{{
 " ---------------------------------------------------------------------
 
-exe "hi pandocNonBreakingSpace"     . s:fg_red   .s:bg_none  .s:fmt_revr
-" pandocEmphasis
-" pandocStrongEmphasis
-"exe "hi pandocStyleDelim" . s:fg_base01 .s:bg_none .s:fmt_none
+exe "hi pandocTitleBlockTitle"   . s:fg_orange.s:bg_none  .s:fmt_bold
+exe "hi pandocTitleBlock"   . s:fg_orange.s:bg_none  .s:fmt_none
+"hi link pandocStyleDelim            Comment
+exe "hi pandocNonBreakingSpace"         . s:fg_red   .s:bg_none  .s:fmt_revr
+exe "hi pandocEmphasis"                 . s:fg_base0 .s:bg_none  .s:fmt_ital
+exe "hi pandocEmphasisNested"           . s:fg_base0 .s:bg_none  .s:fmt_bldi
+exe "hi pandocStrongEmphasis"           . s:fg_base0 .s:bg_none  .s:fmt_bold
+exe "hi pandocStrongEmphasisNested"     . s:fg_base0 .s:bg_none  .s:fmt_bldi
+exe "hi pandocStrongEmphasisEmphasis"   . s:fg_base0 .s:bg_none  .s:fmt_bldi
 
 
 
 
-exe "hi markdownHeadingDelimiter" . s:fg_yellow   .s:bg_none   .s:fmt_bold
-exe "hi markdownHeadingRule" . s:fg_yellow   .s:bg_none   .s:fmt_bold
-exe "hi markdownH1"     . s:fg_orange   .s:bg_none   .s:fmt_bold
-exe "hi markdownH2"     . s:fg_orange   .s:bg_none   .s:fmt_none
-exe "hi markdownBold"     . s:fg_base1   .s:bg_none   .s:fmt_bold
-exe "hi markdownItalic"     . s:fg_base1   .s:bg_none   .s:fmt_ital
-exe "hi markdownCodeDelimiter"  . s:fg_yellow   .s:bg_none   .s:fmt_none
-exe "hi markdownCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
-exe "hi markdownCodeBlock"     . s:fg_yellow   .s:bg_none  .s:fmt_none
-
-exe "hi pandocVerbatimColumn"     . s:fg_red   .s:bg_yellow  .s:fmt_none
-
-exe "hi pandocCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
-exe "hi pandocHTML"     . s:fg_red   .s:bg_none   .s:fmt_undr
-
-"hi link pandocStrongEmphasis markdownBold
-"hi link pandocEmphasis markdownItalic
-hi link pandocCodeDelimiter markdownCodeDelimiter
-"hi link pandocCode markdownCode
-hi link pandocCodeBlock markdownCodeBlock
-hi link pandocVerbatimBlock markdownCodeBlock
-hi link pandocVerbatimInline markdownCodeBlock
-hi link pandocHTMLComment Comment
-hi link pandocComment Comment
-hi link pandocTitleBlock Structure
-"hi link pandocEscapedCharacter Special
-exe "hi pandocBlock"     . s:fg_none   .s:bg_red  .s:fmt_none
-exe "hi pandocVerbatimBlock" . s:fg_yellow .s:bg_none .s:fmt_none
-hi link pandocCodeBlock pandocVerbatimBlock
-exe "hi pandocCodeBlockDelim" . s:fg_back .s:bg_yellow .s:fmt_none
-exe "hi pandocBlankLine" . s:fg_none   .s:bg_blue .s:fmt_none
-exe "hi pandocMath" . s:fg_base03 .s:bg_red .s:fmt_none
-exe "hi pandocImageLink" . s:fg_violet .s:bg_none .s:fmt_none
-exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
-exe "hi pandocListMarker" . s:fg_green .s:bg_yellow .s:fmt_none
-exe "hi pandocListMarker" . s:fg_green .s:bg_none .s:fmt_none
-
-exe "hi hakyllMetadata" . s:fg_magenta .s:bg_none .s:fmt_none
-exe "hi hakyllMetadataDelim" . s:fg_base01 .s:bg_none .s:fmt_none
-exe "hi hakyllKeyValuePair" . s:fg_yellow .s:bg_none .s:fmt_none
-exe "hi hakyllKeyName" . s:fg_magenta .s:bg_none .s:fmt_none
-
-exe "hi pandocDefinitionTerm" . s:fg_back .s:bg_cyan .s:fmt_none
-exe "hi pandocDefinitionBlock" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocDefinitionIndctr" . s:fg_back .s:bg_cyan .s:fmt_none
-
-exe "hi pandocRule" . s:fg_back .s:bg_blue .s:fmt_none
-exe "hi pandocTable" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocTableHeader" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocTableStructure" . s:fg_violet .s:bg_none .s:fmt_none
-
-exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
-hi link pandocVerbatimBlockDeep pandocVerbatimBlock
-hi link pandocSuperscript pandocSubscript
-exe "hi pandocStrikeout"     .s:fmt_revr
-hi link pandocListReference pandocListMarker
-
-exe "hi pandocDefinitions"     . s:fg_yellow   .s:bg_none   .s:fmt_none
-exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
-exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
-exe "hi pandocBlockIndicator1"      . s:fg_blue  .s:bg_none   .s:fmt_none
-exe "hi pandocBlockIndicator2"      . s:fg_cyan  .s:bg_none   .s:fmt_none
-exe "hi pandocBlockIndicator3"      . s:fg_yellow  .s:bg_none   .s:fmt_none
-exe "hi pandocBlockIndicator4"      . s:fg_red  .s:bg_none   .s:fmt_none
-
-exe "hi pandocLink" . s:fg_blue  .s:bg_none .s:fmt_none
-exe "hi pandocLinkText" . s:fg_blue   .s:bg_none .s:fmt_none
-exe "hi pandocLinkLabel" . s:fg_cyan  .s:bg_none .s:fmt_none
-exe "hi pandocImageCaption" . s:fg_violet  .s:bg_none .s:fmt_none
-exe "hi pandocLinkURL" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocLinkDefinition" . s:fg_green .s:bg_none .s:fmt_none
-exe "hi pandocLinkTitle" . s:fg_green .s:bg_none .s:fmt_ital
-exe "hi pandocLinkDelim" . s:fg_green   .s:bg_none .s:fmt_none
-exe "hi pandocFootnoteLink" . s:fg_cyan  .s:bg_none .s:fmt_undr
-exe "hi pandocFootnoteInline" . s:fg_cyan  .s:bg_none .s:fmt_undr
-exe "hi pandocFootnote" . s:fg_cyan    .s:bg_none .s:fmt_none
-exe "hi pandocFootnoteIndctr" . s:fg_violet.s:bg_none   .s:fmt_none
-exe "hi pandocCitation" . s:fg_yellow  .s:bg_cyan .s:fmt_none
-exe "hi pandocCitationInline" . s:fg_yellow  .s:bg_orange .s:fmt_none
-exe "hi pandocCitationRef" . s:fg_red     .s:bg_blue .s:fmt_none
-exe "hi pandocCitationLink" . s:fg_violet.s:bg_cyan .s:fmt_none
+"exe "hi markdownHeadingDelimiter" . s:fg_yellow   .s:bg_none   .s:fmt_bold
+"exe "hi markdownHeadingRule" . s:fg_yellow   .s:bg_none   .s:fmt_bold
+"exe "hi markdownH1"     . s:fg_orange   .s:bg_none   .s:fmt_bold
+"exe "hi markdownH2"     . s:fg_orange   .s:bg_none   .s:fmt_none
+"exe "hi markdownBold"     . s:fg_base1   .s:bg_none   .s:fmt_bold
+"exe "hi markdownItalic"     . s:fg_base1   .s:bg_none   .s:fmt_ital
+"exe "hi markdownCodeDelimiter"  . s:fg_yellow   .s:bg_none   .s:fmt_none
+"exe "hi markdownCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
+"exe "hi markdownCodeBlock"     . s:fg_yellow   .s:bg_none  .s:fmt_none
+"
+"exe "hi pandocCode"     . s:fg_red   .s:bg_none   .s:fmt_undr
+"exe "hi pandocHTML"     . s:fg_red   .s:bg_none   .s:fmt_undr
+"
+"hi link pandocCodeBlock markdownCodeBlock
+"hi link pandocVerbatimBlock markdownCodeBlock
+"hi link pandocVerbatimInline markdownCodeBlock
+"hi link pandocHTMLComment Comment
+"hi link pandocComment Comment
+"hi link pandocTitleBlock Structure
+"exe "hi pandocBlock"     . s:fg_none   .s:bg_red  .s:fmt_none
+"exe "hi pandocVerbatimBlock" . s:fg_yellow .s:bg_none .s:fmt_none
+"hi link pandocCodeBlock pandocVerbatimBlock
+"exe "hi pandocCodeBlockDelim" . s:fg_back .s:bg_yellow .s:fmt_none
+"exe "hi pandocBlankLine" . s:fg_none   .s:bg_blue .s:fmt_none
+"exe "hi pandocMath" . s:fg_base03 .s:bg_red .s:fmt_none
+"exe "hi pandocImageLink" . s:fg_violet .s:bg_none .s:fmt_none
+"exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
+"exe "hi pandocListMarker" . s:fg_green .s:bg_yellow .s:fmt_none
+"exe "hi pandocListMarker" . s:fg_green .s:bg_none .s:fmt_none
+"
+"exe "hi hakyllMetadata" . s:fg_magenta .s:bg_none .s:fmt_none
+"exe "hi hakyllMetadataDelim" . s:fg_base01 .s:bg_none .s:fmt_none
+"exe "hi hakyllKeyValuePair" . s:fg_yellow .s:bg_none .s:fmt_none
+"exe "hi hakyllKeyName" . s:fg_magenta .s:bg_none .s:fmt_none
+"
+"exe "hi pandocDefinitionTerm" . s:fg_back .s:bg_cyan .s:fmt_none
+"exe "hi pandocDefinitionBlock" . s:fg_green .s:bg_none .s:fmt_none
+"exe "hi pandocDefinitionIndctr" . s:fg_back .s:bg_cyan .s:fmt_none
+"
+"exe "hi pandocRule" . s:fg_back .s:bg_blue .s:fmt_none
+"exe "hi pandocTable" . s:fg_green .s:bg_none .s:fmt_none
+"exe "hi pandocTableHeader" . s:fg_green .s:bg_none .s:fmt_none
+"exe "hi pandocTableStructure" . s:fg_violet .s:bg_none .s:fmt_none
+"
+"exe "hi pandocSubscript" . s:fg_cyan .s:bg_none .s:fmt_none
+"hi link pandocVerbatimBlockDeep pandocVerbatimBlock
+"hi link pandocSuperscript pandocSubscript
+"exe "hi pandocStrikeout"     .s:fmt_revr
+"hi link pandocListReference pandocListMarker
+"
+"exe "hi pandocDefinitions"     . s:fg_yellow   .s:bg_none   .s:fmt_none
+"exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
+"exe "hi pandocFootnoteID"      . s:fg_magenta  .s:bg_none   .s:fmt_none
+"exe "hi pandocBlockQuoteLeader1"      . s:fg_blue  .s:bg_none   .s:fmt_none
+"exe "hi pandocBlockQuoteLeader2"      . s:fg_cyan  .s:bg_none   .s:fmt_none
+"exe "hi pandocBlockQuoteLeader3"      . s:fg_yellow  .s:bg_none   .s:fmt_none
+"exe "hi pandocBlockQuoteLeader4"      . s:fg_red  .s:bg_none   .s:fmt_none
+"
+"exe "hi pandocLink" . s:fg_blue  .s:bg_none .s:fmt_none
+"exe "hi pandocLinkText" . s:fg_blue   .s:bg_none .s:fmt_none
+"exe "hi pandocLinkLabel" . s:fg_cyan  .s:bg_none .s:fmt_none
+"exe "hi pandocImageCaption" . s:fg_violet  .s:bg_none .s:fmt_none
+"exe "hi pandocLinkURL" . s:fg_green .s:bg_none .s:fmt_none
+"exe "hi pandocLinkDefinition" . s:fg_green .s:bg_none .s:fmt_none
+"exe "hi pandocLinkTitle" . s:fg_green .s:bg_none .s:fmt_ital
+"exe "hi pandocLinkDelim" . s:fg_green   .s:bg_none .s:fmt_none
+"exe "hi pandocFootnoteLink" . s:fg_cyan  .s:bg_none .s:fmt_undr
+"exe "hi pandocFootnoteInline" . s:fg_cyan  .s:bg_none .s:fmt_undr
+"exe "hi pandocFootnote" . s:fg_cyan    .s:bg_none .s:fmt_none
+"exe "hi pandocFootnoteIndctr" . s:fg_violet.s:bg_none   .s:fmt_none
+"exe "hi pandocCitation" . s:fg_yellow  .s:bg_cyan .s:fmt_none
+"exe "hi pandocCitationInline" . s:fg_yellow  .s:bg_orange .s:fmt_none
+"exe "hi pandocCitationRef" . s:fg_red     .s:bg_blue .s:fmt_none
+"exe "hi pandocCitationLink" . s:fg_violet.s:bg_cyan .s:fmt_none
 
 "}}}
-"
 " Cursor line/column and similar modern vim features"{{{
 " ---------------------------------------------------------------------
-if version >= 700
+"if version >= 700
 " Cursor values
-exe "hi Cursor"         . s:fg_none   .s:bg_none   .s:fmt_revr
-exe "hi CursorLine"     . s:fg_none   .s:bg_base02 .s:fmt_uopt
-exe "hi CursorColumn"   . s:fg_none   .s:bg_base02 .s:fmt_none
-exe "hi ColorColumn"    . s:fg_none   .s:bg_base02 .s:fmt_none
-" Highlighting
-"exe "hi MatchParen"     . s:fg_base1  .s:bg_base02 .s:fmt_undb   .s:sp_red  
-exe "hi MatchParen"     . s:fg_red    .s:bg_base01 .s:fmt_bold
-exe "hi Visual"         . s:fg_none   .s:bg_base02 .s:fmt_none
-exe "hi VisualNOS"      . s:fg_none   .s:bg_base02 .s:fmt_none
-" Tabpages
-exe "hi TabLine"        . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
-exe "hi TabLineFill"    . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
-exe "hi TabLineSel"     . s:fg_base1  .s:bg_base01 .s:fmt_undr   .s:sp_base00
-" P-Menu (auto-completion)
-exe "hi Pmenu"          . s:fg_base00 .s:bg_base02 .s:fmt_none
-exe "hi PmenuSel"       . s:fg_base1  .s:bg_base01 .s:fmt_none
-exe "hi PmenuSbar"      . s:fg_base00 .s:bg_base2  .s:fmt_none
-exe "hi PmenuThumb"     . s:fg_base03 .s:bg_base00 .s:fmt_none
-endif
+"exe "hi Cursor"         . s:fg_none   .s:bg_none   .s:fmt_revr
+"exe "hi CursorLine"     . s:fg_none   .s:bg_base02 .s:fmt_uopt
+"exe "hi CursorColumn"   . s:fg_none   .s:bg_base02 .s:fmt_none
+"exe "hi ColorColumn"    . s:fg_none   .s:bg_base02 .s:fmt_none
+"" Highlighting
+""exe "hi MatchParen"     . s:fg_base1  .s:bg_base02 .s:fmt_undb   .s:sp_red  
+"exe "hi MatchParen"     . s:fg_red    .s:bg_base01 .s:fmt_bold
+"exe "hi Visual"         . s:fg_none   .s:bg_base02 .s:fmt_none
+"exe "hi VisualNOS"      . s:fg_none   .s:bg_base02 .s:fmt_none
+"" Tabpages
+"exe "hi TabLine"        . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
+"exe "hi TabLineFill"    . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
+"exe "hi TabLineSel"     . s:fg_base1  .s:bg_base01 .s:fmt_undr   .s:sp_base00
+"" P-Menu (auto-completion)
+"exe "hi Pmenu"          . s:fg_base00 .s:bg_base02 .s:fmt_none
+"exe "hi PmenuSel"       . s:fg_base1  .s:bg_base01 .s:fmt_none
+"exe "hi PmenuSbar"      . s:fg_base00 .s:bg_base2  .s:fmt_none
+"exe "hi PmenuThumb"     . s:fg_base03 .s:bg_base00 .s:fmt_none
+"endif
 "}}}
-"
 " License "{{{
 " ---------------------------------------------------------------------
 "
