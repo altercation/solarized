@@ -838,7 +838,8 @@ exe "hi pandocEmphasisNested"           . s:fg_base0 .s:bg_none  .s:fmt_bldi
 exe "hi pandocStrongEmphasis"           . s:fg_base0 .s:bg_none  .s:fmt_bold
 exe "hi pandocStrongEmphasisNested"     . s:fg_base0 .s:bg_none  .s:fmt_bldi
 exe "hi pandocStrongEmphasisEmphasis"   . s:fg_base0 .s:bg_none  .s:fmt_bldi
-
+exe "hi pandocTableZebraLight"          . s:fg_base00.s:bg_base03.s:fmt_none
+exe "hi pandocTableZebraDark"           . s:fg_base0 .s:bg_base02.s:fmt_none
 
 
 
