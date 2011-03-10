@@ -96,10 +96,10 @@
 " Solarized HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 " base03    #00141b  8/4 brblack  233 #121212 05 -06 -07   0  20  27 194 100 10
 " base02    #13242a  0/4 black    234 #1c1c1c 13 -06 -06  19  36  42 194  54 16
-" base01    #3f4e53 10/7 brgreen  237 #3a3a3a 32 -05 -05  63  78  83 195  24 33
+" base01    #526166 10/7 brgreen  238 #444444 40 -05 -05  82  97 102 195  20 40
 " base00    #5e6d73 11/7 bryellow 240 #585858 45 -05 -05  94 109 115 197  18 45
 " base0     #77878c 12/6 brblue   242 #6c6c6c 55 -05 -05 119 135 140 194  15 55
-" base1     #9ba9a7 14/4 brcyan   246 #949494 68 -05 -01 155 169 167 174   8 66
+" base1     #869392 14/4 brcyan   245 #8a8a8a 60 -05 -01 134 147 146 174   9 58
 " base2     #d8dbd4  7/7 white    252 #d0d0d0 87 -02  03 216 219 212  87   3 86
 " base3     #f7f0dd 15/7 brwhite  230 #ffffd7 95  00  10 247 240 221  44  11 97
 " yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100 71
@@ -280,12 +280,13 @@ let colors_name = "solarized"
 " neutral gray monotone palette component)
 if has("gui_running") && g:solarized_degrade == 0
     let s:g_back        = "#00141b"
+    let s:g_back        = "#0a1c23"
     let s:g_base03      = "#00141b"
     let s:g_base02      = "#13242a"
-    let s:g_base01      = "#3f4e53"
+    let s:g_base01      = "#526166"
     let s:g_base00      = "#5e6d73"
     let s:g_base0       = "#77878c"
-    let s:g_base1       = "#9ba9a7"
+    let s:g_base1       = "#869392"
     let s:g_base2       = "#d8dbd4"
     let s:g_base3       = "#f7f0dd"
     let s:g_yellow      = "#b58900"
@@ -550,7 +551,7 @@ exe "let s:fmt_stnd     = ' cterm=NONE".s:s." gui=NONE".s:s." term=NONE".s:s."'"
 " note that link syntax to avoid duplicate configuration doesn't work with the
 " exe compiled formats
 
-exe "hi Normal"         . s:fg_base00 .s:bg_back   .s:fmt_none
+exe "hi Normal"         . s:fg_base0  .s:bg_back   .s:fmt_none
 
 " *Comment      any comment
 exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_none
@@ -604,7 +605,7 @@ exe "hi Underlined"     . s:fg_violet .s:bg_none   .s:fmt_none
 exe "hi Ignore"         . s:fg_none   .s:bg_none   .s:fmt_none
 
 " *Error                any erroneous construct
-exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_none
+exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_bold
 
 " *Todo                 anything that needs extra attention; mostly the
 exe "hi Todo"           . s:fg_magenta.s:bg_none   .s:fmt_none
@@ -622,33 +623,33 @@ exe "hi MoreMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi ModeMsg"        . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi LineNr"         . s:fg_base01 .s:bg_base02 .s:fmt_none
 exe "hi Question"       . s:fg_cyan   .s:bg_none   .s:fmt_bold
-exe "hi StatusLine"     . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi StatusLine"     . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi StatusLineNC"   . s:fg_base1  .s:bg_base02 .s:fmt_none
-exe "hi VertSplit"      . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi VertSplit"      . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi Title"          . s:fg_orange .s:bg_none   .s:fmt_bold
-exe "hi Visual"         . s:fg_base00 .s:bg_base02 .s:fmt_none
-exe "hi VisualNOS"      . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi Visual"         . s:fg_base0  .s:bg_base02 .s:fmt_none
+exe "hi VisualNOS"      . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_bold
 exe "hi WildMenu"       . s:fg_base1  .s:bg_base02 .s:fmt_none
-exe "hi Folded"         . s:fg_base1  .s:bg_base01 .s:fmt_none
-exe "hi FoldColumn"     . s:fg_base1  .s:bg_base01 .s:fmt_none
+exe "hi Folded"         . s:fg_base0  .s:bg_base02 .s:fmt_none
+exe "hi FoldColumn"     . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi DiffAdd"        . s:fg_green  .s:bg_none   .s:fmt_revr
 exe "hi DiffChange"     . s:fg_yellow .s:bg_none   .s:fmt_revr
 exe "hi DiffDelete"     . s:fg_red    .s:bg_none   .s:fmt_revr
 exe "hi DiffText"       . s:fg_blue   .s:bg_none   .s:fmt_revr
-exe "hi SignColumn"     . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi SignColumn"     . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi Conceal"        . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi SpellBad"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_red
 exe "hi SpellCap"       . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_violet
 exe "hi SpellRare"      . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_cyan
 exe "hi SpellLocal"     . s:fg_none   .s:bg_none   .s:fmt_curl   .s:sp_yellow
-exe "hi Pmenu"          . s:fg_base00 .s:bg_base02 .s:fmt_none
-exe "hi PmenuSel"       . s:fg_base1  .s:bg_base01 .s:fmt_none
-exe "hi PmenuSbar"      . s:fg_base00 .s:bg_base2  .s:fmt_none
-exe "hi PmenuThumb"     . s:fg_base03 .s:bg_base00 .s:fmt_none
-exe "hi TabLine"        . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
-exe "hi TabLineSel"     . s:fg_base1  .s:bg_base01 .s:fmt_undr   .s:sp_base00
-exe "hi TabLineFill"    . s:fg_base00 .s:bg_base02 .s:fmt_undr   .s:sp_base00
+exe "hi Pmenu"          . s:fg_base0  .s:bg_base02 .s:fmt_none
+exe "hi PmenuSel"       . s:fg_base2  .s:bg_base01 .s:fmt_none
+exe "hi PmenuSbar"      . s:fg_base0  .s:bg_base2  .s:fmt_none
+exe "hi PmenuThumb"     . s:fg_base03 .s:bg_base0  .s:fmt_none
+exe "hi TabLine"        . s:fg_base0  .s:bg_base02 .s:fmt_undr   .s:sp_base0
+exe "hi TabLineSel"     . s:fg_base2  .s:bg_base01 .s:fmt_undr   .s:sp_base0
+exe "hi TabLineFill"    . s:fg_base0  .s:bg_base02 .s:fmt_undr   .s:sp_base0
 exe "hi CursorColumn"   . s:fg_none   .s:bg_base02 .s:fmt_none
 exe "hi CursorLine"     . s:fg_none   .s:bg_base02 .s:fmt_uopt
 exe "hi ColorColumn"    . s:fg_none   .s:bg_base02 .s:fmt_none
