@@ -93,24 +93,24 @@
 "
 " Download palettes and files from: http://ethanschoonover.com/solarized
 " 
-" Solarized HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
-" base03    #00141b  8/4 brblack  233 #121212 05 -06 -07   0  20  27 194 100 10
-" base02    #13242a  0/4 black    234 #1c1c1c 13 -06 -06  19  36  42 194  54 16
-" base01    #526166 10/7 brgreen  238 #444444 40 -05 -05  82  97 102 195  20 40
-" base00    #5e6d73 11/7 bryellow 240 #585858 45 -05 -05  94 109 115 197  18 45
-" base0     #77878c 12/6 brblue   242 #6c6c6c 55 -05 -05 119 135 140 194  15 55
-" base1     #869392 14/4 brcyan   245 #8a8a8a 60 -05 -01 134 147 146 174   9 58
-" base2     #d8dbd4  7/7 white    252 #d0d0d0 87 -02  03 216 219 212  87   3 86
-" base3     #f7f0dd 15/7 brwhite  230 #ffffd7 95  00  10 247 240 221  44  11 97
+" SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
+" --------- ------- ---- -------  ----------- ---------- ----------- -----------
+" base03    #091e25  8/4 brblack  233 #121212 10 -07 -07   9  30  37 194  75  14
+" base02    #14292f  0/4 black    234 #1c1c1c 15 -07 -07  20  41  47 194  58  19
+" base01    #4c6269 10/7 brgreen  239 #4e4e4e 40 -07 -07  76  98 105 195  27  41
+" base00    #586e76 11/7 bryellow 240 #585858 45 -07 -07  88 110 118 195  25  46
+" base0     #829494 12/6 brblue   244 #808080 60 -07 -02 130 148 148 178  13  58
+" base1     #8fa2a1 14/4 brcyan   245 #8a8a8a 65 -07 -02 143 162 161 178  12  63
+" base2     #e2e3d9  7/7 white    253 #dadada 90 -02  05 226 227 217  70   5  89
+" base3     #f7f0dd 15/7 brwhite  230 #ffffd7 95  00  10 247 240 221  44  11  97
 " yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100 71
-" orange    #bb3e07  9/3 brred    130 #af5f00 45  50  55 187  62   7  18  96 73
-" red       #bd000f  1/1 red      124 #af0000 40  65  50 189   0  15 355 100 74
-" magenta   #c42376  5/5 magenta  125 #af005f 45  65 -05 196  35 118 329  82 77
-" violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45 77
-" blue      #007fc4  4/4 blue      32 #0087d7 50 -10 -45   0 127 196 201 100 77
-" cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74 63
+" orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
+" red       #bd000f  1/1 red      124 #af0000 40  65  50 189   0  15 355 100  74
+" magenta   #c42376  5/5 magenta  125 #af005f 45  65 -05 196  35 118 329  82  77
+" violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
+" blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
+" cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
 " green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100 60
-"
 "
 " ---------------------------------------------------------------------
 " OPTIONS
@@ -279,25 +279,21 @@ let colors_name = "solarized"
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
 if has("gui_running") && g:solarized_degrade == 0
-    let s:g_back        = "#00141b"
-"8   let s:g_back        = "#071a21"
-"9   let s:g_back        = "#0a1c23"
-    let s:g_back        = "#071a21"
-    let s:g_back        = "#0a1c23"
-    let s:g_base03      = "#00141b"
-    let s:g_base02      = "#13242a"
-    let s:g_base01      = "#526166"
-    let s:g_base00      = "#5e6d73"
-    let s:g_base0       = "#77878c"
-    let s:g_base1       = "#869392"
-    let s:g_base2       = "#d8dbd4"
+    let s:g_back        = "#091e25"
+    let s:g_base03      = "#091e25"
+    let s:g_base02      = "#14292f"
+    let s:g_base01      = "#4c6269"
+    let s:g_base00      = "#586e76"
+    let s:g_base0       = "#829494"
+    let s:g_base1       = "#8fa2a1"
+    let s:g_base2       = "#e2e3d9"
     let s:g_base3       = "#f7f0dd"
     let s:g_yellow      = "#b58900"
-    let s:g_orange      = "#bb3e07"
+    let s:g_orange      = "#cb4b16"
     let s:g_red         = "#bd000f"
     let s:g_magenta     = "#c42376"
     let s:g_violet      = "#6c71c4"
-    let s:g_blue        = "#007fc4"
+    let s:g_blue        = "#268bd2"
     let s:g_cyan        = "#2aa198"
     let s:g_green       = "#859900"
 else
@@ -311,18 +307,18 @@ else
     let s:g_back        = "#121212"
     let s:g_base03      = "#121212"
     let s:g_base02      = "#1c1c1c"
-    let s:g_base01      = "#3a3a3a"
+    let s:g_base01      = "#4e4e4e"
     let s:g_base00      = "#585858"
-    let s:g_base0       = "#6c6c6c"
-    let s:g_base1       = "#949494"
-    let s:g_base2       = "#d0d0d0"
+    let s:g_base0       = "#808080"
+    let s:g_base1       = "#8a8a8a"
+    let s:g_base2       = "#dadada"
     let s:g_base3       = "#ffffd7"
     let s:g_yellow      = "#af8700"
-    let s:g_orange      = "#af5f00"
+    let s:g_orange      = "#d75f00"
     let s:g_red         = "#af0000"
     let s:g_magenta     = "#af005f"
     let s:g_violet      = "#5f5faf"
-    let s:g_blue        = "#0087d7"
+    let s:g_blue        = "#0087ff"
     let s:g_cyan        = "#00afaf"
     let s:g_green       = "#5f8700"
 endif
@@ -335,18 +331,18 @@ if (has("gui_running") || &t_Co == 256) && g:solarized_termcolors != 16
     let s:c_back        = "233"
     let s:c_base03      = "233"
     let s:c_base02      = "234"
-    let s:c_base01      = "237"
+    let s:c_base01      = "239"
     let s:c_base00      = "240"
-    let s:c_base0       = "242"
-    let s:c_base1       = "246"
-    let s:c_base2       = "252"
+    let s:c_base0       = "244"
+    let s:c_base1       = "245"
+    let s:c_base2       = "253"
     let s:c_base3       = "230"
     let s:c_yellow      = "136"
-    let s:c_orange      = "130"
+    let s:c_orange      = "166"
     let s:c_red         = "124"
     let s:c_magenta     = "125"
     let s:c_violet      = " 61"
-    let s:c_blue        = " 32"
+    let s:c_blue        = " 33"
     let s:c_cyan        = " 37"
     let s:c_green       = " 64"
     let s:ou            = ""
@@ -405,7 +401,7 @@ let s:c                 = ",undercurl"
 let s:r                 = ",reverse"
 let s:s                 = ",standout"
 "}}}
-" Alternate light schemes "{{{
+" Alternate light scheme "{{{
 " ---------------------------------------------------------------------
 if g:solarized_style == "light"
     let s:c_temp03      = s:c_base03
@@ -433,6 +429,21 @@ if g:solarized_style == "light"
     let s:g_base1       = s:g_temp01
     let s:g_base2       = s:g_temp02
     let s:g_base3       = s:g_temp03
+    let s:g_back        = s:g_base03
+endif
+"}}}
+" Alternate inverted background scheme "{{{
+" ---------------------------------------------------------------------
+if g:solarized_style == "inverted"
+    let s:c_temp03      = s:c_base03
+    let s:c_temp02      = s:c_base02
+    let s:c_base03      = s:c_temp02
+    let s:c_base02      = s:c_temp03
+    let s:c_back        = s:c_base03
+    let s:g_temp03      = s:g_base03
+    let s:g_temp02      = s:g_base02
+    let s:g_base03      = s:g_temp02
+    let s:g_base02      = s:g_temp03
     let s:g_back        = s:g_base03
 endif
 "}}}
@@ -634,8 +645,8 @@ exe "hi Visual"         . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi VisualNOS"      . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_bold
 exe "hi WildMenu"       . s:fg_base1  .s:bg_base02 .s:fmt_none
-exe "hi Folded"         . s:fg_base0  .s:bg_base02 .s:fmt_none
-exe "hi FoldColumn"     . s:fg_base0  .s:bg_base02 .s:fmt_none
+exe "hi Folded"         . s:fg_base00 .s:bg_base02 .s:fmt_none
+exe "hi FoldColumn"     . s:fg_base00 .s:bg_base02 .s:fmt_none
 exe "hi DiffAdd"        . s:fg_green  .s:bg_none   .s:fmt_revr
 exe "hi DiffChange"     . s:fg_yellow .s:bg_none   .s:fmt_revr
 exe "hi DiffDelete"     . s:fg_red    .s:bg_none   .s:fmt_revr
@@ -833,8 +844,8 @@ exe "hi hsniceoperator"     . s:fg_cyan   .s:bg_none   .s:fmt_none
 " Markdown syntax highlighting "{{{
 " ---------------------------------------------------------------------
 
-exe "hi pandocTitleBlockTitle"   . s:fg_orange.s:bg_none  .s:fmt_bold
-exe "hi pandocTitleBlock"   . s:fg_orange.s:bg_none  .s:fmt_none
+exe "hi pandocTitleBlockTitle"   . s:fg_blue.s:bg_none  .s:fmt_bold
+exe "hi pandocTitleBlock"   . s:fg_blue.s:bg_none  .s:fmt_none
 "hi link pandocStyleDelim            Comment
 exe "hi pandocNonBreakingSpace"         . s:fg_red   .s:bg_none  .s:fmt_revr
 exe "hi pandocEmphasis"                 . s:fg_base0 .s:bg_none  .s:fmt_ital
@@ -876,11 +887,6 @@ exe "hi pandocTableZebraDark"           . s:fg_base0 .s:bg_base02.s:fmt_none
 "exe "hi pandocImageLinkDelim" . s:fg_violet .s:bg_none .s:fmt_none
 "exe "hi pandocListMarker" . s:fg_green .s:bg_yellow .s:fmt_none
 "exe "hi pandocListMarker" . s:fg_green .s:bg_none .s:fmt_none
-"
-"exe "hi hakyllMetadata" . s:fg_magenta .s:bg_none .s:fmt_none
-"exe "hi hakyllMetadataDelim" . s:fg_base01 .s:bg_none .s:fmt_none
-"exe "hi hakyllKeyValuePair" . s:fg_yellow .s:bg_none .s:fmt_none
-"exe "hi hakyllKeyName" . s:fg_magenta .s:bg_none .s:fmt_none
 "
 "exe "hi pandocDefinitionTerm" . s:fg_back .s:bg_cyan .s:fmt_none
 "exe "hi pandocDefinitionBlock" . s:fg_green .s:bg_none .s:fmt_none
