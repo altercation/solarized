@@ -7,13 +7,13 @@
 
 # custom body highlights -----------------------------------------------
 # highlight my name and other personally relevant strings
-#color body          color172        color230        "(ethan|schoonover)"
+#color body          color136        color230        "(ethan|schoonover)"
 # custom index highlights ----------------------------------------------
 # messages which mention my name in the body
-#color index         color172        color230        "~b \"phil(_g|\!| gregory| gold)|pgregory\" !~N !~T !~F !~p !~P"
+#color index         color136        color230        "~b \"phil(_g|\!| gregory| gold)|pgregory\" !~N !~T !~F !~p !~P"
 #color index         J_cream         color233        "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~N !~T !~F !~p !~P"
-#color index         color172        color37         "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~T !~F !~p !~P"
-#color index         color172        J_magent        "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~F !~p !~P"
+#color index         color136        color37         "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~T !~F !~p !~P"
+#color index         color136        J_magent        "~b \"phil(_g|\!| gregory| gold)|pgregory\" ~F !~p !~P"
 ## messages which are in reference to my mails
 #color index         J_magent        color230        "~x \"(mithrandir|aragorn)\\.aperiodic\\.net|thorin\\.hillmgt\\.com\" !~N !~T !~F !~p !~P"
 #color index         J_magent        color233        "~x \"(mithrandir|aragorn)\\.aperiodic\\.net|thorin\\.hillmgt\\.com\" ~N !~T !~F !~p !~P"
@@ -24,17 +24,17 @@
 # base03, bg, black, any of the non brights
 
 # basic colors ---------------------------------------------------------
-color normal        color242        color230        
+color normal        color244        color230        
 color error         color124        color230        
-color tilde         color252        color230        
+color tilde         color253        color230        
 color message       color37         color230        
 color markers       color124        color234        
 color attachment    color234        color230        
 color search        color61         color230        
 #color status        J_black         J_status        
-color status        color242        color252        
-color indicator     color230        color172        
-color tree          color172        color230                                    # arrow in threads
+color status        color244        color253        
+color indicator     color230        color136        
+color tree          color136        color230                                    # arrow in threads
 
 # basic monocolor screen
 mono  bold          bold
@@ -45,81 +45,81 @@ mono  error         bold
 # index ----------------------------------------------------------------
 
 #color index         color124        color230        "~D(!~p|~p)"               # deleted
-#color index         color252        color230        ~F                         # flagged
-#color index         color130        color230        ~=                         # duplicate messages
-#color index         color246        color230        "~A!~N!~T!~p!~Q!~F!~D!~P"  # the rest
+#color index         color253        color230        ~F                         # flagged
+#color index         color166        color230        ~=                         # duplicate messages
+#color index         color245        color230        "~A!~N!~T!~p!~Q!~F!~D!~P"  # the rest
 #color index         J_base          color230        "~A~N!~T!~p!~Q!~F!~D"      # the rest, new
 color index         color124        color230        "~A"                        # all messages
-color index         color130        color230        "~E"                        # expired messages
-color index         color26         color230        "~N"                        # new messages
-color index         color26         color230        "~O"                        # old messages
+color index         color166        color230        "~E"                        # expired messages
+color index         color33         color230        "~N"                        # new messages
+color index         color33         color230        "~O"                        # old messages
 color index         color61         color230        "~Q"                        # messages that have been replied to
-color index         color246        color230        "~R"                        # read messages
-color index         color26         color230        "~U"                        # unread messages
-color index         color26         color230        "~U~$"                      # unread, unreferenced messages
-color index         color242        color230        "~v"                        # messages part of a collapsed thread
-color index         color242        color230        "~P"                        # messages from me
+color index         color245        color230        "~R"                        # read messages
+color index         color33         color230        "~U"                        # unread messages
+color index         color33         color230        "~U~$"                      # unread, unreferenced messages
+color index         color244        color230        "~v"                        # messages part of a collapsed thread
+color index         color244        color230        "~P"                        # messages from me
 color index         color37         color230        "~p!~F"                     # messages to me
 color index         color37         color230        "~N~p!~F"                   # new messages to me
 color index         color37         color230        "~U~p!~F"                   # unread messages to me
-color index         color246        color230        "~R~p!~F"                   # messages to me
+color index         color245        color230        "~R~p!~F"                   # messages to me
 color index         color124        color230        "~F"                        # flagged messages
 color index         color124        color230        "~F~p"                      # flagged messages to me
 color index         color124        color230        "~N~F"                      # new flagged messages
 color index         color124        color230        "~N~F~p"                    # new flagged messages to me
 color index         color124        color230        "~U~F~p"                    # new flagged messages to me
-color index         color252        color124        "~D"                        # deleted messages
-color index         color236        color230        "~v~(!~N)"                  # collapsed thread with no unread
-color index         color172        color230        "~v~(~N)"                   # collapsed thread with some unread
+color index         color253        color124        "~D"                        # deleted messages
+color index         color239        color230        "~v~(!~N)"                  # collapsed thread with no unread
+color index         color136        color230        "~v~(~N)"                   # collapsed thread with some unread
 color index         color64         color230        "~N~v~(~N)"                 # collapsed thread with unread parent
 # statusbg used to indicated flagged when foreground color shows other status
 # for collapsed thread
-color index         color124        color252        "~v~(~F)!~N"                # collapsed thread with flagged, no unread
-color index         color172        color252        "~v~(~F~N)"                 # collapsed thread with some unread & flagged
-color index         color64         color252        "~N~v~(~F~N)"               # collapsed thread with unread parent & flagged
-color index         color64         color252        "~N~v~(~F)"                 # collapsed thread with unread parent, no unread inside, but some flagged
-color index         color37         color252        "~v~(~p)"                   # collapsed thread with unread parent, no unread inside, some to me directly
-color index         color172        color124        "~v~(~D)"                   # thread with deleted (doesn't differentiate between all or partial)
-#color index         color172        color230        "~(~N)"                    # messages in threads with some unread
+color index         color124        color253        "~v~(~F)!~N"                # collapsed thread with flagged, no unread
+color index         color136        color253        "~v~(~F~N)"                 # collapsed thread with some unread & flagged
+color index         color64         color253        "~N~v~(~F~N)"               # collapsed thread with unread parent & flagged
+color index         color64         color253        "~N~v~(~F)"                 # collapsed thread with unread parent, no unread inside, but some flagged
+color index         color37         color253        "~v~(~p)"                   # collapsed thread with unread parent, no unread inside, some to me directly
+color index         color136        color124        "~v~(~D)"                   # thread with deleted (doesn't differentiate between all or partial)
+#color index         color136        color230        "~(~N)"                    # messages in threads with some unread
 #color index         color64         color230        "~S"                       # superseded messages
 #color index         color124        color230        "~T"                       # tagged messages
-#color index         color130        color124        "~="                       # duplicated messages
+#color index         color166        color124        "~="                       # duplicated messages
 
 # message headers ------------------------------------------------------
 
-#color header        color246        color230        "^"
-color hdrdefault    color246        color230        
-color header        color242        color230        "^(From)"
-color header        color26         color230        "^(Subject)"
+#color header        color245        color230        "^"
+color hdrdefault    color245        color230        
+color header        color244        color230        "^(From)"
+color header        color33         color230        "^(Subject)"
 
 # body -----------------------------------------------------------------
 
-color quoted        color26         color230        
+color quoted        color33         color230        
 color quoted1       color37         color230        
-color quoted2       color172        color230        
+color quoted2       color136        color230        
 color quoted3       color124        color230        
-color quoted4       color130        color230        
+color quoted4       color166        color230        
 
-color signature     color246        color230        
-color bold          color252        color230        
-color underline     color252        color230        
-color normal        color239        color230        
+color signature     color245        color230        
+color bold          color253        color230        
+color underline     color253        color230        
+color normal        color240        color230        
 #
-color body          color236        color230        "[;:][-o][)/(|]"    # emoticons
-color body          color236        color230        "[;:][)(|]"         # emoticons
-color body          color236        color230        "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|\
+color body          color239        color230        "[;:][-o][)/(|]"    # emoticons
+color body          color239        color230        "[;:][)(|]"         # emoticons
+color body          color239        color230        "[*]?((N)?ACK|CU|LOL|SCNR|BRB|BTW|CWYL|\
                                                      |FWIW|vbg|GD&R|HTH|HTHBE|IMHO|IMNSHO|\
                                                      |IRL|RTFM|ROTFL|ROFL|YMMV)[*]?"
-color body          color236        color230        "[ ][*][^*]*[*][ ]?" # more emoticon?
-color body          color236        color230        "[ ]?[*][^*]*[*][ ]" # more emoticon?
+color body          color239        color230        "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body          color239        color230        "[ ]?[*][^*]*[*][ ]" # more emoticon?
 
 ## pgp
 
 color body          color124        color230        "(BAD signature)"
 color body          color37         color230        "(Good signature)"
 color body          color230        color230        "^gpg: Good signature .*"
-color body          color242        color230        "^gpg: "
-color body          color242        color124        "^gpg: BAD signature from.*"
+color body          color244        color230        "^gpg: "
+color body          color244        color124        "^gpg: BAD signature from.*"
 mono  body          bold                            "^gpg: Good signature"
 mono  body          bold                            "^gpg: BAD signature from.*"
 
@@ -131,21 +131,21 @@ color body          color124        color230        "([a-z][a-z0-9+-]*://(((([a-
 # Various smilies and the like
 #color body          color233        color230        "<[Gg]>"                            # <g>
 #color body          color233        color230        "<[Bb][Gg]>"                        # <bg>
-#color body          color172        color230        " [;:]-*[})>{(<|]"                  # :-) etc...
+#color body          color136        color230        " [;:]-*[})>{(<|]"                  # :-) etc...
 # *bold*
-#color body          color26         color230        "(^|[[:space:][:punct:]])\\*[^*]+\\*([[:space:][:punct:]]|$)"
+#color body          color33         color230        "(^|[[:space:][:punct:]])\\*[^*]+\\*([[:space:][:punct:]]|$)"
 #mono  body          bold                            "(^|[[:space:][:punct:]])\\*[^*]+\\*([[:space:][:punct:]]|$)"
 # _underline_
-#color body          color26         color230        "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
+#color body          color33         color230        "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
 #mono  body          underline                       "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
 # /italic/  (Sometimes gets directory names)
-#color body         color26         color230        "(^|[[:space:][:punct:]])/[^/]+/([[:space:][:punct:]]|$)"
+#color body         color33         color230        "(^|[[:space:][:punct:]])/[^/]+/([[:space:][:punct:]]|$)"
 #mono body          underline                       "(^|[[:space:][:punct:]])/[^/]+/([[:space:][:punct:]]|$)"
 
 # Border lines.
-#color body          color26         color230        "( *[-+=#*~_]){6,}"
+#color body          color33         color230        "( *[-+=#*~_]){6,}"
 
 #folder-hook .                  "color status        J_black         J_status        "
-#folder-hook gmail/inbox        "color status        J_black         color172        "
-#folder-hook gmail/important    "color status        J_black         color172        "
+#folder-hook gmail/inbox        "color status        J_black         color136        "
+#folder-hook gmail/important    "color status        J_black         color136        "
 
