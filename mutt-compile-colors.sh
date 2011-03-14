@@ -6,16 +6,16 @@
 # 
 # SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 # --------- ------- ---- -------  ----------- ---------- ----------- -----------
-# base03    #091e25  8/4 brblack  233 #121212 10 -07 -07   9  30  37 194  75  14
-# base02    #14292f  0/4 black    234 #1c1c1c 15 -07 -07  20  41  47 194  58  19
+# base03    #001b21  8/4 brblack  233 #121212 08 -08 -08   0  27  33 191 100  13
+# base02    #0d262e  0/4 black    234 #1c1c1c 13 -08 -08  13  38  46 195  72  18
 # base01    #4c6269 10/7 brgreen  239 #4e4e4e 40 -07 -07  76  98 105 195  27  41
 # base00    #586e76 11/7 bryellow 240 #585858 45 -07 -07  88 110 118 195  25  46
 # base0     #829494 12/6 brblue   244 #808080 60 -07 -02 130 148 148 178  13  58
 # base1     #8fa2a1 14/4 brcyan   245 #8a8a8a 65 -07 -02 143 162 161 178  12  63
-# base2     #e2e3d9  7/7 white    253 #dadada 90 -02  05 226 227 217  70   5  89
-# base3     #f7f0dd 15/7 brwhite  230 #ffffd7 95  00  10 247 240 221  44  11  97
+# base2     #e7e9de  7/7 white    254 #e4e4e4 92 -02  05 231 233 222  71   5  91
+# base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
 # yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
-# orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
+# orange    #c45221  9/3 brred    166 #d75f00 50  45  50 196  82  33  18  83  77
 # red       #bd000f  1/1 red      124 #af0000 40  65  50 189   0  15 355 100  74
 # magenta   #c42376  5/5 magenta  125 #af005f 45  65 -05 196  35 118 329  82  77
 # violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
@@ -30,7 +30,7 @@ J_base01        ,color239        ,brightgreen     ,
 J_base00        ,color240        ,brightyellow    ,
 J_base0         ,color244        ,brightblue      ,
 J_base1         ,color245        ,brightcyan      ,
-J_base2         ,color253        ,white           ,
+J_base2         ,color254        ,white           ,
 J_base3         ,color230        ,brightwhite     ,
 J_yellow        ,color136        ,yellow          ,
 J_orange        ,color166        ,brightred       ,
@@ -52,7 +52,7 @@ J_base1         ,color239        ,brightgreen     ,
 J_base0         ,color240        ,brightyellow    ,
 J_base00        ,color244        ,brightblue      ,
 J_base01        ,color245        ,brightcyan      ,
-J_base02        ,color253        ,white           ,
+J_base02        ,color254        ,white           ,
 J_base03        ,color230        ,brightwhite     ,
 J_yellow        ,color136        ,yellow          ,
 J_orange        ,color166        ,brightred       ,
@@ -65,7 +65,7 @@ J_green         ,color64         ,green           ,
 J_bg            ,color230        ,default         ,
 J_fg            ,color240        ,default         ,
 J_statusfg      ,color244        ,brightblue      ,
-J_statusbg      ,color253        ,white           ,
+J_statusbg      ,color254        ,white           ,
 SETPALETTELIGHT
 
 MUTTSOURCE="mutt-colors-solarized-template.muttrc"

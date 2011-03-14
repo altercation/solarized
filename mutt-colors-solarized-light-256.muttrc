@@ -26,13 +26,13 @@
 # basic colors ---------------------------------------------------------
 color normal        color244        color230        
 color error         color124        color230        
-color tilde         color253        color230        
+color tilde         color254        color230        
 color message       color37         color230        
 color markers       color124        color234        
 color attachment    color234        color230        
 color search        color61         color230        
 #color status        J_black         J_status        
-color status        color244        color253        
+color status        color244        color254        
 color indicator     color230        color136        
 color tree          color136        color230                                    # arrow in threads
 
@@ -45,7 +45,7 @@ mono  error         bold
 # index ----------------------------------------------------------------
 
 #color index         color124        color230        "~D(!~p|~p)"               # deleted
-#color index         color253        color230        ~F                         # flagged
+#color index         color254        color230        ~F                         # flagged
 #color index         color166        color230        ~=                         # duplicate messages
 #color index         color245        color230        "~A!~N!~T!~p!~Q!~F!~D!~P"  # the rest
 #color index         J_base          color230        "~A~N!~T!~p!~Q!~F!~D"      # the rest, new
@@ -68,17 +68,17 @@ color index         color124        color230        "~F~p"                      
 color index         color124        color230        "~N~F"                      # new flagged messages
 color index         color124        color230        "~N~F~p"                    # new flagged messages to me
 color index         color124        color230        "~U~F~p"                    # new flagged messages to me
-color index         color253        color124        "~D"                        # deleted messages
+color index         color254        color124        "~D"                        # deleted messages
 color index         color239        color230        "~v~(!~N)"                  # collapsed thread with no unread
 color index         color136        color230        "~v~(~N)"                   # collapsed thread with some unread
 color index         color64         color230        "~N~v~(~N)"                 # collapsed thread with unread parent
 # statusbg used to indicated flagged when foreground color shows other status
 # for collapsed thread
-color index         color124        color253        "~v~(~F)!~N"                # collapsed thread with flagged, no unread
-color index         color136        color253        "~v~(~F~N)"                 # collapsed thread with some unread & flagged
-color index         color64         color253        "~N~v~(~F~N)"               # collapsed thread with unread parent & flagged
-color index         color64         color253        "~N~v~(~F)"                 # collapsed thread with unread parent, no unread inside, but some flagged
-color index         color37         color253        "~v~(~p)"                   # collapsed thread with unread parent, no unread inside, some to me directly
+color index         color124        color254        "~v~(~F)!~N"                # collapsed thread with flagged, no unread
+color index         color136        color254        "~v~(~F~N)"                 # collapsed thread with some unread & flagged
+color index         color64         color254        "~N~v~(~F~N)"               # collapsed thread with unread parent & flagged
+color index         color64         color254        "~N~v~(~F)"                 # collapsed thread with unread parent, no unread inside, but some flagged
+color index         color37         color254        "~v~(~p)"                   # collapsed thread with unread parent, no unread inside, some to me directly
 color index         color136        color124        "~v~(~D)"                   # thread with deleted (doesn't differentiate between all or partial)
 #color index         color136        color230        "~(~N)"                    # messages in threads with some unread
 #color index         color64         color230        "~S"                       # superseded messages
@@ -101,8 +101,8 @@ color quoted3       color124        color230
 color quoted4       color166        color230        
 
 color signature     color245        color230        
-color bold          color253        color230        
-color underline     color253        color230        
+color bold          color254        color230        
+color underline     color254        color230        
 color normal        color240        color230        
 #
 color body          color239        color230        "[;:][-o][)/(|]"    # emoticons
