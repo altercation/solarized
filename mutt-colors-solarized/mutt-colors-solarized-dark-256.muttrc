@@ -28,8 +28,8 @@ color normal        color240        color233
 color error         color124        color233        
 color tilde         color234        color233        
 color message       color37         color233        
-color markers       color124        color253        
-color attachment    color253        color233        
+color markers       color124        color254        
+color attachment    color254        color233        
 color search        color61         color233        
 #color status        J_black         J_status        
 color status        color240        color234        
