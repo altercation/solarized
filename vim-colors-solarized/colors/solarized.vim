@@ -100,7 +100,7 @@
 " base00    #586e76 11/7 bryellow 240 #585858 45 -07 -07  88 110 118 195  25  46
 " base0     #829494 12/6 brblue   244 #808080 60 -07 -02 130 148 148 178  13  58
 " base1     #8fa2a1 14/4 brcyan   245 #8a8a8a 65 -07 -02 143 162 161 178  12  63
-" base2     #e7e9de  7/7 white    254 #e4e4e4 92 -02  05 231 233 222  71   5  91
+" base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
 " base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
 " yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
 " orange    #c45221  9/3 brred    166 #d75f00 50  45  50 196  82  33  18  83  77
@@ -287,7 +287,7 @@ if has("gui_running") && g:solarized_degrade == 0
     let s:g_base00      = "#586e76"
     let s:g_base0       = "#829494"
     let s:g_base1       = "#8fa2a1"
-    let s:g_base2       = "#e7e9de"
+    let s:g_base2       = "#eee8d5"
     let s:g_base3       = "#fdf6e3"
     let s:g_yellow      = "#b58900"
     let s:g_orange      = "#c45221"
@@ -649,8 +649,8 @@ exe "hi StatusLine"     . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi StatusLineNC"   . s:fg_base1  .s:bg_base02 .s:fmt_none
 exe "hi VertSplit"      . s:fg_base0  .s:bg_base02 .s:fmt_none
 exe "hi Title"          . s:fg_orange .s:bg_none   .s:fmt_bold
-exe "hi Visual"         . s:fg_none   .s:bg_base02 .s:fmt_none
-exe "hi VisualNOS"      . s:fg_none   .s:bg_base02 .s:fmt_none
+exe "hi Visual"         . s:fg_none   .s:bg_base02 .s:fmt_stnd
+exe "hi VisualNOS"      . s:fg_none   .s:bg_base02 .s:fmt_stnd
 exe "hi WarningMsg"     . s:fg_red    .s:bg_none   .s:fmt_bold
 exe "hi WildMenu"       . s:fg_base1  .s:bg_base02 .s:fmt_none
 exe "hi Folded"         . s:fg_base0  .s:bg_base02 .s:fmt_undr   .s:sp_base03
@@ -855,11 +855,11 @@ hi link pandocLineBreak                 pandocEscapePair
 
 " Embedded Code 
 " ---------------------------------------------------------------------
-exe "hi pandocHakyllMetadataDelim"      .s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi pandocHakyllMetadata"           .s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi pandocHakyllMetadataKey"        .s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi pandocHakyllMetadata"           .s:fg_blue   .s:bg_none   .s:fmt_bold
-hi link pandocHakyllMetadataTitle       pandocHakyllMetadata
+exe "hi pandocMetadataDelim"            .s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi pandocMetadataKey"              .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
+hi link pandocMetadataTitle             pandocMetadata
 
 "}}}
 " License "{{{
