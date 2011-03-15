@@ -297,12 +297,9 @@ if has("gui_running") && g:solarized_degrade == 0
     let s:g_blue        = "#268bd2"
     let s:g_cyan        = "#2aa198"
     let s:g_green       = "#859900"
-"" yellow
+
     let s:g_base2       = "#eee8d5"
     let s:g_base3       = "#fdf6e3"
-"" blue
-    let s:g_base2       = "#e7e9de"
-    let s:g_base3       = "#f6f7ed"
 
 else
     " these colors are for non-gui vim when CSApprox is installed. CSApprox 
