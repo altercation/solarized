@@ -297,6 +297,12 @@ if has("gui_running") && g:solarized_degrade == 0
     let s:g_blue        = "#268bd2"
     let s:g_cyan        = "#2aa198"
     let s:g_green       = "#859900"
+"" yellow
+    let s:g_base2       = "#eee8d5"
+    let s:g_base3       = "#fdf6e3"
+"" blue
+    let s:g_base2       = "#e7e9de"
+    let s:g_base3       = "#f6f7ed"
 
 else
     " these colors are for non-gui vim when CSApprox is installed. CSApprox 
@@ -855,11 +861,11 @@ hi link pandocLineBreak                 pandocEscapePair
 
 " Embedded Code 
 " ---------------------------------------------------------------------
-exe "hi pandocHakyllMetadataDelim"      .s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi pandocHakyllMetadata"           .s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi pandocHakyllMetadataKey"        .s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi pandocHakyllMetadata"           .s:fg_blue   .s:bg_none   .s:fmt_bold
-hi link pandocHakyllMetadataTitle       pandocHakyllMetadata
+exe "hi pandocMetadataDelim"            .s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi pandocMetadataKey"              .s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi pandocMetadata"                 .s:fg_blue   .s:bg_none   .s:fmt_bold
+hi link pandocMetadataTitle             pandocMetadata
 
 "}}}
 " License "{{{
