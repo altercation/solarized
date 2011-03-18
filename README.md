@@ -1,7 +1,16 @@
 Solarized
 =========
 
-A precision colorscheme for machines and people.
+A precision colorscheme for machines and people. Available in formats for:
+
+* Vim
+* Adobe Photoshop Palette
+* GIMP Palette
+* Apple Color Picker Palette
+* iTerm2
+* OS X Terminal.app
+* Mutt mail reader colorscheme
+* Xresources / Xdefaults
 
 What
 ----
@@ -15,23 +24,28 @@ conditions.
 Features
 --------
 
-Selective contrast
-:   Solarized reduces brightness based contrast in general. Our display devices
+1. Selective contrast
+
+    Solarized reduces brightness based contrast in general. Our display devices
     today are capable of blasting off your retina with brightness and I found 
     my eyes growing tired using high contrast colorschemes. Solarized reduces 
     brightness contrast but, unlike many low contrast colorschemes, retains 
     contrasting hues (based on colorwheel relations) for syntax highlighting 
     readability.
 
-Dual mode: Dark/Light
-:   I switch between dark and light modes when editing text even when editing
-    different types of files.
+2. Dual mode: Dark/Light
+    I switch between dark and light modes when editing text even when editing
+    different types of files. Solarized retains the same selective contrast 
+    relationships and overall feel when switching between the light and dark 
+    background modes. A *lot* of thought, planning and testing has gone into 
+    making both modes feel like part of a unified colorscheme.
 
-Features/Benefits
---------
-Selective contrast / Reduced eye fatigue
-Colorwheel relations / Timeless design qualities
-16/5 palette
+3. 16/5 Palette modes
+    Solarized works as a sixteen color palette for compatibility with comment
+    terminal based applications / emulators. It has been designed to scale down 
+    to a variety of five color palettes (four base monotones and one accent 
+    color) for use in design work, such as web development.
+
 
 Why
 ---
