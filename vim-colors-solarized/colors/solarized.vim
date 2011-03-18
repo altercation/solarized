@@ -94,12 +94,12 @@
 " 
 " SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 " --------- ------- ---- -------  ----------- ---------- ----------- -----------
-" base03    #052a32  8/4 brblack  234 #1c1c1c 15 -11 -09   5  42  50 191  90  20
-" base02    #12353d  0/4 black    235 #262626 20 -11 -09  18  53  61 191  71  24
-" base01    #517077 10/7 brgreen  240 #585858 45 -10 -08  81 112 119 192  32  47
-" base00    #617c82 11/7 bryellow 241 #626262 50 -09 -07  97 124 130 192  26  51
-" base0     #809599 12/6 brblue   244 #808080 60 -07 -05 128 149 153 190  17  60
-" base1     #8fa1a5 14/4 brcyan   245 #8a8a8a 65 -06 -04 143 161 165 189  13  65
+" base03    #002a32  8/4 brblack  234 #1c1c1c 15 -12 -09   0  42  50 190 100  20
+" base02    #17353d  0/4 black    235 #262626 20 -10 -09  23  53  61 193  62  24
+" base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
+" base00    #617c82 11/7 bryellow 241 #626262 50 -09 -07  97 124 130 191  25  51
+" base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
+" base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
 " base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
 " base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
 " yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
@@ -280,13 +280,13 @@ let colors_name = "solarized"
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
 if has("gui_running") && g:solarized_degrade == 0
-    let s:g_back        = "#052a32"
-    let s:g_base03      = "#052a32"
-    let s:g_base02      = "#12353d"
-    let s:g_base01      = "#517077"
+    let s:g_back        = "#002a32"
+    let s:g_base03      = "#002a32"
+    let s:g_base02      = "#17353d"
+    let s:g_base01      = "#586e75;"
     let s:g_base00      = "#617c82"
-    let s:g_base0       = "#809599"
-    let s:g_base1       = "#8fa1a5"
+    let s:g_base0       = "#839496"
+    let s:g_base1       = "#93a1a1"
     let s:g_base2       = "#eee8d5"
     let s:g_base3       = "#fdf6e3"
     let s:g_yellow      = "#b58900"
@@ -297,9 +297,6 @@ if has("gui_running") && g:solarized_degrade == 0
     let s:g_blue        = "#268bd2"
     let s:g_cyan        = "#2aa198"
     let s:g_green       = "#859900"
-
-
-
 else
     " these colors are for non-gui vim when CSApprox is installed. CSApprox 
     " degrades the base colors poorly (bright blues instead of muted gray 
