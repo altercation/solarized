@@ -24,7 +24,7 @@ conditions.
 Features
 --------
 
-1. Selective contrast
+1. **Selective contrast**
 
     Solarized reduces brightness based contrast in general. Our display devices
     today are capable of blasting off your retina with brightness and I found 
@@ -33,14 +33,16 @@ Features
     contrasting hues (based on colorwheel relations) for syntax highlighting 
     readability.
 
-2. Dual mode: Dark/Light
+2. **Dual mode: Dark/Light**
+
     I switch between dark and light modes when editing text even when editing
     different types of files. Solarized retains the same selective contrast 
     relationships and overall feel when switching between the light and dark 
     background modes. A *lot* of thought, planning and testing has gone into 
     making both modes feel like part of a unified colorscheme.
 
-3. 16/5 Palette modes
+3. **16/5 Palette modes**
+
     Solarized works as a sixteen color palette for compatibility with comment
     terminal based applications / emulators. It has been designed to scale down 
     to a variety of five color palettes (four base monotones and one accent 
