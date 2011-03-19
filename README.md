@@ -26,14 +26,17 @@ Available in formats for:
 Download
 --------
 
-Downloads, screenshots and more information is available from the project 
-homepage: <http://ethanschoonover.com/solarized>.
+* **Project Page:** Downloads, screenshots and more information are available 
+  from the project page: <http://ethanschoonover.com/solarized>.
 
-The git repository is at: <https://github.com/altercation/solarized>.
+* **Git repo:** The full git repository is at: 
+  <https://github.com/altercation/solarized>.
 
-The vim-only colorscheme (Pathogen ready) is available at: <https://github.com/altercation/vim-colors-solarized>.
+* **Vim only:** The vim-only colorscheme (Pathogen ready) is available at: 
+  <https://github.com/altercation/vim-colors-solarized>.
 
-The mutt-only variants can be cloned from https://github.com/altercation/mutt-colors-solarized
+* **Mutt only:** The mutt-only variants can be cloned from 
+  https://github.com/altercation/mutt-colors-solarized
 
 Note that through the magic of 
 [git-subtree](https://github.com/apenwarr/git-subtree) these repositories are 
