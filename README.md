@@ -3,10 +3,10 @@ Solarized
 
 A precision colorscheme for machines and people. Available in formats for:
 
-* Vim (a repository with *just* the Vim colorscheme is available 
+* **Vim** (a repository with *just* the Vim colorscheme is available 
   [here](https://github.com/altercation/vim-colors-solarized), for use with 
   Pathogen, etc.)
-* Mutt e-mail client (a repository with *just* the Mutt colorscheme is 
+* **Mutt** e-mail client (a repository with *just* the Mutt colorscheme is 
   available [here](https://github.com/altercation/mutt-colors-solarized)
 * Adobe Photoshop Palette
 * GIMP Palette
@@ -15,16 +15,15 @@ A precision colorscheme for machines and people. Available in formats for:
 * OS X Terminal.app
 * Xresources / Xdefaults
 
-[vim-colorscheme-solarized]:
-
 What
 ----
 
-Solarized is a 16 color palette with several unique properties. It has been 
-designed with both precise L\*A\*B lightness relationships and a refined set of 
-hues based on fixed color wheel relationships. It has been tested extensively 
-in real world use on color calibrated displays and in a variety of lighting 
-conditions.
+Solarized is a sixteen color palette (eight monotones, eight accent colors) 
+designed for use with terminal and gui applications and has several unique 
+properties. It has been designed with both precise [CIELAB] lightness 
+relationships and a refined set of hues based on fixed color wheel 
+relationships. It has been tested extensively in real world use on color 
+calibrated displays and in a variety of lighting conditions.
 
 Features
 --------
@@ -32,13 +31,13 @@ Features
 1. **Selective contrast**
 
     Solarized reduces brightness based contrast in general. Our display devices
-    today are capable of blasting off your retina with brightness and I found 
-    my eyes growing tired using high contrast colorschemes. Solarized reduces 
-    brightness contrast but, unlike many low contrast colorschemes, retains 
-    contrasting hues (based on colorwheel relations) for syntax highlighting 
-    readability.
+    today are capable of blasting retina clean off with max brightness and 
+    I found my eyes growing tired using high contrast colorschemes, even with 
+    the brightness turned down. Solarized reduces *brightness contrast* but, 
+    unlike many low contrast colorschemes, retains *contrasting hues* (based on 
+    colorwheel relations) for syntax highlighting readability.
 
-2. **Dual mode: Dark/Light**
+2. **Dual modes: Dark/Light**
 
     I switch between dark and light modes when editing text even when editing
     different types of files. Solarized retains the same selective contrast 
@@ -53,6 +52,13 @@ Features
     to a variety of five color palettes (four base monotones and one accent 
     color) for use in design work, such as web development.
 
+4.  **Personality that doesn't crowd out the room**
+
+    Solarized can be used as a pure monotone palette, a five-up monotone+accent 
+    colorscheme or in full on sixteen color mode for full syntax highlighting.  
+    In every case it retains a strong identity but doesn't overwhelm. Like any 
+    good supporting actor, it keeps the story moving without chewing up the 
+    scenery.
 
 Why
 ---
@@ -60,3 +66,4 @@ Why
 How
 ---
 
+[CIELAB](http://en.wikipedia.org/wiki/Lab_color_space)
