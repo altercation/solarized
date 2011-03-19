@@ -4,7 +4,7 @@ Solarized
 **A precision colorscheme for machines and people.** Solarized is a sixteen 
 color palette (eight monotones, eight accent colors) designed for use with 
 terminal and gui applications and has several unique properties. It has been 
-designed with both precise [CIELAB] lightness relationships and a refined set 
+designed with both precise [CIELAB](http://en.wikipedia.org/wiki/Lab_color_space)  lightness relationships and a refined set 
 of hues based on fixed color wheel relationships. It has been tested 
 extensively in real world use on color calibrated displays and in a variety of 
 lighting conditions.
