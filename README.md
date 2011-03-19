@@ -3,11 +3,11 @@ Solarized
 
 A precision colorscheme for machines and people. Available in formats for:
 
-* **Vim** (a repository with *just* the Vim colorscheme is available 
-  [here](https://github.com/altercation/vim-colors-solarized), for use with 
+* **Vim** (a repository with *just* the Vim colorscheme is [available 
+  here](https://github.com/altercation/vim-colors-solarized), for use with 
   Pathogen, etc.)
 * **Mutt** e-mail client (a repository with *just* the Mutt colorscheme is 
-  available [here](https://github.com/altercation/mutt-colors-solarized)
+  [available here](https://github.com/altercation/mutt-colors-solarized))
 * Adobe Photoshop Palette
 * GIMP Palette
 * Apple Color Picker Palette
