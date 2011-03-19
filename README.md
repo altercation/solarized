@@ -1,7 +1,9 @@
 Solarized
 =========
 
-**A precision colorscheme for machines and people.** Solarized is a sixteen 
+**A precision colorscheme for machines and people.**
+
+Solarized is a sixteen 
 color palette (eight monotones, eight accent colors) designed for use with 
 terminal and gui applications and has several unique properties. It has been 
 designed with both precise [CIELAB](http://en.wikipedia.org/wiki/Lab_color_space)  lightness relationships and a refined set 
@@ -26,17 +28,20 @@ Available in formats for:
 Download
 --------
 
-* **Project Page:** Downloads, screenshots and more information are available 
-  from the project page: <http://ethanschoonover.com/solarized>.
+* **Project Page:**
+    Downloads, screenshots and more information are available 
+    from the project page: <http://ethanschoonover.com/solarized>.
 
-* **Git repo:** The full git repository is at: 
-  <https://github.com/altercation/solarized>.
+* **Git repo:**
+    The full git repository is at: <https://github.com/altercation/solarized>.
 
-* **Vim only:** The vim-only colorscheme (Pathogen ready) is available at: 
-  <https://github.com/altercation/vim-colors-solarized>.
+* **Vim only:**
+    The vim-only colorscheme (Pathogen ready) is available at: 
+    <https://github.com/altercation/vim-colors-solarized>.
 
-* **Mutt only:** The mutt-only variants can be cloned from 
-  https://github.com/altercation/mutt-colors-solarized
+* **Mutt only:**
+    The mutt-only variants can be cloned from 
+    https://github.com/altercation/mutt-colors-solarized
 
 Note that through the magic of 
 [git-subtree](https://github.com/apenwarr/git-subtree) these repositories are 
@@ -105,7 +110,7 @@ Installation
 Installation instructions for each version of the colorscheme are included in 
 the subdirectory README files. Note that for Vim (and possibly for Mutt) you 
 may want to clone the specific repository (for instance if you are using 
-Pathogen).  See the links at the top of this file.
+Pathogen). See the links at the top of this file.
 
 The colors
 ----------
@@ -128,6 +133,4 @@ The colors
     blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
     cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
     green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
-
-
 
