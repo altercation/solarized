@@ -1,7 +1,15 @@
 Solarized
 =========
 
-A precision colorscheme for machines and people. Available in formats for:
+**A precision colorscheme for machines and people.** Solarized is a sixteen 
+color palette (eight monotones, eight accent colors) designed for use with 
+terminal and gui applications and has several unique properties. It has been 
+designed with both precise [CIELAB] lightness relationships and a refined set 
+of hues based on fixed color wheel relationships. It has been tested 
+extensively in real world use on color calibrated displays and in a variety of 
+lighting conditions.
+
+Available in formats for:
 
 * **Vim** (a repository with *just* the Vim colorscheme is [available 
   here](https://github.com/altercation/vim-colors-solarized), for use with 
