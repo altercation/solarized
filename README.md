@@ -29,9 +29,9 @@ Download
 Downloads, screenshots and more information is available from the project 
 homepage: <http://ethanschoonover.com/solarized>.
 
-The git repository is at: https://github.com/altercation/solarized
+The git repository is at: <https://github.com/altercation/solarized>.
 
-The vim-only colorscheme (Pathogen ready) is available at: (https://github.com/altercation/vim-colors-solarized
+The vim-only colorscheme (Pathogen ready) is available at: <https://github.com/altercation/vim-colors-solarized>.
 
 The mutt-only variants can be cloned from https://github.com/altercation/mutt-colors-solarized
 
@@ -95,17 +95,12 @@ Features
     themselves, as with the monotone \*A\*B values, have been adjusted within 
     a small range to achieve the most pleasing combination of colors.
 
-Download
---------
-
-
-
 Installation
 ------------
 
-Installation instructions for each version of the colorscheme is included in 
-the subdirectory's README. Note that for Vim (and possibly for Mutt) you may 
-want to clone the specific repository (for instance if you are using Pathogen).  
-See the links at the top of this file.
+Installation instructions for each version of the colorscheme are included in 
+the subdirectory README files. Note that for Vim (and possibly for Mutt) you 
+may want to clone the specific repository (for instance if you are using 
+Pathogen).  See the links at the top of this file.
 
 [CIELAB](http://en.wikipedia.org/wiki/Lab_color_space)
