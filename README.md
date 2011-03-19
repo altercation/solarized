@@ -48,10 +48,11 @@ What
 
 Solarized is a sixteen color palette (eight monotones, eight accent colors) 
 designed for use with terminal and gui applications and has several unique 
-properties. It has been designed with both precise [CIELAB] lightness 
-relationships and a refined set of hues based on fixed color wheel 
-relationships. It has been tested extensively in real world use on color 
-calibrated displays and in a variety of lighting conditions.
+properties. It has been designed with both precise 
+[CIELAB](http://en.wikipedia.org/wiki/Lab_color_space) lightness relationships 
+and a refined set of hues based on fixed color wheel relationships. It has been 
+tested extensively in real world use on color calibrated displays and in 
+a variety of lighting conditions.
 
 Features
 --------
@@ -106,4 +107,4 @@ the subdirectory README files. Note that for Vim (and possibly for Mutt) you
 may want to clone the specific repository (for instance if you are using 
 Pathogen).  See the links at the top of this file.
 
-[CIELAB](http://en.wikipedia.org/wiki/Lab_color_space)
+
