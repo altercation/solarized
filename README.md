@@ -12,8 +12,8 @@ and a refined set of hues based on fixed color wheel relationships. It has been
 tested extensively in real world use on color calibrated displays and in 
 a variety of lighting conditions.
 
-![solarized monotones](images/solarized-monotones.png)
-![solarized accents](images/solarized-accentcolors.png)
+![solarized monotones](https://github.com/altercation/solarized/raw/master/images/solarized-monotones.png)
+![solarized accents](https://github.com/altercation/solarized/raw/master/images/solarized-accentcolors.png)
 
 Available in formats for:
 
