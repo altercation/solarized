@@ -91,20 +91,23 @@
 " ---------------------------------------------------------------------
 "
 " Download palettes and files from: http://ethanschoonover.com/solarized
-" 
+"     let s:g_back        = "#002b36" " 12 12
+    let s:g_base03      = "#"
+    let s:g_base02      = "#"
+
 " SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 " --------- ------- ---- -------  ----------- ---------- ----------- -----------
-" base03    #002a32  8/4 brblack  234 #1c1c1c 15 -12 -09   0  42  50 190 100  20
-" base02    #17353d  0/4 black    235 #262626 20 -10 -09  23  53  61 193  62  24
+" base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
+" base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
 " base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
-" base00    #617c82 11/7 bryellow 241 #626262 50 -09 -07  97 124 130 191  25  51
+" base00    #657b83 11/7 bryellow 241 #626262 50 -07 -07 101 123 131 195  23  51
 " base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
 " base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
 " base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
 " base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
 " yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
-" orange    #c45221  9/3 brred    166 #d75f00 50  45  50 196  82  33  18  83  77
-" red       #cd1e1a  1/1 red      124 #af0000 45  65  50 205  30  26   1  87  80
+" orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
+" red       #d30102  1/1 red      124 #af0000 45  70  60 211   1   2   0  99  83
 " magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
 " violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
 " blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
@@ -280,18 +283,18 @@ let colors_name = "solarized"
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
 if has("gui_running") && g:solarized_degrade == 0
-    let s:g_back        = "#002a32"
-    let s:g_base03      = "#002a32"
-    let s:g_base02      = "#17353d"
-    let s:g_base01      = "#586e75;"
-    let s:g_base00      = "#617c82"
+    let s:g_back        = "#002b36"
+    let s:g_base03      = "#002b36"
+    let s:g_base02      = "#073642"
+    let s:g_base01      = "#586e75"
+    let s:g_base00      = "#657b83"
     let s:g_base0       = "#839496"
     let s:g_base1       = "#93a1a1"
     let s:g_base2       = "#eee8d5"
     let s:g_base3       = "#fdf6e3"
     let s:g_yellow      = "#b58900"
-    let s:g_orange      = "#c45221"
-    let s:g_red         = "#cd1e1a"
+    let s:g_orange      = "#cb4b16"
+    let s:g_red         = "#d30102"
     let s:g_magenta     = "#d33682"
     let s:g_violet      = "#6c71c4"
     let s:g_blue        = "#268bd2"
@@ -679,6 +682,9 @@ exe "hi lCursor"        . s:fg_none   .s:bg_none   .s:fmt_stnd
 exe "hi MatchParen"     . s:fg_red    .s:bg_base01 .s:fmt_bold
 
 "}}}
+" Extended highlighting "{{{
+" ---------------------------------------------------------------------
+"}}}
 " vim syntax highlighting "{{{
 " ---------------------------------------------------------------------
 "exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_none
@@ -705,6 +711,37 @@ exe "hi htmlEndTag"     . s:fg_red    .s:bg_none   .s:fmt_none
 " ---------------------------------------------------------------------
 exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
 "}}}
+" ruby highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
+hi rubyRegexp                  guifg=#B18A3D      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
+hi rubyRegexpDelimiter         guifg=#FF8000      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
+hi rubyEscape                  guifg=white        guibg=NONE      gui=NONE      ctermfg=cyan           ctermbg=NONE      cterm=NONE
+hi rubyInterpolationDelimiter  guifg=#00A0A0      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE
+hi rubyControl                 guifg=#6699CC      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE  "and break, etc
+"hi rubyGlobalVariable          guifg=#FFCCFF      guibg=NONE      gui=NONE      ctermfg=lightblue      ctermbg=NONE      cterm=NONE  "yield
+hi rubyStringDelimiter         guifg=#336633      guibg=NONE      gui=NONE      ctermfg=lightgreen     ctermbg=NONE      cterm=NONE
+"rubyInclude
+"rubySharpBang
+"rubyAccess
+"rubyPredefinedVariable
+"rubyBoolean
+"rubyClassVariable
+"rubyBeginEnd
+"rubyRepeatModifier
+"hi link rubyArrayDelimiter    Special  " [ , , ]
+"rubyCurlyBlock  { , , }
+
+hi link rubyClass             Keyword 
+hi link rubyModule            Keyword 
+hi link rubyKeyword           Keyword 
+hi link rubyOperator          Operator
+hi link rubyIdentifier        Identifier
+hi link rubyInstanceVariable  Identifier
+hi link rubyGlobalVariable    Identifier
+hi link rubyClassVariable     Identifier
+hi link rubyConstant          Type  
+"}}}
 " haskell syntax highlighting"{{{
 " ---------------------------------------------------------------------
 " For use with syntax/haskell.vim : Haskell Syntax File 
@@ -717,6 +754,12 @@ exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
 let hs_highlight_boolean=1
 " highlight delims, see the plugin referenced above
 let hs_highlight_delimiters=1
+
+exe "hi cPreCondit". s:fg_orange.s:bg_none   .s:fmt_none
+
+exe "hi VarId"    . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi ConId"    . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi hsImport" . s:fg_magenta.s:bg_none   .s:fmt_none
 
 exe "hi hsStructure"        . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi hs_hlFunctionName"  . s:fg_blue   .s:bg_none
@@ -799,9 +842,9 @@ exe "hi pandocSubscriptTable"               .s:fg_ptable.s:bg_none  .s:fmt_none
 
 " Headings
 " ---------------------------------------------------------------------
-let s:fg_phead = s:fg_magenta
+let s:fg_phead = s:fg_orange
 exe "hi pandocHeading"                      .s:fg_phead .s:bg_none.s:fmt_bold
-exe "hi pandocHeadingMarker"                .s:fg_blue  .s:bg_none.s:fmt_bold
+exe "hi pandocHeadingMarker"                .s:fg_yellow.s:bg_none.s:fmt_bold
 exe "hi pandocEmphasisHeading"              .s:fg_phead .s:bg_none.s:fmt_bldi
 exe "hi pandocEmphasisNestedHeading"        .s:fg_phead .s:bg_none.s:fmt_bldi
 exe "hi pandocStrongEmphasisHeading"        .s:fg_phead .s:bg_none.s:fmt_bold
