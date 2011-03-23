@@ -56,13 +56,18 @@ repositories:
 *   **Vim only:**
 
     The vim-only colorscheme (Pathogen ready) is available at: 
-    <https://github.com/altercation/vim-colors-solarized>. You can also download 
-    it from [vim.org](http://vim.org/scripturlhere).
+    <https://github.com/altercation/vim-colors-solarized>.
+
+        $ git clone git://github.com/altercation/vim-colors-solarized.git
+    
+    You can also download it from [vim.org](http://vim.org/scripturlhere).
 
 *   **Mutt only:**
 
     The mutt-only variants can be cloned from 
     <https://github.com/altercation/mutt-colors-solarized>
+
+        $ git clone git://github.com/altercation/mutt-colors-solarized.git
 
 *   **Canonical Project Page:**
 
