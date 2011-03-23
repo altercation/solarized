@@ -579,8 +579,8 @@ exe "hi Normal"         . s:fg_base0  .s:bg_back   .s:fmt_none
 exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_none
 "      *Comment         any comment
 
-exe "hi Constant"       . s:fg_green  .s:bg_none   .s:fmt_none
-exe "hi String"         . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi Constant"       . s:fg_cyan   .s:bg_none   .s:fmt_none
+"exe "hi String"         . s:fg_yellow .s:bg_none   .s:fmt_none
 "      *Constant        any constant
 "       String          a string constant: "this is a string"
 "       Character       a character constant: 'c', '\n'
@@ -592,7 +592,7 @@ exe "hi Identifier"     . s:fg_blue   .s:bg_none   .s:fmt_none
 "      *Identifier      any variable name
 "       Function        function name (also: methods for classes)
 "
-exe "hi Statement"      . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi Statement"      . s:fg_green  .s:bg_none   .s:fmt_none
 "      *Statement       any statement
 "       Conditional     if, then, else, endif, switch, etc.
 "       Repeat          for, do, while, etc.
@@ -601,14 +601,14 @@ exe "hi Statement"      . s:fg_cyan   .s:bg_none   .s:fmt_none
 "       Keyword         any other keyword
 "       Exception       try, catch, throw
 
-exe "hi PreProc"        . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi PreProc"        . s:fg_orange .s:bg_none   .s:fmt_none
 "      *PreProc         generic Preprocessor
 "       Include         preprocessor #include
 "       Define          preprocessor #define
 "       Macro           same as Define
 "       PreCondit       preprocessor #if, #else, #endif, etc.
 
-exe "hi Type"           . s:fg_orange .s:bg_none   .s:fmt_none
+exe "hi Type"           . s:fg_yellow .s:bg_none   .s:fmt_none
 "      *Type            int, long, char, etc.
 "       StorageClass    static, register, volatile, etc.
 "       Structure       struct, union, enum, etc.
@@ -631,7 +631,7 @@ exe "hi Ignore"         . s:fg_none   .s:bg_none   .s:fmt_none
 exe "hi Error"          . s:fg_red    .s:bg_none   .s:fmt_bold
 "      *Error           any erroneous construct
 
-exe "hi Todo"           . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi Todo"           . s:fg_magenta.s:bg_none   .s:fmt_bold
 "      *Todo            anything that needs extra attention; mostly the
 "                       keywords TODO FIXME and XXX
 "
@@ -687,40 +687,56 @@ exe "hi MatchParen"     . s:fg_red    .s:bg_base01 .s:fmt_bold
 "}}}
 " vim syntax highlighting "{{{
 " ---------------------------------------------------------------------
-"exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_none
-"exe "hi vimVar"         . s:fg_cyan   .s:bg_none   .s:fmt_none
-"exe "hi helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
+exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi vimCommentString".s:fg_violet .s:bg_none   .s:fmt_none
+hi link vimVar Identifier
+hi link vimFunc Function
+hi link vimUserFunc Function
+exe "hi vimCommand"     . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi vimCmdSep"      . s:fg_blue   .s:bg_none   .s:fmt_bold
+exe "hi helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
+hi link helpSpecial Special
 "exe "hi helpSpecial"    . s:fg_yellow .s:bg_none   .s:fmt_none
-"exe "hi helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
-"exe "hi helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
-"exe "hi helpVim"       . s:fg_magenta.s:bg_none   .s:fmt_none
-"exe "hi helpHyperTextJump".s:fg_blue  .s:bg_none   .s:fmt_undr
-"exe "hi helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
-"exe "hi vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
-"exe "hi vimSynMtchOpt". s:fg_yellow .s:bg_none   .s:fmt_none
-"exe "hi vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi helpVim"       . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi helpHyperTextJump".s:fg_blue  .s:bg_none   .s:fmt_undr
+exe "hi helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
+exe "hi vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
+exe "hi vimSynMtchOpt". s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
+exe "hi vimHiLink"      . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi vimHiGroup"     . s:fg_blue   .s:bg_none   .s:fmt_none
+exe "hi vimGroup"       . s:fg_blue   .s:bg_none   .s:fmt_undb
 "}}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi htmlTag"        . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi htmlTagN"       . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi htmlTagName"    . s:fg_red    .s:bg_none   .s:fmt_none
-exe "hi htmlEndTag"     . s:fg_red    .s:bg_none   .s:fmt_none
+exe "hi htmlTag"        . s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi htmlEndTag"     . s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi htmlTagN"       . s:fg_base1  .s:bg_none   .s:fmt_bold
+exe "hi htmlTagName"    . s:fg_blue   .s:bg_none   .s:fmt_bold
+exe "hi htmlSpecialTagName". s:fg_blue  .s:bg_none .s:fmt_ital
+exe "hi htmlArg"        . s:fg_base00 .s:bg_none   .s:fmt_none
+exe "hi javaScript"     . s:fg_yellow .s:bg_none   .s:fmt_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
+exe "hi perlVarPlain" . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi perlStatementFileDesc"    . s:fg_cyan   .s:bg_back   .s:fmt_none
+
+"}}}
+" tex highlighting "{{{
+" ---------------------------------------------------------------------
+exe "hi texStatement"   . s:fg_cyan   .s:bg_back   .s:fmt_none
+exe "hi texMathZoneX"   . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi texMathMatcher" . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi texMathMatcher" . s:fg_yellow .s:bg_back   .s:fmt_none
+exe "hi texRefLabel"    . s:fg_yellow .s:bg_back   .s:fmt_none
 "}}}
 " ruby highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi perlHereDoc"    . s:fg_base1  .s:bg_back   .s:fmt_none
-hi rubyRegexp                  guifg=#B18A3D      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
-hi rubyRegexpDelimiter         guifg=#FF8000      guibg=NONE      gui=NONE      ctermfg=brown          ctermbg=NONE      cterm=NONE
-hi rubyEscape                  guifg=white        guibg=NONE      gui=NONE      ctermfg=cyan           ctermbg=NONE      cterm=NONE
-hi rubyInterpolationDelimiter  guifg=#00A0A0      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE
-hi rubyControl                 guifg=#6699CC      guibg=NONE      gui=NONE      ctermfg=blue           ctermbg=NONE      cterm=NONE  "and break, etc
-"hi rubyGlobalVariable          guifg=#FFCCFF      guibg=NONE      gui=NONE      ctermfg=lightblue      ctermbg=NONE      cterm=NONE  "yield
-hi rubyStringDelimiter         guifg=#336633      guibg=NONE      gui=NONE      ctermfg=lightgreen     ctermbg=NONE      cterm=NONE
+exe "hi rubyDefine"     . s:fg_base1  .s:bg_back   .s:fmt_bold
 "rubyInclude
 "rubySharpBang
 "rubyAccess
@@ -732,15 +748,15 @@ hi rubyStringDelimiter         guifg=#336633      guibg=NONE      gui=NONE      
 "hi link rubyArrayDelimiter    Special  " [ , , ]
 "rubyCurlyBlock  { , , }
 
-hi link rubyClass             Keyword 
-hi link rubyModule            Keyword 
-hi link rubyKeyword           Keyword 
-hi link rubyOperator          Operator
-hi link rubyIdentifier        Identifier
-hi link rubyInstanceVariable  Identifier
-hi link rubyGlobalVariable    Identifier
-hi link rubyClassVariable     Identifier
-hi link rubyConstant          Type  
+"hi link rubyClass             Keyword 
+"hi link rubyModule            Keyword 
+"hi link rubyKeyword           Keyword 
+"hi link rubyOperator          Operator
+"hi link rubyIdentifier        Identifier
+"hi link rubyInstanceVariable  Identifier
+"hi link rubyGlobalVariable    Identifier
+"hi link rubyClassVariable     Identifier
+"hi link rubyConstant          Type  
 "}}}
 " haskell syntax highlighting"{{{
 " ---------------------------------------------------------------------
