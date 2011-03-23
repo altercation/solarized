@@ -3,7 +3,7 @@ Solarized
 
 ## Precision colors for machines and people
 
-[![solarized dualmode](img/solarized-yinyang.png)](#features)\
+[![solarized dualmode](blob/master/img/solarized-yinyang.png)](#features)\
 
 
 Solarized is a sixteen 
