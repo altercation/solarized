@@ -1,21 +1,34 @@
+---
+title: Solarized
+subtitle: Precision colors for machines and people
+author: Ethan Schoonover
+tags: test, testing, test123
+colors: light yellow
+created: March 15, 2011
+lastchanged: March 21, 2011
+---
+
 Solarized
 =========
 
-**Precision colors for machines and people**
+## Precision colors for machines and people
+
+[![solarized dualmode](/img/solarized-yinyang.png)](#features)\
+
 
 Solarized is a sixteen 
 color palette (eight monotones, eight accent colors) designed for use with 
-terminal and gui applications. It has several unique properties. I designed 
-this colorscheme with both precise 
+terminal and gui applications. It has several [unique properties](#features).
+I designed this colorscheme with both precise 
 [CIELAB](http://en.wikipedia.org/wiki/Lab_color_space) lightness relationships 
 and a refined set of hues based on fixed color wheel relationships. It has been 
-tested extensively in real world use on color calibrated displays and in 
-a variety of lighting conditions.
+tested extensively in real world use on color calibrated displays (as well as 
+uncalibrated/intentionally miscalibrated displays) and in a variety of lighting 
+conditions.
 
-![solarized monotones](https://github.com/altercation/solarized/raw/master/images/solarized-monotones.png)
-![solarized accents](https://github.com/altercation/solarized/raw/master/images/solarized-accentcolors.png)
+![solarized palette](/img/solarized-palette.png)\
 
-Available in formats for:
+Currently available in formats for (cf [screenshots](#screenshots) below):
 
 * **Vim** (the Vim-only portion of Solarized is [available 
 here](https://github.com/altercation/vim-colors-solarized), for use with 
@@ -29,76 +42,85 @@ here](https://github.com/altercation/mutt-colors-solarized))
 * OS X Terminal.app
 * Xresources / Xdefaults
 
+Don't see the application you want to use it in? Download the palettes (or pull 
+the values from the table below) and create your own. Submit it back and I'll 
+happily note the contribution and include it on this page.
+
 Download
-========
+--------
 
-**Project Page:**
-:   Downloads, screenshots and more information are available from the project 
-    page: <http://ethanschoonover.com/solarized>.
+### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.tgz)
 
-**Git repo:**
-:   The full git repository is at: <https://github.com/altercation/solarized>.
+Or use the following links to access application specific downloads and git 
+repositories:
 
-**Vim only:**
-:   The vim-only colorscheme (Pathogen ready) is available at: 
-    <https://github.com/altercation/vim-colors-solarized>.
+*   **Git repo:**
 
-**Mutt only:**
-:   The mutt-only variants can be cloned from 
-    https://github.com/altercation/mutt-colors-solarized
+    The full git repository is at: <https://github.com/altercation/solarized>
+
+*   **Vim only:**
+
+    The vim-only colorscheme (Pathogen ready) is available at: 
+    <https://github.com/altercation/vim-colors-solarized>. You can also download 
+    it from [vim.org](http://vim.org/scripturlhere).
+
+*   **Mutt only:**
+
+    The mutt-only variants can be cloned from 
+    <https://github.com/altercation/mutt-colors-solarized>
+
+*   **Canonical Project Page:**
+
+    Downloads, screenshots and more information are always available from the
+    project page: <http://ethanschoonover.com/solarized>
 
 Note that through the magic of 
 [git-subtree](https://github.com/apenwarr/git-subtree) these repositories are 
 all kept in sync, so you can pull any of them and get the most up-to-date 
 version.
 
-What
-----
-
-Solarized is a sixteen color palette (eight monotones, eight accent colors) 
-designed for use with terminal and gui applications and has several unique 
-properties. It has been designed with both precise 
-[CIELAB](http://en.wikipedia.org/wiki/Lab_color_space) lightness relationships 
-and a refined set of hues based on fixed color wheel relationships. It has been 
-tested extensively in real world use on color calibrated displays and in 
-a variety of lighting conditions.
-
 Features
 --------
 
 1. **Selective contrast**
 
-    Solarized reduces brightness based contrast in general. Modern display 
-    devices are capable of blasting your retina clean off with max brightness 
-    and I found my eyes growing tired using high contrast colorschemes, even 
-    with the brightness turned down. Solarized reduces *brightness contrast* 
-    but, unlike many low contrast colorschemes, retains *contrasting hues* 
-    (based on colorwheel relations) for syntax highlighting readability.
+    On a sunny summer day I love to read a book outside. Not right in the sun; 
+    that's too bright. I'll hunt for a shady spot under a tree. The shaded 
+    paper contrasts with the crisp text nicely. If you were to actually measure 
+    the contrast between the two, you'd find it is much lower than black text 
+    on a white background (or white on black) on your display device of choice.
+    Black text on white from a computer display is akin to reading a book in 
+    direct sunlight and tires the eye.
 
-2. **Dual modes: Dark/Light**
+    ![solarized selective contrast](/img/solarized-selcon.png)\
 
-    I switch between dark and light modes when editing text even when editing
-    different types of files. Solarized retains the same selective contrast 
-    relationships and overall feel when switching between the light and dark 
-    background modes. A *lot* of thought, planning and testing has gone into 
-    making both modes feel like part of a unified colorscheme.
+    Solarized reduces *brightness contrast* but, unlike many low contrast 
+    colorschemes, retains *contrasting hues* (based on colorwheel relations) 
+    for syntax highlighting readability.
 
-3. **16/5 Palette modes**
+2. **Both sides of the force**
+
+    ![solarized dualmode](/img/solarized-dualmode.png)\
+
+    I often switch between dark and light modes when editing text and code.
+    Solarized retains the same selective contrast relationships and overall 
+    feel when switching between the light and dark background modes. A *lot* of 
+    thought, planning and testing has gone into making both modes feel like 
+    part of a unified colorscheme.
+
+3. **16/5 palette modes**
+
+    ![solarized palettes](/img/solarized-165.png)\
 
     Solarized works as a sixteen color palette for compatibility with common
     terminal based applications / emulators. In addition, it has been carefull 
     designed to scale down to a variety of five color palettes (four base 
     monotones plus one accent color) for use in design work such as web design.
+    In every case it retains a strong personality but doesn't overwhelm.
 
-4.  **Personality that doesn't crowd out the room**
+5.  **Precision, symmetry**
 
-    Solarized can be used as a pure monotone palette, a five-up monotone+accent 
-    colorscheme or in full on sixteen color mode for full syntax highlighting.  
-    In every case it retains a strong identity but doesn't overwhelm. Like any 
-    good supporting actor, it keeps the story moving without chewing up the 
-    scenery.
-
-5.  **Precision**
+    ![solarized symmetry](/img/solarized-sym.png)\
 
     The monotones have symmetric CIELAB lightness differences, so switching 
     from dark to light mode retains the same perceived contrast in brightness 
@@ -108,6 +130,48 @@ Features
     themselves, as with the monotone \*A\*B values, have been adjusted within 
     a small range to achieve the most pleasing combination of colors.
 
+    This makes colorscheme inversion trivial. Here, for instance, is a sass 
+    (scss) snippet that inverts solarized based on the class of the html tag 
+    (e.g. `<html class="dark red">` to give a dark background with red accent):
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ {.scss .numberLines}
+    $base03:    #002b36;
+    $base02:    #073642;
+    $base01:    #586e75;
+    $base00:    #657b83;
+    $base0:     #839496;
+    $base1:     #93a1a1;
+    $base2:     #eee8d5;
+    $base3:     #fdf6e3;
+    $yellow:    #b58900;
+    $orange:    #cb4b16;
+    $red:       #d30102;
+    $magenta:   #d33682;
+    $violet:    #6c71c4;
+    $blue:      #268bd2;
+    $cyan:      #2aa198;
+    $green:     #859900;
+    @mixin rebase($rebase03,$rebase02,$rebase01,$rebase00,$rebase0,$rebase1,$rebase2,$rebase3) 
+    {
+        background-color:$rebase03;
+        color:$rebase0;
+        * { color:$rebase0; }
+        h1,h2,h3,h4,h5,h6 { color:$rebase1; border-color: $rebase0; }
+        a, a:active, a:visited { color: $rebase1; }
+    }
+    @mixin accentize($accent) {
+        a, a:active, a:visited, code.url { color: $accent; }
+        h1,h2,h3,h4,h5,h6 {color:$accent}
+    }
+    /* light is default mode, so pair with general html definition */
+    html, .light { @include rebase($base3,$base2,$base1,$base0,$base00,$base01,$base02,$base03)}
+    .dark  { @include rebase($base03,$base02,$base01,$base00,$base0,$base1,$base2,$base3)}
+    html * {
+        color-profile: sRGB;
+        rendering-intent: auto;
+    }
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Installation
 ------------
 
@@ -116,25 +180,98 @@ the subdirectory README files. Note that for Vim (and possibly for Mutt) you
 may want to clone the specific repository (for instance if you are using 
 Pathogen). See the links at the top of this file.
 
-The colors
+Font Samples
+------------
+
+Solarized has been designed to handle fonts of various weights and retain 
+readability, from the classic Terminus to the beefy Menlo.
+
+![font samples - light](/img/solarized-fontsamples-light.png)
+![font samples - dark](/img/solarized-fontsamples-dark.png)
+
+Clockwise from upper left: Menlo, Letter Gothic, Terminus, Andale Mono
+
+Screenshots
+-----------
+
+Click to view.
+
+### Mutt
+
+[![mutt dark](/img/solarized-screen-mutt-dark-th.png)](/img/solarized-screen-mutt-dark.png)
+[![mutt light](/img/solarized-screen-mutt-light-th.png)](/img/solarized-screen-mutt-light.png)
+
+### C
+
+[![c dark](/img/solarized-screen-c-lettergothic18-dark-th.png)](/img/solarized-screen-c-lettergothic18-dark.png)
+[![c light](/img/solarized-screen-c-lettergothic18-light-th.png)](/img/solarized-screen-c-lettergothic18-light.png)
+
+### Haskell
+
+[![haskell dark](/img/solarized-screen-haskell-lettergothic18-dark-th.png)](/img/solarized-screen-haskell-lettergothic18-dark.png)
+[![haskell light](/img/solarized-screen-haskell-lettergothic18-light-th.png)](/img/solarized-screen-haskell-lettergothic18-light.png)
+
+### HTML
+
+[![html dark](/img/solarized-screen-html-lettergothic18-dark-th.png)](/img/solarized-screen-html-lettergothic18-dark.png)
+[![html light](/img/solarized-screen-html-lettergothic18-light-th.png)](/img/solarized-screen-html-lettergothic18-light.png)
+
+### Java
+
+[![java dark](/img/solarized-screen-java-lettergothic18-dark-th.png)](/img/solarized-screen-java-lettergothic18-dark.png)
+[![java light](/img/solarized-screen-java-lettergothic18-light-th.png)](/img/solarized-screen-java-lettergothic18-light.png)
+
+### Pandoc
+
+[![pandoc dark](/img/solarized-screen-pandoc-lettergothic18-dark-th.png)](/img/solarized-screen-pandoc-lettergothic18-dark.png)
+[![pandoc light](/img/solarized-screen-pandoc-lettergothic18-light-th.png)](/img/solarized-screen-pandoc-lettergothic18-light.png)
+
+### Perl
+
+[![perl dark](/img/solarized-screen-perl-lettergothic18-dark-th.png)](/img/solarized-screen-perl-lettergothic18-dark.png)
+[![perl light](/img/solarized-screen-perl-lettergothic18-light-th.png)](/img/solarized-screen-perl-lettergothic18-light.png)
+
+### Python
+
+[![python dark](/img/solarized-screen-python-lettergothic18-dark-th.png)](/img/solarized-screen-python-lettergothic18-dark.png)
+[![python light](/img/solarized-screen-python-lettergothic18-light-th.png)](/img/solarized-screen-python-lettergothic18-light.png)
+
+### Ruby
+
+[![ruby dark](/img/solarized-screen-ruby-lettergothic18-dark-th.png)](/img/solarized-screen-ruby-lettergothic18-dark.png)
+[![ruby light](/img/solarized-screen-ruby-lettergothic18-light-th.png)](/img/solarized-screen-ruby-lettergothic18-light.png)
+
+### TeX
+
+[![tex dark](/img/solarized-screen-tex-lettergothic18-dark-th.png)](/img/solarized-screen-tex-lettergothic18-dark.png)
+[![tex light](/img/solarized-screen-tex-lettergothic18-light-th.png)](/img/solarized-screen-tex-lettergothic18-light.png)
+
+
+The Values
 ----------
 
-    SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   CIELAB     RGB         HSB
-    --------- ------- ---- -------  ----------- ---------- ----------- -----------
-    base03    #002a32  8/4 brblack  234 #1c1c1c 15 -12 -09   0  42  50 190 100  20
-    base02    #17353d  0/4 black    235 #262626 20 -10 -09  23  53  61 193  62  24
-    base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
-    base00    #617c82 11/7 bryellow 241 #626262 50 -09 -07  97 124 130 191  25  51
-    base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
-    base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
-    base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
-    base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
-    yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
-    orange    #c45221  9/3 brred    166 #d75f00 50  45  50 196  82  33  18  83  77
-    red       #cd1e1a  1/1 red      124 #af0000 45  65  50 205  30  26   1  87  80
-    magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
-    violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
-    blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
-    cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
-    green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
+L\*A\*B values are canonical (White D65, Reference D50), other values are 
+matched in sRGB space. Hex values are assumed to be presented as 
+direct-to-display (or direct to color-management system) device values 
+(worst case scenario) as they exist without colorspace data in most 
+configuration files. I've tested them in this configuration. When available, 
+they should be tagged as sRGB values (for instance in CSS3).
 
+SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
+--------- ------- ---- -------  ----------- ---------- ----------- -----------
+base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
+base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
+base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
+base00    #657b83 11/7 bryellow 241 #626262 50 -07 -07 101 123 131 195  23  51
+base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
+base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
+base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
+base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
+yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
+orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
+red       #d30102  1/1 red      124 #af0000 45  70  60 211   1   2   0  99  83
+magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
+violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
+blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
+cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
+green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60

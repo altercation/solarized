@@ -1,0 +1,24 @@
+% Time-stamp: <2004/04/06, 16:46:43 (EST), maverick, test.tex>
+\subsection{Strict diagonal-dominance}
+Suppose we are given a matrix $A=L+D$, where $L$ is a Laplacian and
+$D$ is a nonnegative diagonal matrix, for which we seek to construct a
+preconditioner.
+ 
+We may construct a Support Tree Preconditioner, $B =
+\begin{pmatrix} T & U\\U\TT & W\end{pmatrix}$ for $L$ and to use $B'
+=\begin{pmatrix} T & U \\U\TT & W+D\end{pmatrix}$ as a preconditioner
+for $A$.  If we let $Q = W - U\TT T\IV U$, by Lemma~\ref{lem:stcg} it
+suffices to bound $\sigma(A/Q+D)$ and $\sigma(Q+D/A)$.
+
+\begin{proposition}\label{prop:XZ-YZ}
+If $X$, $Y$, and $Z$ are spsd matrices of the same size then 
+$\sigma(X+Z/Y+Z) \leq \max\{\sigma(X/Y),\, 1\}$.
+\end{proposition}
+
+\Proof We have $\sigma(X+Z/Y+Z) = 
+\min\{\tau \mid \forall\vv{x},\, \tau\cdot \vv{x}\TT (Y+Z)\vv{x} \geq
+       \vv{x}\TT(X+Z)\vv{x}\} = 
+\min\{\tau \mid \forall\vv{x},\, (\tau-1)\cdot \vv{x}\TT Z\vv{x} + 
+      \tau \cdot\vv{x}\TT Y\vv{x} \geq \vv{x}\TT X\vv{x}\} \leq 
+\max\{1,\,\sigma(X/Y)\}$.\QED
+
