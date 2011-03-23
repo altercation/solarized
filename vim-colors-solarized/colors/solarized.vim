@@ -576,7 +576,7 @@ exe "let s:fmt_stnd     = ' cterm=NONE".s:s." gui=NONE".s:s." term=NONE".s:s."'"
 
 exe "hi Normal"         . s:fg_base0  .s:bg_back   .s:fmt_none
 
-exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_ital
 "      *Comment         any comment
 
 exe "hi Constant"       . s:fg_cyan   .s:bg_none   .s:fmt_none
@@ -687,7 +687,7 @@ exe "hi MatchParen"     . s:fg_red    .s:bg_base01 .s:fmt_bold
 "}}}
 " vim syntax highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_none
+exe "hi vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
 exe "hi vimCommentString".s:fg_violet .s:bg_none   .s:fmt_none
 hi link vimVar Identifier
 hi link vimFunc Function
@@ -776,6 +776,7 @@ exe "hi cPreCondit". s:fg_orange.s:bg_none   .s:fmt_none
 exe "hi VarId"    . s:fg_blue   .s:bg_none   .s:fmt_none
 exe "hi ConId"    . s:fg_yellow .s:bg_none   .s:fmt_none
 exe "hi hsImport" . s:fg_magenta.s:bg_none   .s:fmt_none
+exe "hi hsString" . s:fg_base00 .s:bg_none   .s:fmt_none
 
 exe "hi hsStructure"        . s:fg_cyan   .s:bg_none   .s:fmt_none
 exe "hi hs_hlFunctionName"  . s:fg_blue   .s:bg_none
