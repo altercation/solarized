@@ -3,14 +3,21 @@ Solarized Colorscheme for Vim
 
 Developed by Ethan Schoonover <es@ethanschoonover.com>
 
-[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)][solarized]
+Visit the [Solarized Homepage][solarized]
+-----------------------------------------
 
 See the [homepage for the Solarized colorscheme][solarized] for screenshots, 
 details and colorscheme versions for Vim, Mutt, popular terminal emulators and 
 other applications.
 
-[![ruby dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark.png)
-[![ruby light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light.png)
+Screenshots
+-----------
+
+[![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark.png)
+[![solarized light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light.png)
+
+Downloads
+---------
 
 If you have come across this colorscheme via the [vim-only repository on 
 github][vim-solarized-github], or the [vim.org script page][vimorg-script] see 
