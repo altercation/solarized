@@ -5,7 +5,7 @@ Solarized
 
 ## Precision colors for machines and people
 
-[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)\
+[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)
 
 
 Solarized is a sixteen 
@@ -18,7 +18,7 @@ tested extensively in real world use on color calibrated displays (as well as
 uncalibrated/intentionally miscalibrated displays) and in a variety of lighting 
 conditions.
 
-![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)\
+![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
 
 Currently available in formats for (cf [screenshots](#screenshots) below):
 
@@ -84,7 +84,7 @@ Features
     Black text on white from a computer display is akin to reading a book in 
     direct sunlight and tires the eye.
 
-    ![solarized selective contrast](https://github.com/altercation/solarized/raw/master/img/solarized-selcon.png)\
+    ![solarized selective contrast](https://github.com/altercation/solarized/raw/master/img/solarized-selcon.png)
 
     Solarized reduces *brightness contrast* but, unlike many low contrast 
     colorschemes, retains *contrasting hues* (based on colorwheel relations) 
@@ -92,7 +92,7 @@ Features
 
 2. **Both sides of the force**
 
-    ![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-dualmode.png)\
+    ![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-dualmode.png)
 
     I often switch between dark and light modes when editing text and code.
     Solarized retains the same selective contrast relationships and overall 
@@ -102,7 +102,7 @@ Features
 
 3. **16/5 palette modes**
 
-    ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)\
+    ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)
 
     Solarized works as a sixteen color palette for compatibility with common
     terminal based applications / emulators. In addition, it has been carefull 
@@ -112,7 +112,7 @@ Features
 
 5.  **Precision, symmetry**
 
-    ![solarized symmetry](https://github.com/altercation/solarized/raw/master/img/solarized-sym.png)\
+    ![solarized symmetry](https://github.com/altercation/solarized/raw/master/img/solarized-sym.png)
 
     The monotones have symmetric CIELAB lightness differences, so switching 
     from dark to light mode retains the same perceived contrast in brightness 
@@ -249,21 +249,21 @@ direct-to-display (or direct to color-management system) device values
 configuration files. I've tested them in this configuration. When available, 
 they should be tagged as sRGB values (for instance in CSS3).
 
-SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
---------- ------- ---- -------  ----------- ---------- ----------- -----------
-base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
-base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
-base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
-base00    #657b83 11/7 bryellow 241 #626262 50 -07 -07 101 123 131 195  23  51
-base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
-base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
-base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
-base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
-yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
-orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
-red       #d30102  1/1 red      124 #af0000 45  70  60 211   1   2   0  99  83
-magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
-violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
-blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
-cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
-green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
+    SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
+    --------- ------- ---- -------  ----------- ---------- ----------- -----------
+    base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
+    base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
+    base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
+    base00    #657b83 11/7 bryellow 241 #626262 50 -07 -07 101 123 131 195  23  51
+    base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
+    base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
+    base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
+    base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
+    yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
+    orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
+    red       #d30102  1/1 red      124 #af0000 45  70  60 211   1   2   0  99  83
+    magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
+    violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
+    blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
+    cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
+    green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
