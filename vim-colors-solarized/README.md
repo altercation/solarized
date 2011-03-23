@@ -3,7 +3,7 @@ Solarized Colorscheme for Vim
 
 Developed by Ethan Schoonover <es@ethanschoonover.com>
 
-[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)
+[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)][solarized]
 
 See the [homepage for the Solarized colorscheme][solarized] for screenshots, 
 details and colorscheme versions for Vim, Mutt, popular terminal emulators and 
