@@ -12,15 +12,43 @@ github][vim-solarized-github], or the [vim.org script page][vimorg-script] see
 the link above to the Solarized homepage or
 visit the [github repository for Solarized][solarized-github].
 
-[solarized]: http://ethanschoonover.com/solarized
-[solarized-github]: https://github.com/altercation/solarized
+[solarized]:            http://ethanschoonover.com/solarized
+[solarized-github]:     https://github.com/altercation/solarized
 [vim-solarized-github]: https://github.com/altercation/vim-colors-solarized
-[vimorg-script]: http://vim.org/script
+[vimorg-script]:        http://vim.org/script
+[pathogen]:             https://github.com/tpope/vim-pathogen
 
 Installation
 ------------
 
-Put the following two lines in your vimrc:
+### Option 1: Manual installation
+
+1.  Put the files in the right place!
+
+2.  Move `solarized.vim` to your `.vim/colors` directory.
+
+### Option 2: Pathogen installation ***(recommended)***
+
+1.  Download and install Tim Pope's [Pathogen].
+
+2.  Next, move or clone the `vim-colors-solarized` directory so that it is 
+    a subdirectory of the `.vim/bundle` directory.
+
+    a. **Clone:** 
+
+            $ cd ~/.vim/bundle
+            $ git clone git://github.com/altercation/vim-colors-solarized.git
+
+    b. **Move:**
+
+        In the parent directory of vim-colors-solarized:
+        
+            $ mv vim-colors-solarized ~/.vim/bundle/
+
+### Modify .vimrc
+
+After either Option 1 or Option 2 above, put the following two lines in your 
+.vimrc:
 
   set background=dark
   colorscheme solarized
@@ -36,7 +64,12 @@ select either the light or dark background.
 Advanced Configuration
 ----------------------
 
-**IMPORTANT NOTE FOR TERMINAL USERS**
+Solarized will work out of the box with just the two lines specified above.
+
+
+
+### **IMPORTANT NOTE FOR TERMINAL USERS**
+
 If you are running vim in a terminal, Solarized will run in 256 color mode if 
 the terminal supports it, but those 256 colors are (in all 256 color terminal 
 emulators) limited to a "degraded" color palette.  While the colors will all 
@@ -59,7 +92,6 @@ the creation of any color scheme. By simply changing the sixteen values in the
 GUI section and testing in gvim (or mvim) you can rapidly prototype new 
 colorschemes without diving into the weeds of line-item editing each syntax 
 highlight declaration.
-
 
 License
 -------
