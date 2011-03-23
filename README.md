@@ -3,7 +3,7 @@ Solarized
 
 ## Precision colors for machines and people
 
-[![solarized dualmode](blob/master/img/solarized-yinyang.png)](#features)\
+[![solarized dualmode](https://github.com/altercation/solarized/blob/master/img//solarized-yinyang.png)](#features)\
 
 
 Solarized is a sixteen 
@@ -16,7 +16,7 @@ tested extensively in real world use on color calibrated displays (as well as
 uncalibrated/intentionally miscalibrated displays) and in a variety of lighting 
 conditions.
 
-![solarized palette](/img/solarized-palette.png)\
+![solarized palette](https://github.com/altercation/solarized/blob/master/img//solarized-palette.png)\
 
 Currently available in formats for (cf [screenshots](#screenshots) below):
 
@@ -82,7 +82,7 @@ Features
     Black text on white from a computer display is akin to reading a book in 
     direct sunlight and tires the eye.
 
-    ![solarized selective contrast](/img/solarized-selcon.png)\
+    ![solarized selective contrast](https://github.com/altercation/solarized/blob/master/img//solarized-selcon.png)\
 
     Solarized reduces *brightness contrast* but, unlike many low contrast 
     colorschemes, retains *contrasting hues* (based on colorwheel relations) 
@@ -90,7 +90,7 @@ Features
 
 2. **Both sides of the force**
 
-    ![solarized dualmode](/img/solarized-dualmode.png)\
+    ![solarized dualmode](https://github.com/altercation/solarized/blob/master/img//solarized-dualmode.png)\
 
     I often switch between dark and light modes when editing text and code.
     Solarized retains the same selective contrast relationships and overall 
@@ -100,7 +100,7 @@ Features
 
 3. **16/5 palette modes**
 
-    ![solarized palettes](/img/solarized-165.png)\
+    ![solarized palettes](https://github.com/altercation/solarized/blob/master/img//solarized-165.png)\
 
     Solarized works as a sixteen color palette for compatibility with common
     terminal based applications / emulators. In addition, it has been carefull 
@@ -110,7 +110,7 @@ Features
 
 5.  **Precision, symmetry**
 
-    ![solarized symmetry](/img/solarized-sym.png)\
+    ![solarized symmetry](https://github.com/altercation/solarized/blob/master/img//solarized-sym.png)\
 
     The monotones have symmetric CIELAB lightness differences, so switching 
     from dark to light mode retains the same perceived contrast in brightness 
@@ -176,8 +176,8 @@ Font Samples
 Solarized has been designed to handle fonts of various weights and retain 
 readability, from the classic Terminus to the beefy Menlo.
 
-![font samples - light](/img/solarized-fontsamples-light.png)
-![font samples - dark](/img/solarized-fontsamples-dark.png)
+![font samples - light](https://github.com/altercation/solarized/blob/master/img//solarized-fontsamples-light.png)
+![font samples - dark](https://github.com/altercation/solarized/blob/master/img//solarized-fontsamples-dark.png)
 
 Clockwise from upper left: Menlo, Letter Gothic, Terminus, Andale Mono
 
@@ -188,53 +188,53 @@ Click to view.
 
 ### Mutt
 
-[![mutt dark](/img/solarized-screen-mutt-dark-th.png)](/img/solarized-screen-mutt-dark.png)
-[![mutt light](/img/solarized-screen-mutt-light-th.png)](/img/solarized-screen-mutt-light.png)
+[![mutt dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-mutt-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-mutt-dark.png)
+[![mutt light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-mutt-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-mutt-light.png)
 
 ### C
 
-[![c dark](/img/solarized-screen-c-lettergothic18-dark-th.png)](/img/solarized-screen-c-lettergothic18-dark.png)
-[![c light](/img/solarized-screen-c-lettergothic18-light-th.png)](/img/solarized-screen-c-lettergothic18-light.png)
+[![c dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-c-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-c-lettergothic18-dark.png)
+[![c light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-c-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-c-lettergothic18-light.png)
 
 ### Haskell
 
-[![haskell dark](/img/solarized-screen-haskell-lettergothic18-dark-th.png)](/img/solarized-screen-haskell-lettergothic18-dark.png)
-[![haskell light](/img/solarized-screen-haskell-lettergothic18-light-th.png)](/img/solarized-screen-haskell-lettergothic18-light.png)
+[![haskell dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-haskell-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-haskell-lettergothic18-dark.png)
+[![haskell light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-haskell-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-haskell-lettergothic18-light.png)
 
 ### HTML
 
-[![html dark](/img/solarized-screen-html-lettergothic18-dark-th.png)](/img/solarized-screen-html-lettergothic18-dark.png)
-[![html light](/img/solarized-screen-html-lettergothic18-light-th.png)](/img/solarized-screen-html-lettergothic18-light.png)
+[![html dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-html-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-html-lettergothic18-dark.png)
+[![html light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-html-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-html-lettergothic18-light.png)
 
 ### Java
 
-[![java dark](/img/solarized-screen-java-lettergothic18-dark-th.png)](/img/solarized-screen-java-lettergothic18-dark.png)
-[![java light](/img/solarized-screen-java-lettergothic18-light-th.png)](/img/solarized-screen-java-lettergothic18-light.png)
+[![java dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-java-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-java-lettergothic18-dark.png)
+[![java light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-java-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-java-lettergothic18-light.png)
 
 ### Pandoc
 
-[![pandoc dark](/img/solarized-screen-pandoc-lettergothic18-dark-th.png)](/img/solarized-screen-pandoc-lettergothic18-dark.png)
-[![pandoc light](/img/solarized-screen-pandoc-lettergothic18-light-th.png)](/img/solarized-screen-pandoc-lettergothic18-light.png)
+[![pandoc dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-pandoc-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-pandoc-lettergothic18-dark.png)
+[![pandoc light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-pandoc-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-pandoc-lettergothic18-light.png)
 
 ### Perl
 
-[![perl dark](/img/solarized-screen-perl-lettergothic18-dark-th.png)](/img/solarized-screen-perl-lettergothic18-dark.png)
-[![perl light](/img/solarized-screen-perl-lettergothic18-light-th.png)](/img/solarized-screen-perl-lettergothic18-light.png)
+[![perl dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-perl-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-perl-lettergothic18-dark.png)
+[![perl light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-perl-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-perl-lettergothic18-light.png)
 
 ### Python
 
-[![python dark](/img/solarized-screen-python-lettergothic18-dark-th.png)](/img/solarized-screen-python-lettergothic18-dark.png)
-[![python light](/img/solarized-screen-python-lettergothic18-light-th.png)](/img/solarized-screen-python-lettergothic18-light.png)
+[![python dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-python-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-python-lettergothic18-dark.png)
+[![python light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-python-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-python-lettergothic18-light.png)
 
 ### Ruby
 
-[![ruby dark](/img/solarized-screen-ruby-lettergothic18-dark-th.png)](/img/solarized-screen-ruby-lettergothic18-dark.png)
-[![ruby light](/img/solarized-screen-ruby-lettergothic18-light-th.png)](/img/solarized-screen-ruby-lettergothic18-light.png)
+[![ruby dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-ruby-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-ruby-lettergothic18-dark.png)
+[![ruby light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-ruby-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-ruby-lettergothic18-light.png)
 
 ### TeX
 
-[![tex dark](/img/solarized-screen-tex-lettergothic18-dark-th.png)](/img/solarized-screen-tex-lettergothic18-dark.png)
-[![tex light](/img/solarized-screen-tex-lettergothic18-light-th.png)](/img/solarized-screen-tex-lettergothic18-light.png)
+[![tex dark](https://github.com/altercation/solarized/blob/master/img//solarized-screen-tex-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-tex-lettergothic18-dark.png)
+[![tex light](https://github.com/altercation/solarized/blob/master/img//solarized-screen-tex-lettergothic18-light-th.png)](https://github.com/altercation/solarized/blob/master/img//solarized-screen-tex-lettergothic18-light.png)
 
 
 The Values
