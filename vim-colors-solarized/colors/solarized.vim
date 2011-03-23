@@ -5,95 +5,200 @@
 " License:  OSI approved MIT license (see end of this file)
 "
 " Usage "{{{
-" ---------------------------------------------------------------------
-" QUICKSTART:
-" ---------------------------------------------------------------------
-" Put the following two lines in your vimrc:
 "
-"   set background=dark
-"   colorscheme solarized
+" ---------------------------------------------------------------------
+" ABOUT:
+" ---------------------------------------------------------------------
+" Solarized is a carefully designed selective contrast colorscheme with dual 
+" light and dark modes that runs in both GUI, 256 and 16 color modes.
 "
+" See the homepage above for screenshots and details.
+"
+" ---------------------------------------------------------------------
+" INSTALLATION:
+" ---------------------------------------------------------------------
+"
+" Two options for installation: manual or pathogen
+" 
+" MANUAL INSTALLATION OPTION:
+" ---------------------------------------------------------------------
+" 
+" 1.  Put the files in the right place!
+" 2.  Move `solarized.vim` to your `.vim/colors` directory.
+" 
+" RECOMMENDED PATHOGEN INSTALLATION OPTION:
+" ---------------------------------------------------------------------
+" 
+" 1.  Download and install Tim Pope's Pathogen from:
+"     https://github.com/tpope/vim-pathogen
+"
+" 2.  Next, move or clone the `vim-colors-solarized` directory so that it is
+"     a subdirectory of the `.vim/bundle` directory.
+"
+"     a. **clone with git:**
+"
+"       $ cd ~/.vim/bundle
+"       $ git clone git://github.com/altercation/vim-colors-solarized.git
+"
+"     b. **or move manually into the pathogen bundle directory:**
+"         In the parent directory of vim-colors-solarized:
+"         
+"         $ mv vim-colors-solarized ~/.vim/bundle/
+" 
+" MODIFY VIMRC:
+" 
+" After either Option 1 or Option 2 above, put the following two lines in your 
+" .vimrc:
+" 
+"     set background=dark
+"     colorscheme solarized
+" 
 " or, for the light background mode of Solarized:
+" 
+"     set background=light
+"     colorscheme solarized
+" 
+" I like to have a different background in GUI and terminal modes, so I can use 
+" the following if-then. However, I find vim's background autodetection to be 
+" pretty good and, at least with MacVim, I can leave this background value 
+" assignment out entirely and get the same results.
 "
-"   set background=light
-"   colorscheme solarized
-"
-" pathogen users can install to:
-"
-"   (your vim directory)/bundle/vim-solarized/colors/solarized.vim
-"
-" (note that vim-solarized could be just solarized, it's up to you, but
-" if you pull from git you'll get this directory name unless you change it)
+"     if has('gui_running')
+"       set background=light
+"     else
+"       set background=dark
+"     endif
+" 
+" See the Solarized homepage at http://ethanschoonover.com/solarized for 
+" screenshots which will help you select either the light or dark background.
 "
 " Other options are detailed below.
 "
 " IMPORTANT NOTE FOR TERMINAL USERS:
-" If you are running vim in a terminal, Solarized will run in 256 color mode if 
-" the terminal supports it, but those 256 colors are (in all 256 color terminal 
-" emulators) limited to a "degraded" color palette.  While the colors will all 
-" approximate the specific Solarized color values, if you prefer an accurate 
-" color palette you can set the ANSI colors in your terminal and use the 16 
-" color terminal mode using the g:solarized_termcolors="16" option detailed 
-" below. The ANSI color map is specified in the table below and terminal color 
-" themes are available for download from the web page listed at the top of this 
-" file, including xorg Xdefaults/Xresources color values and themes for OS 
-" X Terminal.app and iTerm 2.
 "
+" If you are going to use Solarized in Terminal mode (i.e. not in a GUI 
+" version like gvim or macvim), **please please please** consider setting your 
+" terminal emulator's colorscheme to used the Solarized palette. I've included 
+" palettes for some popular terminal emulator as well as Xdefaults in the 
+" official Solarized download available from:
+" 
+" http://ethanschoonover.com/solarized
+" 
+" If you use Solarized without these colors, Solarized will by default use an 
+" approximate set of 256 colors.  It isn't bad looking and has been extensively 
+" tweaked, but it's still not quite the real thing.
+" 
+" If you do use the custom terminal colors, simply add the following line 
+" *before* the `colorschem solarized` line:
+" 
+"     let g:solarized_termcolors=16
+" 
+" ---------------------------------------------------------------------
+" TOGGLE BACKGROUND FUNCTION
+" ---------------------------------------------------------------------
+" Here's a quick script that toggles the background color, using F5 in this 
+" example. You can drop this into .vimrc:
+"
+" function! ToggleBackground()
+"     if (w:solarized_style=="dark")
+"     let w:solarized_style="light"
+"     colorscheme solarized
+" else
+"     let w:solarized_style="dark"
+"     colorscheme solarized
+" endif
+" endfunction
+" command! Togbg call ToggleBackground()
+" nnoremap <F5> :call ToggleBackground()<CR>
+" inoremap <F5> <ESC>:call ToggleBackground()<CR>a
+" vnoremap <F5> <ESC>:call ToggleBackground()<CR>
 "
 " ---------------------------------------------------------------------
-" ABOUT
+" OPTIONS
 " ---------------------------------------------------------------------
+" 
+" Set these in your vimrc file prior to calling the colorscheme.
 "
-" SOLARIZED is a precisely designed color scheme with unique characteristics:
+" option name               default     optional
+" ------------------------------------------------
+" g:solarized_termcolors=   256     |   16
+" g:solarized_termtrans =   0       |   1
+" g:solarized_degrade   =   0       |   1
+" g:solarized_bold      =   1       |   0
+" g:solarized_underline =   1       |   0
+" g:solarized_italic    =   1       |   0
+" g:solarized_style     =   "dark"  |   "light"
+" g:solarized_contrast  =   "normal"|   "high" or "low"
+" ------------------------------------------------
 "
-" PRECISION: Solarized is comprised of eight base monotone colors complemented 
-" by eight accent colors. The monotone colors are specified in L*a*b* 
-" colorspace for perceptually uniform contrast, even when the palette is 
-" inverted from dark to light background mode. Accent colors are selected based 
-" on specific color-wheel relationships to the base monotone series 
-" (complement, triad, tetrad, split-complement, etc).
+" OPTION DETAILS
 "
-" INVERSION: Solarized can easily switch from light to dark background mode and 
-" yet maintains L* (lightness) relationships in the entire base monotone 
-" palette set. Accent colors retain excellent readability on both light and 
-" dark backgrounds. Thus the vim solarized colorscheme, for example, can be 
-" easily modified and extended without any effort spent on maintaining the 
-" light/dark modes separately; the mode switch is the simple inversion of four 
-" color values.
+" ------------------------------------------------
+" g:solarized_termcolors=   256     |   16
+" ------------------------------------------------
+" The most important option if you are using vim in terminal (non gui) mode!
+" This tells Solarized to use the 256 degraded color mode if running in a 256 
+" color capable terminal.  Otherwise, if set to `16` it will use the terminal 
+" emulators colorscheme (best option as long as you've set the emulators colors 
+" to the Solarized palette).
 "
-" READABILITY: Solarized has been designed as a "selective contrast" 
-" colorscheme (versus the more common high or low contrast schemes). Elements 
-" which are secondary in importance, or which should minimize their visual 
-" intrusiveness (e.g. line numbers and comments in vim) use the lower contrast 
-" base color values, while high value content (e.g. code) uses higher contrast 
-" base values as well as accent colors.
+" If you are going to use Solarized in Terminal mode (i.e. not in a GUI 
+" version like gvim or macvim), **please please please** consider setting your 
+" terminal emulator's colorscheme to used the Solarized palette. I've included 
+" palettes for some popular terminal emulator as well as Xdefaults in the 
+" official Solarized download available from: 
+" http://ethanschoonover.com/solarized . If you use Solarized without these 
+" colors, Solarized will by default use an approximate set of 256 colors.  It 
+" isn't bad looking and has been extensively tweaked, but it's still not quite 
+" the real thing.
 "
-" SCALABILITY: Solarized has been designed to be used both in the full palette 
-" mode (in text editors where many colors are useful for syntax highlighting) 
-" as well as in a scaled down five color mode for graphic design purposes (web 
-" pages).
+" ------------------------------------------------
+" g:solarized_termtrans =   0       |   1
+" ------------------------------------------------
+" If you use a terminal emulator with a transparent background and Solarized 
+" isn't displaying the background color transparently, set this to 1 and 
+" Solarized will use the default (transparent) background of the terminal 
+" emulator. *urxvt* required this in my testing; Terminal.app/iTerm2 did not.
 "
-" PERSONALITY: Solarized aims to be flexible in many contexts and as such it 
-" maintains the common primary and secondary named colors (red, blue, yellow, 
-" green, etc.). Despite the common nature of these hues, each color has been 
-" carefully tuned in terms of saturation, luminosity (more accurately, L* 
-" lightness) so that the entire palette has a rich, warm feel in the accent 
-" range as evidenced by the ochre yellow and oxygenated blood red, 
-" complementing the deep-sea blue-greens of the base monotone colors.
+" ------------------------------------------------
+" g:solarized_degrade   =   0       |   1
+" ------------------------------------------------
+" For test purposes only; forces Solarized to use the 256 degraded color mode 
+" to test the approximate color values for accuracy.
 "
-" On the name: "Solarized" refers to the dual light/dark mode of the palette, 
-" somewhat analogous to the photographic effect of solarization. The Ian Brown 
-" album "Solarized" is also on regular rotation in my playlist.
+" ------------------------------------------------
+" g:solarized_bold      =   1       |   0
+" ------------------------------------------------
+" ------------------------------------------------
+" g:solarized_underline =   1       |   0
+" ------------------------------------------------
+" ------------------------------------------------
+" g:solarized_italic    =   1       |   0
+" ------------------------------------------------
+" If you wish to stop Solarized from displaying bold, underlined or 
+" italicized typefaces, simply assign a zero value to the appropriate 
+" variable, for example: `let g:solarized_italic=0`
 "
+" ------------------------------------------------
+" g:solarized_style     =   "dark"  |   "light"
+" ------------------------------------------------
+" Simply another way to force Solarized to use a dark or light background.  
+" It's better to use `set background=dark` or `set background=light` in your 
+" .vimrc file. This option is mostly used in scripts (quick background color 
+" change) or for testing. Note that, if set, g:solarized_style overrides the 
+" setting for "background".
+"
+" ------------------------------------------------
+" g:solarized_contrast  =   "normal"|   "high" or "low"
+" ------------------------------------------------
+" Stick with normal! It's been carefully tested. Setting this option to high 
+" or low does use the same Solarized palette but simply shifts some values up 
+" or down in order to expand or compress the tonal range displayed.
 "
 " ---------------------------------------------------------------------
 " COLOR VALUES
 " ---------------------------------------------------------------------
-"
 " Download palettes and files from: http://ethanschoonover.com/solarized
-"     let s:g_back        = "#002b36" " 12 12
-    let s:g_base03      = "#"
-    let s:g_base02      = "#"
 
 " SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 " --------- ------- ---- -------  ----------- ---------- ----------- -----------
@@ -115,100 +220,8 @@
 " green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
 "
 " ---------------------------------------------------------------------
-" OPTIONS
+" COLORSCHEME HACKING
 " ---------------------------------------------------------------------
-" 
-" Set these in your vimrc file prior to calling the colorscheme.
-"
-" option name               default     optional
-" ------------------------------------------------
-" g:solarized_style     =   "dark"  |   "light"
-" g:solarized_contrast  =   "normal"|   "high" or "low"
-" g:solarized_termtrans =   0       |   1
-" g:solarized_termcolors=   16      |   256
-" g:solarized_degrade   =   0       |   1
-" g:solarized_bold      =   1       |   0
-" g:solarized_underline =   1       |   0
-" g:solarized_italic    =   0       |   1
-" ------------------------------------------------
-"
-" OPTION DETAILS
-"
-" ------------------------------------------------
-" g:solarized_style     =   "dark"  |   "light"
-" ------------------------------------------------
-" If "solarized_style" isn't set, Solarized will use the value set by 
-" "background" in your vimrc.  I recommend using "background" for simplicity.
-" Thus in your vimrc file, the following sequences would set Solarized to 
-" either dark or light mode, respectively:
-"
-"   set background=dark
-"   colorscheme solarized
-"
-"   set background=light
-"   colorscheme solarized
-"
-" The above is equivalent to:
-"
-"   let g:solarized_style = "dark"
-"   colorscheme solarized
-"
-"   let g:solarized_style = "light"
-"   colorscheme solarized
-" 
-" Note that, if set, g:solarized_style overrides the setting for "background".
-"
-" ------------------------------------------------
-" g:solarized_contrast  =   "normal"|   "high"
-" ------------------------------------------------
-" Solarized has been designed to keep contrast of less critical elements low 
-" (e.g. comments are lower contrast). Solarized has also been tested on devices 
-" with a wide variety of gamma values and should perform well on most displays.  
-" If you find you want to increase contrast for the low contrast items 
-" (comments, etc.) you can set this value to "high" (default is "normal").  
-" I encourage you to use it in normal mode first. There is, additionally, 
-" a "low" contrast mode, shifting the background tone towards the main content 
-" tones.
-"
-" ------------------------------------------------
-" g:solarized_termtrans =   0       |   1
-" ------------------------------------------------
-" On some terminals (urxvt in my tests) Vim colorthemes may override 
-" transparency settings of the terminal. Setting this to "1" changes the 
-" background value in terminal Vim mode to "NONE" allowing your terminal 
-" background color/transparency to be used for Vim's background. This shouldn't 
-" be necessary in OSX terminal applications such as Terminal and iTerm2.
-"
-" ------------------------------------------------
-" g:solarized_termcolors=   16      |   256
-" ------------------------------------------------
-" A very important setting if you are using Vim in terminals and want accurate 
-" colors. There are two options:
-" 16 - Use the named 16 colors of the terminal (red, blue, etc.). In order for 
-" the colors to be accurately reproduced for this colorscheme, you must set 
-" your terminal's 16 colors to match Solarized. I list the terminal color 
-" values in a table above, and also provide downloads of colorscheme for 
-" command terminal applications from http://ejas.net/solarized
-"
-" ------------------------------------------------
-" g:solarized_degrade   =   0       |   1
-" ------------------------------------------------
-" Used primarily during testing, this can be set to 1 to force Solarized to 
-" degrade the hex color values to xterm/256 color approximate matching values.  
-" Note that while in terminal mode in a 256 color terminal, these degraded 
-" color values will be used automatically unless you have adjusted your 
-" terminal's default 16 colors and set g:solarized_termcolors to 16 in your 
-" vimrc before setting your colorscheme.
-"
-" ------------------------------------------------
-" g:solarized_bold      =   1       |   0
-" ------------------------------------------------
-" ------------------------------------------------
-" g:solarized_underline =   1       |   0
-" ------------------------------------------------
-" ------------------------------------------------
-" g:solarized_italic    =   0       |   1
-" ------------------------------------------------
 "
 " Useful commands for testing colorschemes:
 " :source $VIMRUNTIME/syntax/hitest.vim
@@ -226,39 +239,55 @@
 " Default option values"{{{
 " ---------------------------------------------------------------------
 if !exists("g:solarized_termtrans")
-    let g:solarized_termtrans = 0
+    let w:solarized_termtrans = 0
+else
+    let w:solarized_termtrans = g:solarized_termtrans
 endif
 if !exists("g:solarized_degrade")
-    let g:solarized_degrade = 0
+    let w:solarized_degrade = 0
+else
+    let w:solarized_degrade = g:solarized_degrade 
 endif
 if !exists("g:solarized_bold")
-    let g:solarized_bold      = 1
+    let w:solarized_bold = 1
+else
+    let w:solarized_bold = g:solarized_bold 
 endif
 if !exists("g:solarized_underline")
-    let g:solarized_underline = 1
+    let w:solarized_underline = 1
+else
+    let w:solarized_underline = g:solarized_underline 
 endif
 if !exists("g:solarized_italic")
-    let g:solarized_italic    = 1
+    let w:solarized_italic = 1
+else
+    let w:solarized_italic = g:solarized_italic
 endif
 if !exists("g:solarized_termcolors")
-    let g:solarized_termcolors = 256
-    let g:solarized_termcolors = 16
+    let w:solarized_termcolors = 256
+else
+    let w:solarized_termcolors = g:solarized_termcolors 
 endif
-if !exists("g:solarized_style")
-    let g:solarized_style = &background
+if !exists("w:solarized_style") && !exists("g:solarized_style")
+    let w:solarized_style = &background
+elseif exists("g:solarized_style")
+    let w:solarized_style = g:solarized_style 
+" else we have an existing w:solarized_style
 endif
 if !exists("g:solarized_contrast")
-    let g:solarized_contrast = "normal"
+    let w:solarized_contrast = "normal"
+else
+    let w:solarized_contrast = g:solarized_contrast 
 endif
 "}}}
 " Colorscheme basic settings"{{{
 " ---------------------------------------------------------------------
-if g:solarized_style == "dark"
+if w:solarized_style == "dark"
     set background=dark
-elseif g:solarized_style == "light"
+elseif w:solarized_style == "light"
     set background=light
 else
-    let g:solarized_style = &background
+    let w:solarized_style = &background
 endif
 
 hi clear
@@ -282,7 +311,7 @@ let colors_name = "solarized"
 " leave the hex values out entirely in that case and include only cterm colors)
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
-if has("gui_running") && g:solarized_degrade == 0
+if has("gui_running") && w:solarized_degrade == 0
     let s:g_back        = "#002b36"
     let s:g_base03      = "#002b36"
     let s:g_base02      = "#073642"
@@ -331,7 +360,7 @@ endif
 " ---------------------------------------------------------------------
 " We also set this if gui is running as we use the optional formatting
 " values that get set here (ou==optional underline, ob==opt bold).
-if (has("gui_running") || &t_Co == 256) && g:solarized_termcolors != 16
+if (has("gui_running") || &t_Co == 256) && w:solarized_termcolors != 16
     let s:c_back        = "233"
     let s:c_base03      = "233"
     let s:c_base02      = "234"
@@ -351,7 +380,7 @@ if (has("gui_running") || &t_Co == 256) && g:solarized_termcolors != 16
     let s:c_green       = "64"
     let s:ou            = ""
     let s:ob            = ""
-elseif &t_Co > 8 || g:solarized_termcolors == 16
+elseif &t_Co > 8 || w:solarized_termcolors == 16
     " NOTE: this requires terminal colors to be set to solarized standard
     " 16 colors (see top of this file for details)
     let s:c_back        = "NONE"
@@ -407,7 +436,7 @@ let s:s                 = ",standout"
 "}}}
 " Alternate light scheme "{{{
 " ---------------------------------------------------------------------
-if g:solarized_style == "light"
+if w:solarized_style == "light"
     let s:c_temp03      = s:c_base03
     let s:c_temp02      = s:c_base02
     let s:c_temp01      = s:c_base01
@@ -438,7 +467,7 @@ endif
 "}}}
 " Alternate inverted background scheme "{{{
 " ---------------------------------------------------------------------
-if g:solarized_style == "inverted"
+if w:solarized_style == "inverted"
     let s:c_temp03      = s:c_base03
     let s:c_temp02      = s:c_base02
     let s:c_base03      = s:c_temp02
@@ -453,7 +482,7 @@ endif
 "}}}
 " Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
-if g:solarized_contrast == "high"
+if w:solarized_contrast == "high"
     let s:g_base03      = s:g_base03
     let s:g_base02      = s:g_base02
     let s:g_base01      = s:g_base00
@@ -464,29 +493,29 @@ if g:solarized_contrast == "high"
     let s:g_base3       = s:g_base3
     let s:g_back        = s:g_back
 endif
-if g:solarized_contrast == "low"
+if w:solarized_contrast == "low"
     let s:g_back        = s:g_base02
 endif
 "}}}
 " Overrides dependent on user specified values"{{{
 " ---------------------------------------------------------------------
-if g:solarized_termtrans == 1
+if w:solarized_termtrans == 1
     let s:c_back        = "NONE"   
 endif
 
-if g:solarized_bold == 1
+if w:solarized_bold == 1
     let s:b             = ",bold"
 else
     let s:b             = ""
 endif
 
-if g:solarized_underline == 1
+if w:solarized_underline == 1
     let s:u             = ",underline"
 else
     let s:u             = ""
 endif
 
-if g:solarized_italic == 1
+if w:solarized_italic == 1
     let s:i             = ",italic"
 else
     let s:i             = ""
