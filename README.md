@@ -48,7 +48,10 @@ repositories:
 
 *   **Git repo:**
 
-    The full git repository is at: <https://github.com/altercation/solarized>
+    The full git repository is at: <https://github.com/altercation/solarized>. 
+    Get it using the following command:
+
+        $ git clone git://github.com/altercation/solarized.git
 
 *   **Vim only:**
 
