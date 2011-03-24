@@ -13,8 +13,8 @@ other applications.
 Screenshots
 -----------
 
-[![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark.png)
-[![solarized light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light.png)
+[![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark.png)
+[![solarized light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light.png)
 
 Downloads
 ---------
