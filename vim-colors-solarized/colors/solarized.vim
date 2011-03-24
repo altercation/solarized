@@ -204,11 +204,11 @@
 " --------- ------- ---- -------  ----------- ---------- ----------- -----------
 " base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
 " base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
-" base01    #586e75 10/7 brgreen  240 #585858 45 -07 -07  88 110 117 194  25  46
-" base00    #657b83 11/7 bryellow 241 #626262 50 -07 -07 101 123 131 195  23  51
+" base01    #586e75 10/7 brgreen  240 #4e4e4e 45 -07 -07  88 110 117 194  25  46
+" base00    #657b83 11/7 bryellow 241 #585858 50 -07 -07 101 123 131 195  23  51
 " base0     #839496 12/6 brblue   244 #808080 60 -06 -03 131 148 150 186  13  59
 " base1     #93a1a1 14/4 brcyan   245 #8a8a8a 65 -05 -02 147 161 161 180   9  63
-" base2     #eee8d5  7/7 white    254 #e4e4e4 92 -00  10 238 232 213  44  11  93
+" base2     #eee8d5  7/7 white    254 #d7d7af 92 -00  10 238 232 213  44  11  93
 " base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
 " yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
 " orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
@@ -337,14 +337,14 @@ else
     " and use just the color table values, leaving these blank. Not much
     " difference either way and I'd rather be thorough about it.
     " They can also be used by setting g:solarized_degrade to 1 in vimrc
-    let s:g_back        = "#121212"
-    let s:g_base03      = "#121212"
-    let s:g_base02      = "#1c1c1c"
+    let s:g_back        = "#1c1c1c"
+    let s:g_base03      = "#1c1c1c"
+    let s:g_base02      = "#262626"
     let s:g_base01      = "#4e4e4e"
     let s:g_base00      = "#585858"
     let s:g_base0       = "#808080"
     let s:g_base1       = "#8a8a8a"
-    let s:g_base2       = "#e4e4e4"
+    let s:g_base2       = "#d7d7af"
     let s:g_base3       = "#ffffd7"
     let s:g_yellow      = "#af8700"
     let s:g_orange      = "#d75f00"
@@ -361,14 +361,14 @@ endif
 " We also set this if gui is running as we use the optional formatting
 " values that get set here (ou==optional underline, ob==opt bold).
 if (has("gui_running") || &t_Co == 256) && w:solarized_termcolors != 16
-    let s:c_back        = "233"
-    let s:c_base03      = "233"
-    let s:c_base02      = "234"
+    let s:c_back        = "234"
+    let s:c_base03      = "234"
+    let s:c_base02      = "235"
     let s:c_base01      = "239"
     let s:c_base00      = "240"
     let s:c_base0       = "244"
     let s:c_base1       = "245"
-    let s:c_base2       = "254"
+    let s:c_base2       = "187"
     let s:c_base3       = "230"
     let s:c_yellow      = "136"
     let s:c_orange      = "166"
@@ -583,18 +583,18 @@ exe "let s:sp_cyan      = ' guisp=".s:g_cyan   ."'"
 
 exe "let s:fmt_none     = ' cterm=NONE".    " gui=NONE".    " term=NONE".    "'"
 exe "let s:fmt_bold     = ' cterm=NONE".s:b." gui=NONE".s:b." term=NONE".s:b."'"
-exe "let s:fmt_bldi     = ' cterm=NONE".s:b.s:i." gui=NONE".s:b.s:i." term=NONE".s:b.s:i."'"
+exe "let s:fmt_bldi     = ' cterm=NONE".s:b." gui=NONE".s:b.s:i." term=NONE".s:b."'"
 exe "let s:fmt_undr     = ' cterm=NONE".s:u." gui=NONE".s:u." term=NONE".s:u."'"
 exe "let s:fmt_undb     = ' cterm=NONE".s:u.s:b." gui=NONE".s:u.s:b.
             \" term=NONE".s:u.s:b."'"
-exe "let s:fmt_undi     = ' cterm=NONE".s:u.s:i." gui=NONE".s:u.s:i.
-            \" term=NONE".s:u.s:i."'"
+exe "let s:fmt_undi     = ' cterm=NONE".s:u." gui=NONE".s:u.s:i.
+            \" term=NONE".s:u."'"
 exe "let s:fmt_uopt     = ' cterm=NONE".s:ou." gui=NONE".s:ou.
             \" term=NONE".s:ou."'"
 exe "let s:fmt_bopt     = ' cterm=NONE".s:ob." gui=NONE".s:ob.
             \" term=NONE".s:ob."'"
 exe "let s:fmt_curl     = ' cterm=NONE".s:c." gui=NONE".s:c." term=NONE".s:c."'"
-exe "let s:fmt_ital     = ' cterm=NONE".s:i." gui=NONE".s:i." term=NONE".s:i."'"
+exe "let s:fmt_ital     = ' cterm=NONE".    " gui=NONE".s:i." term=NONE".    "'"
 exe "let s:fmt_revr     = ' cterm=NONE".s:r." gui=NONE".s:r." term=NONE".s:r."'"
 exe "let s:fmt_stnd     = ' cterm=NONE".s:s." gui=NONE".s:s." term=NONE".s:s."'"
 "}}}
