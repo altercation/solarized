@@ -5,26 +5,25 @@ Solarized
 
 ## Precision colors for machines and people
 
-[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)
+[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)\
 
 
-Solarized is a sixteen 
-color palette (eight monotones, eight accent colors) designed for use with 
-terminal and gui applications. It has several [unique properties](#features).
-I designed this colorscheme with both precise 
+Solarized is a sixteen color palette (eight monotones, eight accent colors) 
+designed for use with terminal and gui applications. It has several [unique 
+properties](#features). I designed this colorscheme with both precise 
 [CIELAB](http://en.wikipedia.org/wiki/Lab_color_space) lightness relationships 
 and a refined set of hues based on fixed color wheel relationships. It has been 
 tested extensively in real world use on color calibrated displays (as well as 
 uncalibrated/intentionally miscalibrated displays) and in a variety of lighting 
 conditions.
 
-![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)\
 
 Currently available in formats for (cf [screenshots](#screenshots) below):
 
 * **Vim** (the Vim-only portion of Solarized is [available 
-  here](https://github.com/altercation/vim-colors-solarized), for use with 
-  Pathogen, etc.)
+here](https://github.com/altercation/vim-colors-solarized), for use with 
+Pathogen, etc.)
 * **Mutt** e-mail client (*just* the Mutt colorscheme is [available 
 here](https://github.com/altercation/mutt-colors-solarized))
 * **Xresources** / Xdefaults
@@ -35,7 +34,7 @@ here](https://github.com/altercation/mutt-colors-solarized))
 * GIMP Palette
 
 Don't see the application you want to use it in? Download the palettes (or pull 
-the values from the table below) and create your own. Submit it back and I'll 
+the values from the table below) and create your own. Submit it back and I'll  
 happily note the contribution and include it on this page.
 
 **Note:** I am still tweaking the Vim highlighting for specific syntaxes and 
@@ -44,14 +43,14 @@ welcome feedback on these.
 Download
 --------
 
-### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.tgz)
+### [Click here to download latest version](http://ethanschoonover.com/files/solarized/solarized.tar.gz)
 
 Or use the following links to access application specific downloads and git 
 repositories:
 
 *   **Git repo:**
 
-    The full git repository is at: <https://github.com/altercation/solarized>. 
+    The full git repository is at: <https://github.com/altercation/solarized>
     Get it using the following command:
 
         $ git clone git://github.com/altercation/solarized.git
@@ -60,10 +59,10 @@ repositories:
 
     The vim-only colorscheme (Pathogen ready) is available at: 
     <https://github.com/altercation/vim-colors-solarized>.
-
-        $ git clone git://github.com/altercation/vim-colors-solarized.git
     
-    You can also download it from [vim.org](http://vim.org/scripturlhere).
+        $ git clone git://github.com/altercation/vim-colors-solarized.git
+
+    You can also download it from [vim.org](http://www.vim.org/scripts/script.php?script_id=3520).
 
 *   **Mutt only:**
 
@@ -95,7 +94,7 @@ Features
     Black text on white from a computer display is akin to reading a book in 
     direct sunlight and tires the eye.
 
-    ![solarized selective contrast](https://github.com/altercation/solarized/raw/master/img/solarized-selcon.png)
+    ![solarized selective contrast](https://github.com/altercation/solarized/raw/master/img/solarized-selcon.png)\
 
     Solarized reduces *brightness contrast* but, unlike many low contrast 
     colorschemes, retains *contrasting hues* (based on colorwheel relations) 
@@ -103,7 +102,7 @@ Features
 
 2. **Both sides of the force**
 
-    ![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-dualmode.png)
+    ![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-dualmode.png)\
 
     I often switch between dark and light modes when editing text and code.
     Solarized retains the same selective contrast relationships and overall 
@@ -113,7 +112,7 @@ Features
 
 3. **16/5 palette modes**
 
-    ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)
+    ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)\
 
     Solarized works as a sixteen color palette for compatibility with common
     terminal based applications / emulators. In addition, it has been carefull 
@@ -123,7 +122,7 @@ Features
 
 5.  **Precision, symmetry**
 
-    ![solarized symmetry](https://github.com/altercation/solarized/raw/master/img/solarized-sym.png)
+    ![solarized symmetry](https://github.com/altercation/solarized/raw/master/img/solarized-sym.png)\
 
     The monotones have symmetric CIELAB lightness differences, so switching 
     from dark to light mode retains the same perceived contrast in brightness 
@@ -204,51 +203,51 @@ Click to view.
 
 ### C (Vim)
 
-[![c dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-lettergothic18-dark.png)
-[![c light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-lettergothic18-light.png)
+[![c dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-dark.png)
+[![c light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-c-light.png)
 
 ### Haskell (Vim)
 
-[![haskell dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-lettergothic18-dark.png)
-[![haskell light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-lettergothic18-light.png)
+[![haskell dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-dark.png)
+[![haskell light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-haskell-light.png)
 
 ### HTML (Vim)
 
-[![html dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-lettergothic18-dark.png)
-[![html light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-lettergothic18-light.png)
+[![html dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-dark.png)
+[![html light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-html-light.png)
 
 ### Java (Vim)
 
-[![java dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-lettergothic18-dark.png)
-[![java light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-lettergothic18-light.png)
+[![java dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-dark.png)
+[![java light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-java-light.png)
 
-### Pandoc (Vim)
+### Pandoc Markdown (Vim)
 
 These screen shots show Vim running with my own [Pandoc Kit 
 Syntax](/pandockit).
 
-[![pandoc dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-lettergothic18-dark.png)
-[![pandoc light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-lettergothic18-light.png)
+[![pandoc dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-dark.png)
+[![pandoc light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-pandoc-light.png)
 
 ### Perl (Vim)
 
-[![perl dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-lettergothic18-dark.png)
-[![perl light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-lettergothic18-light.png)
+[![perl dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-dark.png)
+[![perl light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-perl-light.png)
 
 ### Python (Vim)
 
-[![python dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-lettergothic18-dark.png)
-[![python light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-lettergothic18-light.png)
+[![python dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-dark.png)
+[![python light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-python-light.png)
 
 ### Ruby (Vim)
 
-[![ruby dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-dark.png)
-[![ruby light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-lettergothic18-light.png)
+[![ruby dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark.png)
+[![ruby light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light.png)
 
 ### TeX (Vim)
 
-[![tex dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-lettergothic18-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-lettergothic18-dark.png)
-[![tex light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-lettergothic18-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-lettergothic18-light.png)
+[![tex dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-dark.png)
+[![tex light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-tex-light.png)
 
 
 The Values
@@ -275,3 +274,4 @@ matched in sRGB space.
     blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
     cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
     green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
+    

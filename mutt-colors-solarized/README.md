@@ -31,6 +31,11 @@ Installation
     source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
     source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-light-256.muttrc
 
+Note: You can safely ignore the compile colors script and the template file.  
+They are used only for creating the actual colorscheme files. If you want to 
+modify the colorscheme or colors, you can use the compile script and template 
+to do so.
+
 Which Variation?
 ----------------
 

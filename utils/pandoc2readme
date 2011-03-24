@@ -1,0 +1,4 @@
+%s+(/img/solarized/+(https://github.com/altercation/solarized/raw/master/img/+g
+g/\%^---/,/^---\s*$/d
+g/\%^$/d
+g/^The Values$/+6,/\%$/ s /^/    /

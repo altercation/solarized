@@ -1,0 +1,28 @@
+Solarized
+=========
+
+summary
+-------
+
+Beautiful dual light/dark, selective contrast, GUI/256/16 colorscheme
+
+detailed description
+--------------------
+
+Screenshots and details at http://ethanschoonover.com/solarized (includes Solarized for other applications including mutt, terminal emulators).
+
+Can also be cloned from github at https://github.com/altercation/vim-colors-solarized for use with Pathogen, Vundle, etc.
+
+* * *
+
+Solarized is a beautiful, carefully designed 16 color, selective contrast colorscheme with both *light* and *dark* modes. It supports GUI full color, 256 color terminal mode and 16 color terminal mode (use Solarized terminal colorschemes with the latter for optimal results; see project homepage above).
+
+It has been built on a foundation of eight monotones with precise CIELAB lightness relations. These monotones relations are symmetric, allowing for use in light and dark modes with identical readability.
+
+Install details
+---------------
+
+See the README in the script download for installation details and utility scripts for your .vimrc.
+
+For the impatient without customized vim setups: drop solarized.vim into your ~/.vim/colors directory.
+
