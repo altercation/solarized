@@ -22,11 +22,20 @@ applied them. To apply them, simply select an existing profile from the profile
 list window on the left, or create a new profile. Then select the Solarized 
 Dark or Solarized Light preset from the "Load Presets" drop down.
 
-Please note that my experience with iTerm2 color management has been insane. It 
-doesn't come close to getting color management right at all. I did extensive 
-testing of various tagged colors for use with iTerm 2, but unfortunately it 
-bakes in the color management at the time of preset creation. The current 
-presets should be acceptable in most cases.
+Ok, I've gone crazy with iTerm2 color management but you are going to be ok.  
+Just realize two things:
+
+1. Like other apps (Chrome as of this writing) on the Mac, iTerm2 locks in 
+   a target color space when you create a new window. If you switch your 
+   monitor color space, relaunch iTerm2 and it will pick up the new target 
+   color space.
+
+2. The colors in iTerm2 currently cannot be device colors. They are baked in as 
+   generic rgb (which, despite the name, is an actual, specific color space 
+   from Apple and is used as a default just like other systems use sRGB as 
+   a default). I've switch Solarized Apple Color Picker palettes to use tagged 
+   colors by default, so for the most part iTerm2 will match up with other apps 
+   where you use Color Picker swatches.
 
 The Values
 ----------

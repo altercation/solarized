@@ -1,18 +1,3 @@
-Solarized - Apple Color Picker Palette
-======================================
-
-### [See official homepage for full content](http://ethanschoonover.com/solarized)
-
-Installation
-------------
-
-Copy or move the `solarized.clr` file to your `~/Library/Colors` directory.
-
-Use the included colorpicker launcher to confirm installation. Launch the 
-`launch-colorpicker` application, navigate to the color palette view (usually 
-the third icon from the left) and select 'Solarized' from the drop-down palette 
-list. Click the cancel button to dismiss the color picker.
-
 Alternate Palette
 ------------------
 

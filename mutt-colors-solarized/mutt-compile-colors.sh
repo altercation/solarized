@@ -16,7 +16,7 @@
 # base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
 # yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
 # orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
-# red       #d30102  1/1 red      124 #af0000 45  70  60 211   1   2   0  99  83
+# red       #dc322f  1/1 red      160 #d70000 50  65  45 220  50  47   1  79  86
 # magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
 # violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
 # blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
@@ -34,7 +34,7 @@ J_base2         ,color254        ,white           ,
 J_base3         ,color230        ,brightwhite     ,
 J_yellow        ,color136        ,yellow          ,
 J_orange        ,color166        ,brightred       ,
-J_red           ,color124        ,red             ,
+J_red           ,color160        ,red             ,
 J_magenta       ,color125        ,magenta         ,
 J_violet        ,color61         ,brightmagenta   ,
 J_blue          ,color33         ,blue            ,
@@ -56,7 +56,7 @@ J_base02        ,color254        ,white           ,
 J_base03        ,color230        ,brightwhite     ,
 J_yellow        ,color136        ,yellow          ,
 J_orange        ,color166        ,brightred       ,
-J_red           ,color124        ,red             ,
+J_red           ,color160        ,red             ,
 J_magenta       ,color125        ,magenta         ,
 J_violet        ,color61         ,brightmagenta   ,
 J_blue          ,color33         ,blue            ,
