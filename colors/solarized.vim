@@ -100,11 +100,11 @@
 " example. You can drop this into .vimrc:
 "
 " function! ToggleBackground()
-"     if (w:solarized_style=="dark")
-"     let w:solarized_style="light"
+"     if (g:solarized_style=="dark")
+"     let g:solarized_style="light"
 "     colorscheme solarized
 " else
-"     let w:solarized_style="dark"
+"     let g:solarized_style="dark"
 "     colorscheme solarized
 " endif
 " endfunction
@@ -199,8 +199,11 @@
 " COLOR VALUES
 " ---------------------------------------------------------------------
 " Download palettes and files from: http://ethanschoonover.com/solarized
-
-" SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
+"
+" L\*a\*b values are canonical (White D65, Reference D50), other values are 
+" matched in sRGB space.
+"
+" SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      sRGB        HSB
 " --------- ------- ---- -------  ----------- ---------- ----------- -----------
 " base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
 " base02    #073642  0/4 black    235 #262626 20 -12 -12   7  54  66 192  90  26
@@ -212,7 +215,7 @@
 " base3     #fdf6e3 15/7 brwhite  230 #ffffd7 97  00  10 253 246 227  44  10  99
 " yellow    #b58900  3/3 yellow   136 #af8700 60  10  65 181 137   0  45 100  71
 " orange    #cb4b16  9/3 brred    166 #d75f00 50  50  55 203  75  22  18  89  80
-" red       #d30102  1/1 red      124 #af0000 45  70  60 211   1   2   0  99  83
+" red       #dc322f  1/1 red      160 #d70000 50  65  45 220  50  47   1  79  86
 " magenta   #d33682  5/5 magenta  125 #af005f 50  65 -05 211  54 130 331  74  83
 " violet    #6c71c4 13/5 brmagenta 61 #5f5faf 50  15 -45 108 113 196 237  45  77
 " blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
@@ -239,55 +242,38 @@
 " Default option values"{{{
 " ---------------------------------------------------------------------
 if !exists("g:solarized_termtrans")
-    let w:solarized_termtrans = 0
-else
-    let w:solarized_termtrans = g:solarized_termtrans
+    let g:solarized_termtrans = 0
 endif
 if !exists("g:solarized_degrade")
-    let w:solarized_degrade = 0
-else
-    let w:solarized_degrade = g:solarized_degrade 
+    let g:solarized_degrade = 0
 endif
 if !exists("g:solarized_bold")
-    let w:solarized_bold = 1
-else
-    let w:solarized_bold = g:solarized_bold 
+    let g:solarized_bold = 1
 endif
 if !exists("g:solarized_underline")
-    let w:solarized_underline = 1
-else
-    let w:solarized_underline = g:solarized_underline 
+    let g:solarized_underline = 1
 endif
 if !exists("g:solarized_italic")
-    let w:solarized_italic = 1
-else
-    let w:solarized_italic = g:solarized_italic
+    let g:solarized_italic = 1
 endif
 if !exists("g:solarized_termcolors")
-    let w:solarized_termcolors = 256
-else
-    let w:solarized_termcolors = g:solarized_termcolors 
+    let g:solarized_termcolors = 256
 endif
-if !exists("w:solarized_style") && !exists("g:solarized_style")
-    let w:solarized_style = &background
-elseif exists("g:solarized_style")
-    let w:solarized_style = g:solarized_style 
-" else we have an existing w:solarized_style
+if !exists("g:solarized_style") && !exists("g:solarized_style")
+    let g:solarized_style = &background
 endif
 if !exists("g:solarized_contrast")
-    let w:solarized_contrast = "normal"
-else
-    let w:solarized_contrast = g:solarized_contrast 
+    let g:solarized_contrast = "normal"
 endif
 "}}}
 " Colorscheme basic settings"{{{
 " ---------------------------------------------------------------------
-if w:solarized_style == "dark"
+if g:solarized_style == "dark"
     set background=dark
-elseif w:solarized_style == "light"
+elseif g:solarized_style == "light"
     set background=light
 else
-    let w:solarized_style = &background
+    let g:solarized_style = &background
 endif
 
 hi clear
@@ -311,7 +297,7 @@ let colors_name = "solarized"
 " leave the hex values out entirely in that case and include only cterm colors)
 " We also check to see if user has set solarized (force use of the
 " neutral gray monotone palette component)
-if has("gui_running") && w:solarized_degrade == 0
+if has("gui_running") && g:solarized_degrade == 0
     let s:g_back        = "#002b36"
     let s:g_base03      = "#002b36"
     let s:g_base02      = "#073642"
@@ -323,7 +309,7 @@ if has("gui_running") && w:solarized_degrade == 0
     let s:g_base3       = "#fdf6e3"
     let s:g_yellow      = "#b58900"
     let s:g_orange      = "#cb4b16"
-    let s:g_red         = "#d30102"
+    let s:g_red         = "#dc322f"
     let s:g_magenta     = "#d33682"
     let s:g_violet      = "#6c71c4"
     let s:g_blue        = "#268bd2"
@@ -360,7 +346,7 @@ endif
 " ---------------------------------------------------------------------
 " We also set this if gui is running as we use the optional formatting
 " values that get set here (ou==optional underline, ob==opt bold).
-if (has("gui_running") || &t_Co == 256) && w:solarized_termcolors != 16
+if (has("gui_running") || &t_Co == 256) && g:solarized_termcolors != 16
     let s:c_back        = "234"
     let s:c_base03      = "234"
     let s:c_base02      = "235"
@@ -380,7 +366,7 @@ if (has("gui_running") || &t_Co == 256) && w:solarized_termcolors != 16
     let s:c_green       = "64"
     let s:ou            = ""
     let s:ob            = ""
-elseif &t_Co > 8 || w:solarized_termcolors == 16
+elseif &t_Co > 8 || g:solarized_termcolors == 16
     " NOTE: this requires terminal colors to be set to solarized standard
     " 16 colors (see top of this file for details)
     let s:c_back        = "NONE"
@@ -436,7 +422,7 @@ let s:s                 = ",standout"
 "}}}
 " Alternate light scheme "{{{
 " ---------------------------------------------------------------------
-if w:solarized_style == "light"
+if g:solarized_style == "light"
     let s:c_temp03      = s:c_base03
     let s:c_temp02      = s:c_base02
     let s:c_temp01      = s:c_base01
@@ -467,7 +453,7 @@ endif
 "}}}
 " Alternate inverted background scheme "{{{
 " ---------------------------------------------------------------------
-if w:solarized_style == "inverted"
+if g:solarized_style == "inverted"
     let s:c_temp03      = s:c_base03
     let s:c_temp02      = s:c_base02
     let s:c_base03      = s:c_temp02
@@ -482,7 +468,7 @@ endif
 "}}}
 " Optional contrast schemes "{{{
 " ---------------------------------------------------------------------
-if w:solarized_contrast == "high"
+if g:solarized_contrast == "high"
     let s:g_base03      = s:g_base03
     let s:g_base02      = s:g_base02
     let s:g_base01      = s:g_base00
@@ -493,29 +479,30 @@ if w:solarized_contrast == "high"
     let s:g_base3       = s:g_base3
     let s:g_back        = s:g_back
 endif
-if w:solarized_contrast == "low"
+if g:solarized_contrast == "low"
     let s:g_back        = s:g_base02
+    let s:ou            = ",underline"
 endif
 "}}}
 " Overrides dependent on user specified values"{{{
 " ---------------------------------------------------------------------
-if w:solarized_termtrans == 1
+if g:solarized_termtrans == 1
     let s:c_back        = "NONE"   
 endif
 
-if w:solarized_bold == 1
+if g:solarized_bold == 1
     let s:b             = ",bold"
 else
     let s:b             = ""
 endif
 
-if w:solarized_underline == 1
+if g:solarized_underline == 1
     let s:u             = ",underline"
 else
     let s:u             = ""
 endif
 
-if w:solarized_italic == 1
+if g:solarized_italic == 1
     let s:i             = ",italic"
 else
     let s:i             = ""
@@ -643,8 +630,8 @@ exe "hi Type"           . s:fg_yellow .s:bg_none   .s:fmt_none
 "       Structure       struct, union, enum, etc.
 "       Typedef         A typedef
 
-" *Special              any special symbol
 exe "hi Special"        . s:fg_red    .s:bg_none   .s:fmt_none
+"       *Special        any special symbol
 "        SpecialChar    special character in a constant
 "        Tag            you can use CTRL-] on this
 "        Delimiter      character that needs attention
@@ -704,7 +691,7 @@ exe "hi TabLine"        . s:fg_base0  .s:bg_base02 .s:fmt_undr   .s:sp_base0
 exe "hi TabLineSel"     . s:fg_base2  .s:bg_base01 .s:fmt_undr   .s:sp_base0
 exe "hi TabLineFill"    . s:fg_base0  .s:bg_base02 .s:fmt_undr   .s:sp_base0
 exe "hi CursorColumn"   . s:fg_none   .s:bg_base02 .s:fmt_none
-exe "hi CursorLine"     . s:fg_none   .s:bg_base02 .s:fmt_uopt
+exe "hi CursorLine"     . s:fg_none   .s:bg_base02 .s:fmt_uopt   .s:sp_base1
 exe "hi ColorColumn"    . s:fg_none   .s:bg_base02 .s:fmt_none
 exe "hi Cursor"         . s:fg_none   .s:bg_none   .s:fmt_revr
 exe "hi lCursor"        . s:fg_none   .s:bg_none   .s:fmt_stnd
