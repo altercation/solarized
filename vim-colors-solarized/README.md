@@ -3,10 +3,10 @@ Solarized Colorscheme for Vim
 
 Developed by Ethan Schoonover <es@ethanschoonover.com>
 
-Visit the [Solarized Homepage][solarized]
+Visit the [Solarized Homepage][Solarized]
 -----------------------------------------
 
-See the [homepage for the Solarized colorscheme][solarized] for screenshots, 
+See the [homepage for the Solarized colorscheme][Solarized] for screenshots, 
 details and colorscheme versions for Vim, Mutt, popular terminal emulators and 
 other applications.
 
@@ -20,16 +20,21 @@ dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-r
 Downloads
 ---------
 
-If you have come across this colorscheme via the [vim-only repository on 
-github][vim-solarized-github], or the [vim.org script page][vimorg-script] see 
-the link above to the Solarized homepage or
-visit the [github repository for Solarized][solarized-github].
+If you have come across this colorscheme via the [Vim-only repository] on 
+github, or the [vim.org script] page see the link above to the Solarized 
+homepage or visit the main [Solarized repository].
 
-[solarized]:            http://ethanschoonover.com/solarized
-[solarized-github]:     https://github.com/altercation/solarized
-[vim-solarized-github]: https://github.com/altercation/vim-colors-solarized
+The [Vim-only repository] is kept in sync with the main [Solarized repository] 
+and is for installation convenience only (with [Pathogen] or [Vundle], for 
+instance).  Issues, bug reports, changelogs are centralized at the main 
+[Solarized repository].
+
+[Solarized]:            http://ethanschoonover.com/solarized
+[Solarized repository]: https://github.com/altercation/solarized
+[Vim-only repository]:  https://github.com/altercation/vim-colors-solarized
 [vimorg-script]:        http://vim.org/script
-[pathogen]:             https://github.com/tpope/vim-pathogen
+[Pathogen]:             https://github.com/tpope/vim-pathogen
+[Vundle]:               https://github.com/gmarik/vundle
 
 Installation
 ------------
@@ -84,7 +89,7 @@ assignment out entirely and get the same results.
         set background=dark
     endif
 
-See the [Solarized homepage][solarized] for screenshots which will help you 
+See the [Solarized homepage][Solarized] for screenshots which will help you 
 select either the light or dark background.
 
 ### IMPORTANT NOTE FOR TERMINAL USERS:
@@ -93,7 +98,7 @@ If you are going to use Solarized in Terminal mode (i.e. not in a GUI version
 like gvim or macvim), **please please please** consider setting your terminal 
 emulator's colorscheme to used the Solarized palette. I've included palettes 
 for some popular terminal emulator as well as Xdefaults in the official 
-Solarized download available from [Solarized homepage][solarized]. If you use 
+Solarized download available from [Solarized homepage][Solarized]. If you use 
 Solarized without these colors, Solarized will by default use an approximate 
 set of 256 colors. It isn't bad looking and has been extensively tweaked, but 
 it's still not quite the real thing.
