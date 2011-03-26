@@ -1,3 +1,5 @@
+
+
 (eval-when-compile
   (require 'color-theme))
 
@@ -69,6 +71,9 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (secondary-selection ((t (:background ,base02))))
        (trailing-whitespace ((t (:foreground ,red :inverse-video t))))
        (vertical-border ((t (:foreground ,base0))))
+       ;; compilation faces
+       (compilation-info ((t (:forground ,green :bold t))))
+       (compilation-warning ((t (:foreground ,orange :bold t))))
        ;; customize faces
        (custom-button
         ((t (:background ,base02 :box (:line-width 2 :style released-button)))))
@@ -81,11 +86,16 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (custom-documentation ((t (:inherit default))))
        (custom-group-tag ((t (:foreground ,orange :bold t))))
        (custom-link ((t (:foreground ,violet))))
+       (custom-state ((t (:foreground ,green))))
        (custom-variable-tag ((t (:foreground ,orange :bold t))))
        ;; diff faces
        (diff-added ((t (:foreground ,green :inverse-video t))))
        (diff-changed ((t (:foreground ,yellow :inverse-video t))))
        (diff-removed ((t (:foreground ,red :inverse-video t))))
+       ;; emacs-wiki faces
+       (emacs-wiki-bad-link-face ((t (:foreground ,red :underline t))))
+       (emacs-wiki-link-face ((t (:foreground ,blue :underline t))))
+       (emacs-wiki-verbatim-face ((t (:foreground ,base00 :underline t))))
        ;; font-lock faces
        (font-lock-builtin-face ((t (:foreground ,green))))
        (font-lock-comment-face ((t (:foreground ,base01 :italic t))))
@@ -95,7 +105,10 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (font-lock-string-face ((t (:foreground ,cyan))))
        (font-lock-type-face ((t (:foregound ,yellow))))
        (font-lock-variable-name-face ((t (:foregound ,blue))))
-       (font-lock-warning-face ((t (:foreground ,red :bold t))))))))
+       (font-lock-warning-face ((t (:foreground ,red :bold t))))
+       ;; info faces
+       (info-xref ((t (:foreground ,blue :underline t))))
+       (info-xref-visited ((t (:inherit info-xref :foreground ,magenta))))))))
 
 (defun color-theme-solarized-dark () (color-theme-solarized 'dark))
 (defun color-theme-solarized-light () (color-theme-solarized 'light))
