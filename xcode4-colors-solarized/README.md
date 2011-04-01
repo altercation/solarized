@@ -21,8 +21,8 @@ Install XCode4
 Note: I added the Solarized color palette to the system using the directions 
 in ../apple-colorpalette-solarized. I don't know if this is required or not.
 
-  mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
-  cp Solarize\ Dark.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+    mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+    cp Solarize\ Dark.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 The Values
 ----------
