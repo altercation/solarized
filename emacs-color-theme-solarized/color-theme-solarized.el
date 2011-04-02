@@ -110,5 +110,12 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (info-xref ((t (:foreground ,blue :underline t))))
        (info-xref-visited ((t (:inherit info-xref :foreground ,magenta))))))))
 
-(defun color-theme-solarized-dark () (color-theme-solarized 'dark))
-(defun color-theme-solarized-light () (color-theme-solarized 'light))
+(defun color-theme-solarized-dark ()
+  (interactive)
+  (color-theme-solarized 'dark))
+
+(defun color-theme-solarized-light ()
+  (interactive)
+  (color-theme-solarized 'light))
+
+(provide 'color-theme-solarized)
