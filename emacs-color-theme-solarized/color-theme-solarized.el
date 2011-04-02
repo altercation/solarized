@@ -49,7 +49,8 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
      `(color-theme-solarized
        ((foreground-color . ,base0)
         (background-color . ,base03)
-        (background-mode . ,mode))
+        (background-mode . ,mode)
+        (cursor-color . ,base0))
        ;; basic faces
        (default ((t (:foreground ,base0))))
        (cursor ((t (:foreground ,base0 :background ,base03 :inverse-video t))))
