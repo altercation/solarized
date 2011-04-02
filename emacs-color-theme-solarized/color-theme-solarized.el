@@ -1,4 +1,14 @@
+;;; Author: Ethan Schoonover, Solarized; Greg Pfeil, Emacs adaptation
+;;; URL: http://ethanschoonover.com/solarized
 
+;;; This file is not (YET) part of GNU Emacs.
+
+;;; # Usage
+
+;;; 1. Install the color-theme package
+;;;   (http://www.emacswiki.org/cgi-bin/wiki/ColorTheme)
+;;; 2. Load this file
+;;; 3. M-x color-theme-solarized-[dark|light]
 
 (eval-when-compile
   (require 'color-theme))
