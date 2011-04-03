@@ -119,7 +119,14 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (font-lock-warning-face ((t (:foreground ,red :bold t))))
        ;; info faces
        (info-xref ((t (:foreground ,blue :underline t))))
-       (info-xref-visited ((t (:inherit info-xref :foreground ,magenta))))))))
+       (info-xref-visited ((t (:inherit info-xref :foreground ,magenta))))
+       ;; org
+       (org-hide ((t (:foreground ,base03))))
+       (org-todo ((t (:foreground ,red :bold t))))
+       (org-done ((t (:foreground ,green :bold t))))
+       ;; show-paren
+       (show-paren-match-face ((t (:background ,cyan :foreground ,base3))))
+       (show-paren-mismatch-face ((t (:background ,red :foreground ,base3))))))))
 
 (defun color-theme-solarized-dark ()
   (interactive)
