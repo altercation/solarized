@@ -493,6 +493,17 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>JS: Class</string>
+			<key>scope</key>
+			<string>support.class.js, entity.name.type.instance.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#BD3800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>JS: Source</string>
 			<key>scope</key>
 			<string>text.html.basic source.js.embedded.html</string>
@@ -1079,6 +1090,17 @@
 			<dict>
 				<key>foreground</key>
 				<string>#BD3800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>PHP: Storage modifier</string>
+			<key>scope</key>
+			<string>storage.modifier.php, storage.modifier.reference.php</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#A57800</string>
 			</dict>
 		</dict>
 	</array>
