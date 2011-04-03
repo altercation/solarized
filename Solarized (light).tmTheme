@@ -761,7 +761,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#1F74CF</string>
+				<string>#A57800</string>
 			</dict>
 		</dict>
 		<dict>
@@ -781,11 +781,37 @@
 			<key>name</key>
 			<string>Ruby: Class</string>
 			<key>scope</key>
-			<string>keyword.control.class.ruby</string>
+			<string>keyword.control.class.ruby, meta.class.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#748B00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: Keyword</string>
+			<key>scope</key>
+			<string>keyword.control.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#748B00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: Support Class</string>
+			<key>scope</key>
+			<string>support.class.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A57800</string>
 			</dict>
 		</dict>
 		<dict>
@@ -803,22 +829,46 @@
 			<key>name</key>
 			<string>Ruby: Constant</string>
 			<key>scope</key>
+			<string>constant.language.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: Constant Other</string>
+			<key>scope</key>
 			<string>variable.other.constant.ruby</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string></string>
 				<key>foreground</key>
 				<string>#A57800</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Ruby: Punctuation Section</string>
+			<string>Ruby: Punctuation Section ''</string>
 			<key>scope</key>
-			<string>punctuation.section.embedded.ruby</string>
+			<string>punctuation.section.embedded.ruby, punctuation.definition.string.begin.ruby, punctuation.definition.string.end.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#D01F1E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: Special Method</string>
+			<key>scope</key>
+			<string>keyword.other.special-method.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#BD3800</string>
 			</dict>
 		</dict>
 		<dict>
