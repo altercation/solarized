@@ -1,6 +1,6 @@
 #!/bin/sh
 
-dir=`pwd`
+dir=`dirname $0`
 
 # set palette
 gconftool-2 -s -t string /apps/gnome-terminal/profiles/Default/palette `cat $dir/colors/palette`
