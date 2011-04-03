@@ -47,6 +47,17 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>StringNumber</string>
+			<key>scope</key>
+			<string>string</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#586E75</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Regexp</string>
 			<key>scope</key>
 			<string>string.regexp</string>
@@ -297,6 +308,148 @@
 			<string>invalid</string>
 			<key>settings</key>
 			<dict/>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup: Doctype</string>
+			<key>scope</key>
+			<string>entitiy.name.tag.doctype.html, meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string</string>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#EAE3CB</string>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#899090</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup: style attribute</string>
+			<key>scope</key>
+			<string>source.css.embedded.html string.quoted.double.html</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>CSS: Property</string>
+			<key>scope</key>
+			<string>entity.name.tag.css</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#C58106</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>CSS: Value</string>
+			<key>scope</key>
+			<string>meta.property-value.css constant.numeric.css, meta.property-value.css keyword.other.unit.css,constant.other.color.rgb-value.css</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup: Script</string>
+			<key>scope</key>
+			<string>entity.name.tag.script.html</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS: Function Name</string>
+			<key>scope</key>
+			<string>meta.function.js, entity.name.function.js, support.function.dom.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C58106</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS: Source</string>
+			<key>scope</key>
+			<string>text.html.basic source.js.embedded.html</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#C58106</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>JS: Function</string>
+			<key>scope</key>
+			<string>storage.type.function.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#268BD2</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>()</string>
+			<key>scope</key>
+			<string>meta.brace.round, punctuation.definition.parameters.begin.js, punctuation.definition.parameters.end.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#93A1A1</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>{}</string>
+			<key>scope</key>
+			<string>meta.brace.curly.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#1F74CF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Markup: Tag</string>
+			<key>scope</key>
+			<string>entity.name.tag.structure.any.html</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Double Quoted String</string>
+			<key>scope</key>
+			<string>string.quoted.double.html, string.quoted.double.js</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
 		</dict>
 	</array>
 	<key>uuid</key>
