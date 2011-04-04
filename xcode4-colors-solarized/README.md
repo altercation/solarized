@@ -11,7 +11,7 @@ general guide for setting the colors for XCode4. All the hard work was done
 before me. All I did was use the color palette and set some colors. There are
 deviations from the Vim theme, but for the most part, I think it looks good.
 
-Also, I didn't do the light theme, just the dark theme.
+The Light theme has been added as of April 4, 2011
 
 Installation
 ------------
@@ -19,10 +19,11 @@ Installation
 Install XCode4
 
 Note: I added the Solarized color palette to the system using the directions 
-in ../apple-colorpalette-solarized. I don't know if this is required or not.
+in ../apple-colorpalette-solarized. This is not required to use either Theme.
 
     mkdir -p ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
     cp Solarize\ Dark.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
+    cp Solarize\ Light.dvtcolortheme ~/Library/Developer/Xcode/UserData/FontAndColorThemes/
 
 The Values
 ----------
