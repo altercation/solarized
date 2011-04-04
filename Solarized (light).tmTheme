@@ -493,17 +493,6 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>JS: Class</string>
-			<key>scope</key>
-			<string>support.class.js, entity.name.type.instance.js</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#BD3800</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
 			<string>JS: Source</string>
 			<key>scope</key>
 			<string>text.html.basic source.js.embedded.html</string>
@@ -624,7 +613,7 @@
 			<key>name</key>
 			<string>HTML: Text</string>
 			<key>scope</key>
-			<string>text.html.basic</string>
+			<string>text.html.basic, text.html.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -772,7 +761,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#A57800</string>
+				<string>#1F74CF</string>
 			</dict>
 		</dict>
 		<dict>
@@ -797,6 +786,19 @@
 			<dict>
 				<key>foreground</key>
 				<string>#748B00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: Class Name</string>
+			<key>scope</key>
+			<string>entity.name.type.class.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A57800</string>
 			</dict>
 		</dict>
 		<dict>
@@ -840,7 +842,7 @@
 			<key>name</key>
 			<string>Ruby: Constant</string>
 			<key>scope</key>
-			<string>constant.language.ruby</string>
+			<string>constant.language.ruby, constant.numeric.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -858,6 +860,19 @@
 				<string></string>
 				<key>foreground</key>
 				<string>#A57800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: :symbol</string>
+			<key>scope</key>
+			<string>constant.other.symbol.ruby</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
 			</dict>
 		</dict>
 		<dict>
@@ -891,6 +906,32 @@
 			<dict>
 				<key>foreground</key>
 				<string>#BD3800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: erb =</string>
+			<key>scope</key>
+			<string>text.html.ruby meta.tag.inline.any.html</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#819090</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ruby: erb ""</string>
+			<key>scope</key>
+			<string>text.html.ruby punctuation.definition.string.begin, text.html.ruby punctuation.definition.string.end</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1090,17 +1131,6 @@
 			<dict>
 				<key>foreground</key>
 				<string>#BD3800</string>
-			</dict>
-		</dict>
-		<dict>
-			<key>name</key>
-			<string>PHP: Storage modifier</string>
-			<key>scope</key>
-			<string>storage.modifier.php, storage.modifier.reference.php</string>
-			<key>settings</key>
-			<dict>
-				<key>foreground</key>
-				<string>#A57800</string>
 			</dict>
 		</dict>
 	</array>
