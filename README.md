@@ -55,7 +55,7 @@ Download
 
 ### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.zip)
 
-Current release is **v1.0.0beta2**.
+Current release is **v1.0.0beta1**.
 
 You can also use the following links to access application specific downloads 
 and git repositories:
