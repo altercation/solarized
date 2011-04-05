@@ -613,7 +613,7 @@
 			<key>name</key>
 			<string>HTML: Text</string>
 			<key>scope</key>
-			<string>text.html.basic, text.html.ruby</string>
+			<string>text.html.ruby</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -637,7 +637,7 @@
 			<key>name</key>
 			<string>HTML: =</string>
 			<key>scope</key>
-			<string>text.html.basic meta.tag.structure.any.html, text.html.basic source.js.embedded.html</string>
+			<string>text.html.basic meta.tag.other.html, text.html.basic meta.tag.any.html, text.html.basic meta.tag.block.any, text.html.basic meta.tag.inline.any, text.html.basic meta.tag.structure.any.html, text.html.basic source.js.embedded.html, punctuation.separator.key-value.html</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -661,7 +661,7 @@
 			<key>name</key>
 			<string>HTML: "</string>
 			<key>scope</key>
-			<string>text.html.basic meta.tag.structure.any.html punctuation.definition.string.begin</string>
+			<string>text.html.basic meta.tag.structure.any.html punctuation.definition.string.begin.html, punctuation.definition.string.begin.html, punctuation.definition.string.end.html </string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -681,6 +681,19 @@
 				<string>bold</string>
 				<key>foreground</key>
 				<string>#1F74CF</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>HTML: &gt;text&lt;</string>
+			<key>scope</key>
+			<string>text.html.basic</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#6A58BE</string>
 			</dict>
 		</dict>
 		<dict>
