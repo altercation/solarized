@@ -144,6 +144,9 @@ Features
     themselves, as with the monotone \*a\*b values, have been adjusted within 
     a small range to achieve the most pleasing combination of colors.
 
+    See also the [Usage & Development](#usage-development) section below for 
+    details on the specific values to be used in different contexts.
+
     This makes colorscheme inversion trivial. Here, for instance, is a sass 
     (scss) snippet that inverts solarized based on the class of the html tag 
     (e.g. `<html class="dark red">` to give a dark background with red accent):
@@ -183,6 +186,8 @@ Features
             color-profile: sRGB;
             rendering-intent: auto;
         }
+
+        See also [the full css stylesheet for this site](https://github.com/altercation/ethanschoonover.com/blob/master/resources/css/style.css).
 
 Installation
 ------------
