@@ -1,6 +1,6 @@
 ---
 title: Solarized
-subtitle: Precision colors for machines and people
+description: Precision colors for machines and people
 author: Ethan Schoonover
 tags: test, testing, test123
 colors: light yellow
@@ -55,7 +55,7 @@ Download
 
 ### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.zip)
 
-Current release is **v1.0.0beta2**.
+Current release is **v1.0.0beta1**.
 
 You can also use the following links to access application specific downloads 
 and git repositories:
@@ -144,6 +144,9 @@ Features
     themselves, as with the monotone \*a\*b values, have been adjusted within 
     a small range to achieve the most pleasing combination of colors.
 
+    See also the [Usage & Development](#usage-development) section below for 
+    details on the specific values to be used in different contexts.
+
     This makes colorscheme inversion trivial. Here, for instance, is a sass 
     (scss) snippet that inverts solarized based on the class of the html tag 
     (e.g. `<html class="dark red">` to give a dark background with red accent):
@@ -184,6 +187,8 @@ Features
             rendering-intent: auto;
         }
 
+    See also [the full css stylesheet for this site](https://github.com/altercation/ethanschoonover.com/blob/master/resources/css/style.css).
+
 Installation
 ------------
 
@@ -206,17 +211,17 @@ Clockwise from upper left: Menlo, Letter Gothic, Terminus, Andale Mono.
 Preview all code samples in specific font faces by selecting a link from this 
 list:
 
-* [DejaVu Sans 18](http:/ethanschoonover.com/solarized/img/dejavusans18/)
-* [DejaVu Sans 14](http:/ethanschoonover.com/solarized/img/dejavusans14/)
-* [Letter Gothic 18](http:/ethanschoonover.com/solarized/img/lettergothic18/)
-* [Letter Gothic 14](http:/ethanschoonover.com/solarized/img/lettergothic14/)
+* [DejaVu Sans 18](http://ethanschoonover.com/solarized/img/dejavusans18/)
+* [DejaVu Sans 14](http://ethanschoonover.com/solarized/img/dejavusans14/)
+* [Letter Gothic 18](http://ethanschoonover.com/solarized/img/lettergothic18/)
+* [Letter Gothic 14](http://ethanschoonover.com/solarized/img/lettergothic14/)
 
-* [Andale Mono 14](http:/ethanschoonover.com/solarized/img/andalemono14/)
-* [Monaco 14](http:/ethanschoonover.com/solarized/img/monaco14/)
-* [Skyhook Mono 14](http:/ethanschoonover.com/solarized/img/skyhookmono14/)
+* [Andale Mono 14](http://ethanschoonover.com/solarized/img/andalemono14/)
+* [Monaco 14](http://ethanschoonover.com/solarized/img/monaco14/)
+* [Skyhook Mono 14](http://ethanschoonover.com/solarized/img/skyhookmono14/)
 
-* [Terminus 12](http:/ethanschoonover.com/solarized/img/terminus12/)
-* [Terminus 20](http:/ethanschoonover.com/solarized/img/terminus20/)
+* [Terminus 12](http://ethanschoonover.com/solarized/img/terminus12/)
+* [Terminus 20](http://ethanschoonover.com/solarized/img/terminus20/)
 
 Screenshots
 -----------
@@ -290,7 +295,6 @@ These screen shots show Vim running with my own [Pandoc Kit Syntax](http://ethan
 [![tex dark](https://github.com/altercation/solarized/raw/master/img/screen-tex-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/screen-tex-dark.png)
 [![tex light](https://github.com/altercation/solarized/raw/master/img/screen-tex-light-th.png)](https://github.com/altercation/solarized/raw/master/img/screen-tex-light.png)
 
-
 The Values
 ----------
 
@@ -315,3 +319,26 @@ matched in sRGB space.
     blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
     cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
     green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
+
+Usage & Development
+-------------------
+
+Solarized flips between light and dark modes. In each mode, four monotones form 
+the core values (with an optional fifth for emphasized content).
+
+![value samples - dark](https://github.com/altercation/solarized/raw/master/img/solarized-values-dark.png)\
+
+![value samples - light](https://github.com/altercation/solarized/raw/master/img/solarized-values-light.png)\
+
+Thus in the case of a dark background colorscheme, the normal relationship for 
+background and body text is `base03:base0` (please note that body text is 
+**not** `base00`).  Note also that in cases where the background and foreground 
+can be specified as a pair value, text can be highlighted using a combination 
+of `base02:base1`. The L\*a\*b lightness difference between `base03:base0` and 
+`base02:base1` is identical by design, resulting in identical readability 
+against both normal and highlighted backgrounds. An example use case is folded 
+text in Vim which uses `base02` for the background and `base1` for the 
+foreground.
+
+The values in this example are simply inverted in the case of a light 
+background.
