@@ -574,13 +574,11 @@
 			<key>name</key>
 			<string>HTML: Doctype</string>
 			<key>scope</key>
-			<string>entitiy.name.tag.doctype.html, meta.tag.sgml.doctype, meta.tag.sgml.doctype entity, meta.tag.sgml.doctype string, meta.tag.preprocessor.xml, meta.tag.preprocessor.xml entity, meta.tag.preprocessor.xml string</string>
+			<string>entity.name.tag.doctype.html, meta.tag.sgml.html, string.quoted.double.doctype.identifiers-and-DTDs.html</string>
 			<key>settings</key>
 			<dict>
-				<key>background</key>
-				<string>#EAE3CB</string>
 				<key>fontStyle</key>
-				<string></string>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#899090</string>
 			</dict>
@@ -693,7 +691,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#6A58BE</string>
+				<string>#536871</string>
 			</dict>
 		</dict>
 		<dict>
