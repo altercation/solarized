@@ -187,7 +187,7 @@ Features
             rendering-intent: auto;
         }
 
-        See also [the full css stylesheet for this site](https://github.com/altercation/ethanschoonover.com/blob/master/resources/css/style.css).
+    See also [the full css stylesheet for this site](https://github.com/altercation/ethanschoonover.com/blob/master/resources/css/style.css).
 
 Installation
 ------------
