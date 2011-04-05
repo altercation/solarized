@@ -211,17 +211,17 @@ Clockwise from upper left: Menlo, Letter Gothic, Terminus, Andale Mono.
 Preview all code samples in specific font faces by selecting a link from this 
 list:
 
-* [DejaVu Sans 18](http:/ethanschoonover.com/solarized/img/dejavusans18/)
-* [DejaVu Sans 14](http:/ethanschoonover.com/solarized/img/dejavusans14/)
-* [Letter Gothic 18](http:/ethanschoonover.com/solarized/img/lettergothic18/)
-* [Letter Gothic 14](http:/ethanschoonover.com/solarized/img/lettergothic14/)
+* [DejaVu Sans 18](http://ethanschoonover.com/solarized/img/dejavusans18/)
+* [DejaVu Sans 14](http://ethanschoonover.com/solarized/img/dejavusans14/)
+* [Letter Gothic 18](http://ethanschoonover.com/solarized/img/lettergothic18/)
+* [Letter Gothic 14](http://ethanschoonover.com/solarized/img/lettergothic14/)
 
-* [Andale Mono 14](http:/ethanschoonover.com/solarized/img/andalemono14/)
-* [Monaco 14](http:/ethanschoonover.com/solarized/img/monaco14/)
-* [Skyhook Mono 14](http:/ethanschoonover.com/solarized/img/skyhookmono14/)
+* [Andale Mono 14](http://ethanschoonover.com/solarized/img/andalemono14/)
+* [Monaco 14](http://ethanschoonover.com/solarized/img/monaco14/)
+* [Skyhook Mono 14](http://ethanschoonover.com/solarized/img/skyhookmono14/)
 
-* [Terminus 12](http:/ethanschoonover.com/solarized/img/terminus12/)
-* [Terminus 20](http:/ethanschoonover.com/solarized/img/terminus20/)
+* [Terminus 12](http://ethanschoonover.com/solarized/img/terminus12/)
+* [Terminus 20](http://ethanschoonover.com/solarized/img/terminus20/)
 
 Screenshots
 -----------
