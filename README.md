@@ -290,7 +290,6 @@ These screen shots show Vim running with my own [Pandoc Kit Syntax](http://ethan
 [![tex dark](https://github.com/altercation/solarized/raw/master/img/screen-tex-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/screen-tex-dark.png)
 [![tex light](https://github.com/altercation/solarized/raw/master/img/screen-tex-light-th.png)](https://github.com/altercation/solarized/raw/master/img/screen-tex-light.png)
 
-
 The Values
 ----------
 
@@ -315,3 +314,25 @@ matched in sRGB space.
     blue      #268bd2  4/4 blue      33 #0087ff 55 -10 -45  38 139 210 205  82  82
     cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
     green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
+
+Usage & Development
+-------------------
+
+Solarized flips between light and dark modes. In each mode, four monotones form 
+the core values (with an optional fifth for emphasized content).
+
+![value samples - dark](https://github.com/altercation/solarized/raw/master/img/solarized-values-dark.png)
+
+![value samples - light](https://github.com/altercation/solarized/raw/master/img/solarized-values-light.png)
+
+Thus in the case of a dark background colorscheme, the normal relationship for 
+background and body text is base03:base0 (please note that body text is **not** 
+base00).  Note also that in cases where the background and foreground can be 
+specified as a pair value, text can be highlighted using a combination of 
+base02:base1. The L\*a\*b lightness difference between base03:base0 and 
+base02:base1 is identical by design, resulting in identical readability against 
+both normal and highlighted backgrounds. An example use case is folded text in 
+Vim which uses base02 for the background and base1 for the foreground.
+
+The values in this example are simply inverted in the case of a light 
+background.
