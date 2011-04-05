@@ -1,6 +1,6 @@
 ---
 title: Solarized
-subtitle: Precision colors for machines and people
+description: Precision colors for machines and people
 author: Ethan Schoonover
 tags: test, testing, test123
 colors: light yellow
