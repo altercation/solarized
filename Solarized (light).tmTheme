@@ -1339,6 +1339,186 @@
 				<string>#269186</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: {}</string>
+			<key>scope</key>
+			<string>punctuation.section.group.tex , punctuation.definition.arguments.begin.latex, punctuation.definition.arguments.end.latex, punctuation.definition.arguments.latex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#B81D1C</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: {text}</string>
+			<key>scope</key>
+			<string>meta.group.braces.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A57705</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Other Math</string>
+			<key>scope</key>
+			<string>string.other.math.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A57705</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: {var}</string>
+			<key>scope</key>
+			<string>variable.parameter.function.latex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#BD3800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Math \\</string>
+			<key>scope</key>
+			<string>punctuation.definition.constant.math.tex, text.tex.latex constant.other.general.math.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#D01F1E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Constant Math</string>
+			<key>scope</key>
+			<string>text.tex.latex constant.other.math.tex, constant.other.general.math.tex, constant.other.general.math.tex, constant.character.math.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Other Math String</string>
+			<key>scope</key>
+			<string>string.other.math.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A57800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: $</string>
+			<key>scope</key>
+			<string>punctuation.definition.string.begin.tex, punctuation.definition.string.end.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#D3201F</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: \label</string>
+			<key>scope</key>
+			<string>keyword.control.label.latex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: \label { }</string>
+			<key>scope</key>
+			<string>variable.parameter.definition.label.latex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#D01F1E</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Function </string>
+			<key>scope</key>
+			<string>support.function.be.latex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#748B00</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Support Function Section</string>
+			<key>scope</key>
+			<string>support.function.section.latex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#BD3800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Support Function</string>
+			<key>scope</key>
+			<string>support.function.general.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Comment</string>
+			<key>scope</key>
+			<string>punctuation.definition.comment.tex, comment.line.percentage.tex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>38E819D9-AE02-452F-9231-ECC3B204AFD7</string>
