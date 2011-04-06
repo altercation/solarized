@@ -1144,6 +1144,84 @@
 				<string>#BD3800</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>C: constant</string>
+			<key>scope</key>
+			<string>constant.numeric.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C: Meta Preprocessor</string>
+			<key>scope</key>
+			<string>meta.preprocessor.c.include, meta.preprocessor.macro.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#BB3700</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C: Keyword</string>
+			<key>scope</key>
+			<string>keyword.control.import.define.c, keyword.control.import.include.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#BB3700</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C: Function Preprocessor</string>
+			<key>scope</key>
+			<string>entity.name.function.preprocessor.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#BB3700</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C: include &lt;something.c&gt;</string>
+			<key>scope</key>
+			<string>meta.preprocessor.c.include string.quoted.other.lt-gt.include.c, meta.preprocessor.c.include punctuation.definition.string.begin.c, meta.preprocessor.c.include punctuation.definition.string.end.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>C: Function</string>
+			<key>scope</key>
+			<string>support.function.C99.c</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#536871</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>38E819D9-AE02-452F-9231-ECC3B204AFD7</string>
