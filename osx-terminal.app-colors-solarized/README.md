@@ -30,6 +30,17 @@ and open in 32 bit mode
 cf
 https://github.com/evanphx/terminalcolours
 
+xterm-256color variant
+----------------------
+
+Terminal.app does not normally support being set to xterm-256color from within 
+its preferences. I have modified the two files in the xterm-256color folder to 
+specify an xterm-256color $TERM value. This will only work if you have an 
+existing terminfo file for xterm-256color.
+
+The advantage of the xterm-256color mode is some better support for background 
+toggling. It does not fully support true 256 color mode however.
+
 The Values
 ----------
 
