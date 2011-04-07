@@ -11,7 +11,7 @@
 	<entry name="use_theme_colors" mtime="1302213339" type="bool" value="false"/>
 	<entry name="default_size_columns" mtime="1301342164" type="int" value="80"/>
 	<entry name="font" mtime="1302213339" type="string">
-		<stringvalue>Neep Alt Medium Semi-Condensed 9</stringvalue>
+		<stringvalue>Monospace</stringvalue>
 	</entry>
 	<entry name="use_custom_command" mtime="1301342164" type="bool" value="false"/>
 	<entry name="word_chars" mtime="1301342164" type="string">
