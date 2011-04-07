@@ -377,7 +377,7 @@ else
     let s:green       = "2"
 endif
 "}}}
-" Formatting options and null values for passthrough effect"{{{
+" Formatting options and null values for passthrough effect "{{{
 " ---------------------------------------------------------------------
     let s:none            = "NONE"
     let s:none            = "NONE"
@@ -388,6 +388,14 @@ endif
     let s:s               = ",standout"
     let s:ou              = ""
     let s:ob              = ""
+"}}}
+" Background value based on termtrans setting "{{{
+" ---------------------------------------------------------------------
+if g:solarized_termtrans == 0
+    let s:back        = s:base03
+else
+    let s:back        = "NONE"
+endif
 "}}}
 " Alternate light scheme "{{{
 " ---------------------------------------------------------------------
@@ -426,12 +434,6 @@ endif
 "}}}
 " Overrides dependent on user specified values"{{{
 " ---------------------------------------------------------------------
-if g:solarized_termtrans == 0
-    let s:back        = s:base03
-else
-    let s:back        = "NONE"
-endif
-
 if g:solarized_bold == 1
     let s:b           = ",bold"
 else
