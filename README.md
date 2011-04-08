@@ -1,11 +1,11 @@
 ---
-title: Solarized
-description: Precision colors for machines and people
-author: Ethan Schoonover
-tags: test, testing, test123
-colors: light yellow
-created: March 15, 2011
-lastchanged: March 21, 2011
+Title: Solarized
+Description: Precision colors for machines and people
+Author: Ethan Schoonover
+Tags: test, testing, test123
+Colors: light yellow
+Created:  2011 Mar 15
+Modified: 2011 Apr 07
 
 ---
 
