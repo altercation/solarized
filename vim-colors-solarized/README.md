@@ -132,6 +132,7 @@ Set these in your vimrc file prior to calling the colorscheme.
     g:solarized_underline =   1       |   0
     g:solarized_italic    =   1       |   0
     g:solarized_contrast  =   "normal"|   "high" or "low"
+    g:solarized_visibility=   "normal"|   "high" or "low"
     ------------------------------------------------
 
 ### Option Details
@@ -171,6 +172,12 @@ Set these in your vimrc file prior to calling the colorscheme.
     Stick with normal! It's been carefully tested. Setting this option to high 
     or low does use the same Solarized palette but simply shifts some values up 
     or down in order to expand or compress the tonal range displayed.
+
+*   g:solarized_visibility
+
+    Special characters such as trailing whitespace, tabs, newlines, when
+    displayed using `:set list` can be set to one of three levels depending on 
+    your needs. Default value is `normal` with `high` and `low` options.
 
 Toggle Background Function
 --------------------------
