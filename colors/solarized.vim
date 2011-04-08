@@ -133,6 +133,7 @@
 " g:solarized_underline =   1       |   0
 " g:solarized_italic    =   1       |   0
 " g:solarized_contrast  =   "normal"|   "high" or "low"
+" g:solarized_visibility=   "normal"|   "high" or "low"
 " ------------------------------------------------
 "
 " OPTION DETAILS
@@ -193,6 +194,13 @@
 " Stick with normal! It's been carefully tested. Setting this option to high
 " or low does use the same Solarized palette but simply shifts some values up
 " or down in order to expand or compress the tonal range displayed.
+"
+" ------------------------------------------------
+" g:solarized_visibility =  "normal"|   "high" or "low"
+" ------------------------------------------------
+" Special characters such as trailing whitespace, tabs, newlines, when 
+" displayed using ":set list" can be set to one of three levels depending on 
+" your needs.
 "
 " ---------------------------------------------------------------------
 " COLOR VALUES
@@ -264,6 +272,9 @@ if !exists("g:solarized_termcolors")
 endif
 if !exists("g:solarized_contrast")
     let g:solarized_contrast = "normal"
+endif
+if !exists("g:solarized_visibility")
+    let g:solarized_visibility = "normal"
 endif
 "}}}
 " Colorscheme initialization "{{{
@@ -615,8 +626,16 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 "
 "Highlighting groups for various occasions
 "-----------------------------------------
-exe "hi! SpecialKey"     .s:fmt_none   .s:fg_base02 .s:bg_none
+if      (g:solarized_visibility=="high")
+exe "hi! SpecialKey"     .s:fmt_revr   .s:fg_red    .s:bg_none
+exe "hi! NonText"        .s:fmt_bold   .s:fg_base1  .s:bg_none
+elseif  (g:solarized_visibility=="low")
+exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_base02 .s:bg_none
 exe "hi! NonText"        .s:fmt_bold   .s:fg_base02 .s:bg_none
+else
+exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_red    .s:bg_none
+exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_none
+endif
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ErrorMsg"       .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! IncSearch"      .s:fmt_revr   .s:fg_yellow .s:bg_none
