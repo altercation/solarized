@@ -402,11 +402,11 @@
 			</dict>
 		</dict>
 		<dict>
-			<key>name</key>
 			<string>CSS: Value</string>
 			<key>scope</key>
 			<string>meta.property-value.css</string>
 			<key>settings</key>
+			<key>name</key>
 			<dict>
 				<key>foreground</key>
 				<string>#269186</string>
@@ -785,7 +785,7 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#475B63</string>
+				<string>#738A05</string>
 			</dict>
 		</dict>
 		<dict>
