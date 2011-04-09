@@ -110,7 +110,7 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#073642</string>
+				<string>#D11C24</string>
 			</dict>
 		</dict>
 		<dict>
@@ -750,7 +750,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#485A62</string>
+				<string>#708284</string>
 			</dict>
 		</dict>
 		<dict>
@@ -785,7 +785,7 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#475B63</string>
+				<string>#738A05</string>
 			</dict>
 		</dict>
 		<dict>
