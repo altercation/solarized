@@ -103,3 +103,8 @@ First public release. Included:
 * Vim Colorscheme
 * Xresources colors
 
+
+
+***
+
+MODIFIED: 2011 Apr 09
