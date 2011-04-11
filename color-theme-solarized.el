@@ -119,4 +119,13 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
   (interactive)
   (color-theme-solarized 'light))
 
+(add-to-list 'color-themes
+             '(color-theme-solarized-light
+               "Solarized Light"
+               "Ethan Schoonover & Greg Pfeil <greg@technomadic.org>"))
+(add-to-list 'color-themes
+             '(color-theme-solarized-dark
+               "Solarized Dark"
+               "Ethan Schoonover & Greg Pfeil <greg@technomadic.org>"))
+
 (provide 'color-theme-solarized)
