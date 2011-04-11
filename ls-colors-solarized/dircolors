@@ -61,27 +61,34 @@ TERM xterm-debian
 # 30=black 31=red 32=green 33=yellow 34=blue 35=magenta 36=cyan 37=white
 # Background color codes:
 # 40=black 41=red 42=green 43=yellow 44=blue 45=magenta 46=cyan 47=white
-#NORMAL 00 # no color code at all
+
+## dircolors 256 COLOR SUPPORT (see here: http://www.mail-archive.com/bug-coreutils@gnu.org/msg11030.html)
+# Text 256 color coding:
+# 38;5;COLOR_NUMBER
+# Background 256 color coding:
+# 48;5;COLOR_NUMBER
+
+NORMAL 00;38;5;244 # no color code at all
 #FILE 00 # regular file: use no color at all
 RESET 0 # reset to "normal" color
-DIR 01;34 # directory
-LINK 01;36 # symbolic link. (If you set this to 'target' instead of a
+DIR 00;38;5;33 # directory 01;34
+LINK 01;38;5;33 # symbolic link. (If you set this to 'target' instead of a
  # numerical value, the color is as for the file pointed to.)
 MULTIHARDLINK 00 # regular file with more than one link
-FIFO 40;33 # pipe
-SOCK 01;35 # socket
-DOOR 01;35 # door
-BLK 40;33;01 # block device driver
-CHR 40;33;01 # character device driver
-ORPHAN 40;31;01 # symlink to nonexistent file, or non-stat'able file
-SETUID 37;41 # file that is setuid (u+s)
-SETGID 30;43 # file that is setgid (g+s)
+FIFO 48;5;230;38;5;136;01 # pipe
+SOCK 48;5;230;38;5;136;01 # socket
+DOOR 48;5;230;38;5;136;01 # door
+BLK 48;5;230;38;5;244;01 # block device driver
+CHR 48;5;230;38;5;244;01 # character device driver
+ORPHAN 48;5;235;38;5;160 # symlink to nonexistent file, or non-stat'able file
+SETUID 48;5;160;38;5;230 # file that is setuid (u+s)
+SETGID 48;5;136;38;5;230 # file that is setgid (g+s)
 CAPABILITY 30;41 # file with capability
-STICKY_OTHER_WRITABLE 30;42 # dir that is sticky and other-writable (+t,o+w)
-OTHER_WRITABLE 34;42 # dir that is other-writable (o+w) and not sticky
-STICKY 37;44 # dir with the sticky bit set (+t) and not other-writable
+STICKY_OTHER_WRITABLE 48;5;64;38;5;230 # dir that is sticky and other-writable (+t,o+w)
+OTHER_WRITABLE 48;5;235;38;5;33 # dir that is other-writable (o+w) and not sticky
+STICKY 48;5;33;38;5;230 # dir with the sticky bit set (+t) and not other-writable
 # This is for files with execute permission:
-EXEC 01;32
+EXEC 01;38;5;64
 # List any file extensions like '.gz' or '.tar' that you would like ls
 # to colorize below. Put the extension, a space, and the color init string.
 # (and any comments you want to add after a '#')
@@ -95,100 +102,124 @@ EXEC 01;32
 # executable bit actually set.
 #.sh 01;32
 #.csh 01;32
- # archives or compressed (bright red)
-.tar 01;31
-.tgz 01;31
-.arj 01;31
-.taz 01;31
-.lzh 01;31
-.lzma 01;31
-.tlz 01;31
-.txz 01;31
-.zip 01;31
-.z 01;31
-.Z 01;31
-.dz 01;31
-.gz 01;31
-.lz 01;31
-.xz 01;31
-.bz2 01;31
-.bz 01;31
-.tbz 01;31
-.tbz2 01;31
-.tz 01;31
-.deb 01;31
-.rpm 01;31
-.jar 01;31
-.rar 01;31
-.ace 01;31
-.zoo 01;31
-.cpio 01;31
-.7z 01;31
-.rz 01;31
-# image formats
-.jpg 01;35
-.jpeg 01;35
-.gif 01;35
-.bmp 01;35
-.pbm 01;35
-.pgm 01;35
-.ppm 01;35
-.tga 01;35
-.xbm 01;35
-.xpm 01;35
-.tif 01;35
-.tiff 01;35
-.png 01;35
-.svg 01;35
-.svgz 01;35
-.mng 01;35
-.pcx 01;35
-.mov 01;35
-.mpg 01;35
-.mpeg 01;35
-.m2v 01;35
-.mkv 01;35
-.ogm 01;35
-.mp4 01;35
-.m4v 01;35
-.mp4v 01;35
-.vob 01;35
-.qt 01;35
-.nuv 01;35
-.wmv 01;35
-.asf 01;35
-.rm 01;35
-.rmvb 01;35
-.flc 01;35
-.avi 01;35
-.fli 01;35
-.flv 01;35
-.gl 01;35
-.dl 01;35
-.xcf 01;35
-.xwd 01;35
-.yuv 01;35
-.cgm 01;35
-.emf 01;35
+
+ # archives or compressed (violet + bold for compression)
+.tar    00;38;5;61
+.tgz    01;38;5;61
+.arj    01;38;5;61
+.taz    01;38;5;61
+.lzh    01;38;5;61
+.lzma   01;38;5;61
+.tlz    01;38;5;61
+.txz    01;38;5;61
+.zip    01;38;5;61
+.z      01;38;5;61
+.Z      01;38;5;61
+.dz     01;38;5;61
+.gz     01;38;5;61
+.lz     01;38;5;61
+.xz     01;38;5;61
+.bz2    01;38;5;61
+.bz     01;38;5;61
+.tbz    01;38;5;61
+.tbz2   01;38;5;61
+.tz     01;38;5;61
+.deb    01;38;5;61
+.rpm    01;38;5;61
+.jar    01;38;5;61
+.rar    01;38;5;61
+.ace    01;38;5;61
+.zoo    01;38;5;61
+.cpio   01;38;5;61
+.7z     01;38;5;61
+.rz     01;38;5;61
+.apk    01;38;5;61
+
+# image formats (yellow)
+.jpg    00;38;5;136
+.JPG    00;38;5;136 #stupid but needed
+.jpeg   00;38;5;136
+.gif    00;38;5;136
+.bmp    00;38;5;136
+.pbm    00;38;5;136
+.pgm    00;38;5;136
+.ppm    00;38;5;136
+.tga    00;38;5;136
+.xbm    00;38;5;136
+.xpm    00;38;5;136
+.tif    00;38;5;136
+.tiff   00;38;5;136
+.png    00;38;5;136
+.svg    00;38;5;136
+.svgz   00;38;5;136
+.mng    00;38;5;136
+.pcx    00;38;5;136
+.dl     00;38;5;136
+.xcf    00;38;5;136
+.xwd    00;38;5;136
+.yuv    00;38;5;136
+.cgm    00;38;5;136
+.emf    00;38;5;136
+.eps    00;38;5;136
+
+# files of interest (base1 + bold)
+.pdf    01;38;5;245
+.tex    01;38;5;245
+.rdf    01;38;5;245
+.owl    01;38;5;245
+.n3     01;38;5;245
+.tt     01;38;5;245
+.nt     01;38;5;245
+
+# "unimportant" files as logs and backups (base01)
+.log    00;38;5;240
+.bak    00;38;5;240
+.aux    00;38;5;240
+.bbl    00;38;5;240
+.blg    00;38;5;240
+
+# audio formats (orange)
+.aac    00;38;5;166
+.au     00;38;5;166
+.flac   00;38;5;166
+.mid    00;38;5;166
+.midi   00;38;5;166
+.mka    00;38;5;166
+.mp3    00;38;5;166
+.mpc    00;38;5;166
+.ogg    00;38;5;166
+.ra     00;38;5;166
+.wav    00;38;5;166
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axv 01;35
-.anx 01;35
-.ogv 01;35
-.ogx 01;35
-# audio formats
-.aac 00;36
-.au 00;36
-.flac 00;36
-.mid 00;36
-.midi 00;36
-.mka 00;36
-.mp3 00;36
-.mpc 00;36
-.ogg 00;36
-.ra 00;36
-.wav 00;36
+.axa    00;38;5;166
+.oga    00;38;5;166
+.spx    00;38;5;166
+.xspf   00;38;5;166
+
+# video formats (as audio + bold)
+.mov    01;38;5;166
+.mpg    01;38;5;166
+.mpeg   01;38;5;166
+.m2v    01;38;5;166
+.mkv    01;38;5;166
+.ogm    01;38;5;166
+.mp4    01;38;5;166
+.m4v    01;38;5;166
+.mp4v   01;38;5;166
+.vob    01;38;5;166
+.qt     01;38;5;166
+.nuv    01;38;5;166
+.wmv    01;38;5;166
+.asf    01;38;5;166
+.rm     01;38;5;166
+.rmvb   01;38;5;166
+.flc    01;38;5;166
+.avi    01;38;5;166
+.fli    01;38;5;166
+.flv    01;38;5;166
+.gl     01;38;5;166
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.axa 00;36
-.oga 00;36
-.spx 00;36
-.xspf 00;36
+.axv 01;38;5;166
+.anx 01;38;5;166
+.ogv 01;38;5;166
+.ogx 01;38;5;166
