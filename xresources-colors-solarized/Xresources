@@ -69,7 +69,7 @@
 
 !! black dark/light
 *color0:                S_base02
-*color8:                S_base03
+*color8:                S_base1
 
 !! red dark/light
 *color1:                S_red
