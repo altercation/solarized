@@ -19,6 +19,8 @@
 !!cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
 !!green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
 
+#define SOLARIZED_LIGHT
+#undef SOLARIZED_DARK
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
@@ -35,6 +37,27 @@
 #define S_violet        #268bd2
 #define S_blue          #2aa198
 #define S_cyan          #859900
+
+#ifdef SOLARIZED_LIGHT
+  #define S_base03      S_rebase3
+  #define S_base02      S_rebase2
+  #define S_base01      S_rebase1
+  #define S_base00      S_rebase0
+  #define S_base0       S_rebase00
+  #define S_base1       S_rebase01
+  #define S_base2       S_rebase02
+  #define S_base3       S_rebase03
+#endif
+#ifdef SOLARIZED_DARK
+  #define S_base03      S_rebase03
+  #define S_base02      S_rebase02
+  #define S_base01      S_rebase01
+  #define S_base00      S_rebase00
+  #define S_base0       S_rebase0
+  #define S_base1       S_rebase1
+  #define S_base2       S_rebase2
+  #define S_base3       S_rebase3
+#endif
 
 *background:            S_base03
 *foreground:            S_base00
