@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Solarized</title>
+		<style>
+			body { margin: 0; padding: 0; }
+			.box { width: 300px; float: left; padding: 0 15px; }
+		</style>
+	</head>
+	<body>
+		<script>
+			function HexToR(h) {return parseInt((cutHex(h)).substring(0,2),16)}
+			function HexToG(h) {return parseInt((cutHex(h)).substring(2,4),16)}
+			function HexToB(h) {return parseInt((cutHex(h)).substring(4,6),16)}
+			function cutHex(h) {return (h.charAt(0)=="#") ? h.substring(1,7):h}
+
+			var colors = [
+				"#002b36",//base03
+				"#073642",//base02
+				"#586e75",//base01
+				"#657b83",//base00
+				"#839496",//base0
+				"#93a1a1",//base1
+				"#eee8d5",//base2
+				"#fdf6e3",//base3
+			]
+			var accents = [
+				"#b58900",//yellow
+				"#cb4b16",//orange
+				"#dc322f",//red
+				"#d33682",//magenta
+				"#6c71c4",//violet
+				"#268bd2",//blue
+				"#2aa198",//cyan
+				"#859900",//green
+			]
+
+			var toPerc = function(val) {
+				return Math.round(parseFloat(val/255)*100)/100 
+			}
+
+			var getColorNode = function(color) {
+				var p = document.createElement("p");
+				var scolor = color.substr(1,6);
+				var r = HexToR(scolor);
+				var g = HexToG(scolor);
+				var b = HexToB(scolor);
+				p.innerHTML = color + " | (" + r + ", " + g + ", " + b +") | (" + toPerc(r) + ", " + toPerc(g) + ", " + toPerc(b) + ")";
+				p.style.color = color;
+				return p;
+			}
+			var renderColor = function(reverse) {	
+				var n = document.createElement("div");
+				n.className = "box";
+				n.style.backgroundColor = (reverse)?colors[colors.length-1]:colors[0];
+				if (reverse) {
+					for (var i = colors.length - 1; i >= 0; i--) {
+						n.appendChild(getColorNode(colors[i]));
+					}
+				} else {
+					for (var i = 0; i < colors.length; i++) {
+						n.appendChild(getColorNode(colors[i]));
+					}
+				}
+				for (var i = 0; i < accents.length; i++) {
+					n.appendChild(getColorNode(accents[i]));
+				}
+				document.body.appendChild(n);
+			}
+
+			//light
+			renderColor(true);
+
+			//dark
+			renderColor(false);
+			
+		</script>
+	</body>
+</html>
