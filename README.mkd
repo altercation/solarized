@@ -1,3 +1,13 @@
+---
+Title: Solarized Colorscheme for Vim
+Description: Precision colors for machines and people
+Author: Ethan Schoonover
+Colors: light yellow
+Created:  2011 Mar 15
+Modified: 2011 Apr 12
+
+---
+
 Solarized Colorscheme for Vim
 =============================
 
@@ -185,15 +195,19 @@ Toggle Background Function
 Solarized comes with a Toggle Background plugin that by default will map to 
 <F5> if that mapping is available. If it is not available you will need to 
 either map the function manually or change your current <F5> mapping to 
-something else. If you wish to map the function manually, enter the following 
-lines in your .vimrc:
+something else.
 
-    nmap <unique> <F5> <Plug>ToggleBackground
-    imap <unique> <F5> <Plug>ToggleBackground
-    vmap <unique> <F5> <Plug>ToggleBackground
+To set your own mapping in your .vimrc file, simply add the following three 
+lines to support normal, insert and visual mode usage, changing the "<F5>" 
+value to the key or key combination you wish to use:
 
-Note that it is important to *not* use the noremap map variants. The plugin 
-uses noremap internally. You may run `:help togglebg` for more information.
+    call togglebg#map("<F5>")
+
+Note that you'll want to use a single function key or equivalent if you want 
+the plugin to work in all modes (normal, insert, visual).
+
+Note also that it is important to NOT use the noremap map variants. The plugin 
+uses noremap internally.
 
 Code Notes
 ----------
@@ -254,4 +268,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
