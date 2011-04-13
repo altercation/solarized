@@ -402,11 +402,11 @@
 			</dict>
 		</dict>
 		<dict>
+			<key>name</key>
 			<string>CSS: Value</string>
 			<key>scope</key>
 			<string>meta.property-value.css</string>
 			<key>settings</key>
-			<key>name</key>
 			<dict>
 				<key>foreground</key>
 				<string>#269186</string>
@@ -785,7 +785,7 @@
 				<key>fontStyle</key>
 				<string>bold</string>
 				<key>foreground</key>
-				<string>#738A05</string>
+				<string>#475B63</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1524,3 +1524,4 @@
 	<string>38E819D9-AE02-452F-9231-ECC3B204AFD7</string>
 </dict>
 </plist>
+
