@@ -2,10 +2,7 @@
 
 dir=`dirname $0`
 
-PROFILE="Default"
-if [[ $# -ge 1 ]]; then
-    PROFILE=$1
-fi
+PROFILE=${1:-Default}
 
 # set palette
 gconftool-2 -s -t string /apps/gnome-terminal/profiles/$PROFILE/palette `cat $dir/colors/palette`
