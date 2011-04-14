@@ -5,7 +5,7 @@ Author: Ethan Schoonover
 Tags: test, testing, test123
 Colors: light yellow
 Created:  2011 Mar 15
-Modified: 2011 Apr 07
+Modified: 2011 Apr 14
 
 ---
 
@@ -31,17 +31,32 @@ conditions.
 
 Currently available in formats for (cf [screenshots](#screenshots) below):
 
+### Editors & IDEs
+
 * **Vim** (the Vim-only portion of Solarized is [available 
-here](https://github.com/altercation/vim-colors-solarized), for use with 
-Pathogen, etc.)
+    here](https://github.com/altercation/vim-colors-solarized), for use with 
+    Pathogen, etc.)
 * **Mutt** e-mail client (*just* the Mutt colorscheme is [available 
-here](https://github.com/altercation/mutt-colors-solarized))
+    here](https://github.com/altercation/mutt-colors-solarized))
+* **Emacs** courtesy [Greg Pfeil](http://blog.technomadic.org)
+    ([@sellout](http://twitter.com/sellout))
+    and available in the main repository as well as [standalone 
+    here](https://github.com/sellout/emacs-color-theme-solarized)
+* **Visual Studio** courtesy [David Thibault](http://www.leddt.com)
+    ([@leddt](http://twitter.com/leddt))
+    and available in the main repository as well as [standalone 
+    here](https://github.com/leddt/visualstudio-colors-solarized).
+
+### Terminal Emulators
 * **Xresources** / Xdefaults
 * **iTerm2**
-* OS X **Terminal.app**
-* Adobe Photoshop Palette (inc. L\*a\*b values)
-* Apple Color Picker Palette
-* GIMP Palette
+* **OS X Terminal.app**
+
+### Palettes
+
+* **Adobe Photoshop** Palette (inc. L\*a\*b values)
+* **Apple Color Picker** Palettes
+* **GIMP** Palette
 
 Don't see the application you want to use it in? Download the palettes (or pull 
 the values from the table below) and create your own. Submit it back and I'll 
