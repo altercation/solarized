@@ -42,6 +42,10 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
     ([@sellout](http://twitter.com/sellout))
     and available in the main repository as well as [standalone 
     here](https://github.com/sellout/emacs-color-theme-solarized)
+* **IntelliJ IDEA** courtesy [Johan Kaving](https://github.com/jkaving) and
+    [Adam Vandenberg](https://github.com/adamv) ([@flangy](http://twitter.com/flangy))
+    and available in the main repository as well as [standalone 
+    here](https://github.com/jkaving/intellij-colors-solarized)
 * **Visual Studio** courtesy [David Thibault](http://www.leddt.com)
     ([@leddt](http://twitter.com/leddt))
     and available in the main repository as well as [standalone 
