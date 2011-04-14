@@ -10,6 +10,8 @@ Howto
 
 After checking it out, run the set_dark.sh or set_light.sh to set the palette, foreground, highlight and background colors.
 
+You can add an optional parameter if you not want to change the "Default" profile. Just give it a name of an already existing profile.
+
 Feedback
 --------
 
