@@ -1615,6 +1615,71 @@
 				<string>#BD3800</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>Java: import</string>
+			<key>scope</key>
+			<string>keyword.other.import.java</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#BD3800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Java: meta-import</string>
+			<key>scope</key>
+			<string>storage.modifier.import.java</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#586E75</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Java: Class</string>
+			<key>scope</key>
+			<string>meta.class.java storage.modifier.java</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#A57800</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Java: /* comment */</string>
+			<key>scope</key>
+			<string>source.java comment.block</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#536871</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Java: /* @param */</string>
+			<key>scope</key>
+			<string>comment.block meta.documentation.tag.param.javadoc keyword.other.documentation.param.javadoc</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#536871</string>
+			</dict>
+		</dict>
 	</array>
 	<key>uuid</key>
 	<string>38E819D9-AE02-452F-9231-ECC3B204AFD7</string>
