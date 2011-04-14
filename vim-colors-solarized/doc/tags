@@ -1,0 +1,11 @@
+tog-bg	togglebg.txt	/*tog-bg*
+togbg	togglebg.txt	/*togbg*
+toggle-background	togglebg.txt	/*toggle-background*
+toggle-bg	togglebg.txt	/*toggle-bg*
+togglebackground	togglebg.txt	/*togglebackground*
+togglebg	togglebg.txt	/*togglebg*
+togglebg-default	togglebg.txt	/*togglebg-default*
+togglebg-issues	togglebg.txt	/*togglebg-issues*
+togglebg-newmap	togglebg.txt	/*togglebg-newmap*
+togglebg-usage	togglebg.txt	/*togglebg-usage*
+togglebg.vim	togglebg.txt	/*togglebg.vim*

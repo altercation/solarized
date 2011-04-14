@@ -4,25 +4,90 @@ Solarized Changelog
 1.0.0beta2
 ----------
 
-Changes:
+### Critical Changes
 
-*   [global] Modified red from L\*a\*b lightness value 45 to 50 to bring it in
+These changes may require you to change your configuration.
+
+*   **GLOBAL : IMPROVEMENT : New red accent color value**
+    Modified red from L\*a\*b lightness value 45 to 50 to bring it in
     line with the other accent colors and address bleed into dark background on 
     some displays, as well as reducing shift of red against base03 when viewed 
     with glasses (chromatic aberration). All instances of the colorscheme and 
-    palettes updated to new red.
+    palettes updated to new red and avalailable for use/import without further 
+    modification. Forks and ports should pull new changes and/or update ported 
+    red value accordingly.  The new red:
 
-*   [palettes] Changed default OS X color picker palatte swatches to tagged
-    colors (sRGB) and included alternate palette with untagged color swatches 
-    for advanced users (v1.0.0beta1 had untagged as default).
+            red #dc322f
 
-*   [vim] Removed default italicized font in terminal mode in the Solarized Vim
+*   **VIM : CHANGE : Default mode now 16 color**
+    Default terminal mode is now ***16 colors***. Most of the users of terminal 
+    mode seem comfortabel and capable changing terminal colors. This is the 
+    preferred method of implementing Solarized in Terminal mode. If you wish to 
+    instead use the degraded 256 color palette, you may do so with the 
+    following line in your .vimrc:
+
+            let g:solarized_termcolors=256
+
+    You no longer need to specify "let g:solarized_termcolors=16" as it is now 
+    the default; leaving it in your .vimrc won't hurt anything, however.
+
+*   **VIM : IMPROVEMENT : New Toggle Background Plugin**
+    Added new Toggle Background plugin. Will load automatically and show up as 
+    a menu item in the `Window` menu in gui vim. Automatically maps to <F5> if 
+    available (won't clobber that mapping if you're using it). Also available 
+    as a command `:ToggleBG`.  To manually map to something other than <F5>:
+
+            nmap <unique> <F5> <Plug>ToggleBackground
+            imap <unique> <F5> <Plug>ToggleBackground
+            vmap <unique> <F5> <Plug>ToggleBackground
+
+    Note that it is important to *not* use the noremap map variants. The plugin
+    uses noremap internally. You may run `:help togglebg` for more information.
+
+*   **VIM : IMPROVEMENT : Special & Non-text items now more visible**
+    Special characters such as trailing whitespace, tabs, newlines, when 
+    displayed using ":set list" can be set to one of three levels depending on 
+    your needs.
+
+            g:solarized_visibility =  "normal"|   "high" or "low"
+
+    I'll be honest: I still prefer low visibility. I like them barely there.  
+    They show up in lines that are highlighted as by the cursor line, which 
+    works for me. If you are with me on this, put the following in your .vimrc:
+
+            g:solarized_visibility =  "low"
+
+### Non Critical Changes
+
+These changes should not impact your usage of the Solarized.
+
+*   **PALETTES : IMPROVEMENT : Better red**
+    Changed default OS X color picker palatte swatches to tagged colors (sRGB) 
+    and included alternate palette with untagged color swatches for advanced 
+    users (v1.0.0beta1 had untagged as default).
+
+*   **VIM : BUGFIX : Better display in Terminal.app, other emulators**
+    Terminal.app and other common terminal emulators that report 8 color mode 
+    had display issues due to order of synt highlighting definitions and color 
+    values specified. These have been conformed and reordered in such a way 
+    that there is a more graceful degrading of the Solarized color palette on 
+    8 color terminals. Infact, the experience should be almost identical to gui 
+    other than lack of bold typeface.
+
+*   **VIM : BUGFIX : Better distinction between status bar and split windows**
+    Status bar was previously too similar to the cursor line and window splits.  
+    This has now been changed significantly to improve the clarity of what is 
+    status, cursor line and window separator.
+
+*   **VIM : STREAMLINED : Removed simultaneous gui/cterm definitions**
+*   Refactored solarized.vim to eliminate simultaneous definition of gui and 
+    cterm values.
+
+*   **VIM : BUGFIX : Removed italicized front in terminal mode**
+    Removed default italicized font in terminal mode in the Solarized Vim
     colorscheme (many terminal emulators display Vim italics as reversed type).  
     Italics still used in GUI mode by default and can still be turned off in 
     both modes by setting a variable: `let g:solarized_italic=0`.
-
-*   [vim] Reverted to global variables in sample toggle-background script (in
-    vim readme) to fix cases where new tabs don't read window variables
 
 1.0.0beta1
 ----------
@@ -38,3 +103,8 @@ First public release. Included:
 * Vim Colorscheme
 * Xresources colors
 
+
+
+***
+
+MODIFIED: 2011 Apr 09

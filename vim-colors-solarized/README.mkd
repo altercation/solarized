@@ -1,21 +1,29 @@
+---
+Title: Solarized Colorscheme for Vim
+Description: Precision colors for machines and people
+Author: Ethan Schoonover
+Colors: light yellow
+Created:  2011 Mar 15
+Modified: 2011 Apr 12
+
+---
+
 Solarized Colorscheme for Vim
 =============================
 
 Developed by Ethan Schoonover <es@ethanschoonover.com>
 
-Visit the [Solarized Homepage][Solarized]
------------------------------------------
+Visit the [Solarized homepage]
+------------------------------
 
-See the [homepage for the Solarized colorscheme][Solarized] for screenshots, 
+See the [Solarized homepage] for screenshots, 
 details and colorscheme versions for Vim, Mutt, popular terminal emulators and 
 other applications.
 
 Screenshots
 -----------
 
-[![solarized 
-dark](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-dark.png)
-[![solarized light](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light-th.png)](https://github.com/altercation/solarized/raw/master/img/solarized-screen-ruby-light.png)
+![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
 
 Downloads
 ---------
@@ -29,7 +37,7 @@ and is for installation convenience only (with [Pathogen] or [Vundle], for
 instance).  Issues, bug reports, changelogs are centralized at the main 
 [Solarized repository].
 
-[Solarized]:            http://ethanschoonover.com/solarized
+[Solarized homepage]:   http://ethanschoonover.com/solarized
 [Solarized repository]: https://github.com/altercation/solarized
 [Vim-only repository]:  https://github.com/altercation/vim-colors-solarized
 [vimorg-script]:        http://vim.org/script
@@ -70,11 +78,13 @@ Installation
 After either Option 1 or Option 2 above, put the following two lines in your 
 .vimrc:
 
+    syntax enable
     set background=dark
     colorscheme solarized
 
 or, for the light background mode of Solarized:
 
+    syntax enable
     set background=light
     colorscheme solarized
 
@@ -89,7 +99,7 @@ assignment out entirely and get the same results.
         set background=dark
     endif
 
-See the [Solarized homepage][Solarized] for screenshots which will help you 
+See the [Solarized homepage] for screenshots which will help you 
 select either the light or dark background.
 
 ### IMPORTANT NOTE FOR TERMINAL USERS:
@@ -98,15 +108,22 @@ If you are going to use Solarized in Terminal mode (i.e. not in a GUI version
 like gvim or macvim), **please please please** consider setting your terminal 
 emulator's colorscheme to used the Solarized palette. I've included palettes 
 for some popular terminal emulator as well as Xdefaults in the official 
-Solarized download available from [Solarized homepage][Solarized]. If you use 
-Solarized without these colors, Solarized will by default use an approximate 
-set of 256 colors. It isn't bad looking and has been extensively tweaked, but 
-it's still not quite the real thing.
+Solarized download available from [Solarized homepage]. If you use 
+Solarized *without* these colors, Solarized will need to be told to degrade its
+colorscheme to a set compatible with the limited 256 terminal palette (whereas 
+by using the terminal's 16 ansi color values, you can set the correct, specific 
+values for the Solarized palette).
 
-If you do use the custom terminal colors, simply add the following line 
-*before* the `colorschem solarized` line:
+If you do use the custom terminal colors, solarized.vim should work out of the
+box for you. If you are using a terminal emulator that supports 256 colors and 
+don't want to use the custom Solarized terminal colors, you will need to use 
+the degraded 256 colorscheme. To do so, simply add the following line *before* 
+the `colorschem solarized` line:
 
-    let g:solarized_termcolors=16
+    let g:solarized_termcolors=256
+
+Again, I recommend just changing your terminal colors to Solarized values 
+either manually or via one of the many terminal schemes available for import.
 
 Advanced Configuration
 ----------------------
@@ -118,33 +135,36 @@ Set these in your vimrc file prior to calling the colorscheme.
 "
     option name               default     optional
     ------------------------------------------------
-    g:solarized_termcolors=   256     |   16
+    g:solarized_termcolors=   16      |   256
     g:solarized_termtrans =   0       |   1
     g:solarized_degrade   =   0       |   1
     g:solarized_bold      =   1       |   0
     g:solarized_underline =   1       |   0
     g:solarized_italic    =   1       |   0
-    g:solarized_style     =   "dark"  |   "light"
     g:solarized_contrast  =   "normal"|   "high" or "low"
+    g:solarized_visibility=   "normal"|   "high" or "low"
     ------------------------------------------------
 
 ### Option Details
 
 *   g:solarized_termcolors
 
-    **The most important option** if you are using vim in terminal (non gui) 
-    mode! See my diatribe above regarding terminal colors. This tells Solarized 
-    to use the 256 degraded color mode if running in a 256 color capable 
-    terminal.  Otherwise, if set to `16` it will use the terminal emulators 
-    colorscheme (best option as long as you've set the emulators colors to the 
-    Solarized palette).
+    This is set to *16* by default, meaning that Solarized will attempt to use 
+    the standard 16 colors of your terminal emulator. You will need to set 
+    those colors to the correct Solarized values either manually or by 
+    importing one of the many colorscheme available for popular terminal 
+    emulators and Xdefaults.
 
 *   g:solarized_termtrans
 
     If you use a terminal emulator with a transparent background and Solarized 
     isn't displaying the background color transparently, set this to 1 and 
     Solarized will use the default (transparent) background of the terminal 
-    emulator. *urxvt* required this in my testing; Terminal.app/iTerm2 did not.
+    emulator. *urxvt* required this in my testing; iTerm2 did not.
+
+    Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1 by 
+    default as this is almost always the best option. The only exception to 
+    this is if the working terminfo file supports 256 colors (xterm-256color).
 
 *   g:solarized_degrade
 
@@ -157,50 +177,37 @@ Set these in your vimrc file prior to calling the colorscheme.
     italicized typefaces, simply assign a zero value to the appropriate 
     variable, for example: `let g:solarized_italic=0`
 
-*   g:solarized_style
-
-    Simply another way to force Solarized to use a dark or light background.  
-    It's better to use `set background=dark` or `set background=light` in your 
-    .vimrc file. This option is mostly used in scripts (quick background color 
-    change) or for testing.
-
 *   g:solarized_contrast
 
     Stick with normal! It's been carefully tested. Setting this option to high 
     or low does use the same Solarized palette but simply shifts some values up 
     or down in order to expand or compress the tonal range displayed.
 
-### **IMPORTANT NOTE FOR TERMINAL USERS**
+*   g:solarized_visibility
 
-If you are running vim in a terminal, Solarized will run in 256 color mode if 
-the terminal supports it, but those 256 colors are (in all 256 color terminal 
-emulators) limited to a "degraded" color palette.  While the colors will all 
-approximate the specific Solarized color values, if you prefer an accurate 
-color palette you can set the ANSI colors in your terminal and use the 16 color 
-terminal mode using the g:solarized_termcolors="16" option detailed below. The 
-ANSI color map is specified in the table below and terminal color themes are 
-available for download from the web page listed at the top of this file, 
-including xorg defaul color values and themes for OS X Terminal.app and iTerm2.
+    Special characters such as trailing whitespace, tabs, newlines, when
+    displayed using `:set list` can be set to one of three levels depending on 
+    your needs. Default value is `normal` with `high` and `low` options.
 
 Toggle Background Function
 --------------------------
 
-Here's a quick script that toggles the background color, using F5 in this 
-example. You can drop this into .vimrc:
+Solarized comes with a Toggle Background plugin that by default will map to 
+<F5> if that mapping is available. If it is not available you will need to 
+either map the function manually or change your current <F5> mapping to 
+something else.
 
-    function! ToggleBackground()
-        if (w:solarized_style=="dark")
-        let w:solarized_style="light"
-        colorscheme solarized
-    else
-        let w:solarized_style="dark"
-        colorscheme solarized
-    endif
-    endfunction
-    command! Togbg call ToggleBackground()
-    nnoremap <F5> :call ToggleBackground()<CR>
-    inoremap <F5> <ESC>:call ToggleBackground()<CR>a
-    vnoremap <F5> <ESC>:call ToggleBackground()<CR>
+To set your own mapping in your .vimrc file, simply add the following three 
+lines to support normal, insert and visual mode usage, changing the "<F5>" 
+value to the key or key combination you wish to use:
+
+    call togglebg#map("<F5>")
+
+Note that you'll want to use a single function key or equivalent if you want 
+the plugin to work in all modes (normal, insert, visual).
+
+Note also that it is important to NOT use the noremap map variants. The plugin 
+uses noremap internally.
 
 Code Notes
 ----------
@@ -261,4 +268,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
