@@ -4,20 +4,24 @@ Subtree Specific Remotes
 remote-emacs-colors-solarized
 remote-textmate-colors-solarized
 remote-visualstudio-colors-solarized
+remote-intellij-colors-solarized
 
 Add remotes history
 ===================
 git remote add remote-emacs-colors-solarized https://github.com/sellout/emacs-color-theme-solarized.git
 git remote add remote-visualstudio-colors-solarized https://github.com/leddt/visualstudio-colors-solarized.git
+git remote add remote-intellij-colors-solarized https://github.com/jkaving/intellij-colors-solarized.git
 
 Add subtrees:
 ============
 git subtree add -m "added emacs subtree project from @sellout" --prefix=emacs-colors-solarized remote-emacs-colors-solarized master
 git subtree add -m "added visualstudio subtree project from @leddt" --prefix=visualstudio-colors-solarized remote-visualstudio-colors-solarized master
+git subtree add -m "added intellij subtree project from @jkaving with combined work from @adamv" --prefix=intellij-colors-solarized remote-intellij-colors-solarized master
 
 Pull commands:
 ==============
 git subtree pull --prefix=emacs-colors-solarized remote-emacs-colors-solarized master
 git subtree pull --prefix=visualstudio-colors-solarized remote-visualstudio-colors-solarized master
+git subtree pull --prefix=intellij-colors-solarized remote-intellij-colors-solarized master
 
 
