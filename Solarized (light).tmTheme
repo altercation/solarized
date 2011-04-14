@@ -447,6 +447,19 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>CSS: : ,</string>
+			<key>scope</key>
+			<string>punctuation.separator.key-value.css, punctuation.terminator.rule.css</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#536871</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>CSS .class</string>
 			<key>scope</key>
 			<string>entity.other.attribute-name.class.css</string>
@@ -691,7 +704,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#536871</string>
+				<string>#BD3800</string>
 			</dict>
 		</dict>
 		<dict>
