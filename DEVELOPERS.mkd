@@ -1,0 +1,57 @@
+---
+Title: Solarized Developers
+Description: Notes and Guidelines on Port Development
+Author: Ethan Schoonover
+Tags: test, testing, test123
+Colors: light yellow
+Created:  2011 Mar 15
+Modified: 2011 Apr 14
+
+---
+
+Solarized Developers
+====================
+
+## Notes and Guidelines on Port Development
+
+When developing a port of the Solarized colorscheme that you'd like to see 
+included in the main project repository, please consider the following 
+guidelines:
+
+1. No hue or color changes. Please keep the same hex/rgb/L*a*b values. If you 
+   want to change them, that's fine, but I'd recommend setting it up as a 
+
+2. If you are making a new port, consider creating a repository with just the 
+   theme/plugin for your particular port, rather than forking the entire 
+   Solarized master repository. This allows your users to pull down just the 
+   theme for the application easily. I can also pull in your repository using 
+   git-subtree as a subdirectory of the master Solarized project. This is what 
+   I do with the Vim and Mutt themes (they each have an independent repo for 
+   the convenience of those cloning the project directly into their vim/mutt 
+   configuration).
+
+3. If you are going to fork and modify code, please check to see who the 
+   maintainer for the specific Solarized component is. Mail me if you can't 
+   find that information in the README for the specific port.
+
+### README guidlines
+
+Please include a README for your project that contains the following 
+information:
+
+1. A link to the main solarized project page:
+   http://ethanschoonover.com/solarized
+   This page will also have links back to your port/repo as well as 
+   attribution. I want to maintain it as the canonical clearing house for all 
+   ports, etc.
+
+2. A link to your project repository
+
+3. A link to the main solarized repository on github (in addition to the link 
+   to the main site above)
+
+4. Installation instructions as necessary for your port
+
+See the vim-colors-solarized subdirectory for an example of this. Your README 
+doesn't need to be this elaborate, of course, but should be clear enough that 
+users can get up and running.
