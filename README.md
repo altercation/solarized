@@ -33,7 +33,7 @@ Installation
 ### Option 1: Install using "Import Settings..."
 
 1. Go to `File | Import Settings...` and specify the `intellij-colors-solarized` directory.
- Clik `Ok` in the dialog that appears.
+ Clik `OK` in the dialog that appears.
 
 2. Restart IntelliJ IDEA
 
