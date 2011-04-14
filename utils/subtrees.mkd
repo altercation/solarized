@@ -25,3 +25,7 @@ git subtree pull --prefix=visualstudio-colors-solarized remote-visualstudio-colo
 git subtree pull --prefix=intellij-colors-solarized remote-intellij-colors-solarized master
 
 
+
+Non subtree ports
+=================
+putty: https://github.com/brantb/solarized.git

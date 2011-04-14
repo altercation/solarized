@@ -55,6 +55,8 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 * **Xresources** / Xdefaults
 * **iTerm2**
 * **OS X Terminal.app**
+* **Putty** courtesy [Brant Bobby](http://www.control-v.net)
+    and on [GitHub](https://github.com/brantb)
 
 ### Palettes
 
