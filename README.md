@@ -33,23 +33,18 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 ### Editors & IDEs
 
-* **Vim** (the Vim-only portion of Solarized is [available 
-    here](https://github.com/altercation/vim-colors-solarized), for use with 
-    Pathogen, etc.)
-* **Mutt** e-mail client (*just* the Mutt colorscheme is [available 
-    here](https://github.com/altercation/mutt-colors-solarized))
-* **Emacs** courtesy [Greg Pfeil](http://blog.technomadic.org)
-    ([@sellout](http://twitter.com/sellout))
-    and available in the main repository as well as [standalone 
-    here](https://github.com/sellout/emacs-color-theme-solarized)
-* **IntelliJ IDEA** courtesy [Johan Kaving](https://github.com/jkaving) and
+*   **Vim** (the Vim-only portion of Solarized is
+    [available here][Vim Repository], for use with Pathogen, etc.)
+*   **Mutt** e-mail client (*just* the Mutt colorscheme is
+    [available here][Mutt Repository])
+* **Emacs** courtesy [Greg Pfeil](http://blog.technomadic.org) ([@sellout](http://twitter.com/sellout))
+    and available in the main repository as well as [standalone here][Emacs Repository]
+* **IntelliJ IDEA**
+    courtesy [Johan Kaving](https://github.com/jkaving) and
     [Adam Vandenberg](https://github.com/adamv) ([@flangy](http://twitter.com/flangy))
-    and available in the main repository as well as [standalone 
-    here](https://github.com/jkaving/intellij-colors-solarized)
-* **Visual Studio** courtesy [David Thibault](http://www.leddt.com)
-    ([@leddt](http://twitter.com/leddt))
-    and available in the main repository as well as [standalone 
-    here](https://github.com/leddt/visualstudio-colors-solarized).
+    and available in the main repository as well as [standalone here][IntelliJ Repository]
+* **Visual Studio** courtesy [David Thibault](http://www.leddt.com) ([@leddt](http://twitter.com/leddt))
+    and available in the main repository as well as [standalone here][Visual Studio Repository]
 
 ### Terminal Emulators
 * **Xresources** / Xdefaults
@@ -81,38 +76,31 @@ Current release is **v1.0.0beta1**.
 You can also use the following links to access application specific downloads 
 and git repositories:
 
-*   **Full git repository:**
+*   **Canonical Project Page:**
+
+    Downloads, screenshots and more information are always available from the
+    project page: <http://ethanschoonover.com/solarized>
+
+*   **Full Git Repository:**
 
     The full git repository is at: <https://github.com/altercation/solarized>
     Get it using the following command:
 
         $ git clone git://github.com/altercation/solarized.git
 
-*   **Vim only:**
+*   **Application Specific Repositories:**
 
-    The vim-only colorscheme (Pathogen ready) is available at: 
-    <https://github.com/altercation/vim-colors-solarized>.
-    
-        $ git clone git://github.com/altercation/vim-colors-solarized.git
+    You can clone repositories specific to many of the application specific 
+    color themes. See links in the list above or select from this list:
 
-    You can also download it from [vim.org](http://www.vim.org/scripts/script.php?script_id=3520).
+    * [Vim Repository]
+    * [Mutt Repository]
+    * [Emacs Repository]
+    * [IntelliJ Repository]
+    * [Visual Studio Repository]
 
-*   **Mutt only:**
-
-    The mutt-only variants can be cloned from 
-    <https://github.com/altercation/mutt-colors-solarized>
-
-        $ git clone git://github.com/altercation/mutt-colors-solarized.git
-
-*   **Canonical Project Page:**
-
-    Downloads, screenshots and more information are always available from the
-    project page: <http://ethanschoonover.com/solarized>
-
-Note that through the magic of 
-[git-subtree](https://github.com/apenwarr/git-subtree) these repositories are 
-all kept in sync, so you can pull any of them and get the most up-to-date 
-version.
+Note that through the magic of [git-subtree](https://github.com/apenwarr/git-subtree)
+these repositories are all kept in sync, so you can pull any of them and get the most up-to-date version.
 
 Features
 --------
@@ -363,3 +351,11 @@ foreground.
 
 The values in this example are simply inverted in the case of a light 
 background.
+
+
+
+[Vim Repository]: https://github.com/altercation/vim-colors-solarized
+[Mutt Repository]: https://github.com/altercation/mutt-colors-solarized
+[Emacs Repository]: https://github.com/sellout/emacs-color-theme-solarized
+[IntelliJ Repository]: https://github.com/jkaving/intellij-colors-solarized
+[Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
