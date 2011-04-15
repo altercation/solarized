@@ -332,6 +332,10 @@ matched in sRGB space.
 Usage & Development
 -------------------
 
+If you are considering developing a port for Solarized, please see also the 
+[developer notes](http://ethanschoonover.com/solarized/DEVELOPERS) for 
+information about optional repository structure and readme formats.
+
 Solarized flips between light and dark modes. In each mode, four monotones form 
 the core values (with an optional fifth for emphasized content).
 
