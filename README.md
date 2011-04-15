@@ -37,13 +37,19 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
     [available here][Vim Repository], for use with Pathogen, etc.)
 *   **Mutt** e-mail client (*just* the Mutt colorscheme is
     [available here][Mutt Repository])
-* **Emacs** courtesy [Greg Pfeil](http://blog.technomadic.org) ([@sellout](http://twitter.com/sellout))
+*   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
+    ([@sellout](http://twitter.com/sellout))
     and available in the main repository as well as [standalone here][Emacs Repository]
-* **IntelliJ IDEA**
-    courtesy [Johan Kaving](https://github.com/jkaving) and
-    [Adam Vandenberg](https://github.com/adamv) ([@flangy](http://twitter.com/flangy))
+*   **SeeStyle theme for Coda & SubEthaEdit** courtesy of
+    [Justin Hileman](http://justinhileman.com/) 
+    ([@bobthecow](http://twitter.com/bobthecow)),
+    available standalone[here][SeeStyle Repository]
+*   **IntelliJ IDEA**
+    courtesy of [Johan Kaving](https://github.com/jkaving) and
+    ([@flangy](http://twitter.com/flangy))
     and available in the main repository as well as [standalone here][IntelliJ Repository]
-* **Visual Studio** courtesy [David Thibault](http://www.leddt.com) ([@leddt](http://twitter.com/leddt))
+*   **Visual Studio** courtesy of [David Thibault](http://www.leddt.com) 
+    ([@leddt](http://twitter.com/leddt))
     and available in the main repository as well as [standalone here][Visual Studio Repository]
 
 ### Terminal Emulators
@@ -96,6 +102,7 @@ and git repositories:
     * [Vim Repository]
     * [Mutt Repository]
     * [Emacs Repository]
+    * [SeeStyle Repository]
     * [IntelliJ Repository]
     * [Visual Studio Repository]
 
@@ -363,3 +370,4 @@ background.
 [Emacs Repository]: https://github.com/sellout/emacs-color-theme-solarized
 [IntelliJ Repository]: https://github.com/jkaving/intellij-colors-solarized
 [Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
+[SeeStyle Repository]: https://github.com/bobthecow/solarized-seestyle
