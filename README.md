@@ -136,7 +136,7 @@ Features
     ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)\
 
     Solarized works as a sixteen color palette for compatibility with common
-    terminal based applications / emulators. In addition, it has been carefull 
+    terminal based applications / emulators. In addition, it has been carefully 
     designed to scale down to a variety of five color palettes (four base 
     monotones plus one accent color) for use in design work such as web design.
     In every case it retains a strong personality but doesn't overwhelm.
