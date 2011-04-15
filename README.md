@@ -1,7 +1,21 @@
 Solarized - SeeStyle for Coda and SubEthaEdit
 =============================================
 
-### [See official homepage for full content](http://ethanschoonover.com/solarized)
+This is a [Solarized][solarized] color scheme for [Coda][coda] and
+[SubEthaEdit][see], contributed by [Justin Hileman][jh].
+
+See the [Solarized home page][solarized] for screenshots and more details,
+as well as color schemes for other applications. To contribute or file bug
+reports or issues, please visit [the GitHub repo for this port][coda-repo],
+or the main [Solarized repository][solarized-repo].
+
+  [coda]:           http://panic.com/coda/
+  [coda-repo]:      https://github.com/bobthecow/solarized-seestyle
+  [jh]:             http://justinhileman.com
+  [see]:            http://www.codingmonkeys.de/subethaedit/
+  [solarized]:      http://ethanschoonover.com/solarized
+  [solarized-repo]: https://github.com/altercation/solarized
+
 
 Installation
 ------------
@@ -9,18 +23,19 @@ Installation
 Import via the Coda or SubEthaEdit color preferences pane. Select "Use Inverted
 Colors" to switch to the light-on-dark variant.
 
-Note: Sometimes Coda doesn't get the text and background colors right on import.
+_Note: Sometimes Coda doesn't get the text and background colors right on import._
 If that happens, use these values:
 
- * text:       #586e75
- * background: #fdf6e3
- * invisible:  #eee8d5
+ * text:       `#586e75`
+ * background: `#fdf6e3`
+ * invisible:  `#eee8d5`
 
 And their inverted variants:
 
- * text:       #93a1a1
- * background: #002b36
- * invisible:  #073642
+ * text:       `#93a1a1`
+ * background: `#002b36`
+ * invisible:  `#073642`
+
 
 The Values
 ----------
