@@ -102,7 +102,6 @@ and git repositories:
     * [Vim Repository]
     * [Mutt Repository]
     * [Emacs Repository]
-    * [SeeStyle Repository]
     * [SeeStyle-Coda-SubEthaEdit Repository]
     * [IntelliJ Repository]
     * [Visual Studio Repository]
