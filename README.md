@@ -39,18 +39,19 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
     [available here][Mutt Repository])
 *   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
     ([@sellout](http://twitter.com/sellout))
-    and available in the main repository as well as [standalone here][Emacs Repository]
+    in the main repo and in a [standalone repository][Emacs Repository]
 *   **SeeStyle theme for Coda & SubEthaEdit** courtesy of
     [Justin Hileman](http://justinhileman.com/) 
     ([@bobthecow](http://twitter.com/bobthecow)),
-    available standalone [here][SeeStyle-Coda-SubEthaEdit Repository]
+    in the main repo and in a
+    [standalone repository][SeeStyle-Coda-SubEthaEdit Repository]
 *   **IntelliJ IDEA**
     courtesy of [Johan Kaving](https://github.com/jkaving) and
     ([@flangy](http://twitter.com/flangy))
-    and available in the main repository as well as [standalone here][IntelliJ Repository]
+    in the main repo and in a [standalone repository][IntelliJ Repository]
 *   **Visual Studio** courtesy of [David Thibault](http://www.leddt.com) 
     ([@leddt](http://twitter.com/leddt))
-    and available in the main repository as well as [standalone here][Visual Studio Repository]
+    in the main repo and in a [standalone repository][Visual Studio Repository]
 
 ### Terminal Emulators
 * **Xresources** / Xdefaults
