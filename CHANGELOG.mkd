@@ -17,6 +17,7 @@ currently included ports, highlighted items are new, updates noted:
 *   \[UPDATED\] **Vim**
 *   \[NEW\] ***Emacs***
 *   \[NEW\] ***IntelliJ IDEA***
+*   \[NEW\] ***NetBeans***
 *   \[NEW\] ***SeeStyle theme for Coda & SubEthaEdit***
 *   \[NEW\] ***TextMate***
 *   \[NEW\] ***Visual Studio***

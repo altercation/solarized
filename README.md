@@ -44,6 +44,8 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
     courtesy of [Johan Kaving](https://github.com/jkaving) and
     ([@flangy](http://twitter.com/flangy))
     in the main repo and in a [standalone repository][IntelliJ Repository]
+*   **NetBeans** courtesy of [Brian Fenton](https://github.com/fentie) and
+    in the main repo and in a [standalone repository][NetBeans Repository]
 *   **SeeStyle theme for Coda & SubEthaEdit** courtesy of
     [Justin Hileman](http://justinhileman.com/) 
     ([@bobthecow](http://twitter.com/bobthecow)),
@@ -120,6 +122,7 @@ and git repositories:
     * [Mutt Repository]
     * [Emacs Repository]
     * [IntelliJ Repository]
+    * [NetBeans Repository]
     * [SeeStyle-Coda-SubEthaEdit Repository]
     * [TextMate Repository]
     * [Visual Studio Repository]
@@ -390,6 +393,7 @@ background.
 [Mutt Repository]: https://github.com/altercation/mutt-colors-solarized
 [Emacs Repository]: https://github.com/sellout/emacs-color-theme-solarized
 [IntelliJ Repository]: https://github.com/jkaving/intellij-colors-solarized
+[NetBeans Repository]: https://github.com/fentie/netbeans-colors-solarized
 [SeeStyle-Coda-SubEthaEdit Repository]: https://github.com/bobthecow/solarized-seestyle
 [TextMate Repository]: https://github.com/deplorableword/textmate-solarized
 [Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
