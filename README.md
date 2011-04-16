@@ -52,7 +52,8 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
     ([@bobthecow](http://twitter.com/bobthecow)),
     in the main repo and in a
     [standalone repository][SeeStyle-Coda-SubEthaEdit Repository]
-*   **TextMate** courtesy of [Tom Martin](http://thedeplorableword.net/) 
+*   **TextMate** --- ***NOTE:*** Dark Theme is work in progress\
+    courtesy of [Tom Martin](http://thedeplorableword.net/) 
     ([@deplorableword](http://twitter.com/deplorableword))
     in the main repo and in a [standalone repository][TextMate Repository]
     (with key work from [Mark Story](http://mark-story.com) 
@@ -97,7 +98,7 @@ Download
 
 ### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.zip)
 
-Current release is **v1.0.0beta1**. See the [changelog] for details on what's 
+Current release is **v1.0.0beta2**. See the [changelog] for details on what's 
 new in this release.
 
 ### Fresh Code on GitHub
