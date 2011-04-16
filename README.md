@@ -26,6 +26,8 @@ tested extensively in real world use on color calibrated displays (as well as
 uncalibrated/intentionally miscalibrated displays) and in a variety of lighting 
 conditions.
 
+***See the [changelog] for what's new in the most recent release.***
+
 ![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)\
 ![solarized vim](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)\
 
@@ -35,8 +37,6 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 *   **Vim** by [me] (the Vim-only portion of Solarized is
     [available here][Vim Repository], for use with Pathogen, etc.)
-*   **Mutt** e-mail client also by [me] (*just* the Mutt colorscheme is
-    [available here][Mutt Repository])
 *   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
     ([@sellout](http://twitter.com/sellout))
     in the main repo and in a [standalone repository][Emacs Repository]
@@ -52,20 +52,27 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 *   **TextMate** courtesy of [Tom Martin](http://thedeplorableword.net/) 
     ([@deplorableword](http://twitter.com/deplorableword))
     in the main repo and in a [standalone repository][TextMate Repository]
-    (with key work from [Mark Story](http://mark-story.com) and [Brian Mathiyakom](http://brian.rarevisions.net))
+    (with key work from [Mark Story](http://mark-story.com) 
+    and [Brian Mathiyakom](http://brian.rarevisions.net))
 *   **Visual Studio** courtesy of [David Thibault](http://www.leddt.com) 
     ([@leddt](http://twitter.com/leddt))
     in the main repo and in a [standalone repository][Visual Studio Repository]
 
-*   **Xcode** Work in progress Xcode ports are available for [Xcode 3] and [Xcode 4] 
+*   **Xcode** work in progress ports are available for [Xcode 3] and [Xcode 4] 
     and will be pulled into the main Solarized project soon.
 
 ### Terminal Emulators
+
 * **Xresources** / Xdefaults
 * **iTerm2**
 * **OS X Terminal.app**
 * **Putty** courtesy [Brant Bobby](http://www.control-v.net)
     and on [GitHub](https://github.com/brantb)
+
+### Other Applications
+
+*   **Mutt** e-mail client also by [me] (*just* the Mutt colorscheme is
+    [available here][Mutt Repository])
 
 ### Palettes
 
@@ -84,7 +91,10 @@ Download
 
 ### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.zip)
 
-Current release is **v1.0.0beta1**.
+Current release is **v1.0.0beta1**. See the [changelog] for details on what's 
+new in this release.
+
+### Fresh Code on GitHub
 
 You can also use the following links to access application specific downloads 
 and git repositories:
@@ -113,6 +123,9 @@ and git repositories:
     * [SeeStyle-Coda-SubEthaEdit Repository]
     * [TextMate Repository]
     * [Visual Studio Repository]
+
+    * [Xcode 3 work in progress][Xcode 3]
+    * [Xcode 4 work in progress][Xcode 4]
 
 Note that through the magic of [git-subtree](https://github.com/apenwarr/git-subtree)
 these repositories are all kept in sync, so you can pull any of them and get the most up-to-date version.
@@ -383,3 +396,4 @@ background.
 [Xcode 3]: https://github.com/shayne/solarized/tree/master/apple-xcode3-solarized
 [Xcode 4]: https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized
 [me]: http://ethanschoonover.com/colophon
+[changelog]: http://ethanschoonover.com/solarized/CHANGELOG
