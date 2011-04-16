@@ -14,28 +14,28 @@ currently included ports, highlighted items are new, updates noted:
 
 #### Editors & IDEs
 
-*   \[UPDATED\] Vim
-*   \[NEW\] Emacs
-*   \[NEW\] IntelliJ IDEA
-*   \[NEW\] SeeStyle theme for Coda & SubEthaEdit
-*   \[NEW\] TextMate
-*   \[NEW\] Visual Studio
+*   \[UPDATED\] **Vim**
+*   \[NEW\] ***Emacs***
+*   \[NEW\] ***IntelliJ IDEA***
+*   \[NEW\] ***SeeStyle theme for Coda & SubEthaEdit***
+*   \[NEW\] ***TextMate***
+*   \[NEW\] ***Visual Studio***
 
 #### Terminal Emulators
 
-* \[UPDATED\] iTerm2 colorschemes
-* \[UPDATED\] OS X Terminal.app colors
-* \[UPDATED\] Xresources colors
+* \[UPDATED\] **iTerm2 colorschemes**
+* \[UPDATED\] **OS X Terminal.app colors**
+* \[UPDATED\] **Xresources colors**
 
 #### Other Applications
 
-* \[UPDATED\] Mutt mail client colorschemes
+* \[UPDATED\] **Mutt mail client colorschemes**
 
 #### Palettes
 
-* \[UPDATED\] Adobe Photoshop Swatches
-* \[UPDATED\] Apple Color Picker Palette
-* \[UPDATED\] Gimp Palette
+* \[UPDATED\] **Adobe Photoshop Swatches**
+* \[UPDATED\] **Apple Color Picker Palette**
+* \[UPDATED\] **Gimp Palette**
 
 
 ### Critical Changes
@@ -71,12 +71,14 @@ These changes may require you to change your configuration.
     available (won't clobber that mapping if you're using it). Also available 
     as a command `:ToggleBG`.  To manually map to something other than <F5>:
 
-            nmap <unique> <F5> <Plug>ToggleBackground
-            imap <unique> <F5> <Plug>ToggleBackground
-            vmap <unique> <F5> <Plug>ToggleBackground
+    To set your own mapping in your .vimrc file, simply add the following line 
+    to support normal, insert and visual mode usage, changing the "<F5>" value 
+    to the key or key combination you wish to use:
 
-    Note that it is important to *not* use the noremap map variants. The plugin
-    uses noremap internally. You may run `:help togglebg` for more information.
+        call togglebg#map("<F5>")
+
+    Note that you'll want to use a single function key or equivalent if you want 
+    the plugin to work in all modes (normal, insert, visual).
 
 *   **VIM : IMPROVEMENT : Special & Non-text items now more visible**
     Special characters such as trailing whitespace, tabs, newlines, when 
