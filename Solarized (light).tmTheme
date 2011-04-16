@@ -1434,7 +1434,7 @@
 			<key>name</key>
 			<string>Tex: Math \\</string>
 			<key>scope</key>
-			<string>punctuation.definition.constant.math.tex, text.tex.latex constant.other.general.math.tex</string>
+			<string>punctuation.definition.constant.math.tex</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1486,7 +1486,7 @@
 			<key>name</key>
 			<string>Tex: \label</string>
 			<key>scope</key>
-			<string>keyword.control.label.latex</string>
+			<string>keyword.control.label.latex, text.tex.latex constant.other.general.math.tex</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
@@ -1556,6 +1556,19 @@
 			<dict>
 				<key>fontStyle</key>
 				<string>italic</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Tex: Reference Label</string>
+			<key>scope</key>
+			<string>keyword.control.ref.latex</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#269186</string>
 			</dict>
 		</dict>
 		<dict>
