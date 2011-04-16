@@ -10,7 +10,7 @@ Modified: 2011 Apr 16
 Solarized Colorscheme for BBEdit and TextWrangler
 =================================================
 
-Developed by Rui Carmo <rui.carmo@taoofmac.com>
+Developed by Rui Carmo http://the.taoofmac.com
 
 If you have come across this colorscheme via the [repository] on 
 github, visit the [Solarized homepage] or visit the main
