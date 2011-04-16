@@ -36,7 +36,8 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 ### Editors & IDEs
 
 *   **Vim** by [me] (the Vim-only portion of Solarized is
-    [available here][Vim Repository], for use with Pathogen, etc.)
+    [available here][Vim Repository], for use with Pathogen, etc.).
+    See also the [Vim README].
 *   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
     ([@sellout](http://twitter.com/sellout))
     in the main repo and in a [standalone repository][Emacs Repository]
@@ -56,6 +57,9 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
     in the main repo and in a [standalone repository][TextMate Repository]
     (with key work from [Mark Story](http://mark-story.com) 
     and [Brian Mathiyakom](http://brian.rarevisions.net))
+*   **TextWrangler & BBEdit** courtesy of [Rui Carmo](http://the.taoofmac.com)
+    ([@taoofmac](http://twitter.com/taoofmac))
+    in the main repo and in a [standalone repository][TextWrangler-BBEdit Repository]
 *   **Visual Studio** courtesy of [David Thibault](http://www.leddt.com) 
     ([@leddt](http://twitter.com/leddt))
     in the main repo and in a [standalone repository][Visual Studio Repository]
@@ -125,6 +129,7 @@ and git repositories:
     * [NetBeans Repository]
     * [SeeStyle-Coda-SubEthaEdit Repository]
     * [TextMate Repository]
+    * [TextWrangler-BBEdit Repository]
     * [Visual Studio Repository]
 
     * [Xcode 3 work in progress][Xcode 3]
@@ -396,8 +401,10 @@ background.
 [NetBeans Repository]: https://github.com/fentie/netbeans-colors-solarized
 [SeeStyle-Coda-SubEthaEdit Repository]: https://github.com/bobthecow/solarized-seestyle
 [TextMate Repository]: https://github.com/deplorableword/textmate-solarized
+[TextWrangler-BBEdit Repository]: https://github.com/rcarmo/textwrangler-bbedit-solarized
 [Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
 [Xcode 3]: https://github.com/shayne/solarized/tree/master/apple-xcode3-solarized
 [Xcode 4]: https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized
 [me]: http://ethanschoonover.com/colophon
 [changelog]: http://ethanschoonover.com/solarized/CHANGELOG
+[Vim README]: http://ethanschoonover.com/solarized/vim-colors-solarized
