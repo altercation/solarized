@@ -5,7 +5,7 @@ author: Ethan Schoonover
 tags: test, testing, test123
 colors: light yellow
 created:  2011 Mar 15
-modified: 2011 Apr 14
+modified: 2011 Apr 16
 
 ---
 
@@ -33,25 +33,32 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 ### Editors & IDEs
 
-*   **Vim** (the Vim-only portion of Solarized is
+*   **Vim** by [me] (the Vim-only portion of Solarized is
     [available here][Vim Repository], for use with Pathogen, etc.)
-*   **Mutt** e-mail client (*just* the Mutt colorscheme is
+*   **Mutt** e-mail client also by [me] (*just* the Mutt colorscheme is
     [available here][Mutt Repository])
 *   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
     ([@sellout](http://twitter.com/sellout))
     in the main repo and in a [standalone repository][Emacs Repository]
+*   **IntelliJ IDEA**
+    courtesy of [Johan Kaving](https://github.com/jkaving) and
+    ([@flangy](http://twitter.com/flangy))
+    in the main repo and in a [standalone repository][IntelliJ Repository]
 *   **SeeStyle theme for Coda & SubEthaEdit** courtesy of
     [Justin Hileman](http://justinhileman.com/) 
     ([@bobthecow](http://twitter.com/bobthecow)),
     in the main repo and in a
     [standalone repository][SeeStyle-Coda-SubEthaEdit Repository]
-*   **IntelliJ IDEA**
-    courtesy of [Johan Kaving](https://github.com/jkaving) and
-    ([@flangy](http://twitter.com/flangy))
-    in the main repo and in a [standalone repository][IntelliJ Repository]
+*   **TextMate** courtesy of [Tom Martin](http://thedeplorableword.net/) 
+    ([@deplorableword](http://twitter.com/deplorableword))
+    in the main repo and in a [standalone repository][TextMate Repository]
+    (with key work from [Mark Story](http://mark-story.com) and [Brian Mathiyakom](http://brian.rarevisions.net))
 *   **Visual Studio** courtesy of [David Thibault](http://www.leddt.com) 
     ([@leddt](http://twitter.com/leddt))
     in the main repo and in a [standalone repository][Visual Studio Repository]
+
+*   **Xcode** Work in progress Xcode ports are available for [Xcode 3] and [Xcode 4] 
+    and will be pulled into the main Solarized project soon.
 
 ### Terminal Emulators
 * **Xresources** / Xdefaults
@@ -68,10 +75,9 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 Don't see the application you want to use it in? Download the palettes (or pull 
 the values from the table below) and create your own. Submit it back and I'll 
-happily note the contribution and include it on this page.
-
-**Note:** I am still tweaking the Vim highlighting for specific syntaxes and 
-welcome feedback on these.
+happily note the contribution and include it on this page.  See also the 
+[Usage & Development](#usage-development) section below for details on the 
+specific values to be used in different contexts.
 
 Download
 --------
@@ -103,8 +109,9 @@ and git repositories:
     * [Vim Repository]
     * [Mutt Repository]
     * [Emacs Repository]
-    * [SeeStyle-Coda-SubEthaEdit Repository]
     * [IntelliJ Repository]
+    * [SeeStyle-Coda-SubEthaEdit Repository]
+    * [TextMate Repository]
     * [Visual Studio Repository]
 
 Note that through the magic of [git-subtree](https://github.com/apenwarr/git-subtree)
@@ -370,5 +377,9 @@ background.
 [Mutt Repository]: https://github.com/altercation/mutt-colors-solarized
 [Emacs Repository]: https://github.com/sellout/emacs-color-theme-solarized
 [IntelliJ Repository]: https://github.com/jkaving/intellij-colors-solarized
-[Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
 [SeeStyle-Coda-SubEthaEdit Repository]: https://github.com/bobthecow/solarized-seestyle
+[TextMate Repository]: https://github.com/deplorableword/textmate-solarized
+[Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
+[Xcode 3]: https://github.com/shayne/solarized/tree/master/apple-xcode3-solarized
+[Xcode 4]: https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized
+[me]: http://ethanschoonover.com/colophon
