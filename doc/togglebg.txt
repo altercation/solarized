@@ -1,4 +1,4 @@
-*togglebg.vim*  For Vim version 7.3. or newer  Modified: 2011 Apr 12
+*togglebg.vim*  For Vim version 7.3. or newer  Modified: 2011 Apr 16
 
 
 		TOGGLE BACKGROUND PLUGIN by Ethan Schoonover ~
@@ -35,17 +35,14 @@ remove/change your existing <F5> mapping to another value.
 ==============================================================================
 2. Changing the Mapping					*togglebg-newmap*
 
-To set your own mapping in your .vimrc file, simply add the following three 
-lines to support normal, insert and visual mode usage, changing the "<F5>" 
-value to the key or key combination you wish to use:
+To set your own mapping in your .vimrc file, simply add the following line to 
+support normal, insert and visual mode usage, changing the "<F5>" value to the 
+key or key combination you wish to use:
 
 	call togglebg#map("<F5>")
 
 Note that you'll want to use a single function key or equivalent if you want 
 the plugin to work in all modes (normal, insert, visual).
-
-Note also that it is important to NOT use the noremap map variants. The plugin 
-uses noremap internally.
 
 ==============================================================================
 3. Issues						*togglebg-issues*
