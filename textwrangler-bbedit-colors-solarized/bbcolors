@@ -1,0 +1,386 @@
+#!/usr/bin/env perl
+#
+# bbcolors -- A text color scheme manager for BBEdit and TextWrangler.
+#
+# Copyright (c) 2006 John Gruber
+# <http://daringfireball.net/projects/bbcolors/>
+#
+# This program is free software; you may redistribute it and/or
+# modify it under the same terms as Perl itself.
+#
+
+
+use warnings;
+use strict;
+use Getopt::Long;
+use Pod::Usage;
+use encoding 'utf8';
+use utf8;
+
+use vars qw($VERSION);
+$VERSION = '1.0.1';
+# Sun 15 Oct 2006
+
+my $delete_setname;
+my $load_setname;
+my $save_setname;
+my $language;
+my $bbopen   = 0;		# If set, open a disk browser window showing the current saved color sets.
+my $reckless = 0;		# If set, apply defaults changes even if app is running.
+my $zap      = 0;		# If set, clear all existing text color prefs, resetting to BBEdit defaults.
+my %app = (
+	name	=> "BBEdit",
+	bundle	=> "com.barebones.bbedit",
+	creator	=> "R*ch",
+	tool	=> "bbedit",
+);
+
+# This should work even on systems not using English; the true names aren't localized:
+my $bbcolors_support_folder = "$ENV{HOME}/Library/Application Support/BBColors";	
+unless (-d $bbcolors_support_folder) {
+	mkdir $bbcolors_support_folder
+		or die "Can't create application support folder: $!";
+}
+
+GetOptions (
+	"delete=s"			=> \$delete_setname,
+	"list"				=> \&list_color_sets,
+	"load=s"			=> \$load_setname,
+	"save=s"			=> \$save_setname,
+	"reckless"			=> \$reckless,
+	"language=s"		=> \$language,
+	"bbedit"			=> ,  # Do nothing; uses BBEdit by default
+	"textwrangler|tw"	=> sub {%app = (
+									name	=> "TextWrangler",
+									bundle	=> "com.barebones.textwrangler",
+									creator	=> "!Rch",
+									tool	=> "edit",
+								)},
+	"open"				=> \&open_sets_folder_in_finder,
+	"bbopen"			=> \$bbopen,
+	"zap"				=> \$zap,
+	'help|?'			=> sub { pod2usage(1); },
+	'man'				=> sub { pod2usage(-verbose => 2); },
+	"version"			=> sub { print "Version $VERSION\n";  exit 0; },
+	) or pod2usage(2);
+
+
+# Save first:
+if ($save_setname) {
+	open (SETFILE, '>:utf8', "$bbcolors_support_folder/$save_setname.bbcolors")
+		or die "Can't open file for writing: $!";
+
+	my @lines = qx(defaults read $app{bundle} | egrep \\"Color:);
+
+	if ($language) {
+		# Only save color prefs for the language "$language"
+		$language = quotemeta $language;
+		@lines = grep(/"Color:.+:$language/, @lines);
+	}
+
+	my $len = 0;  # Longest key string
+	foreach (@lines) {
+		if (m{^\s*(.+?) = (.+);\s*$}ms) {
+			my $key = $1; # Should already have quotes around it
+			my $val = $2;
+			$key = unescape_plist_string($key);
+			$len = length $key if (length $key > $len);
+			$_ = "$key = $val;";
+		}
+	}
+
+	# Loop through again to print; I can't figure out a way to do this
+	# in one loop and still get the pretty-printed alignment.
+	foreach (@lines) {
+		if (m{^\s*(.+?) = (.+);\s*$}ms) {
+			my $key = $1; # Should already have quotes around it
+			my $val = $2;
+			$val = " " . $val unless $val =~ m/^"/; # Looks better with a space before non-string values.
+			printf SETFILE ("%-${len}s  =  %s;\n", $key, $val);
+		}
+	}
+
+	close SETFILE;
+}
+
+
+# Then Zap:
+if ($zap) {
+	if ( is_editor_running($app{name}) and ! $reckless ) {
+		print "Won't zap prefs while $app{name} is running.\n";
+		exit 0;
+	}
+	else {
+		my @lines = qx(defaults read $app{bundle} | egrep \\"Color:);
+		
+		if ($language) {
+			# Only zap color prefs for the language "$language"
+			$language = quotemeta $language;
+			@lines = grep(/"Color:[^"]+:$language/, @lines);
+		}
+		
+		foreach (@lines) {
+			if (m{^\s*(.+?) = (.+);\s*$}ms) {
+				my $key = $1; # Should already have quotes around it
+				$key = unescape_plist_string($key);
+				my $res = qx(defaults delete $app{bundle} $key );
+			}
+			else {
+				print STDERR "Can't parse line: «$_»\n";
+			}
+		}
+	}
+}
+
+
+# Then load:
+if ($load_setname) {
+	if ( is_editor_running($app{name}) and ! $reckless ) {
+		print "Won't load prefs while $app{name} is running.\n";
+		exit 0;
+	}
+	else {
+		open (SETFILE, '<:utf8', "$bbcolors_support_folder/$load_setname.bbcolors")
+			or do {print "No such scheme: '$load_setname'\nTry 'bbcolors -list' to see available schemes.\n"; exit;};
+		while (<SETFILE>) {
+			#
+			# These lines should look like:
+			#	 "Color:CTagsIdentifier" = "rgb(39321,0,26214)"; 
+			#    "Color:ColorAttributesSeparately" = 1; 
+			#
+			
+			next if m{^[ \t]*//}ms;  # Treat // lines as comments.
+			
+			if (m{^\s*(.+?)[ \t]*=[ \t]*(.+);\s*$}ms) {
+				my $key = $1;  # These two captures keep the quotes around the key...
+				my $val = $2;  # ...and value.
+				my $type = "-string";
+				if ($val =~ m{^\d+$}) {
+					# If the value is nothing but digits, treat it as an integer.
+					# This seems to work even if it's actually a boolean. (I.e.
+					# there's no need to guess whether 1 and 0 are bools or ints.)
+					$type = "-integer";
+				}
+				
+				if ($language) {
+					my $quoted = quotemeta $language;
+					next if ($key !~ m/$quoted"$/);
+				}
+				
+				my $res = qx(defaults write $app{bundle} $key $type $val );
+			}
+			else {
+				# Do nothing with lines that don't match.
+			}
+		}
+	}
+}
+
+
+# Then delete:
+if ($delete_setname) {
+	if (-f "$bbcolors_support_folder/$delete_setname.bbcolors") {
+		unlink "$bbcolors_support_folder/$delete_setname.bbcolors"
+			or die "Unable to delete $bbcolors_support_folder/$delete_setname.bbcolors: $!";
+	}
+	else {
+		print "Color scheme '$delete_setname' does not exist.\n";
+	}
+}
+
+
+# bbopen last; that way it won't fire up your editor before you diddle with the prefs
+if ($bbopen) {
+	system($app{tool}, $bbcolors_support_folder);
+}
+
+
+
+#### End of main script. ####
+
+sub unescape_plist_string {
+	my $str = shift;
+
+	# Un-double backslashes
+	$str =~ s{\\\\}{\\}g;
+	# Unescape Unicode chars:
+	$str =~ s{ \\U([[:xdigit:]]{4}) }{ chr(hex($1)) }egx;
+
+	return $str;
+}
+
+
+sub escape_plist_string {
+	my $str = shift;
+
+	# Encode Unicode chars into plist \U hex escapes;
+	# e.g. "Langüage" -> "Lang\U00fcage"
+	$str =~ s{ (\P{IsASCII}) }{ sprintf("\\U%04x", ord($1)) }egx;
+	# Double all backslashes:
+	$str =~ s{\\}{\\\\}g;
+
+	return $str;
+}
+
+
+sub is_editor_running {
+	my $app_name = shift;
+	my @processes = qx( ps -xc -o command );
+	chomp @processes;
+	my $count = grep { $_ eq $app_name } @processes;
+	return $count;
+}
+
+
+sub list_color_sets {
+	my $count = 0;
+	opendir(FOLDER, $bbcolors_support_folder)
+		or die "Can't open $bbcolors_support_folder: $!";
+	while( my $file = readdir FOLDER ) {
+		if (-T "$bbcolors_support_folder/$file" and $file =~ m/[.]bbcolors$/) {
+			$count++;
+			$file =~ s/[.]bbcolors$//;		# trim the extension
+			print "$file\n";
+		}
+	}
+	print "No color sets available in $bbcolors_support_folder\n" unless $count;
+	closedir(FOLDER);
+}
+
+
+sub open_sets_folder_in_finder {
+	system("open", $bbcolors_support_folder);
+}
+
+
+
+__END__
+
+=head1 NAME
+
+bbcolors - Save and load text color sets for BBEdit.
+
+
+=head1 SYNOPSIS
+
+  bbcolors -save "scheme name"
+  bbcolors -load "scheme name"
+  bbcolors -man
+
+
+=head1 DESCRIPTION
+
+B<bbcolors> saves and loads "sets" of text color preferences for BBEdit.
+
+
+=head1 OPTIONS
+
+=over 8
+
+=item B<-delete> F<setname>
+
+Delete the saved bbcolors scheme named 'setname'. Does not effect current BBEdit preferences.
+
+
+=item B<-list>
+
+List all color sets.
+
+
+=item B<-load> F<setname>
+
+Replace current BBEdit text colors with scheme named "setname".
+
+
+=item B<-save> F<setname>
+
+Save current BBEdit text colors to scheme named "setname', overwriting any existing scheme with that name.
+
+
+=item B<-zap>
+
+Deletes all current BBEdit (or TextWrangler) color settings, including those keyed to specific languages. For example, if you set custom colors for the Perl language in BBEdit, and then use bbcolors to load a new colorset that does not contain Perl-specific colors, your previously-set custom colors for Perl will remain in place. If you use the B<-zap> option when loading the new scheme, however, your custom color settings will be deleted, and your Perl files will be displayed using the default colors of the just-loaded color scheme.
+
+=item B<-lang> F<"language name">
+
+Target a specific language when saving, loading, or zapping.
+
+=over 4
+
+=item *
+
+If saving, only save those colors set for the specified language. (The <-save> command normally saves all colors.)
+
+=item *
+
+If loading, only load those colors from the named scheme which are keyed to the specified language.
+
+=item *
+
+If zapping, only zap the preferences keyed to the specified language.
+
+=back
+
+=item B<-open>
+
+Open the ~/Library/Application Support/BBColors/ folder in the Finder. If the folder doesn't exist, it will be created.
+
+
+=item B<-bbopen>
+
+Open the ~/Library/Application Support/BBColors/ folder in a new disk browser window using BBEdit (or TextWrangler, if used in conjunction with the B<-tw> option). If the folder doesn't exist, it will be created.
+
+
+=item B<-bbedit>
+
+Explicitly use with BBEdit (as opposed to TextWrangler). This option is on by default.
+
+
+=item B<-textwrangler>
+
+=item B<-tw>
+
+Use TextWrangler instead of BBEdit.
+
+
+=item B<-help>
+
+Print a brief help message and exit.
+
+
+=item B<-man>
+
+Print the full bbcolors manual page.
+
+
+=item B<-version>
+
+Print the current bbcolors version number.
+
+
+=back
+
+
+=head1 A NOTE ON TEXT ENCODING
+
+B<bbcolors> should work just fine with languages modules and saved color sets whose names contain non-ASCII characters. The only provision is that all input and output is assumed to be UTF-8.
+
+
+=head1 VERSION HISTORY
+
+=over 8
+
+=item 1.0.1 - Sun 15 Oct 2006
+
+Switched to a more efficient method of testing whether BBEdit and TextWrangler are currently running. Cleaned up the documentation slightly, replacing several instances of "color set" with "color scheme".
+
+
+=back
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (c) 2006 John Gruber.  <http://daringfireball.net/>   
+
+This program is free software; you may redistribute it and/or modify it under the same terms as Perl itself.
+
+=cut

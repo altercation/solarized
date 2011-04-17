@@ -4,7 +4,7 @@ Description: Precision colors for machines and people
 Author: Ethan Schoonover
 Colors: light yellow
 Created:  2011 Mar 15
-Modified: 2011 Apr 12
+Modified: 2011 Apr 16
 
 ---
 
@@ -197,17 +197,14 @@ Solarized comes with a Toggle Background plugin that by default will map to
 either map the function manually or change your current <F5> mapping to 
 something else.
 
-To set your own mapping in your .vimrc file, simply add the following three 
-lines to support normal, insert and visual mode usage, changing the "<F5>" 
-value to the key or key combination you wish to use:
+To set your own mapping in your .vimrc file, simply add the following line to 
+support normal, insert and visual mode usage, changing the "<F5>" value to the 
+key or key combination you wish to use:
 
     call togglebg#map("<F5>")
 
 Note that you'll want to use a single function key or equivalent if you want 
 the plugin to work in all modes (normal, insert, visual).
-
-Note also that it is important to NOT use the noremap map variants. The plugin 
-uses noremap internally.
 
 Code Notes
 ----------
