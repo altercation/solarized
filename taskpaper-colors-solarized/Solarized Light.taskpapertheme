@@ -17,7 +17,7 @@
 	<color id="cyan" red="0.164706" green="0.631373" blue="0.596078" alpha="1.0" />
 	<color id="green" red="0.521569" green="0.6" blue="0" alpha="1.0" />
 
-	<!-- Solarized dark -->
+	<!-- Solarized light -->
 	<color id="foreground" extendsColorID="base00" />
 	<color id="emphasis" extendsColorID="base01" />
 	<color id="secondary" extendsColorID="base1" />
