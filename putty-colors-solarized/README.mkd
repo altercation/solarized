@@ -1,0 +1,26 @@
+Solarized - PuTTY settings
+==========================
+
+### [See official homepage for full content](http://ethanschoonover.com/solarized)
+
+Installation (PuTTY)
+--------------------
+
+Import the `.reg` files to create new sessions using the Solarized color scheme which you can modify/duplicate as you see fit.
+
+To copy the color settings into an existing session, edit `solarized_dark.reg` or `solarized_light.reg` and replace `Solarized%20Dark` in the third line with the name of the session you want to modify.
+
+PuTTY Tray
+----------
+
+[PuTTY Tray](http://haanstra.eu/putty/) can store sessions in text files as opposed to the Windows registry. To modify an existing session to use Solarized colors, open the file in a text editor and replace the lines beginning with `Colour##` (0-21) with the version from `solarized_dark_puttytray.txt` or `solarized_light_puttytray.txt`.
+
+Screenshots
+-----------
+
+![Dark scheme](https://github.com/brantb/solarized/raw/putty/putty-colors-solarized/dark.png)  
+*Dark scheme*
+
+![Light scheme](https://github.com/brantb/solarized/raw/putty/putty-colors-solarized/light.png)  
+*Light scheme*
+

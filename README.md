@@ -1,11 +1,11 @@
 ---
-Title: Solarized
-Description: Precision colors for machines and people
-Author: Ethan Schoonover
-Tags: test, testing, test123
-Colors: light yellow
-Created:  2011 Mar 15
-Modified: 2011 Apr 07
+title: Solarized
+description: Precision colors for machines and people
+author: Ethan Schoonover
+tags: test, testing, test123
+colors: light yellow
+created:  2011 Mar 15
+modified: 2011 Apr 16
 
 ---
 
@@ -26,72 +26,118 @@ tested extensively in real world use on color calibrated displays (as well as
 uncalibrated/intentionally miscalibrated displays) and in a variety of lighting 
 conditions.
 
+***See the [changelog] for what's new in the most recent release.***
+
 ![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)\
 ![solarized vim](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)\
 
 Currently available in formats for (cf [screenshots](#screenshots) below):
 
-* **Vim** (the Vim-only portion of Solarized is [available 
-here](https://github.com/altercation/vim-colors-solarized), for use with 
-Pathogen, etc.)
-* **Mutt** e-mail client (*just* the Mutt colorscheme is [available 
-here](https://github.com/altercation/mutt-colors-solarized))
+### Editors & IDEs
+
+*   **Vim** by [me] (the Vim-only portion of Solarized is
+    [available here][Vim Repository], for use with Pathogen, etc.).
+    See also the [Vim README].
+*   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
+    ([@sellout](http://twitter.com/sellout))
+    in the main repo and in a [standalone repository][Emacs Repository]
+*   **IntelliJ IDEA**
+    courtesy of [Johan Kaving](https://github.com/jkaving) and
+    ([@flangy](http://twitter.com/flangy))
+    in the main repo and in a [standalone repository][IntelliJ Repository]
+*   **NetBeans** courtesy of [Brian Fenton](https://github.com/fentie) and
+    in the main repo and in a [standalone repository][NetBeans Repository]
+*   **SeeStyle theme for Coda & SubEthaEdit** courtesy of
+    [Justin Hileman](http://justinhileman.com/) 
+    ([@bobthecow](http://twitter.com/bobthecow)),
+    in the main repo and in a
+    [standalone repository][SeeStyle-Coda-SubEthaEdit Repository]
+*   **TextMate** --- ***NOTE:*** Dark Theme is work in progress\
+    courtesy of [Tom Martin](http://thedeplorableword.net/) 
+    ([@deplorableword](http://twitter.com/deplorableword))
+    in the main repo and in a [standalone repository][TextMate Repository]
+    (with key work from [Mark Story](http://mark-story.com) 
+    and [Brian Mathiyakom](http://brian.rarevisions.net))
+*   **TextWrangler & BBEdit** courtesy of [Rui Carmo](http://the.taoofmac.com)
+    ([@taoofmac](http://twitter.com/taoofmac))
+    in the main repo and in a [standalone repository][TextWrangler-BBEdit Repository]
+*   **Visual Studio** courtesy of [David Thibault](http://www.leddt.com) 
+    ([@leddt](http://twitter.com/leddt))
+    in the main repo and in a [standalone repository][Visual Studio Repository]
+
+*   **Xcode** work in progress ports are available for [Xcode 3] and [Xcode 4] 
+    and will be pulled into the main Solarized project soon.
+
+### Terminal Emulators
+
 * **Xresources** / Xdefaults
 * **iTerm2**
-* OS X **Terminal.app**
-* Adobe Photoshop Palette (inc. L\*a\*b values)
-* Apple Color Picker Palette
-* GIMP Palette
+* **OS X Terminal.app**
+* **Putty** courtesy [Brant Bobby](http://www.control-v.net)
+    and on [GitHub](https://github.com/brantb)
+
+### Other Applications
+
+*   **Mutt** e-mail client also by [me] (*just* the Mutt colorscheme is
+    [available here][Mutt Repository])
+
+### Palettes
+
+* **Adobe Photoshop** Palette (inc. L\*a\*b values)
+* **Apple Color Picker** Palettes
+* **GIMP** Palette
 
 Don't see the application you want to use it in? Download the palettes (or pull 
 the values from the table below) and create your own. Submit it back and I'll 
-happily note the contribution and include it on this page.
-
-**Note:** I am still tweaking the Vim highlighting for specific syntaxes and 
-welcome feedback on these.
+happily note the contribution and include it on this page.  See also the 
+[Usage & Development](#usage-development) section below for details on the 
+specific values to be used in different contexts.
 
 Download
 --------
 
 ### [Click here to download latest version](http://ethanschoonover.com/solarized/files/solarized.zip)
 
-Current release is **v1.0.0beta1**.
+Current release is **v1.0.0beta2**. See the [changelog] for details on what's 
+new in this release.
+
+### Fresh Code on GitHub
 
 You can also use the following links to access application specific downloads 
 and git repositories:
-
-*   **Full git repository:**
-
-    The full git repository is at: <https://github.com/altercation/solarized>
-    Get it using the following command:
-
-        $ git clone git://github.com/altercation/solarized.git
-
-*   **Vim only:**
-
-    The vim-only colorscheme (Pathogen ready) is available at: 
-    <https://github.com/altercation/vim-colors-solarized>.
-    
-        $ git clone git://github.com/altercation/vim-colors-solarized.git
-
-    You can also download it from [vim.org](http://www.vim.org/scripts/script.php?script_id=3520).
-
-*   **Mutt only:**
-
-    The mutt-only variants can be cloned from 
-    <https://github.com/altercation/mutt-colors-solarized>
-
-        $ git clone git://github.com/altercation/mutt-colors-solarized.git
 
 *   **Canonical Project Page:**
 
     Downloads, screenshots and more information are always available from the
     project page: <http://ethanschoonover.com/solarized>
 
-Note that through the magic of 
-[git-subtree](https://github.com/apenwarr/git-subtree) these repositories are 
-all kept in sync, so you can pull any of them and get the most up-to-date 
-version.
+*   **Full Git Repository:**
+
+    The full git repository is at: <https://github.com/altercation/solarized>
+    Get it using the following command:
+
+        $ git clone git://github.com/altercation/solarized.git
+
+*   **Application Specific Repositories:**
+
+    You can clone repositories specific to many of the application specific 
+    color themes. See links in the list above or select from this list:
+
+    * [Vim Repository]
+    * [Mutt Repository]
+    * [Emacs Repository]
+    * [IntelliJ Repository]
+    * [NetBeans Repository]
+    * [SeeStyle-Coda-SubEthaEdit Repository]
+    * [TextMate Repository]
+    * [TextWrangler-BBEdit Repository]
+    * [Visual Studio Repository]
+
+    * [Xcode 3 work in progress][Xcode 3]
+    * [Xcode 4 work in progress][Xcode 4]
+
+Note that through the magic of [git-subtree](https://github.com/apenwarr/git-subtree)
+these repositories are all kept in sync, so you can pull any of them and get the most up-to-date version.
 
 Features
 --------
@@ -127,7 +173,7 @@ Features
     ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)\
 
     Solarized works as a sixteen color palette for compatibility with common
-    terminal based applications / emulators. In addition, it has been carefull 
+    terminal based applications / emulators. In addition, it has been carefully 
     designed to scale down to a variety of five color palettes (four base 
     monotones plus one accent color) for use in design work such as web design.
     In every case it retains a strong personality but doesn't overwhelm.
@@ -323,6 +369,10 @@ matched in sRGB space.
 Usage & Development
 -------------------
 
+If you are considering developing a port for Solarized, please see also the 
+[developer notes](http://ethanschoonover.com/solarized/DEVELOPERS) for 
+information about optional repository structure and readme formats.
+
 Solarized flips between light and dark modes. In each mode, four monotones form 
 the core values (with an optional fifth for emphasized content).
 
@@ -342,3 +392,20 @@ foreground.
 
 The values in this example are simply inverted in the case of a light 
 background.
+
+
+
+[Vim Repository]: https://github.com/altercation/vim-colors-solarized
+[Mutt Repository]: https://github.com/altercation/mutt-colors-solarized
+[Emacs Repository]: https://github.com/sellout/emacs-color-theme-solarized
+[IntelliJ Repository]: https://github.com/jkaving/intellij-colors-solarized
+[NetBeans Repository]: https://github.com/fentie/netbeans-colors-solarized
+[SeeStyle-Coda-SubEthaEdit Repository]: https://github.com/bobthecow/solarized-seestyle
+[TextMate Repository]: https://github.com/deplorableword/textmate-solarized
+[TextWrangler-BBEdit Repository]: https://github.com/rcarmo/textwrangler-bbedit-solarized
+[Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
+[Xcode 3]: https://github.com/shayne/solarized/tree/master/apple-xcode3-solarized
+[Xcode 4]: https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized
+[me]: http://ethanschoonover.com/colophon
+[changelog]: http://ethanschoonover.com/solarized/CHANGELOG
+[Vim README]: http://ethanschoonover.com/solarized/vim-colors-solarized

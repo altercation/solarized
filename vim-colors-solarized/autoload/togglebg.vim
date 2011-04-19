@@ -3,21 +3,10 @@
 " Maintainer:   Ethan Schoonover
 " License:      OSI approved MIT license
 
-if exists("g:loaded_ToggleBackground")
+if exists("g:loaded_togglebg")
     finish
 endif
-let g:loaded_ToggleBackground = 1
-
-if !exists("no_plugin_maps") && !hasmapto('<Plug>ToggleBackground')
-    " map alone won't work here as it doesn't 
-    try
-        silent! nmap <unique> <F5> <Plug>ToggleBackground
-        silent! imap <unique> <F5> <Plug>ToggleBackground
-        silent! vmap <unique> <F5> <Plug>ToggleBackground
-    finally
-        let g:test_val = "checked"
-    endtry
-endif
+let g:loaded_togglebg = 1
 
 " noremap is a bit misleading here if you are unused to vim mapping.
 " in fact, there is remapping, but only of script locally defined remaps, in 
@@ -43,3 +32,16 @@ function! ToggleBackground()
     echo "Please update your ToggleBackground mapping. ':help togglebg' for information."
 endfunction
 
+function! togglebg#map(mapActivation)
+    try
+        exe "silent! nmap <unique> ".a:mapActivation." <Plug>ToggleBackground"
+        exe "silent! imap <unique> ".a:mapActivation." <Plug>ToggleBackground"
+        exe "silent! vmap <unique> ".a:mapActivation." <Plug>ToggleBackground"
+    finally
+        return 0
+    endtry
+endfunction
+
+if !exists("no_plugin_maps") && !hasmapto('<Plug>ToggleBackground')
+    call togglebg#map("<F5>")
+endif
