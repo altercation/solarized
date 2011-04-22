@@ -11,16 +11,16 @@
     <option name="CARET_ROW_COLOR" value="eee8d5" />
     <option name="CONSOLE_BACKGROUND_KEY" value="fdf6e3" />
     <option name="GUTTER_BACKGROUND" value="eee8d5" />
-    <option name="INDENT_GUIDE" value="" />
-    <option name="LINE_NUMBERS_COLOR" value="657b83" />
+    <option name="INDENT_GUIDE" value="eee8d5" />
+    <option name="LINE_NUMBERS_COLOR" value="93a1a1" />
     <option name="METHOD_SEPARATORS_COLOR" value="93a1a1" />
     <option name="MODIFIED_LINES_COLOR" value="" />
     <option name="NOTIFICATION_BACKGROUND" value="2b36" />
     <option name="READONLY_FRAGMENT_BACKGROUND" value="" />
-    <option name="RIGHT_MARGIN_COLOR" value="" />
-    <option name="SELECTED_INDENT_GUIDE" value="" />
-    <option name="SELECTED_TEARLINE_COLOR" value="" />
-    <option name="TEARLINE_COLOR" value="eee8d5" />
+    <option name="RIGHT_MARGIN_COLOR" value="eee8d5" />
+    <option name="SELECTED_INDENT_GUIDE" value="93a1a1" />
+    <option name="SELECTED_TEARLINE_COLOR" value="839496" />
+    <option name="TEARLINE_COLOR" value="93a1a1" />
     <option name="WHITESPACES" value="ffffff" />
   </colors>
   <attributes>
@@ -94,6 +94,16 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
+    <option name="CUSTOM_NUMBER_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="dc322f" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
     <option name="Class">
       <value>
         <option name="FOREGROUND" value="268bd2" />
@@ -121,6 +131,16 @@
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="FOLDED_TEXT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="808080" />
+        <option name="BACKGROUND" value="ffffff" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="1" />
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
