@@ -22,6 +22,15 @@ applied them. To apply them, simply select an existing profile from the profile
 list window on the left, or create a new profile. Then select the Solarized 
 Dark or Solarized Light preset from the "Load Presets" drop down.
 
+For best results and maximum compatibility with console apps the following
+settings have to be adapted:
+
+1. Preferences > Text
+   Uncheck "Draw bold text in bright colors"
+
+2. Preferences > Terminal > Terminal Emulation
+   Set "Report Terminal Type" to "xterm-256color"
+
 Ok, I've gone crazy with iTerm2 color management but you are going to be ok.  
 Just realize two things:
 
