@@ -138,7 +138,9 @@ You can easily modify and experiment with Solarized display options using the
 Solarized menu when using Vim in gui mode. Once you have things set to your 
 liking, you can autogenerate the current option list in a format ready for 
 insertion into your .vimrc file using the Solarized menu "Autogenerate 
-Options" command.
+Options" command or at the command line with:
+
+    :SolarizedOptions
 
 
 OPTION LIST

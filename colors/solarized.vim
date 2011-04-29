@@ -865,7 +865,7 @@ autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | 
 "
 "    let g:solarized_menu=0
 
-function! SolarizedOptions()
+function! s:SolarizedOptions()
     new
     setf vim
     let failed = append(0, s:defaults_list)
@@ -874,6 +874,9 @@ function! SolarizedOptions()
     let failed = append(0, s:lazycat_list)
     0
 endfunction
+if !exists(":SolarizedOptions")
+    command SolarizedOptions :call s:SolarizedOptions()
+endif
 
 function! SolarizedMenu()
 if exists("g:loaded_solarized_menu")
@@ -908,7 +911,7 @@ if g:colors_name == "solarized"
     amenu &Solarized.&Help.&Toggle\ Background\ Help :help togglebg<CR>
     amenu &Solarized.&Help.&Removing\ This\ Menu     :help solarized-menu<CR>
 
-    amenu &Solarized.&Autogenerate\ options          :call SolarizedOptions()<CR>
+    amenu &Solarized.&Autogenerate\ options          :SolarizedOptions<CR>
 
     an 9999.77 &Help.&Solarized\ Colorscheme         :help solarized<CR>
     an 9999.78 &Help.&Toggle\ Background             :help togglebg<CR>
