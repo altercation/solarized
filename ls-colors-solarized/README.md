@@ -1,13 +1,17 @@
-# Solarized dircolors / ls colors (for 256 color terminals)
+# Solarized dircolors / ls colors
+
+## Files
+  * `dircolors.256dark` - dark solarized theme for 256 color terminals (by [seebi](https://github.com/seebi))
 
 ## Usage
-This dircolors database file uses solarized colors instead of the given
+These dircolors database files uses solarized colors instead of the given
 terminal emulator palette. To use it, run this 
 
     eval `dircolors /path/to/dircolorsdb`
 
 Typically, this file is copied or linked to `~/.dir_colors`.
 
+### 256 color schemes
 To be able to use it, you need a 256 color terminal (e.g. gnome-terminal or
 urxvt) and a correct `TERM` variable, e.g.:
 
@@ -25,18 +29,25 @@ urxvt) and a correct `TERM` variable, e.g.:
     solarized light pallette for the background
 
 ## Screenshots
-Here are two screenshots of common and not so common use-cases.
+
+### 256dark theme
+Here are screenshots of common and not so common use-cases.
 They are captured from a gnome-terminal using the [dz-version of the awesome Inconsolata font](http://nodnod.net/2009/feb/12/adding-straight-single-and-double-quotes-inconsola/).
 
-### Common colors in action
+#### Common colors in action
 Executables, archives, audio/video stuff, dead links
-![common use-cases](https://github.com/seebi/solarized/raw/master/ls-colors-solarized/common-cases.png)
 
-### Use-Case: Latex directory
+![common use-cases](https://github.com/seebi/solarized/raw/ls-colors/ls-colors-solarized/screenshots/256dark-common.png)
+
+#### Use-Case: Latex directory
 tex-trash is in comment style and pdf+tex are main files of interest and
 highlighted.
-![common use-cases](https://github.com/seebi/solarized/raw/master/ls-colors-solarized/latex.png)
 
-### All colors in action
+![common use-cases](https://github.com/seebi/solarized/raw/ls-colors/ls-colors-solarized/screenshots/256dark-latex.png)
+
+#### All colors in action
 uncommon stuff like pipes and block devices ...
-![not so common use-cases](https://github.com/seebi/solarized/raw/master/ls-colors-solarized/all-cases.png)
+
+![not so common use-cases](https://github.com/seebi/solarized/raw/ls-colors/ls-colors-solarized/screenshots/256dark-all.png)
+
+
