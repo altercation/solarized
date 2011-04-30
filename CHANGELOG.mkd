@@ -68,13 +68,14 @@ These changes may require you to change your configuration.
 
 *   **VIM : IMPROVEMENT : New Toggle Background Plugin**
     Added new Toggle Background plugin. Will load automatically and show up as 
-    a menu item in the `Window` menu in gui vim. Automatically maps to <F5> if 
-    available (won't clobber that mapping if you're using it). Also available 
-    as a command `:ToggleBG`.  To manually map to something other than <F5>:
+    a menu item in the `Window` menu in gui vim. Automatically maps to
+    `<F5>` if available (won't clobber that mapping if you're using it).
+    Also available as a command `:ToggleBG`.  To manually map to
+    something other than `<F5>`:
 
     To set your own mapping in your .vimrc file, simply add the following line 
-    to support normal, insert and visual mode usage, changing the "<F5>" value 
-    to the key or key combination you wish to use:
+    to support normal, insert and visual mode usage, changing the
+    "`<F5>`" value to the key or key combination you wish to use:
 
         call togglebg#map("<F5>")
 
