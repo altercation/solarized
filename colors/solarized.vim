@@ -4,7 +4,7 @@
 "           (see this url for latest release & screenshots)
 " License:  OSI approved MIT license (see end of this file)
 " Created:  In the middle of the night
-" Modified: 2011 Apr 29
+" Modified: 2011 Apr 30
 "
 " Usage "{{{
 "
@@ -130,6 +130,33 @@
 " http://www.frexx.de/xterm-256-notes/"
 "
 " }}}
+" Environment Specific Overrides "{{{
+" Allow or disallow certain features based on current terminal emulator or 
+" environment.
+
+" Terminals that support italics
+let s:terms_italic=[
+            \"rxvt",
+            \"gnome-terminal"
+            \]
+" For reference only, terminals are known to be incomptible.
+" Terminals that are in neither list need to be tested.
+let s:terms_noitalic=[
+            \"iTerm.app",
+            \"Apple_Terminal"
+            \]
+if has("gui_running")
+    let s:terminal_italic=1 " TODO: could refactor to not require this at all
+else
+    let s:terminal_italic=0 " terminals will be guilty until proven compatible
+    for term in s:terms_italic
+        if $TERM_PROGRAM =~ term
+            let s:terminal_italic=1
+        endif
+    endfor
+endif
+
+" }}}
 " Default option values"{{{
 " ---------------------------------------------------------------------
 " s:options_list is used to autogenerate a list of all non-default options 
@@ -187,10 +214,10 @@ call s:SetOption("termtrans",s:solarized_termtrans_default)
 call s:SetOption("degrade",0)
 call s:SetOption("bold",1)
 call s:SetOption("underline",1)
-call s:SetOption("italic",1)
+call s:SetOption("italic",1) " note that we need to override this later if the terminal doesn't support
 call s:SetOption("termcolors",16)
 call s:SetOption("contrast","normal")
-call s:SetOption("visibility","normal")
+call s:SetOption("visibility","low")
 call s:SetOption("menu",1)
 
 "}}}
@@ -289,22 +316,39 @@ elseif g:solarized_termcolors == 256
 else
     let s:vmode       = "cterm"
     let s:bright      = "* term=bold cterm=bold"
-    let s:base03      = "0".s:bright
-    let s:base02      = "0"
-    let s:base01      = "2".s:bright
-    let s:base00      = "3".s:bright
-    let s:base0       = "4".s:bright
-    let s:base1       = "6".s:bright
-    let s:base2       = "7"
-    let s:base3       = "7".s:bright
-    let s:yellow      = "3"
-    let s:orange      = "1".s:bright
-    let s:red         = "1"
-    let s:magenta     = "5"
-    let s:violet      = "13"
-    let s:blue        = "4"
-    let s:cyan        = "6"
-    let s:green       = "2"
+"   let s:base03      = "0".s:bright
+"   let s:base02      = "0"
+"   let s:base01      = "2".s:bright
+"   let s:base00      = "3".s:bright
+"   let s:base0       = "4".s:bright
+"   let s:base1       = "6".s:bright
+"   let s:base2       = "7"
+"   let s:base3       = "7".s:bright
+"   let s:yellow      = "3"
+"   let s:orange      = "1".s:bright
+"   let s:red         = "1"
+"   let s:magenta     = "5"
+"   let s:violet      = "5".s:bright
+"   let s:blue        = "4"
+"   let s:cyan        = "6"
+"   let s:green       = "2"
+    let s:base03      = "DarkGray"      " 0*
+    let s:base02      = "Black"         " 0
+    let s:base01      = "LightGreen"    " 2*
+    let s:base00      = "LightYellow"   " 3*
+    let s:base0       = "LightBlue"     " 4*
+    let s:base1       = "LightCyan"     " 6*
+    let s:base2       = "LightGray"     " 7
+    let s:base3       = "White"         " 7*
+    let s:yellow      = "DarkYellow"    " 3
+    let s:orange      = "LightRed"      " 1*
+    let s:red         = "DarkRed"       " 1
+    let s:magenta     = "DarkMagenta"   " 5
+    let s:violet      = "LightMagenta"  " 5*
+    let s:blue        = "DarkBlue"      " 4
+    let s:cyan        = "DarkCyan"      " 6
+    let s:green       = "DarkGreen"     " 2
+
 endif
 "}}}
 " Formatting options and null values for passthrough effect "{{{
@@ -362,24 +406,24 @@ if g:solarized_contrast == "low"
     let s:ou          = ",underline"
 endif
 "}}}
-" Overrides dependent on user specified values"{{{
+" Overrides dependent on user specified values and environment "{{{
 " ---------------------------------------------------------------------
-if g:solarized_bold == 1
-    let s:b           = ",bold"
-else
+if g:solarized_bold == 0
     let s:b           = ""
+else
+    let s:b           = ",bold"
 endif
 
-if g:solarized_underline == 1
-    let s:u           = ",underline"
-else
+if g:solarized_underline == 0
     let s:u           = ""
+else
+    let s:u           = ",underline"
 endif
 
-if g:solarized_italic == 1
-    let s:i           = ",italic"
-else
+if g:solarized_italic == 0 || s:terminal_italic == 0
     let s:i           = ""
+else
+    let s:i           = ",italic"
 endif
 "}}}
 " Highlighting primitives"{{{
@@ -431,7 +475,7 @@ exe "let s:fmt_undb     = ' ".s:vmode."=NONE".s:u.s:b.  " term=NONE".s:u.s:b."'"
 exe "let s:fmt_undi     = ' ".s:vmode."=NONE".s:u.      " term=NONE".s:u."'"
 exe "let s:fmt_uopt     = ' ".s:vmode."=NONE".s:ou.     " term=NONE".s:ou."'"
 exe "let s:fmt_curl     = ' ".s:vmode."=NONE".s:c.      " term=NONE".s:c."'"
-exe "let s:fmt_ital     = ' ".s:vmode."=NONE".          " term=NONE".    "'"
+exe "let s:fmt_ital     = ' ".s:vmode."=NONE".s:i.      " term=NONE".s:i."'"
 exe "let s:fmt_revr     = ' ".s:vmode."=NONE".s:r.      " term=NONE".s:r."'"
 exe "let s:fmt_stnd     = ' ".s:vmode."=NONE".s:s.      " term=NONE".s:s."'"
 
@@ -560,8 +604,8 @@ if (has("gui_running")) || &t_Co > 8
     "exe "hi! Visual"         .s:fmt_stnd   .s:fg_none   .s:bg_base02
     exe "hi! Visual"         .s:fmt_none   .s:fg_base03 .s:bg_base01
 else
-    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base02 .s:bg_base2
-    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base02 .s:bg_base2
+    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base02 .s:bg_blue
+    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base00 .s:bg_base02
     exe "hi! Visual"         .s:fmt_none   .s:fg_none   .s:bg_base2
 endif
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
@@ -606,26 +650,30 @@ exe "hi! MatchParen"     .s:fmt_bold   .s:fg_red    .s:bg_base01
 "}}}
 " vim syntax highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
-exe "hi! vimCommentString".s:fg_violet .s:bg_none   .s:fmt_none
+"exe "hi! vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
+"hi! link vimComment Comment
+"hi! link vimLineComment Comment
 hi! link vimVar Identifier
 hi! link vimFunc Function
 hi! link vimUserFunc Function
-exe "hi! vimCommand"     . s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi! vimCmdSep"      . s:fg_blue   .s:bg_none   .s:fmt_bold
-exe "hi! helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
 hi! link helpSpecial Special
-exe "hi! helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi! helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi! helpVim"        . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi! helpHyperTextJump" .s:fg_blue  .s:bg_none   .s:fmt_undr
-exe "hi! helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
-exe "hi! vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
-exe "hi! vimSynMtchOpt"  . s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi! vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi! vimHiLink"      . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi! vimHiGroup"     . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi! vimGroup"       . s:fg_blue   .s:bg_none   .s:fmt_undb
+hi! link vimSet Normal
+hi! link vimSetEqual Normal
+exe "hi! vimCommentString"  .s:fmt_none    .s:fg_violet .s:bg_none
+exe "hi! vimCommand"        .s:fmt_none    .s:fg_yellow .s:bg_none
+exe "hi! vimCmdSep"         .s:fmt_bold    .s:fg_blue   .s:bg_none
+exe "hi! helpExample"       .s:fmt_none    .s:fg_base1  .s:bg_none
+exe "hi! helpOption"        .s:fmt_none    .s:fg_cyan   .s:bg_none
+exe "hi! helpNote"          .s:fmt_none    .s:fg_magenta.s:bg_none
+exe "hi! helpVim"           .s:fmt_none    .s:fg_magenta.s:bg_none
+exe "hi! helpHyperTextJump" .s:fmt_undr    .s:fg_blue   .s:bg_none
+exe "hi! helpHyperTextEntry".s:fmt_none    .s:fg_green  .s:bg_none
+exe "hi! vimIsCommand"      .s:fmt_none    .s:fg_base00 .s:bg_none
+exe "hi! vimSynMtchOpt"     .s:fmt_none    .s:fg_yellow .s:bg_none
+exe "hi! vimSynType"        .s:fmt_none    .s:fg_cyan   .s:bg_none
+exe "hi! vimHiLink"         .s:fmt_none    .s:fg_blue   .s:bg_none
+exe "hi! vimHiGroup"        .s:fmt_none    .s:fg_blue   .s:bg_none
+exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue   .s:bg_none
 "}}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
@@ -866,13 +914,13 @@ autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | 
 "    let g:solarized_menu=0
 
 function! s:SolarizedOptions()
-    new
-    setf vim
+    new "new buffer
+    setf vim "vim filetype
     let failed = append(0, s:defaults_list)
     let failed = append(0, s:colorscheme_list)
     let failed = append(0, s:options_list)
     let failed = append(0, s:lazycat_list)
-    0
+    0 "jump back to the top
 endfunction
 if !exists(":SolarizedOptions")
     command SolarizedOptions :call s:SolarizedOptions()
