@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme version="1.0" name="Solarized ($variant)">
+  <!--
+      Solarized theme ($variant background)
+  -->
+
+  <style name="Text" foreground="$text" background="$bg"/>
+  <style name="LineNumber" foreground="$lite" background="$bg1"/>
+  <style name="CurrentLine" background="$bg1"/>
+  <!-- inveted background -->
+  <style name="Selection" foreground="$bg1" background="$lite"/>
+  <style name="Occurrences" background="$lite"/>
+
+  <!-- non-solarized backgrounds -->
+[% IF variant == 'light' %]
+  <!-- light yellow overlay that works on solarized background as well as
+       on top of default SearchScope -->
+  <style name="SearchResult" background="#FFFFB0"/>
+[% ELSE %]
+  <style name="SearchResult" background="#555000"/>
+  <style name="SearchScope" background="#222000"/>
+[% END %]
+
+  <style name="DisabledCode" foreground="$base1"/>
+  <style name="Comment" foreground="$base1"/>
+  <style name="Doxygen.Comment" foreground="$base1"/>
+  <style name="Keyword" foreground="$base01" bold="true"/>
+  <style name="Operator" foreground="$base01"/>
+  <style name="Label" foreground="$base01" bold="true"/>
+  <style name="CurrentLineNumber" foreground="$base01" bold="true"/>
+
+  <!-- highlights -->
+  <style name="Number" foreground="$cyan"/>
+  <style name="String" foreground="$cyan"/>
+  <style name="Type" foreground="$yellow"/>
+  <style name="Link" foreground="$blue"/>
+  <style name="Preprocessor" foreground="$violet"/>
+  <style name="Parentheses" foreground="$red"/>
+
+  <!-- WIP -->
+  <style name="Static" foreground="$green" italic="true"/>
+  <style name="Doxygen.Tag" foreground="$cyan"/>
+
+  <style name="DiffFile" foreground="$green"/>
+  <style name="DiffLocation" foreground="$yellow"/>
+  <style name="AddedLine" foreground="$cyan"/>
+  <style name="RemovedLine" foreground="$red"/>
+
+  <!-- no color / default -->
+  <style name="VirtualMethod" italic="true"/>
+
+  <!-- let QtCreator choose: these colors are composed on top of
+       existing text, I can't find a nice way to stay compatible with
+       Solarized and produce readable results.
+
+  <style name="Occurrences.Rename"/>
+[% IF variant == 'light' %]
+  <style name="SearchScope"/>
+[% END %]
+  <style name="Field"/>
+  <style name="Local"/>
+   -->
+</style-scheme>
