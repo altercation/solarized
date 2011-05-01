@@ -218,6 +218,7 @@ call s:SetOption("italic",1) " note that we need to override this later if the t
 call s:SetOption("termcolors",16)
 call s:SetOption("contrast","normal")
 call s:SetOption("visibility","low")
+call s:SetOption("diffmode","normal")
 call s:SetOption("menu",1)
 
 "}}}
@@ -631,11 +632,23 @@ exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
 exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02 .s:fmt_revbb
 exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
 exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
+if      (g:solarized_diffmode=="high")
 exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
 exe "hi! DiffChange"     .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! DiffDelete"     .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! DiffText"       .s:fmt_revr   .s:fg_blue   .s:bg_none
-exe "hi! SignColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
+elseif  (g:solarized_diffmode=="low")
+exe "hi! DiffAdd"        .s:fmt_curl   .s:fg_green  .s:bg_none   .s:sp_green
+exe "hi! DiffChange"     .s:fmt_curl   .s:fg_yellow .s:bg_none   .s:sp_yellow
+exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_none
+exe "hi! DiffText"       .s:fmt_curl   .s:fg_blue   .s:bg_none   .s:sp_blue
+else " normal
+exe "hi! DiffAdd"        .s:fmt_bold   .s:fg_green  .s:bg_base02 .s:sp_green
+exe "hi! DiffChange"     .s:fmt_bold   .s:fg_yellow .s:bg_base02 .s:sp_yellow
+exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_base02
+exe "hi! DiffText"       .s:fmt_bold   .s:fg_blue   .s:bg_base02 .s:sp_blue
+endif
+exe "hi! SignColumn"     .s:fmt_none   .s:fg_base0
 exe "hi! Conceal"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red
 exe "hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet
@@ -962,6 +975,10 @@ if g:colors_name == "solarized"
     exe "amenu &Solarized.&Styling.&Turn\\ Italic\\ ".l:italicswitch." :let g:solarized_italic=(abs(g:solarized_italic-1)) \\| colorscheme solarized<CR>"
     if g:solarized_underline==0 | let l:underlineswitch="On" | else | let l:underlineswitch="Off" | endif
     exe "amenu &Solarized.&Styling.&Turn\\ Underline\\ ".l:underlineswitch." :let g:solarized_underline=(abs(g:solarized_underline-1)) \\| colorscheme solarized<CR>"
+
+    amenu &Solarized.&Diff\ Mode.&Low\ Diff\ Mode    :let g:solarized_diffmode="low"     \| colorscheme solarized<CR>
+    amenu &Solarized.&Diff\ Mode.&Normal\ Diff\ Mode :let g:solarized_diffmode="normal"  \| colorscheme solarized<CR>
+    amenu &Solarized.&Diff\ Mode.&High\ Diff\ Mode   :let g:solarized_diffmode="high"    \| colorscheme solarized<CR>
 
     amenu &Solarized.&Help.&Solarized\ Help          :help solarized<CR>
     amenu &Solarized.&Help.&Toggle\ Background\ Help :help togglebg<CR>
