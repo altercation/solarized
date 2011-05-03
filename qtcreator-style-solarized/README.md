@@ -3,7 +3,7 @@
 See Ethan's [Solarized page](http://ethanschoonover.com/solarized) for the 
 background information.
 
-![Qt Creator with solarized (light) style](../blob/master/qtcreator-style-solarized/QtCreator.png?raw=true)
+![Qt Creator with solarized (light) style](https://github.com/artm/solarized/raw/qtcreator/qtcreator-style-solarized/QtCreator.png)
 
 ## Notes
 
