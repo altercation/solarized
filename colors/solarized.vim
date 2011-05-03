@@ -4,7 +4,7 @@
 "           (see this url for latest release & screenshots)
 " License:  OSI approved MIT license (see end of this file)
 " Created:  In the middle of the night
-" Modified: 2011 May 02
+" Modified: 2011 May 03
 "
 " Usage "{{{
 "
@@ -409,7 +409,7 @@ endif
 "}}}
 " Overrides dependent on user specified values and environment "{{{
 " ---------------------------------------------------------------------
-if g:solarized_bold == 0
+if (g:solarized_bold == 0 || &t_Co < 16)
     let s:b           = ""
 else
     let s:b           = ",bold"
