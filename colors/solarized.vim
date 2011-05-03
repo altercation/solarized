@@ -411,8 +411,10 @@ endif
 " ---------------------------------------------------------------------
 if (g:solarized_bold == 0 || &t_Co < 16)
     let s:b           = ""
+    let s:bb          = ",bold"
 else
     let s:b           = ",bold"
+    let s:bb          = ""
 endif
 
 if g:solarized_underline == 0
@@ -483,13 +485,8 @@ exe "let s:fmt_revb     = ' ".s:vmode."=NONE".s:r.s:b.  " term=NONE".s:r.s:b."'"
 " revbb (reverse bold for bright colors) is only set to actual bold in low 
 " color terminals (t_co=8, such as OS X Terminal.app) and should only be used 
 " with colors 8-15.
-if ( has("gui_running") || &t_Co > 8 )
-exe "let s:fmt_revbb    = ' ".s:vmode."=NONE".s:r.        " term=NONE".s:r.    "'"
-exe "let s:fmt_revbbu   = ' ".s:vmode."=NONE".s:r.s:u.    " term=NONE".s:r.s:u."'"
-else
-exe "let s:fmt_revbb    = ' ".s:vmode."=NONE".s:r.s:b.    " term=NONE".s:r.s:b."'"
-exe "let s:fmt_revbbu   = ' ".s:vmode."=NONE".s:r.s:b.s:u." term=NONE".s:r.s:b.s:u."'"
-endif
+exe "let s:fmt_revbb    = ' ".s:vmode."=NONE".s:r.s:bb.   " term=NONE".s:r.s:bb."'"
+exe "let s:fmt_revbbu   = ' ".s:vmode."=NONE".s:r.s:bb.s:u." term=NONE".s:r.s:bb.s:u."'"
 
 if has("gui_running")
     exe "let s:sp_none      = ' guisp=".s:none   ."'"
@@ -705,13 +702,13 @@ exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue   .s:bg_none
 "}}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! htmlTag"        . s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi! htmlEndTag"     . s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi! htmlTagN"       . s:fg_base1  .s:bg_none   .s:fmt_bold
-exe "hi! htmlTagName"    . s:fg_blue   .s:bg_none   .s:fmt_bold
-exe "hi! htmlSpecialTagName". s:fg_blue  .s:bg_none .s:fmt_ital
-exe "hi! htmlArg"        . s:fg_base00 .s:bg_none   .s:fmt_none
-exe "hi! javaScript"     . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! htmlTag"           .s:fmt_none .s:fg_base01 .s:bg_none
+exe "hi! htmlEndTag"        .s:fmt_none .s:fg_base01 .s:bg_none
+exe "hi! htmlTagN"          .s:fmt_bold .s:fg_base1  .s:bg_none
+exe "hi! htmlTagName"       .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlSpecialTagName".s:fmt_ital .s:fg_blue   .s:bg_none
+exe "hi! htmlArg"           .s:fmt_none .s:fg_base00 .s:bg_none
+exe "hi! javaScript"        .s:fmt_none .s:fg_yellow .s:bg_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
