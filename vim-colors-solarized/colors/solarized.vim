@@ -410,7 +410,7 @@ endif
 "}}}
 " Overrides dependent on user specified values and environment "{{{
 " ---------------------------------------------------------------------
-if (g:solarized_bold == 0 || &t_Co < 16)
+if (g:solarized_bold == 0 || &t_Co == 8 )
     let s:b           = ""
     let s:bb          = ",bold"
 else
