@@ -257,7 +257,8 @@ if (has("gui_running") && g:solarized_degrade == 0)
     let s:violet      = "#6c71c4"
     let s:blue        = "#268bd2"
     let s:cyan        = "#2aa198"
-    let s:green       = "#859900"
+    "let s:green       = "#859900" "original
+    let s:green       = "#719e07" "experimental
 elseif (has("gui_running") && g:solarized_degrade == 1)
     " These colors are identical to the 256 color mode. They may be viewed
     " while in gui mode via "let g:solarized_degrade=1", though this is not
@@ -706,6 +707,56 @@ exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue   .s:bg_none
 hi! link diffAdded Statement
 hi! link diffLine Identifier
 "}}}
+" git & gitcommit highlighting "{{{
+"git
+"exe "hi! gitDateHeader"
+"exe "hi! gitIdentityHeader"
+"exe "hi! gitIdentityKeyword"
+"exe "hi! gitNotesHeader"
+"exe "hi! gitReflogHeader"
+"exe "hi! gitKeyword"
+"exe "hi! gitIdentity"
+"exe "hi! gitEmailDelimiter"
+"exe "hi! gitEmail"
+"exe "hi! gitDate"
+"exe "hi! gitMode"
+"exe "hi! gitHashAbbrev"
+"exe "hi! gitHash"
+"exe "hi! gitReflogMiddle"
+"exe "hi! gitReference"
+"exe "hi! gitStage"
+"exe "hi! gitType"
+"exe "hi! gitDiffAdded"
+"exe "hi! gitDiffRemoved"
+"gitcommit
+"exe "hi! gitcommitSummary"      
+exe "hi! gitcommitComment"      .s:fmt_ital     .s:fg_base01    .s:bg_none
+hi! link gitcommitUntracked gitcommitComment
+hi! link gitcommitDiscarded gitcommitComment
+hi! link gitcommitSelected  gitcommitComment
+exe "hi! gitcommitUnmerged"     .s:fmt_bold     .s:fg_green     .s:bg_none
+exe "hi! gitcommitOnBranch"     .s:fmt_bold     .s:fg_base01    .s:bg_none
+exe "hi! gitcommitBranch"       .s:fmt_bold     .s:fg_magenta   .s:bg_none
+hi! link gitcommitNoBranch gitcommitBranch
+exe "hi! gitcommitDiscardedType".s:fmt_none     .s:fg_red       .s:bg_none
+exe "hi! gitcommitSelectedType" .s:fmt_none     .s:fg_green     .s:bg_none
+"exe "hi! gitcommitUnmergedType"
+"exe "hi! gitcommitType"
+"exe "hi! gitcommitNoChanges"
+"exe "hi! gitcommitHeader"
+exe "hi! gitcommitHeader"       .s:fmt_none     .s:fg_base01    .s:bg_none
+exe "hi! gitcommitUntrackedFile".s:fmt_bold     .s:fg_cyan      .s:bg_none
+exe "hi! gitcommitDiscardedFile".s:fmt_bold     .s:fg_red       .s:bg_none
+exe "hi! gitcommitSelectedFile" .s:fmt_bold     .s:fg_green     .s:bg_none
+exe "hi! gitcommitUnmergedFile" .s:fmt_bold     .s:fg_yellow    .s:bg_none
+exe "hi! gitcommitFile"         .s:fmt_bold     .s:fg_base0     .s:bg_none
+hi! link gitcommitDiscardedArrow gitcommitDiscardedFile
+hi! link gitcommitSelectedArrow  gitcommitSelectedFile
+hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
+"exe "hi! gitcommitArrow"
+"exe "hi! gitcommitOverflow"
+"exe "hi! gitcommitBlank"
+" }}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
 exe "hi! htmlTag"           .s:fmt_none .s:fg_base01 .s:bg_none
