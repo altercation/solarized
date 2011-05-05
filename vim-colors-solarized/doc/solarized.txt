@@ -1,4 +1,4 @@
-*solarized.vim* for Vim version 7.3 or newer. Modified: 2011 Apr 29
+*solarized.vim* for Vim version 7.3 or newer. Modified: 2011 May 05
 
 
 		Solarized Vim Colorscheme by Ethan Schoonover ~
@@ -157,6 +157,7 @@ g:solarized_underline =   1       |   0
 g:solarized_italic    =   1       |   0
 g:solarized_contrast  =   "normal"|   "high" or "low"
 g:solarized_visibility=   "normal"|   "high" or "low"
+g:solarized_hitrail   =   0       |   1
 g:solarized_menu      =   1       |   0
 ------------------------------------------------
 
@@ -164,7 +165,7 @@ g:solarized_menu      =   1       |   0
 OPTION DETAILS
 
 ------------------------------------------------
-g:solarized_termcolors=   256     |   16
+g:solarized_termcolors=   256     |   16		*'solarized_termcolors'*
 ------------------------------------------------
 The most important option if you are using vim in terminal (non gui) mode!
 This tells Solarized to use the 256 degraded color mode if running in a 256
@@ -183,7 +184,7 @@ isn't bad looking and has been extensively tweaked, but it's still not quite
 the real thing.
 
 ------------------------------------------------
-g:solarized_termtrans =   0       |   1
+g:solarized_termtrans =   0       |   1			*'solarized_termtrans'*
 ------------------------------------------------
 If you use a terminal emulator with a transparent background and Solarized
 isn't displaying the background color transparently, set this to 1 and
@@ -195,40 +196,53 @@ default as this is almost always the best option. The only exception to this
 is if the working terminfo file supports 256 colors (xterm-256color).
 
 ------------------------------------------------
-g:solarized_degrade   =   0       |   1
+g:solarized_degrade   =   0       |   1			*'solarized_degrade'*
 ------------------------------------------------
 For test purposes only; forces Solarized to use the 256 degraded color mode
 to test the approximate color values for accuracy.
 
 ------------------------------------------------
-g:solarized_bold      =   1       |   0
+g:solarized_bold      =   1       |   0			*'solarized_bold'*
 ------------------------------------------------
 ------------------------------------------------
-g:solarized_underline =   1       |   0
+g:solarized_underline =   1       |   0			*'solarized_underline'*
 ------------------------------------------------
 ------------------------------------------------
-g:solarized_italic    =   1       |   0
+g:solarized_italic    =   1       |   0			*'solarized_italic'*
 ------------------------------------------------
 If you wish to stop Solarized from displaying bold, underlined or
 italicized typefaces, simply assign a zero value to the appropriate
 variable, for example: `let g:solarized_italic=0`
 
 ------------------------------------------------
-g:solarized_contrast  =   "normal"|   "high" or "low"
+g:solarized_contrast  =   "normal"|   "high" or "low"	*'solarized_contrast'*
 ------------------------------------------------
 Stick with normal! It's been carefully tested. Setting this option to high
 or low does use the same Solarized palette but simply shifts some values up
 or down in order to expand or compress the tonal range displayed.
 
 ------------------------------------------------
-g:solarized_visibility =  "normal"|   "high" or "low"
+g:solarized_visibility =  "normal"|   "high" or "low" *'solarized_visibility'*
 ------------------------------------------------
 Special characters such as trailing whitespace, tabs, newlines, when 
 displayed using ":set list" can be set to one of three levels depending on 
 your needs.
 
 ------------------------------------------------
-g:solarized_menu       =  1       |   0
+g:solarized_hitrail   =   0       |   1			*'solarized_hitrail'*
+------------------------------------------------
+Visibility can make listchar entities more visible, but if one has set 
+cursorline on, these same listchar values standout somewhat less due to the 
+background color of the cursorline. g:solarized_hitrail enables highlighting 
+of trailing spaces (only one of the listchar types, but a particularly 
+important one) while in the cursoline in a different manner in order to make 
+them more visible. This may not work consistently as Solarized is using 
+a pattern match than can be overridden by a more encompassing syntax-native 
+match such as a comment line.
+
+
+------------------------------------------------
+g:solarized_menu       =  1       |   0			*'solarized_menu'*
 ------------------------------------------------
 Solarized includes a menu providing access to several of the above
 display related options, including contrast and visibility. This allows
