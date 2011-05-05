@@ -988,14 +988,20 @@ if g:colors_name == "solarized" && g:solarized_menu != 0
     amenu &Solarized.&Contrast.&Low\ Contrast        :let g:solarized_contrast="low"       \| colorscheme solarized<CR>
     amenu &Solarized.&Contrast.&Normal\ Contrast     :let g:solarized_contrast="normal"    \| colorscheme solarized<CR>
     amenu &Solarized.&Contrast.&High\ Contrast       :let g:solarized_contrast="high"      \| colorscheme solarized<CR>
+    an    &Solarized.&Contrast.-sep-                 <Nop>
+    amenu &Solarized.&Contrast.&Help:\ Contrast      :help 'solarized_contrast'<CR>
 
     amenu &Solarized.&Visibility.&Low\ Visibility    :let g:solarized_visibility="low"     \| colorscheme solarized<CR>
     amenu &Solarized.&Visibility.&Normal\ Visibility :let g:solarized_visibility="normal"  \| colorscheme solarized<CR>
     amenu &Solarized.&Visibility.&High\ Visibility   :let g:solarized_visibility="high"    \| colorscheme solarized<CR>
+    an    &Solarized.&Visibility.-sep-                 <Nop>
+    amenu &Solarized.&Visibility.&Help:\ Visibility    :help 'solarized_visibility'<CR>
 
     amenu &Solarized.&Background.&Toggle\ Background :ToggleBG<CR>
     amenu &Solarized.&Background.&Dark\ Background   :set background=dark  \| colorscheme solarized<CR>
     amenu &Solarized.&Background.&Light\ Background  :set background=light \| colorscheme solarized<CR>
+    an    &Solarized.&Background.-sep-               <Nop>
+    amenu &Solarized.&Background.&Help:\ ToggleBG     :help togglebg<CR>
 
     if g:solarized_bold==0 | let l:boldswitch="On" | else | let l:boldswitch="Off" | endif
     exe "amenu &Solarized.&Styling.&Turn\\ Bold\\ ".l:boldswitch." :let g:solarized_bold=(abs(g:solarized_bold-1)) \\| colorscheme solarized<CR>"
@@ -1010,12 +1016,18 @@ if g:colors_name == "solarized" && g:solarized_menu != 0
 
     if g:solarized_hitrail==0 | let l:hitrailswitch="On" | else | let l:hitrailswitch="Off" | endif
     exe "amenu &Solarized.&Experimental.&Turn\\ Highlight\\ Trailing\\ Spaces\\ ".l:hitrailswitch." :let g:solarized_hitrail=(abs(g:solarized_hitrail-1)) \\| colorscheme solarized<CR>"
+    an    &Solarized.&Experimental.-sep-               <Nop>
+    amenu &Solarized.&Experimental.&Help:\ HiTrail    :help 'solarized_hitrail'<CR>
+
+    an    &Solarized.-sep1-                          <Nop>
+
+    amenu &Solarized.&Autogenerate\ options          :SolarizedOptions<CR>
+
+    an    &Solarized.-sep2-                          <Nop>
 
     amenu &Solarized.&Help.&Solarized\ Help          :help solarized<CR>
     amenu &Solarized.&Help.&Toggle\ Background\ Help :help togglebg<CR>
     amenu &Solarized.&Help.&Removing\ This\ Menu     :help solarized-menu<CR>
-
-    amenu &Solarized.&Autogenerate\ options          :SolarizedOptions<CR>
 
     an 9999.77 &Help.&Solarized\ Colorscheme         :help solarized<CR>
     an 9999.78 &Help.&Toggle\ Background             :help togglebg<CR>
