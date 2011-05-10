@@ -143,6 +143,7 @@ Set these in your vimrc file prior to calling the colorscheme.
     g:solarized_italic    =   1       |   0
     g:solarized_contrast  =   "normal"|   "high" or "low"
     g:solarized_visibility=   "normal"|   "high" or "low"
+    g:solarized_specialbg =   "normal"|   "off"
     ------------------------------------------------
 
 ### Option Details
@@ -188,6 +189,13 @@ Set these in your vimrc file prior to calling the colorscheme.
     Special characters such as trailing whitespace, tabs, newlines, when
     displayed using `:set list` can be set to one of three levels depending on 
     your needs. Default value is `normal` with `high` and `low` options.
+
+*   g:solarized_specialbg
+
+    When solarized_visibility is set to `normal`, tabs are displayed
+    with a brighter background.  If you choose to use `set
+    listchars=...` then you may wish to turn this off.  Example: `let
+    g:solarized_specialbg="off"`
 
 Toggle Background Function
 --------------------------
