@@ -1,0 +1,44 @@
+Subtree Specific Remotes
+========================
+
+remote-emacs-colors-solarized
+remote-visualstudio-colors-solarized
+remote-intellij-colors-solarized
+remote-seestyle-colors-solarized
+remote-textmate-colors-solarized
+remote-netbeans-colors-solarized
+remote-textwrangler-bbedit-colors-solarized
+
+Add remotes history
+===================
+git remote add remote-emacs-colors-solarized https://github.com/sellout/emacs-color-theme-solarized.git
+git remote add remote-visualstudio-colors-solarized https://github.com/leddt/visualstudio-colors-solarized.git
+git remote add remote-intellij-colors-solarized https://github.com/jkaving/intellij-colors-solarized.git
+git remote add remote-seestyle-colors-solarized https://github.com/bobthecow/solarized-seestyle.git
+git remote add remote-textmate-colors-solarized https://github.com/deplorableword/textmate-solarized.git
+git remote add remote-netbeans-colors-solarized https://github.com/fentie/netbeans-colors-solarized.git
+git remote add remote-textwrangler-bbedit-colors-solarized https://github.com/rcarmo/textwrangler-bbedit-solarized.git
+
+Add subtrees:
+============
+git subtree add -m "added emacs subtree project from @sellout" --prefix=emacs-colors-solarized remote-emacs-colors-solarized master
+git subtree add -m "added visualstudio subtree project from @leddt" --prefix=visualstudio-colors-solarized remote-visualstudio-colors-solarized master
+git subtree add -m "added intellij subtree project from @jkaving with combined work from @adamv" --prefix=intellij-colors-solarized remote-intellij-colors-solarized master
+git subtree add -m "added seestyle (code & subethaedit) subtree project from @bobthecow" --prefix=seestyle-colors-solarized remote-seestyle-colors-solarized master
+git subtree add -m "added textmate subtree project from @deplorableword" --prefix=textmate-colors-solarized remote-textmate-colors-solarized master
+git subtree add -m "added netbeans subtree project from @fentie" --prefix=netbeans-colors-solarized remote-netbeans-colors-solarized master
+git subtree add -m "added textwrangler-bbedit subtree project from @rcarmo" --prefix=textwrangler-bbedit-colors-solarized remote-textwrangler-bbedit-colors-solarized master
+
+Pull commands:
+==============
+git subtree pull --prefix=emacs-colors-solarized remote-emacs-colors-solarized master
+git subtree pull --prefix=visualstudio-colors-solarized remote-visualstudio-colors-solarized master
+git subtree pull --prefix=intellij-colors-solarized remote-intellij-colors-solarized master
+git subtree pull --prefix=seestyle-colors-solarized remote-seestyle-colors-solarized master
+git subtree pull --prefix=textmate-colors-solarized remote-textmate-colors-solarized master
+git subtree pull --prefix=netbeans-colors-solarized remote-textmate-colors-solarized master
+git subtree pull --prefix=textwrangler-bbedit-colors-solarized remote-textwrangler-bbedit-colors-solarized master
+
+Non subtree ports
+=================
+putty: https://github.com/brantb/solarized.git

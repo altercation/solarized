@@ -27,14 +27,14 @@
 #define S_base1         #93a1a1
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
-#define S_green         #b58900
-#define S_yellow        #cb4b16
-#define S_orange        #d30102
+#define S_yellow        #b58900
+#define S_orange        #cb4b16
 #define S_red           #dc322f
-#define S_magenta       #6c71c4
-#define S_violet        #268bd2
-#define S_blue          #2aa198
-#define S_cyan          #859900
+#define S_magenta       #d33682
+#define S_violet        #6c71c4
+#define S_blue          #268bd2
+#define S_cyan          #2aa198
+#define S_green         #859900
 
 *background:            S_base03
 *foreground:            S_base00
@@ -64,7 +64,7 @@
 *color4:                S_blue
 *color12:               S_base0
 
-!! magenta dark/light[
+!! magenta dark/light
 *color5:                S_magenta
 *color13:               S_violet
 

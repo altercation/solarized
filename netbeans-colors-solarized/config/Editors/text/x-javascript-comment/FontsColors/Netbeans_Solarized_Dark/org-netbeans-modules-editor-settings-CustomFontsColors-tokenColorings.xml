@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="comment" name="IDENT"/>
+    <fontcolor default="default" foreColor="blue" name="COMMENT_LINK" underline="blue"/>
+    <fontcolor default="comment" name="COMMENT_TAG">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor default="comment" name="OTHER_TEXT"/>
+    <fontcolor default="default" name="COMMENT_BOLD">
+        <font style="bold"/>
+    </fontcolor>
+    <fontcolor default="default" name="COMMENT_ITALIC">
+        <font style="italic"/>
+    </fontcolor>
+    <fontcolor default="comment" name="HTML_TAG">
+        <font style="bold"/>
+    </fontcolor>
+</fontscolors>
