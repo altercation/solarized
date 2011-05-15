@@ -6,7 +6,7 @@ Solarized - iTerm2 Color Presets
 Installation
 ------------
 
-Download current build of iTerm 2 from: <http://sites.google.com/site/iterm2home/>
+Download current build of iTerm 2 from: <http://www.iterm2.com/#/section/home>
 
 NOTE: Only builds 480 (Jan 11 2011) and later support import of color schemes.  
 If the stable release doesn't include this function, grab the nightly build 
