@@ -220,6 +220,7 @@ EXEC 01;38;5;64
 .fli    01;38;5;166
 .flv    01;38;5;166
 .gl     01;38;5;166
+.m2ts   01;38;5;166
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
 .axv 01;38;5;166
 .anx 01;38;5;166
