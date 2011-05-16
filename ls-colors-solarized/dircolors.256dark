@@ -192,6 +192,7 @@ EXEC 01;38;5;64
 .ogg    00;38;5;166
 .ra     00;38;5;166
 .wav    00;38;5;166
+.m4a    00;38;5;166
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
 .axa    00;38;5;166
 .oga    00;38;5;166
