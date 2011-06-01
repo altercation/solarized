@@ -56,11 +56,11 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (menu ((t (:foreground ,base0 :background ,base02))))
        (minibuffer-prompt ((t (:foreground ,blue))))
        (mode-line
-        ((t (:foreground ,base1 :background ,base02
+        ((t (:foreground ,base03 :background ,base1
                          :box (:line-width 1 :color ,base1)))))
-       (mode-line-buffer-id ((t (:foreground ,base1))))
+       (mode-line-buffer-id ((t (:foreground ,base03))))
        (mode-line-inactive
-        ((t (:foreground ,base0  :background ,base02
+        ((t (:foreground ,base03  :background ,base00
                          :box (:line-width 1 :color ,base02)))))
        (region ((t (:background ,base02))))
        (secondary-selection ((t (:background ,base02))))
@@ -130,4 +130,3 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
                "Ethan Schoonover & Greg Pfeil <greg@technomadic.org>"))
 
 (provide 'color-theme-solarized)
-
