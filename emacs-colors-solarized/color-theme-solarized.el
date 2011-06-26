@@ -57,7 +57,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (minibuffer-prompt ((t (:foreground ,blue))))
        (mode-line
         ((t (:foreground ,base03 :background ,base1
-                         :box (:line-width 1 :color ,base1)))))
+                         :box (:line-width 1 :color ,base03)))))
        (mode-line-buffer-id ((t (:foreground ,base03))))
        (mode-line-inactive
         ((t (:foreground ,base03  :background ,base00
