@@ -107,6 +107,11 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (org-hide ((t (:foreground ,base03))))
        (org-todo ((t (:foreground ,red :bold t))))
        (org-done ((t (:foreground ,green :bold t))))
+       ;; smerge
+       (smerge-refined-change ((t (:background ,base3 :foreground ,base03))))
+       (smerge-mine-face ((t (:foreground ,blue))))
+       (smerge-other-face ((t (:foreground ,green))))
+       (smerge-markers-face ((t (:foreground ,red))))
        ;; show-paren
        (show-paren-match-face ((t (:background ,cyan :foreground ,base3))))
        (show-paren-mismatch-face ((t (:background ,red :foreground ,base3))))))))
