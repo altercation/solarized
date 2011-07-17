@@ -31,6 +31,12 @@ cf
 https://github.com/evanphx/terminalcolours
 
 xterm-256color variant
+
+3. Add this line to ~/.bash_profile
+export CLICOLOR=1
+( This tells terminal.app to use coloring )
+
+4. Double click any of the .terminal files to install the corresponding theme._
 ----------------------
 
 Terminal.app does not normally support being set to xterm-256color from within 
