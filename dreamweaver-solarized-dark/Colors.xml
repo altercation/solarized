@@ -1,0 +1,295 @@
+<codeColors>
+	<colorGroup>
+		<syntaxColor id="CodeColor_HTMLEntity" bold="true" />
+		<syntaxColor id="CodeColor_JavascriptNative" text="#009999" />
+		<syntaxColor id="CodeColor_JavascriptNumber" text="#FF0000" />
+		<syntaxColor id="CodeColor_JavascriptClient" text="#990099" />
+		<syntaxColor id="CodeColor_JavascriptSpryKeywords" text="#FF6208" />
+		<syntaxColor id="CodeColor_JavascriptSpryClasses" text="#FF6208" />
+		<syntaxColor id="CodeColor_TemplateText" text="#999999" />
+		<syntaxColor id="CodeColor_TemplateCommentText" text="#006600" />
+		<syntaxColor id="CodeColor_TemplateCommentAttr" text="#006600" />
+		<syntaxColor id="CodeColor_CFCommentText" text="#000000" bgcolor="#FFFF99" />
+		<syntaxColor id="CodeColor_JavaJSP" text="#009999" />
+		<syntaxColor id="CodeColor_JavaImplicit" text="#999900" />
+		<syntaxColor id="CodeColor_JavaOther" text="#990099" />
+		<syntaxColor id="CodeColor_JSPPageOperator" text="#000000" />
+		<syntaxColor id="CodeColor_JSPTaglibOperator" text="#000000" />
+		<syntaxColor id="CodeColor_JSPIncludeOperator" text="#000000" />
+		<syntaxColor id="CodeColor_PHPScriptBlock" text="#FF0000" bold="true" />
+		<syntaxColor id="CodeColor_PHPScriptComment" text="#FF9900" />
+		<syntaxColor id="CodeColor_PHPScriptConstant" text="#552200" />
+		<syntaxColor id="CodeColor_PHPScriptString" text="#CC0000" />
+		<syntaxColor id="CodeColor_PHPScriptFunctionsKeywords" text="#0000FF" />
+		<syntaxColor id="CodeColor_PHPScriptReserved" text="#006600" />
+		<syntaxColor id="CodeColor_PHPScriptTypes" text="#009999" />
+		<syntaxColor id="CodeColor_PHPScriptVariables" text="#0066FF" />
+		<syntaxColor id="CodeColor_PHPScriptBuiltinVariables" text="#0066FF" />
+		<syntaxColor id="CodeColor_ASPIncludeAttributes" text="#990099" />
+		<syntaxColor id="CodeColor_ASPDirOperator" text="#000000" />
+		<syntaxColor id="CodeColor_LibraryText" bgcolor="#FFFFCC" />
+		<syntaxColor id="CodeColor_DateText" bgcolor="#FFFFCC" />
+		<syntaxColor id="CodeColor_ASPJSNative" text="#009999" />
+		<syntaxColor id="CodeColor_ASPJSKeywords" text="#990099" />
+		<syntaxColor id="CodeColor_ASPNetCSharpKeywords" text="#990099" />
+		<syntaxColor id="CodeColor_VBSNative" text="#990099" />
+		<syntaxColor id="CodeColor_VBSConstants" text="#009999" />
+		<syntaxColor id="CodeColor_VBNetNative" text="#990099" />
+		<syntaxColor id="CodeColor_VBNetConstants" text="#009999" />
+		<tagColor id="CodeColor_HTMLAnchor" text="#006600" />
+		<tagColor id="CodeColor_HTMLForm" text="#FF9900" />
+		<tagColor id="CodeColor_HTMLImage" text="#990099" />
+		<tagColor id="CodeColor_HTMLObject" text="#990000" />
+		<tagColor id="CodeColor_HTMLScript" text="#990000" />
+		<tagColor id="CodeColor_HTMLStyle" text="#990099" />
+		<tagColor id="CodeColor_HTMLTable" text="#009999" />
+		<syntaxColor id="CodeColor_SpryAttributes" text="#FF6208" />
+		<syntaxColor id="CodeColor_Spry_Tag_Normal" bgcolor="#F8D0AF" />
+		<syntaxColor id="CodeColor_Spry_Tag_Hover" bgcolor="#FF9B58" />
+		<syntaxColor id="CodeColor_Spry_Tag_Selected" bgcolor="#FF6D0C" />
+		<syntaxColor id="CodeColor_HTMLComment" text="#999999" />
+		<syntaxColor id="CodeColor_HTMLString" text="#0000FF" />
+		<syntaxColor id="CodeColor_HTMLNumber" text="#0000FF" />
+		<syntaxColor id="CodeColor_JavascriptFunction" text="#000000" bold="true" />
+		<syntaxColor id="CodeColor_JavascriptBracket" text="#000099" bold="true" />
+		<syntaxColor id="CodeColor_JavascriptReserved" text="#000099" bold="true" />
+		<syntaxColor id="CodeColor_JavascriptString" text="#0000FF" />
+		<syntaxColor id="CodeColor_JavascriptComment" text="#999999" />
+		<syntaxColor id="CodeColor_CSSSelector" text="#FF00FF" />
+		<syntaxColor id="CodeColor_CSSProperty" text="#000099" />
+		<syntaxColor id="CodeColor_CSSValue" text="#0000FF" />
+		<syntaxColor id="CodeColor_CSSImport" text="#009999" bold="true" />
+		<syntaxColor id="CodeColor_CSSMedia" text="#990000" bold="true" />
+		<syntaxColor id="CodeColor_CssKeywordImportant" text="#FF0000" bold="true" />
+		<tagColor id="DWTagLibrary_cfc" text="#990033" />
+		<tagColor id="DWTagLibrary_cfml" text="#990033" />
+		<syntaxColor id="CodeColor_ASPDirTagKeywords" text="#990033" />
+		<tagColor id="DWTagLibrary_aspnetmmtags" text="#990033" />
+		<tagColor id="DWTagLibrary_aspnettemplates" text="#990033" />
+		<tagColor id="DWTagLibrary_aspnet" text="#990033" />
+		<tagColor id="CodeColor_CFScriptTag" text="#990033" />
+		<syntaxColor id="CodeColor_ASPDirString" text="#0000FF" />
+		<syntaxColor id="CodeColor_ActionscriptProperty" text="#000084" />
+		<syntaxColor id="CodeColor_ActionscriptNative" text="#000084" />
+		<syntaxColor id="CodeColor_ActionscriptNumber" text="#000000" />
+		<syntaxColor id="CodeColor_ActionscriptFunction" text="#000084" />
+		<syntaxColor id="CodeColor_ActionscriptBracket" text="#000000" />
+		<syntaxColor id="CodeColor_ActionscriptOperator" text="#000000" />
+		<syntaxColor id="CodeColor_ActionscriptReserved" text="#000084" />
+		<syntaxColor id="CodeColor_ActionscriptString" text="#0000FF" />
+		<syntaxColor id="CodeColor_ActionscriptComment" text="#848284" />
+		<syntaxColor id="CodeColor_ActionscriptRemoting" text="#000084" />
+		<syntaxColor id="CodeColor_ASCommBracket" text="#000099" bold="true" />
+		<syntaxColor id="CodeColor_ASCommComment" text="#999999" />
+		<syntaxColor id="CodeColor_ASCommFunction" text="#000000" bold="true" />
+		<syntaxColor id="CodeColor_ASCommNative" text="#009999" />
+		<syntaxColor id="CodeColor_ASCommNumber" text="#FF0000" />
+		<syntaxColor id="CodeColor_ASCommReserved" text="#000099" />
+		<syntaxColor id="CodeColor_ASCommString" text="#0000FF" />
+		<syntaxColor id="CodeColor_ASRemoteBracket" text="#000099" bold="true" />
+		<syntaxColor id="CodeColor_ASRemoteComment" text="#999999" />
+		<syntaxColor id="CodeColor_ASRemoteFunction" text="#000000" bold="true" />
+		<syntaxColor id="CodeColor_ASRemoteNative" text="#009999" />
+		<syntaxColor id="CodeColor_ASRemoteNumber" text="#FF0000" />
+		<syntaxColor id="CodeColor_ASRemoteReserved" text="#000099" />
+		<syntaxColor id="CodeColor_ASRemoteString" text="#0000FF" />
+	</colorGroup>
+	<colorGroup doctypes="CSS">
+		<syntaxColor id="CodeColor_CSSImport" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSMedia" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSComment" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_CssKeywordImportant" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSProperty" text="#B58900" />
+		<syntaxColor id="CodeColor_CSSSelector" text="#268BD2" />
+		<syntaxColor id="CodeColor_CSSString" text="#2AA198" />
+		<syntaxColor id="CodeColor_CSSValue" text="#2AA198" />
+	</colorGroup>
+	<colorGroup doctypes="CFC">
+		<tagColor id="DWTagLibrary_cfml" text="#859900" />
+		<syntaxColor id="CodeColor_CFScriptBracket" text="#268BD2" />
+		<syntaxColor id="CodeColor_CfmlScriptDefaultText" text="#CB4B16" />
+		<syntaxColor id="CodeColor_CFScriptNative" text="#268BD2" />
+		<syntaxColor id="CodeColor_CFScriptIdentifier" text="#CB4B16" bold="false" />
+		<syntaxColor id="CodeColor_CFScriptNumber" text="#EEE8D5" />
+		<syntaxColor id="CodeColor_CFScriptOperator" text="#CB4B16" />
+		<syntaxColor id="CodeColor_CFScriptReserved" text="#268BD2" />
+		<syntaxColor id="CodeColor_CFScriptString" text="#2AA198" />
+		<syntaxColor id="CodeColor_CFCommentText" text="#FDF6E3" bgcolor="#839496" />
+		<syntaxColor id="CodeColor_CFScriptComment" text="#93A1A1" />
+		<syntaxColor id="CodeColor_CFScriptFunction" text="#268BD2" />
+		<tagColor id="CodeColor_CFScriptTag" text="#859900" />
+		<syntaxColor id="CodeColor_CSSImport" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSMedia" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSComment" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_CssKeywordImportant" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSProperty" text="#B58900" />
+		<syntaxColor id="CodeColor_CSSSelector" text="#268BD2" />
+		<syntaxColor id="CodeColor_CSSString" text="#2AA198" />
+		<syntaxColor id="CodeColor_CSSValue" text="#2AA198" />
+		<syntaxColor id="CodeColor_DateText" text="#000" bgcolor="#FFC" />
+		<tagColor id="CodeColor_HTMLAnchor" text="#268BD2" />
+		<syntaxColor id="CodeColor_HTMLString" text="#2AA198" />
+		<syntaxColor id="CodeColor_HTMLComment" text="#FDF6E3" />
+		<tagColor id="CodeColor_HTMLForm" text="#B58900" />
+		<tagColor id="CodeColor_HTMLImage" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLNumber" text="#93A1A1" />
+		<tagColor id="CodeColor_HTMLObject" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLTag" text="#268BD2" />
+		<tagColor id="CodeColor_HTMLScript" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLEntity" text="#CB4B16" bold="true" />
+		<tagColor id="CodeColor_HTMLStyle" text="#D33682" />
+		<tagColor id="CodeColor_HTMLTable" text="#268BD2" />
+		<syntaxColor id="CodeColor_HTMLText" text="#93A1A1" />
+		<syntaxColor id="CodeColor_JavascriptBracket" text="#268BD2" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptClient" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptComment" text="#657B83" />
+		<syntaxColor id="CodeColor_JavaScriptDefaultText" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptFunction" text="#268BD2" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptIdentifier" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptNative" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptNumber" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_JavascriptOperator" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptRegexp" text="#6C71C4" />
+		<syntaxColor id="CodeColor_JavascriptReserved" text="#D33682" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptString" text="#268BD2" />
+		<syntaxColor id="CodeColor_LibraryText" text="#000" bgcolor="#FFC" />
+		<syntaxColor id="CodeColor_TemplateCommentText" text="#060" />
+		<syntaxColor id="CodeColor_TemplateCommentAttr" text="#060" />
+		<syntaxColor id="CodeColor_TemplateText" text="#999" />
+	</colorGroup>
+	<colorGroup doctypes="ColdFusion">
+		<tagColor id="DWTagLibrary_cfml" text="#859900" />
+		<syntaxColor id="CodeColor_CFScriptBracket" text="#268BD2" />
+		<syntaxColor id="CodeColor_CfmlScriptDefaultText" text="#CB4B16" />
+		<syntaxColor id="CodeColor_CFScriptNative" text="#268BD2" />
+		<syntaxColor id="CodeColor_CFScriptIdentifier" text="#CB4B16" />
+		<syntaxColor id="CodeColor_CFScriptNumber" text="#EEE8D5" />
+		<syntaxColor id="CodeColor_CFScriptOperator" text="#CB4B16" />
+		<syntaxColor id="CodeColor_CFScriptReserved" text="#268BD2" />
+		<syntaxColor id="CodeColor_CFScriptString" text="#2AA198" />
+		<syntaxColor id="CodeColor_CFCommentText" text="#FDF6E3" bgcolor="#839496" />
+		<syntaxColor id="CodeColor_CFScriptComment" text="#93A1A1" />
+		<syntaxColor id="CodeColor_CFScriptFunction" text="#268BD2" />
+		<tagColor id="CodeColor_CFScriptTag" text="#859900" />
+		<syntaxColor id="CodeColor_CSSImport" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSMedia" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSComment" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_CssKeywordImportant" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSProperty" text="#B58900" />
+		<syntaxColor id="CodeColor_CSSSelector" text="#268BD2" />
+		<syntaxColor id="CodeColor_CSSString" text="#2AA198" />
+		<syntaxColor id="CodeColor_CSSValue" text="#2AA198" />
+		<syntaxColor id="CodeColor_DateText" text="#000" bgcolor="#FFC" />
+		<tagColor id="CodeColor_HTMLAnchor" text="#268BD2" />
+		<syntaxColor id="CodeColor_HTMLString" text="#2AA198" />
+		<syntaxColor id="CodeColor_HTMLComment" text="#FDF6E3" />
+		<tagColor id="CodeColor_HTMLForm" text="#B58900" />
+		<tagColor id="CodeColor_HTMLImage" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLNumber" text="#93A1A1" />
+		<tagColor id="CodeColor_HTMLObject" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLTag" text="#268BD2" />
+		<tagColor id="CodeColor_HTMLScript" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLEntity" text="#CB4B16" bold="true" />
+		<tagColor id="CodeColor_HTMLStyle" text="#D33682" />
+		<tagColor id="CodeColor_HTMLTable" text="#268BD2" />
+		<tagColor id="DWTagLibrary_html" text="#268BD2" />
+		<syntaxColor id="CodeColor_HTMLText" text="#93A1A1" />
+		<syntaxColor id="CodeColor_JavascriptBracket" text="#268BD2" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptClient" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptComment" text="#657B83" />
+		<syntaxColor id="CodeColor_JavaScriptDefaultText" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptFunction" text="#268BD2" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptIdentifier" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptNative" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptNumber" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_JavascriptOperator" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptRegexp" text="#6C71C4" />
+		<syntaxColor id="CodeColor_JavascriptReserved" text="#D33682" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptString" text="#268BD2" />
+		<syntaxColor id="CodeColor_LibraryText" text="#000" bgcolor="#FFC" />
+		<syntaxColor id="CodeColor_TemplateCommentText" text="#060" />
+		<syntaxColor id="CodeColor_TemplateCommentAttr" text="#060" />
+		<syntaxColor id="CodeColor_TemplateText" text="#999" />
+	</colorGroup>
+	<colorGroup doctypes="HTML">
+		<syntaxColor id="CodeColor_ASPIncludeString" text="#060" />
+		<syntaxColor id="CodeColor_ASPIncludeAttributes" text="#909" />
+		<syntaxColor id="CodeColor_AspIncludeDirDefaultText" text="#000" />
+		<tagColor id="CodeColor_CFScriptTag" text="#859900" />
+		<syntaxColor id="CodeColor_CSSImport" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSMedia" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSComment" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_CssKeywordImportant" text="#CB4B16" bold="true" />
+		<syntaxColor id="CodeColor_CSSProperty" text="#B58900" />
+		<syntaxColor id="CodeColor_CSSSelector" text="#268BD2" />
+		<syntaxColor id="CodeColor_CSSString" text="#2AA198" />
+		<syntaxColor id="CodeColor_CSSValue" text="#2AA198" />
+		<syntaxColor id="CodeColor_DateText" text="#000" bgcolor="#FFC" />
+		<tagColor id="CodeColor_HTMLAnchor" text="#268BD2" />
+		<syntaxColor id="CodeColor_HTMLString" text="#2AA198" />
+		<syntaxColor id="CodeColor_HTMLComment" text="#FDF6E3" />
+		<tagColor id="CodeColor_HTMLForm" text="#B58900" />
+		<tagColor id="CodeColor_HTMLImage" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLNumber" text="#93A1A1" />
+		<tagColor id="CodeColor_HTMLObject" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLTag" text="#268BD2" />
+		<tagColor id="CodeColor_HTMLScript" text="#D33682" />
+		<syntaxColor id="CodeColor_HTMLEntity" text="#CB4B16" bold="true" />
+		<tagColor id="CodeColor_HTMLStyle" text="#D33682" />
+		<tagColor id="CodeColor_HTMLTable" text="#268BD2" />
+		<tagColor id="DWTagLibrary_html" text="#268BD2" />
+		<syntaxColor id="CodeColor_HTMLText" text="#93A1A1" />
+		<syntaxColor id="CodeColor_JavascriptBracket" text="#268BD2" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptClient" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptComment" text="#657B83" />
+		<syntaxColor id="CodeColor_JavaScriptDefaultText" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptFunction" text="#268BD2" bold="false" />
+		<syntaxColor id="CodeColor_JavascriptIdentifier" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptNative" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptNumber" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_JavascriptOperator" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptRegexp" text="#6C71C4" />
+		<syntaxColor id="CodeColor_JavascriptReserved" text="#D33682" bold="true" />
+		<syntaxColor id="CodeColor_JavascriptString" text="#268BD2" />
+		<syntaxColor id="CodeColor_LibraryText" text="#000" bgcolor="#FFC" />
+		<syntaxColor id="CodeColor_TemplateCommentText" text="#060" />
+		<syntaxColor id="CodeColor_TemplateCommentAttr" text="#060" />
+		<syntaxColor id="CodeColor_TemplateText" text="#999" />
+		<tagColor id="DWTagLibrary_templates" text="#009" />
+	</colorGroup>
+	<colorGroup doctypes="JavaScript">
+		<syntaxColor id="CodeColor_JavascriptBracket" text="#268BD2" />
+		<syntaxColor id="CodeColor_JavascriptClient" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptComment" text="#657B83" />
+		<syntaxColor id="CodeColor_JavaScriptDefaultText" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptFunction" text="#268BD2" />
+		<syntaxColor id="CodeColor_JavascriptIdentifier" text="#B58900" />
+		<syntaxColor id="CodeColor_JavascriptNative" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptNumber" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_JavascriptOperator" text="#859900" />
+		<syntaxColor id="CodeColor_JavascriptRegexp" text="#6C71C4" />
+		<syntaxColor id="CodeColor_JavascriptReserved" text="#D33682" />
+		<syntaxColor id="CodeColor_JavascriptString" text="#268BD2" />
+	</colorGroup>
+	<colorGroup doctypes="Text">
+		<syntaxColor id="CodeColor_TextText" text="#FDF6E3" />
+	</colorGroup>
+	<colorGroup doctypes="XML">
+		<tagColor id="CodeColor_CFScriptTag" text="#859900" />
+		<tagColor id="CodeColor_HTMLAnchor" text="#268BD2" />
+		<tagColor id="CodeColor_HTMLForm" text="#B58900" />
+		<tagColor id="CodeColor_HTMLImage" text="#D33682" />
+		<tagColor id="CodeColor_HTMLObject" text="#D33682" />
+		<tagColor id="CodeColor_HTMLScript" text="#D33682" />
+		<tagColor id="CodeColor_HTMLStyle" text="#D33682" />
+		<tagColor id="CodeColor_HTMLTable" text="#268BD2" />
+		<syntaxColor id="CodeColor_TemplateCommentText" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_TemplateCommentAttr" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_TemplateText" text="#999" />
+		<syntaxColor id="CodeColor_XMLString" text="#2AA198" />
+		<syntaxColor id="CodeColor_XMLComment" text="#FDF6E3" />
+		<syntaxColor id="CodeColor_XMLNumber" text="#93A1A1" />
+		<syntaxColor id="CodeColor_XMLTag" text="#268BD2" />
+		<syntaxColor id="CodeColor_XMLText" text="#93A1A1" />
+	</colorGroup>
+</codeColors>
