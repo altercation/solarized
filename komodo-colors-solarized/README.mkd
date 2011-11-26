@@ -7,11 +7,13 @@ Solarized Colorscheme for Komodo Edit/IDE
 =========================================
 
 Solarized colorsheme developed by Ethan Schoonover <es@ethanschoonover.com>
-Customised for Komodo developed by Ron <http://www.we3geeks.org/2011/06/23/solarized-color-schemes-for-komodo/>
+
+Customisation for Komodo developed by Ron 
+<http://www.we3geeks.org/2011/06/23/solarized-color-schemes-for-komodo/>
 
 
 Installation
 ------------
 You can simply drag/drop schemes onto Komodo, it will offer to install and try out the color scheme.
 
-It works with Komodo 6 & 7 versions also.
+It also works with Komodo 6 & 7 versions.
