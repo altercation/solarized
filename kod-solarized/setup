@@ -1,0 +1,23 @@
+#!/bin/bash
+if [[ "`pwd`" == *kod-solarized* ]]; then
+    if [ -d ~/.kod/ ]; then
+        cp -P mystyle_solarized.css ~/.kod/ 
+        defaults write se.hunch.kod style/url ~/.kod/mystyle_solarized.css
+        if [[ `ps aux | grep -v grep | grep Kod` ]]; then
+            killall Kod
+        fi
+        echo 'solarized is now installed from ~/.kod/'
+        echo 'keep that directory intact'
+    else
+        mkdir ~/.kod/
+        cp -P mystyle_solarized.css ~/.kod/ 
+        defaults write se.hunch.kod style/url ~/.kod/mystyle_solarized.css
+        if [[ `ps aux | grep -v grep | grep Kod` ]]; then
+            killall Kod
+        fi
+        echo 'solarized is now installed'
+        echo 'keep that directory intact'
+    fi
+else
+    echo 'start the script from the git directory'
+fi
