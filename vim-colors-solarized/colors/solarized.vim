@@ -4,7 +4,7 @@
 "           (see this url for latest release & screenshots)
 " License:  OSI approved MIT license (see end of this file)
 " Created:  In the middle of the night
-" Modified: 2011 Apr 14
+" Modified: 2011 May 05
 "
 " Usage "{{{
 "
@@ -17,16 +17,27 @@
 " See the homepage above for screenshots and details.
 "
 " ---------------------------------------------------------------------
+" OPTIONS:
+" ---------------------------------------------------------------------
+" See the "solarized.txt" help file included with this colorscheme (in the 
+" "doc" subdirectory) for information on options, usage, the Toggle Background 
+" function and more. If you have already installed Solarized, this is available 
+" from the Solarized menu and command line as ":help solarized"
+"
+" ---------------------------------------------------------------------
 " INSTALLATION:
 " ---------------------------------------------------------------------
-"
 " Two options for installation: manual or pathogen
 "
 " MANUAL INSTALLATION OPTION:
 " ---------------------------------------------------------------------
 "
-" 1.  Put the files in the right place!
+" 1.  Download the solarized distribution (available on the homepage above)
+"     and unarchive the file.
 " 2.  Move `solarized.vim` to your `.vim/colors` directory.
+" 3.  Move each of the files in each subdirectories to the corresponding .vim
+"     subdirectory (e.g. autoload/togglebg.vim goes into your .vim/autoload 
+"     directory as .vim/autoload/togglebg.vim).
 "
 " RECOMMENDED PATHOGEN INSTALLATION OPTION:
 " ---------------------------------------------------------------------
@@ -76,132 +87,6 @@
 " See the Solarized homepage at http://ethanschoonover.com/solarized for
 " screenshots which will help you select either the light or dark background.
 "
-" Other options are detailed below.
-"
-" IMPORTANT NOTE FOR TERMINAL USERS:
-" 
-" If you are going to use Solarized in Terminal mode (i.e. not in a GUI version 
-" like gvim or macvim), **please please please** consider setting your terminal 
-" emulator's colorscheme to used the Solarized palette. I've included palettes 
-" for some popular terminal emulator as well as Xdefaults in the official 
-" Solarized download available from [Solarized homepage]. If you use 
-" Solarized *without* these colors, Solarized will need to be told to degrade
-" its colorscheme to a set compatible with the limited 256 terminal palette 
-" (whereas by using the terminal's 16 ansi color values, you can set the 
-" correct, specific values for the Solarized palette).
-" 
-" If you do use the custom terminal colors, solarized.vim should work out of 
-" the box for you. If you are using a terminal emulator that supports 256 
-" colors and don't want to use the custom Solarized terminal colors, you will 
-" need to use the degraded 256 colorscheme. To do so, simply add the following 
-" line *before* the `colorschem solarized` line:
-" 
-"     let g:solarized_termcolors=256
-" 
-" Again, I recommend just changing your terminal colors to Solarized values 
-" either manually or via one of the many terminal schemes available for import.
-"
-" ---------------------------------------------------------------------
-" TOGGLE BACKGROUND FUNCTION:
-" ---------------------------------------------------------------------
-" 
-" Solarized comes with a Toggle Background plugin that by default will map to 
-" <F5> if that mapping is available. If it is not available you will need to 
-" either map the function manually or change your current <F5> mapping to 
-" something else. If you wish to map the function manually, enter the following 
-" lines in your .vimrc:
-" 
-"     nmap <unique> <F5> <Plug>ToggleBackground
-"     imap <unique> <F5> <Plug>ToggleBackground
-"     vmap <unique> <F5> <Plug>ToggleBackground
-" 
-" Note that it is important to *not* use the noremap map variants. The plugin 
-" uses noremap internally. You may run `:help togglebg` for more information.
-"
-" ---------------------------------------------------------------------
-" OPTIONS
-" ---------------------------------------------------------------------
-"
-" Set these in your vimrc file prior to calling the colorscheme.
-"
-" option name               default     optional
-" ------------------------------------------------
-" g:solarized_termcolors=   16      |   256
-" g:solarized_termtrans =   0       |   1
-" g:solarized_degrade   =   0       |   1
-" g:solarized_bold      =   1       |   0
-" g:solarized_underline =   1       |   0
-" g:solarized_italic    =   1       |   0
-" g:solarized_contrast  =   "normal"|   "high" or "low"
-" g:solarized_visibility=   "normal"|   "high" or "low"
-" ------------------------------------------------
-"
-" OPTION DETAILS
-"
-" ------------------------------------------------
-" g:solarized_termcolors=   256     |   16
-" ------------------------------------------------
-" The most important option if you are using vim in terminal (non gui) mode!
-" This tells Solarized to use the 256 degraded color mode if running in a 256
-" color capable terminal.  Otherwise, if set to `16` it will use the terminal
-" emulators colorscheme (best option as long as you've set the emulators colors
-" to the Solarized palette).
-"
-" If you are going to use Solarized in Terminal mode (i.e. not in a GUI
-" version like gvim or macvim), **please please please** consider setting your
-" terminal emulator's colorscheme to used the Solarized palette. I've included
-" palettes for some popular terminal emulator as well as Xdefaults in the
-" official Solarized download available from:
-" http://ethanschoonover.com/solarized . If you use Solarized without these
-" colors, Solarized will by default use an approximate set of 256 colors.  It
-" isn't bad looking and has been extensively tweaked, but it's still not quite
-" the real thing.
-"
-" ------------------------------------------------
-" g:solarized_termtrans =   0       |   1
-" ------------------------------------------------
-" If you use a terminal emulator with a transparent background and Solarized
-" isn't displaying the background color transparently, set this to 1 and
-" Solarized will use the default (transparent) background of the terminal
-" emulator. *urxvt* required this in my testing; iTerm2 did not.
-"
-" Note that on Mac OS X Terminal.app, solarized_termtrans is set to 1 by 
-" default as this is almost always the best option. The only exception to this 
-" is if the working terminfo file supports 256 colors (xterm-256color).
-"
-" ------------------------------------------------
-" g:solarized_degrade   =   0       |   1
-" ------------------------------------------------
-" For test purposes only; forces Solarized to use the 256 degraded color mode
-" to test the approximate color values for accuracy.
-"
-" ------------------------------------------------
-" g:solarized_bold      =   1       |   0
-" ------------------------------------------------
-" ------------------------------------------------
-" g:solarized_underline =   1       |   0
-" ------------------------------------------------
-" ------------------------------------------------
-" g:solarized_italic    =   1       |   0
-" ------------------------------------------------
-" If you wish to stop Solarized from displaying bold, underlined or
-" italicized typefaces, simply assign a zero value to the appropriate
-" variable, for example: `let g:solarized_italic=0`
-"
-" ------------------------------------------------
-" g:solarized_contrast  =   "normal"|   "high" or "low"
-" ------------------------------------------------
-" Stick with normal! It's been carefully tested. Setting this option to high
-" or low does use the same Solarized palette but simply shifts some values up
-" or down in order to expand or compress the tonal range displayed.
-"
-" ------------------------------------------------
-" g:solarized_visibility =  "normal"|   "high" or "low"
-" ------------------------------------------------
-" Special characters such as trailing whitespace, tabs, newlines, when 
-" displayed using ":set list" can be set to one of three levels depending on 
-" your needs.
-"
 " ---------------------------------------------------------------------
 " COLOR VALUES
 " ---------------------------------------------------------------------
@@ -244,38 +129,99 @@
 " http://vimcasts.org/episodes/creating-colorschemes-for-vim/
 " http://www.frexx.de/xterm-256-notes/"
 "
-"
+" }}}
+" Environment Specific Overrides "{{{
+" Allow or disallow certain features based on current terminal emulator or 
+" environment.
+
+" Terminals that support italics
+let s:terms_italic=[
+            \"rxvt",
+            \"gnome-terminal"
+            \]
+" For reference only, terminals are known to be incomptible.
+" Terminals that are in neither list need to be tested.
+let s:terms_noitalic=[
+            \"iTerm.app",
+            \"Apple_Terminal"
+            \]
+if has("gui_running")
+    let s:terminal_italic=1 " TODO: could refactor to not require this at all
+else
+    let s:terminal_italic=0 " terminals will be guilty until proven compatible
+    for term in s:terms_italic
+        if $TERM_PROGRAM =~ term
+            let s:terminal_italic=1
+        endif
+    endfor
+endif
+
 " }}}
 " Default option values"{{{
 " ---------------------------------------------------------------------
-if !exists("g:solarized_termtrans")
-    if ($TERM_PROGRAM ==? "apple_terminal" && &t_Co < 256)
-        let g:solarized_termtrans = 1
+" s:options_list is used to autogenerate a list of all non-default options 
+" using "call SolarizedOptions()" or with the "Generate .vimrc commands" 
+" Solarized menu option. See the "Menus" section below for the function itself.
+let s:options_list=[
+            \'" this block of commands has been autogenerated by solarized.vim and',
+            \'" includes the current, non-default Solarized option values.',
+            \'" To use, place these commands in your .vimrc file (replacing any',
+            \'" existing colorscheme commands). See also ":help solarized"',
+            \'',
+            \'" ------------------------------------------------------------------',
+            \'" Solarized Colorscheme Config',
+            \'" ------------------------------------------------------------------',
+            \]
+let s:colorscheme_list=[
+            \'syntax enable',
+            \'set background='.&background,
+            \'colorscheme solarized',
+            \]
+let s:defaults_list=[
+            \'" ------------------------------------------------------------------',
+            \'',
+            \'" The following items are available options, but do not need to be',
+            \'" included in your .vimrc as they are currently set to their defaults.',
+            \''
+            \]
+let s:lazycat_list=[
+            \'" lazy method of appending this onto your .vimrc ":w! >> ~/.vimrc"',
+            \'" ------------------------------------------------------------------',
+            \]
+
+function! s:SetOption(name,default)
+    if type(a:default) == type(0)
+        let l:wrap=''
+        let l:ewrap=''
     else
-        let g:solarized_termtrans = 0
+        let l:wrap='"'
+        let l:ewrap='\"'
     endif
+    if !exists("g:solarized_".a:name) || g:solarized_{a:name}==a:default
+        exe 'let g:solarized_'.a:name.'='.l:wrap.a:default.l:wrap.'"'
+        exe 'call add(s:defaults_list, "\" let g:solarized_'.a:name.'='.l:ewrap.g:solarized_{a:name}.l:ewrap.'")'
+    else
+        exe 'call add(s:options_list,  "let g:solarized_'.a:name.'='.l:ewrap.g:solarized_{a:name}.l:ewrap.'    \"default value is '.a:default.'")'
+    endif
+endfunction
+
+if ($TERM_PROGRAM ==? "apple_terminal" && &t_Co < 256)
+    let s:solarized_termtrans_default = 1
+else
+    let s:solarized_termtrans_default = 0
 endif
-if !exists("g:solarized_degrade")
-    let g:solarized_degrade = 0
-endif
-if !exists("g:solarized_bold")
-    let g:solarized_bold = 1
-endif
-if !exists("g:solarized_underline")
-    let g:solarized_underline = 1
-endif
-if !exists("g:solarized_italic")
-    let g:solarized_italic = 1
-endif
-if !exists("g:solarized_termcolors")
-    let g:solarized_termcolors = 16
-endif
-if !exists("g:solarized_contrast")
-    let g:solarized_contrast = "normal"
-endif
-if !exists("g:solarized_visibility")
-    let g:solarized_visibility = "normal"
-endif
+call s:SetOption("termtrans",s:solarized_termtrans_default)
+call s:SetOption("degrade",0)
+call s:SetOption("bold",1)
+call s:SetOption("underline",1)
+call s:SetOption("italic",1) " note that we need to override this later if the terminal doesn't support
+call s:SetOption("termcolors",16)
+call s:SetOption("contrast","normal")
+call s:SetOption("visibility","normal")
+call s:SetOption("diffmode","normal")
+call s:SetOption("hitrail",0)
+call s:SetOption("menu",1)
+
 "}}}
 " Colorscheme initialization "{{{
 " ---------------------------------------------------------------------
@@ -311,7 +257,8 @@ if (has("gui_running") && g:solarized_degrade == 0)
     let s:violet      = "#6c71c4"
     let s:blue        = "#268bd2"
     let s:cyan        = "#2aa198"
-    let s:green       = "#859900"
+    "let s:green       = "#859900" "original
+    let s:green       = "#719e07" "experimental
 elseif (has("gui_running") && g:solarized_degrade == 1)
     " These colors are identical to the 256 color mode. They may be viewed
     " while in gui mode via "let g:solarized_degrade=1", though this is not
@@ -372,22 +319,39 @@ elseif g:solarized_termcolors == 256
 else
     let s:vmode       = "cterm"
     let s:bright      = "* term=bold cterm=bold"
-    let s:base03      = "0".s:bright
-    let s:base02      = "0"
-    let s:base01      = "2".s:bright
-    let s:base00      = "3".s:bright
-    let s:base0       = "4".s:bright
-    let s:base1       = "6".s:bright
-    let s:base2       = "7"
-    let s:base3       = "7".s:bright
-    let s:yellow      = "3"
-    let s:orange      = "1".s:bright
-    let s:red         = "1"
-    let s:magenta     = "5"
-    let s:violet      = "13"
-    let s:blue        = "4"
-    let s:cyan        = "6"
-    let s:green       = "2"
+"   let s:base03      = "0".s:bright
+"   let s:base02      = "0"
+"   let s:base01      = "2".s:bright
+"   let s:base00      = "3".s:bright
+"   let s:base0       = "4".s:bright
+"   let s:base1       = "6".s:bright
+"   let s:base2       = "7"
+"   let s:base3       = "7".s:bright
+"   let s:yellow      = "3"
+"   let s:orange      = "1".s:bright
+"   let s:red         = "1"
+"   let s:magenta     = "5"
+"   let s:violet      = "5".s:bright
+"   let s:blue        = "4"
+"   let s:cyan        = "6"
+"   let s:green       = "2"
+    let s:base03      = "DarkGray"      " 0*
+    let s:base02      = "Black"         " 0
+    let s:base01      = "LightGreen"    " 2*
+    let s:base00      = "LightYellow"   " 3*
+    let s:base0       = "LightBlue"     " 4*
+    let s:base1       = "LightCyan"     " 6*
+    let s:base2       = "LightGray"     " 7
+    let s:base3       = "White"         " 7*
+    let s:yellow      = "DarkYellow"    " 3
+    let s:orange      = "LightRed"      " 1*
+    let s:red         = "DarkRed"       " 1
+    let s:magenta     = "DarkMagenta"   " 5
+    let s:violet      = "LightMagenta"  " 5*
+    let s:blue        = "DarkBlue"      " 4
+    let s:cyan        = "DarkCyan"      " 6
+    let s:green       = "DarkGreen"     " 2
+
 endif
 "}}}
 " Formatting options and null values for passthrough effect "{{{
@@ -445,24 +409,26 @@ if g:solarized_contrast == "low"
     let s:ou          = ",underline"
 endif
 "}}}
-" Overrides dependent on user specified values"{{{
+" Overrides dependent on user specified values and environment "{{{
 " ---------------------------------------------------------------------
-if g:solarized_bold == 1
-    let s:b           = ",bold"
-else
+if (g:solarized_bold == 0 || &t_Co == 8 )
     let s:b           = ""
+    let s:bb          = ",bold"
+else
+    let s:b           = ",bold"
+    let s:bb          = ""
 endif
 
-if g:solarized_underline == 1
-    let s:u           = ",underline"
-else
+if g:solarized_underline == 0
     let s:u           = ""
+else
+    let s:u           = ",underline"
 endif
 
-if g:solarized_italic == 1
-    let s:i           = ",italic"
-else
+if g:solarized_italic == 0 || s:terminal_italic == 0
     let s:i           = ""
+else
+    let s:i           = ",italic"
 endif
 "}}}
 " Highlighting primitives"{{{
@@ -514,9 +480,15 @@ exe "let s:fmt_undb     = ' ".s:vmode."=NONE".s:u.s:b.  " term=NONE".s:u.s:b."'"
 exe "let s:fmt_undi     = ' ".s:vmode."=NONE".s:u.      " term=NONE".s:u."'"
 exe "let s:fmt_uopt     = ' ".s:vmode."=NONE".s:ou.     " term=NONE".s:ou."'"
 exe "let s:fmt_curl     = ' ".s:vmode."=NONE".s:c.      " term=NONE".s:c."'"
-exe "let s:fmt_ital     = ' ".s:vmode."=NONE".          " term=NONE".    "'"
-exe "let s:fmt_revr     = ' ".s:vmode."=NONE".s:r.      " term=NONE".s:r."'"
+exe "let s:fmt_ital     = ' ".s:vmode."=NONE".s:i.      " term=NONE".s:i."'"
 exe "let s:fmt_stnd     = ' ".s:vmode."=NONE".s:s.      " term=NONE".s:s."'"
+exe "let s:fmt_revr     = ' ".s:vmode."=NONE".s:r.      " term=NONE".s:r."'"
+exe "let s:fmt_revb     = ' ".s:vmode."=NONE".s:r.s:b.  " term=NONE".s:r.s:b."'"
+" revbb (reverse bold for bright colors) is only set to actual bold in low 
+" color terminals (t_co=8, such as OS X Terminal.app) and should only be used 
+" with colors 8-15.
+exe "let s:fmt_revbb    = ' ".s:vmode."=NONE".s:r.s:bb.   " term=NONE".s:r.s:bb."'"
+exe "let s:fmt_revbbu   = ' ".s:vmode."=NONE".s:r.s:bb.s:u." term=NONE".s:r.s:bb.s:u."'"
 
 if has("gui_running")
     exe "let s:sp_none      = ' guisp=".s:none   ."'"
@@ -628,25 +600,18 @@ exe "hi! Todo"           .s:fmt_bold   .s:fg_magenta.s:bg_none
 " Extended highlighting "{{{
 " ---------------------------------------------------------------------
 if      (g:solarized_visibility=="high")
-    exe "hi! SpecialKey"     .s:fmt_revr   .s:fg_red    .s:bg_none
-    exe "hi! NonText"        .s:fmt_bold   .s:fg_base1  .s:bg_none
+    exe "hi! SpecialKey" .s:fmt_revr   .s:fg_red    .s:bg_none
+    exe "hi! NonText"    .s:fmt_bold   .s:fg_red    .s:bg_none
 elseif  (g:solarized_visibility=="low")
-    exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_base02 .s:bg_none
-    exe "hi! NonText"        .s:fmt_bold   .s:fg_base02 .s:bg_none
+    exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none
+    exe "hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none
 else
-    exe "hi! SpecialKey"     .s:fmt_bold   .s:fg_red    .s:bg_none
-    exe "hi! NonText"        .s:fmt_bold   .s:fg_base01 .s:bg_none
+    exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02
+    exe "hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none
 endif
-if (has("gui_running")) || &t_Co > 8
-    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base02 .s:bg_base1
-    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base02 .s:bg_base00
-    "exe "hi! Visual"         .s:fmt_stnd   .s:fg_none   .s:bg_base02
-    exe "hi! Visual"         .s:fmt_none   .s:fg_base03 .s:bg_base01
-else
-    exe "hi! StatusLine"     .s:fmt_none   .s:fg_base02 .s:bg_base2
-    exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base02 .s:bg_base2
-    exe "hi! Visual"         .s:fmt_none   .s:fg_none   .s:bg_base2
-endif
+exe "hi! StatusLine"     .s:fmt_none   .s:fg_base1  .s:bg_base02 .s:fmt_revbb
+exe "hi! StatusLineNC"   .s:fmt_none   .s:fg_base00 .s:bg_base02 .s:fmt_revbb
+exe "hi! Visual"         .s:fmt_none   .s:fg_base01 .s:bg_base03 .s:fmt_revbb
 exe "hi! Directory"      .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ErrorMsg"       .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! IncSearch"      .s:fmt_stnd   .s:fg_orange .s:bg_none
@@ -655,30 +620,53 @@ exe "hi! MoreMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! ModeMsg"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! LineNr"         .s:fmt_none   .s:fg_base01 .s:bg_base02
 exe "hi! Question"       .s:fmt_bold   .s:fg_cyan   .s:bg_none
-exe "hi! VertSplit"      .s:fmt_bold   .s:fg_base00 .s:bg_base00
+if ( has("gui_running") || &t_Co > 8 )
+    exe "hi! VertSplit"  .s:fmt_none   .s:fg_base00 .s:bg_base00
+else
+    exe "hi! VertSplit"  .s:fmt_revbb  .s:fg_base00 .s:bg_base02
+endif
 exe "hi! Title"          .s:fmt_bold   .s:fg_orange .s:bg_none
-exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02
+exe "hi! VisualNOS"      .s:fmt_stnd   .s:fg_none   .s:bg_base02 .s:fmt_revbb
 exe "hi! WarningMsg"     .s:fmt_bold   .s:fg_red    .s:bg_none
-exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02
+exe "hi! WildMenu"       .s:fmt_none   .s:fg_base2  .s:bg_base02 .s:fmt_revbb
 exe "hi! Folded"         .s:fmt_undb   .s:fg_base0  .s:bg_base02  .s:sp_base03
-exe "hi! FoldColumn"     .s:fmt_bold   .s:fg_base0  .s:bg_base02
+exe "hi! FoldColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
+if      (g:solarized_diffmode=="high")
 exe "hi! DiffAdd"        .s:fmt_revr   .s:fg_green  .s:bg_none
 exe "hi! DiffChange"     .s:fmt_revr   .s:fg_yellow .s:bg_none
 exe "hi! DiffDelete"     .s:fmt_revr   .s:fg_red    .s:bg_none
 exe "hi! DiffText"       .s:fmt_revr   .s:fg_blue   .s:bg_none
-exe "hi! SignColumn"     .s:fmt_none   .s:fg_base0  .s:bg_base02
+elseif  (g:solarized_diffmode=="low")
+exe "hi! DiffAdd"        .s:fmt_undr   .s:fg_green  .s:bg_none   .s:sp_green
+exe "hi! DiffChange"     .s:fmt_undr   .s:fg_yellow .s:bg_none   .s:sp_yellow
+exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_none
+exe "hi! DiffText"       .s:fmt_undr   .s:fg_blue   .s:bg_none   .s:sp_blue
+else " normal
+    if has("gui_running")
+exe "hi! DiffAdd"        .s:fmt_bold   .s:fg_green  .s:bg_base02 .s:sp_green
+exe "hi! DiffChange"     .s:fmt_bold   .s:fg_yellow .s:bg_base02 .s:sp_yellow
+exe "hi! DiffDelete"     .s:fmt_bold   .s:fg_red    .s:bg_base02
+exe "hi! DiffText"       .s:fmt_bold   .s:fg_blue   .s:bg_base02 .s:sp_blue
+    else
+exe "hi! DiffAdd"        .s:fmt_none   .s:fg_green  .s:bg_base02 .s:sp_green
+exe "hi! DiffChange"     .s:fmt_none   .s:fg_yellow .s:bg_base02 .s:sp_yellow
+exe "hi! DiffDelete"     .s:fmt_none   .s:fg_red    .s:bg_base02
+exe "hi! DiffText"       .s:fmt_none   .s:fg_blue   .s:bg_base02 .s:sp_blue
+    endif
+endif
+exe "hi! SignColumn"     .s:fmt_none   .s:fg_base0
 exe "hi! Conceal"        .s:fmt_none   .s:fg_blue   .s:bg_none
 exe "hi! SpellBad"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_red
 exe "hi! SpellCap"       .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_violet
 exe "hi! SpellRare"      .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_cyan
 exe "hi! SpellLocal"     .s:fmt_curl   .s:fg_none   .s:bg_none    .s:sp_yellow
-exe "hi! Pmenu"          .s:fmt_none   .s:fg_base0  .s:bg_base02
-exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base2  .s:bg_base01
-exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base0  .s:bg_base2
-exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base03 .s:bg_base0
+exe "hi! Pmenu"          .s:fmt_none   .s:fg_base0  .s:bg_base02  .s:fmt_revbb
+exe "hi! PmenuSel"       .s:fmt_none   .s:fg_base01 .s:bg_base2   .s:fmt_revbb
+exe "hi! PmenuSbar"      .s:fmt_none   .s:fg_base2  .s:bg_base0   .s:fmt_revbb
+exe "hi! PmenuThumb"     .s:fmt_none   .s:fg_base0  .s:bg_base03  .s:fmt_revbb
 exe "hi! TabLine"        .s:fmt_undr   .s:fg_base0  .s:bg_base02  .s:sp_base0
-exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base2  .s:bg_base01  .s:sp_base0
 exe "hi! TabLineFill"    .s:fmt_undr   .s:fg_base0  .s:bg_base02  .s:sp_base0
+exe "hi! TabLineSel"     .s:fmt_undr   .s:fg_base01 .s:bg_base2   .s:sp_base0  .s:fmt_revbbu
 exe "hi! CursorColumn"   .s:fmt_none   .s:fg_none   .s:bg_base02
 exe "hi! CursorLine"     .s:fmt_uopt   .s:fg_none   .s:bg_base02  .s:sp_base1
 exe "hi! ColorColumn"    .s:fmt_none   .s:fg_none   .s:bg_base02
@@ -689,36 +677,95 @@ exe "hi! MatchParen"     .s:fmt_bold   .s:fg_red    .s:bg_base01
 "}}}
 " vim syntax highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
-exe "hi! vimCommentString".s:fg_violet .s:bg_none   .s:fmt_none
+"exe "hi! vimLineComment" . s:fg_base01 .s:bg_none   .s:fmt_ital
+"hi! link vimComment Comment
+"hi! link vimLineComment Comment
 hi! link vimVar Identifier
 hi! link vimFunc Function
 hi! link vimUserFunc Function
-exe "hi! vimCommand"     . s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi! vimCmdSep"      . s:fg_blue   .s:bg_none   .s:fmt_bold
-exe "hi! helpExample"    . s:fg_base1  .s:bg_none   .s:fmt_none
 hi! link helpSpecial Special
-exe "hi! helpOption"     . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi! helpNote"       . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi! helpVim"        . s:fg_magenta.s:bg_none   .s:fmt_none
-exe "hi! helpHyperTextJump" .s:fg_blue  .s:bg_none   .s:fmt_undr
-exe "hi! helpHyperTextEntry".s:fg_green .s:bg_none   .s:fmt_none
-exe "hi! vimIsCommand"   . s:fg_base00 .s:bg_none   .s:fmt_none
-exe "hi! vimSynMtchOpt"  . s:fg_yellow .s:bg_none   .s:fmt_none
-exe "hi! vimSynType"     . s:fg_cyan   .s:bg_none   .s:fmt_none
-exe "hi! vimHiLink"      . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi! vimHiGroup"     . s:fg_blue   .s:bg_none   .s:fmt_none
-exe "hi! vimGroup"       . s:fg_blue   .s:bg_none   .s:fmt_undb
+hi! link vimSet Normal
+hi! link vimSetEqual Normal
+exe "hi! vimCommentString"  .s:fmt_none    .s:fg_violet .s:bg_none
+exe "hi! vimCommand"        .s:fmt_none    .s:fg_yellow .s:bg_none
+exe "hi! vimCmdSep"         .s:fmt_bold    .s:fg_blue   .s:bg_none
+exe "hi! helpExample"       .s:fmt_none    .s:fg_base1  .s:bg_none
+exe "hi! helpOption"        .s:fmt_none    .s:fg_cyan   .s:bg_none
+exe "hi! helpNote"          .s:fmt_none    .s:fg_magenta.s:bg_none
+exe "hi! helpVim"           .s:fmt_none    .s:fg_magenta.s:bg_none
+exe "hi! helpHyperTextJump" .s:fmt_undr    .s:fg_blue   .s:bg_none
+exe "hi! helpHyperTextEntry".s:fmt_none    .s:fg_green  .s:bg_none
+exe "hi! vimIsCommand"      .s:fmt_none    .s:fg_base00 .s:bg_none
+exe "hi! vimSynMtchOpt"     .s:fmt_none    .s:fg_yellow .s:bg_none
+exe "hi! vimSynType"        .s:fmt_none    .s:fg_cyan   .s:bg_none
+exe "hi! vimHiLink"         .s:fmt_none    .s:fg_blue   .s:bg_none
+exe "hi! vimHiGroup"        .s:fmt_none    .s:fg_blue   .s:bg_none
+exe "hi! vimGroup"          .s:fmt_undb    .s:fg_blue   .s:bg_none
 "}}}
+" diff highlighting "{{{
+" ---------------------------------------------------------------------
+hi! link diffAdded Statement
+hi! link diffLine Identifier
+"}}}
+" git & gitcommit highlighting "{{{
+"git
+"exe "hi! gitDateHeader"
+"exe "hi! gitIdentityHeader"
+"exe "hi! gitIdentityKeyword"
+"exe "hi! gitNotesHeader"
+"exe "hi! gitReflogHeader"
+"exe "hi! gitKeyword"
+"exe "hi! gitIdentity"
+"exe "hi! gitEmailDelimiter"
+"exe "hi! gitEmail"
+"exe "hi! gitDate"
+"exe "hi! gitMode"
+"exe "hi! gitHashAbbrev"
+"exe "hi! gitHash"
+"exe "hi! gitReflogMiddle"
+"exe "hi! gitReference"
+"exe "hi! gitStage"
+"exe "hi! gitType"
+"exe "hi! gitDiffAdded"
+"exe "hi! gitDiffRemoved"
+"gitcommit
+"exe "hi! gitcommitSummary"      
+exe "hi! gitcommitComment"      .s:fmt_ital     .s:fg_base01    .s:bg_none
+hi! link gitcommitUntracked gitcommitComment
+hi! link gitcommitDiscarded gitcommitComment
+hi! link gitcommitSelected  gitcommitComment
+exe "hi! gitcommitUnmerged"     .s:fmt_bold     .s:fg_green     .s:bg_none
+exe "hi! gitcommitOnBranch"     .s:fmt_bold     .s:fg_base01    .s:bg_none
+exe "hi! gitcommitBranch"       .s:fmt_bold     .s:fg_magenta   .s:bg_none
+hi! link gitcommitNoBranch gitcommitBranch
+exe "hi! gitcommitDiscardedType".s:fmt_none     .s:fg_red       .s:bg_none
+exe "hi! gitcommitSelectedType" .s:fmt_none     .s:fg_green     .s:bg_none
+"exe "hi! gitcommitUnmergedType"
+"exe "hi! gitcommitType"
+"exe "hi! gitcommitNoChanges"
+"exe "hi! gitcommitHeader"
+exe "hi! gitcommitHeader"       .s:fmt_none     .s:fg_base01    .s:bg_none
+exe "hi! gitcommitUntrackedFile".s:fmt_bold     .s:fg_cyan      .s:bg_none
+exe "hi! gitcommitDiscardedFile".s:fmt_bold     .s:fg_red       .s:bg_none
+exe "hi! gitcommitSelectedFile" .s:fmt_bold     .s:fg_green     .s:bg_none
+exe "hi! gitcommitUnmergedFile" .s:fmt_bold     .s:fg_yellow    .s:bg_none
+exe "hi! gitcommitFile"         .s:fmt_bold     .s:fg_base0     .s:bg_none
+hi! link gitcommitDiscardedArrow gitcommitDiscardedFile
+hi! link gitcommitSelectedArrow  gitcommitSelectedFile
+hi! link gitcommitUnmergedArrow  gitcommitUnmergedFile
+"exe "hi! gitcommitArrow"
+"exe "hi! gitcommitOverflow"
+"exe "hi! gitcommitBlank"
+" }}}
 " html highlighting "{{{
 " ---------------------------------------------------------------------
-exe "hi! htmlTag"        . s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi! htmlEndTag"     . s:fg_base01 .s:bg_none   .s:fmt_none
-exe "hi! htmlTagN"       . s:fg_base1  .s:bg_none   .s:fmt_bold
-exe "hi! htmlTagName"    . s:fg_blue   .s:bg_none   .s:fmt_bold
-exe "hi! htmlSpecialTagName". s:fg_blue  .s:bg_none .s:fmt_ital
-exe "hi! htmlArg"        . s:fg_base00 .s:bg_none   .s:fmt_none
-exe "hi! javaScript"     . s:fg_yellow .s:bg_none   .s:fmt_none
+exe "hi! htmlTag"           .s:fmt_none .s:fg_base01 .s:bg_none
+exe "hi! htmlEndTag"        .s:fmt_none .s:fg_base01 .s:bg_none
+exe "hi! htmlTagN"          .s:fmt_bold .s:fg_base1  .s:bg_none
+exe "hi! htmlTagName"       .s:fmt_bold .s:fg_blue   .s:bg_none
+exe "hi! htmlSpecialTagName".s:fmt_ital .s:fg_blue   .s:bg_none
+exe "hi! htmlArg"           .s:fmt_none .s:fg_base00 .s:bg_none
+exe "hi! javaScript"        .s:fmt_none .s:fg_yellow .s:bg_none
 "}}}
 " perl highlighting "{{{
 " ---------------------------------------------------------------------
@@ -941,6 +988,107 @@ hi! link pandocMetadataTitle             pandocMetadata
 " other potential terminal customizations that might make gui mode suboptimal.
 "
 autocmd GUIEnter * if (s:vmode != "gui") | exe "colorscheme " . g:colors_name | endif
+"}}}
+" Highlight Trailing Space {{{
+" Experimental: Different highlight when on cursorline
+function! s:SolarizedHiTrail()
+    if g:solarized_hitrail==0
+        hi! clear solarizedTrailingSpace
+    else
+        syn match solarizedTrailingSpace "\s*$"
+        exe "hi! solarizedTrailingSpace " .s:fmt_undr .s:fg_red .s:bg_none .s:sp_red
+    endif
+endfunction  
+augroup SolarizedHiTrail
+    autocmd!
+    if g:solarized_hitrail==1
+        autocmd! Syntax * call s:SolarizedHiTrail()
+        autocmd! ColorScheme * if g:colors_name == "solarized" | call s:SolarizedHiTrail() | else | augroup! s:SolarizedHiTrail | endif
+    endif
+augroup END
+" }}}
+" Menus "{{{
+" ---------------------------------------------------------------------
+" Turn off Solarized menu by including the following assignment in your .vimrc:
+"
+"    let g:solarized_menu=0
+
+function! s:SolarizedOptions()
+    new "new buffer
+    setf vim "vim filetype
+    let failed = append(0, s:defaults_list)
+    let failed = append(0, s:colorscheme_list)
+    let failed = append(0, s:options_list)
+    let failed = append(0, s:lazycat_list)
+    0 "jump back to the top
+endfunction
+if !exists(":SolarizedOptions")
+    command SolarizedOptions :call s:SolarizedOptions()
+endif
+
+function! SolarizedMenu()
+    if exists("g:loaded_solarized_menu")
+        try
+            silent! aunmenu Solarized
+        endtry
+    endif
+    let g:loaded_solarized_menu = 1
+
+    if g:colors_name == "solarized" && g:solarized_menu != 0
+
+        amenu &Solarized.&Contrast.&Low\ Contrast        :let g:solarized_contrast="low"       \| colorscheme solarized<CR>
+        amenu &Solarized.&Contrast.&Normal\ Contrast     :let g:solarized_contrast="normal"    \| colorscheme solarized<CR>
+        amenu &Solarized.&Contrast.&High\ Contrast       :let g:solarized_contrast="high"      \| colorscheme solarized<CR>
+        an    &Solarized.&Contrast.-sep-                 <Nop>
+        amenu &Solarized.&Contrast.&Help:\ Contrast      :help 'solarized_contrast'<CR>
+
+        amenu &Solarized.&Visibility.&Low\ Visibility    :let g:solarized_visibility="low"     \| colorscheme solarized<CR>
+        amenu &Solarized.&Visibility.&Normal\ Visibility :let g:solarized_visibility="normal"  \| colorscheme solarized<CR>
+        amenu &Solarized.&Visibility.&High\ Visibility   :let g:solarized_visibility="high"    \| colorscheme solarized<CR>
+        an    &Solarized.&Visibility.-sep-                 <Nop>
+        amenu &Solarized.&Visibility.&Help:\ Visibility    :help 'solarized_visibility'<CR>
+
+        amenu &Solarized.&Background.&Toggle\ Background :ToggleBG<CR>
+        amenu &Solarized.&Background.&Dark\ Background   :set background=dark  \| colorscheme solarized<CR>
+        amenu &Solarized.&Background.&Light\ Background  :set background=light \| colorscheme solarized<CR>
+        an    &Solarized.&Background.-sep-               <Nop>
+        amenu &Solarized.&Background.&Help:\ ToggleBG     :help togglebg<CR>
+
+        if g:solarized_bold==0 | let l:boldswitch="On" | else | let l:boldswitch="Off" | endif
+        exe "amenu &Solarized.&Styling.&Turn\\ Bold\\ ".l:boldswitch." :let g:solarized_bold=(abs(g:solarized_bold-1)) \\| colorscheme solarized<CR>"
+        if g:solarized_italic==0 | let l:italicswitch="On" | else | let l:italicswitch="Off" | endif
+        exe "amenu &Solarized.&Styling.&Turn\\ Italic\\ ".l:italicswitch." :let g:solarized_italic=(abs(g:solarized_italic-1)) \\| colorscheme solarized<CR>"
+        if g:solarized_underline==0 | let l:underlineswitch="On" | else | let l:underlineswitch="Off" | endif
+        exe "amenu &Solarized.&Styling.&Turn\\ Underline\\ ".l:underlineswitch." :let g:solarized_underline=(abs(g:solarized_underline-1)) \\| colorscheme solarized<CR>"
+
+        amenu &Solarized.&Diff\ Mode.&Low\ Diff\ Mode    :let g:solarized_diffmode="low"     \| colorscheme solarized<CR>
+        amenu &Solarized.&Diff\ Mode.&Normal\ Diff\ Mode :let g:solarized_diffmode="normal"  \| colorscheme solarized<CR>
+        amenu &Solarized.&Diff\ Mode.&High\ Diff\ Mode   :let g:solarized_diffmode="high"    \| colorscheme solarized<CR>
+
+        if g:solarized_hitrail==0 | let l:hitrailswitch="On" | else | let l:hitrailswitch="Off" | endif
+        exe "amenu &Solarized.&Experimental.&Turn\\ Highlight\\ Trailing\\ Spaces\\ ".l:hitrailswitch." :let g:solarized_hitrail=(abs(g:solarized_hitrail-1)) \\| colorscheme solarized<CR>"
+        an    &Solarized.&Experimental.-sep-               <Nop>
+        amenu &Solarized.&Experimental.&Help:\ HiTrail    :help 'solarized_hitrail'<CR>
+
+        an    &Solarized.-sep1-                          <Nop>
+
+        amenu &Solarized.&Autogenerate\ options          :SolarizedOptions<CR>
+
+        an    &Solarized.-sep2-                          <Nop>
+
+        amenu &Solarized.&Help.&Solarized\ Help          :help solarized<CR>
+        amenu &Solarized.&Help.&Toggle\ Background\ Help :help togglebg<CR>
+        amenu &Solarized.&Help.&Removing\ This\ Menu     :help solarized-menu<CR>
+
+        an 9999.77 &Help.&Solarized\ Colorscheme         :help solarized<CR>
+        an 9999.78 &Help.&Toggle\ Background             :help togglebg<CR>
+        an 9999.79 &Help.-sep3-                          <Nop>
+
+    endif
+endfunction
+
+autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarized | else | call SolarizedMenu() | endif
+
 "}}}
 " License "{{{
 " ---------------------------------------------------------------------
