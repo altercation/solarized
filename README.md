@@ -35,9 +35,10 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 ### Editors & IDEs
 
-*   **Vim** by [me] (the Vim-only portion of Solarized is
-    [available here][Vim Repository], for use with Pathogen, etc.).
-    See also the [Vim README].
+*   **Vim** by [me](http://ethanschoonover.com/colophon) (the Vim-only portion
+    of Solarized is [available here](https://github.com/altercation/vim-colors-solarized),
+    for use with Pathogen, etc.).  See also the [Vim README]
+    (http://ethanschoonover.com/solarized/vim-colors-solarized).
 *   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
     ([@sellout](http://twitter.com/sellout))
     in the main repo and in a [standalone repository][Emacs Repository]
