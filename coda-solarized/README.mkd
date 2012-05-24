@@ -1,0 +1,22 @@
+Solarized Colorscheme for Coda
+=============================
+
+This is a Solarized color scheme for [Coda 2][coda], contributed by [HAZI][hazi].
+
+
+See the [Solarized home page][solarized] for screenshots and more details,
+as well as color schemes for other applications.
+
+
+Downloads
+---------
+
+If you have come across this page via github please visit the main [Solarized homepage][solarized]
+
+
+
+  [coda]:           http://panic.com/coda/
+  [HAZI]:           http://twitter.com/HAZI
+  [coda-repo]:      https://github.com/hazisarashi/solarized/
+  [solarized]:      http://ethanschoonover.com/solarized
+  [solarized-repo]: https://github.com/altercation/solarized
