@@ -9,7 +9,7 @@ Installation
 Terminal.app doesn't have full color modification support without some effort.  
 The following has only been tested on Snow Leopard. See the links below for 
 updates. I make no claims as to the effectiveness of these methods. iTerm2 may 
-be an easier all roung solution (desptie iTerm 2's terrible color management).
+be an easier all-around solution (despite iTerm 2's terrible color management).
 
 1. Install SIMBL from:
 http://www.culater.net/software/SIMBL/SIMBL.php
