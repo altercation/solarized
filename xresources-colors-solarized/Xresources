@@ -1,5 +1,17 @@
 !! drop in Solarized colorscheme for Xresources/Xdefaults
 
+!! To choose between light/dark background, you have two options:
+!!
+!! 1: Hardcode your choice in your .Xresources file by adding either
+!!      #define SOLARIZED_DARK
+!!      or
+!!      #define SOLARIZED_LIGHT
+!!    above where you pasted the contents of this file.
+!!
+!! 2: Define either of those symbols when loading your .Xresources with
+!!    xrdb, like so:
+!!      xrdb -DSOLARIZED_LIGHT -merge ~/.Xresources
+
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 !!--------- ------- ---- -------  ----------- ---------- ----------- -----------
 !!base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
@@ -19,14 +31,21 @@
 !!cyan      #2aa198  6/6 cyan      37 #00afaf 60 -35 -05  42 161 152 175  74  63
 !!green     #859900  2/2 green     64 #5f8700 60 -20  65 133 153   0  68 100  60
 
-#define S_base03        #002b36
-#define S_base02        #073642
-#define S_base01        #586e75
-#define S_base00        #657b83
-#define S_base0         #839496
-#define S_base1         #93a1a1
-#define S_base2         #eee8d5
-#define S_base3         #fdf6e3
+! Default to dark background if neither constant is defined, or if both are.
+#if !defined(SOLARIZED_LIGHT) && !defined(SOLARIZED_DARK)
+#define SOLARIZED_DARK
+#elif defined(SOLARIZED_LIGHT) && defined(SOLARIZED_DARK)
+#undef SOLARIZED_LIGHT
+#endif
+
+#define S_rebase03      #002b36
+#define S_rebase02      #073642
+#define S_rebase01      #586e75
+#define S_rebase00      #657b83
+#define S_rebase0       #839496
+#define S_rebase1       #93a1a1
+#define S_rebase2       #eee8d5
+#define S_rebase3       #fdf6e3
 #define S_yellow        #b58900
 #define S_orange        #cb4b16
 #define S_red           #dc322f
@@ -35,6 +54,27 @@
 #define S_blue          #268bd2
 #define S_cyan          #2aa198
 #define S_green         #859900
+
+#ifdef SOLARIZED_LIGHT
+  #define S_base03      S_rebase3
+  #define S_base02      S_rebase2
+  #define S_base01      S_rebase1
+  #define S_base00      S_rebase0
+  #define S_base0       S_rebase00
+  #define S_base1       S_rebase01
+  #define S_base2       S_rebase02
+  #define S_base3       S_rebase03
+#endif
+#ifdef SOLARIZED_DARK
+  #define S_base03      S_rebase03
+  #define S_base02      S_rebase02
+  #define S_base01      S_rebase01
+  #define S_base00      S_rebase00
+  #define S_base0       S_rebase0
+  #define S_base1       S_rebase1
+  #define S_base2       S_rebase2
+  #define S_base3       S_rebase3
+#endif
 
 *background:            S_base03
 *foreground:            S_base00
