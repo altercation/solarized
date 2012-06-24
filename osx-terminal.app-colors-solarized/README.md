@@ -5,9 +5,9 @@ Solarized - OS X Terminal.App Settings
 
 OS X Lion
 ---------
-Terminal.app has been updated in OS X Lion and supports modifying the ANSI colors--no more SIMBL. If you have Lion or a newer release of OS X, simply open the .terminal files in the "osx-10.7-and-above" directory to install.
+Terminal.app has been updated in OS X Lion and supports ANSI colors and lets settings modify them. If you have Lion or a newer release of OS X, simply open the .terminal files in the "osx-10.7-and-above" directory to install.
 
-(The rest of this document pertans only to OS X Snow Leopard and older releases.)
+(The rest of this document pertains only to OS X Snow Leopard and older releases.)
 
 Installation
 ------------
