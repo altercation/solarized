@@ -35,7 +35,7 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 ### Editors & IDEs
 
-*   **Vim** by [me] (the Vim-only portion of Solarized is
+*   **Vim** by [me](https://github.com/altercation) (the Vim-only portion of Solarized is
     [available here][Vim Repository], for use with Pathogen, etc.).
     See also the [Vim README].
 *   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org) 
