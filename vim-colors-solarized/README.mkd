@@ -4,7 +4,7 @@ Description: Precision colors for machines and people
 Author: Ethan Schoonover
 Colors: light yellow
 Created:  2011 Mar 15
-Modified: 2011 Apr 16
+Modified: 2012 Aug 2
 
 ---
 
@@ -132,7 +132,7 @@ Solarized will work out of the box with just the two lines specified above but
 does include several other options that can be set in your .vimrc file.
 
 Set these in your vimrc file prior to calling the colorscheme.
-"
+```
     option name               default     optional
     ------------------------------------------------
     g:solarized_termcolors=   16      |   256
@@ -144,6 +144,7 @@ Set these in your vimrc file prior to calling the colorscheme.
     g:solarized_contrast  =   "normal"|   "high" or "low"
     g:solarized_visibility=   "normal"|   "high" or "low"
     ------------------------------------------------
+```
 
 ### Option Details
 
