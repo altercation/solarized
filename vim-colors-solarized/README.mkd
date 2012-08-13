@@ -4,7 +4,7 @@ Description: Precision colors for machines and people
 Author: Ethan Schoonover
 Colors: light yellow
 Created:  2011 Mar 15
-Modified: 2012 Aug 2
+Modified: 2011 Apr 16
 
 ---
 
