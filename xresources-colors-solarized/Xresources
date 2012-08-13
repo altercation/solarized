@@ -1,5 +1,10 @@
-!! drop in Solarized colorscheme for Xresources/Xdefaults
-
+!! drop in Solarized colorscheme for Xresources
+!!
+!! ## Installation
+!! 1) Write to $HOME/.Xresources
+!! 2) If not using Xsession, you must add the line `xrdb -merge ~/.Xresources`
+!!    to `.xinitrc`. See http://manpages.ubuntu.com/Xsession for more details.
+!!
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 !!--------- ------- ---- -------  ----------- ---------- ----------- -----------
 !!base03    #002b36  8/4 brblack  234 #1c1c1c 15 -12 -12   0  43  54 193 100  21
