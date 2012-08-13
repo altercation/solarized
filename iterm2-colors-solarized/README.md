@@ -14,7 +14,7 @@ from: <http://code.google.com/p/iterm2/downloads/list>
 
 Open iTerm 2, open Preferences, click on the "Profiles" (formerly Addresses, 
 formerly Bookmarks) icon in the preferences toolbar, then select the "colors" 
-tab. Click on the "load presets" and select "import...". Select the Solaris 
+tab. Click on the "load presets" and select "import...". Select the Solarized 
 Light or Dark theme file.
 
 You have now loaded the Solarized color presets into iTerm 2, but haven't yet 
