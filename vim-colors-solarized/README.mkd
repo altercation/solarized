@@ -132,7 +132,7 @@ Solarized will work out of the box with just the two lines specified above but
 does include several other options that can be set in your .vimrc file.
 
 Set these in your vimrc file prior to calling the colorscheme.
-"
+
     option name               default     optional
     ------------------------------------------------
     g:solarized_termcolors=   16      |   256
