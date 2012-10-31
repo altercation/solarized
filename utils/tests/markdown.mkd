@@ -1,0 +1,38 @@
+---
+Title: Solarized Developers &copy;
+
+---
+
+Solarized Developers
+====================
+
+## Notes and Guidelines on **Port** Development
+
+> When developing a _port_ of the **Solarized** colorscheme that you'd like to see 
+> > included in the main project repository, please consider the following 
+> > guidelines:
+
+1. No hue or __color changes__...
+
+2. If you are making a new port, consider creating a repository with just the 
+   theme/plugin for your particular port, rather than \*forking\* the entire 
+   *Solarized* master repository...  
+   <- a line break right there
+
+* this is an example `function();`
+- another list item
++ and another
+
+1986\. What a great season.
+
+***
+
+This is [an example](http://example.com/ "Title") inline link.
+This is an image: ![Alt text](/path/to/img.jpg "Optional title") <- image
+
+I get 10 times more traffic from [Google][] than from [Yahoo][] or [MSN][].
+
+  [google]: http://google.com/        "Google"
+  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
+  [msn]:    http://search.msn.com/    "MSN Search"
+
