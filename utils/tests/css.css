@@ -1,0 +1,51 @@
+body { height: 100%; }
+
+h1, 
+article h2,
+section h3 { line-height: 2em; } /*comment goes here*/
+
+h8 { color: blue; } /*non spec element*/
+ 
+div.styled { 
+	position: relative;
+	width: 10px;
+	height: 100px;
+	background: #abc123 url('../folder/something.png');
+	-moz-opacity: 1.0;
+	-webkit-opacity: 1.0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1.0 !important;
+	transition: width 2s;
+	-moz-transition: width 2s;
+	-webkit-transition: width 2s;
+	-o-transition: width 2s; 
+}
+
+@import url("printstyle.css") print;
+
+@media screen and (max-width: 800px) {
+	ul:last-of-type { display: none; }
+}
+
+@font-face {
+  font-family: "some typeface";
+  src: url("type/filename.eot");
+  src: local("☺"),
+    url("type/filename.woff") format("woff"),
+    url("type/filename.otf") format("opentype"),
+    url("type/filename.svg#filename") format("svg");
+}
+h2 { font-family: "some typeface", Georgia, serif; }
+
+div #something > .link a,
+div #something > .link a:link,
+div #something > .link a:visited,
+div #something > .link a:visited { text-decoration: underline; }
+
+.element:first-child,
+ul:first-child li:nth-child(odd),
+form p *:not(textarea):not(label) { height: 20px; }
+
+select option.element[selected] { font-weight: bold; }
+select option.element[contenteditable~="true false"] { border: 1px solid #999; }
