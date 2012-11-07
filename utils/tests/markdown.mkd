@@ -17,7 +17,7 @@ Solarized Developers
 2. If you are making a new port, consider creating a repository with just the 
    theme/plugin for your particular port, rather than \*forking\* the entire 
    *Solarized* master repository...  
-   <- a line break right there
+   a line break right there
 
 * this is an example `function();`
 - another list item
