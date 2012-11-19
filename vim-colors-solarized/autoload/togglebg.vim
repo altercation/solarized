@@ -26,8 +26,16 @@ tmenu ToolBar.togglebg Toggle light and dark background modes
 noremap <SID>TogBG  :call <SID>TogBG()<CR>
 
 function! s:TogBG()
-    let &background = ( &background == "dark"? "light" : "dark" )
+    " when vim runs inside a terminal, 'colorscheme' reset '&background'
+    " to terminal's default & 'background' unset 'g:colors_name'
+    if !exists("g:solarized_background")
+      let g:solarized_background = &background
+    endif
+    let g:solarized_background = ( g:solarized_background == "dark"? "light" : "dark" )
     if exists("g:colors_name")
+        let l:colors_name = g:colors_name
+        let &background = g:solarized_background
+        let g:colors_name = l:colors_name
         exe "colorscheme " . g:colors_name
     endif
 endfunction
