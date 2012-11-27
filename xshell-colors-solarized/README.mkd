@@ -1,0 +1,10 @@
+Solarized - Xshell settings
+==========================
+
+
+Installation (Xshell)
+--------------------
+
+Import the `.xcs` files to the "Tools"-"Color Schemes",now you can select it in a session.
+
+
