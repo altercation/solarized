@@ -10,7 +10,7 @@ Modified: 2012 Nov 30
 Solarized Colorscheme for Konsole
 =================================================
 
-Developed by [George Zankevich](http://the.taoofmac.com)
+Developed by George Zankevich
 
 If you have come across this colorscheme via the [repository] on 
 github, visit the [Solarized homepage] or visit the main
