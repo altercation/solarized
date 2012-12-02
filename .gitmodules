@@ -1,3 +1,6 @@
 [submodule "xresources"]
 	path = xresources
 	url = git://github.com/solarized/xresources.git
+[submodule "xfce4-terminal-colors-solarized"]
+	path = xfce4-terminal-colors-solarized
+	url = git://github.com/solarized/xfce4-terminal-colors-solarized.git
