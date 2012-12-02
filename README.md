@@ -14,8 +14,7 @@ Solarized
 
 ## Precision colors for machines and people
 
-[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)\
-
+[![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-yinyang.png)](#features)
 
 Solarized is a sixteen color palette (eight monotones, eight accent colors)
 designed for use with terminal and gui applications. It has several [unique
@@ -28,8 +27,9 @@ conditions.
 
 ***See the [changelog] for what's new in the most recent release.***
 
-![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)\
-![solarized vim](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)\
+![solarized palette](https://github.com/altercation/solarized/raw/master/img/solarized-palette.png)
+
+![solarized vim](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
 
 Currently available in formats for (cf [screenshots](#screenshots) below):
 
@@ -152,7 +152,7 @@ Features
     Black text on white from a computer display is akin to reading a book in
     direct sunlight and tires the eye.
 
-    ![solarized selective contrast](https://github.com/altercation/solarized/raw/master/img/solarized-selcon.png)\
+    ![solarized selective contrast](https://github.com/altercation/solarized/raw/master/img/solarized-selcon.png)
 
     Solarized reduces *brightness contrast* but, unlike many low contrast
     colorschemes, retains *contrasting hues* (based on colorwheel relations)
@@ -160,7 +160,7 @@ Features
 
 2. **Both sides of the force**
 
-    ![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-dualmode.png)\
+    ![solarized dualmode](https://github.com/altercation/solarized/raw/master/img/solarized-dualmode.png)
 
     I often switch between dark and light modes when editing text and code.
     Solarized retains the same selective contrast relationships and overall
@@ -170,7 +170,7 @@ Features
 
 3. **16/5 palette modes**
 
-    ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)\
+    ![solarized palettes](https://github.com/altercation/solarized/raw/master/img/solarized-165.png)
 
     Solarized works as a sixteen color palette for compatibility with common
     terminal based applications / emulators. In addition, it has been carefully
@@ -180,7 +180,7 @@ Features
 
 5.  **Precision, symmetry**
 
-    ![solarized symmetry](https://github.com/altercation/solarized/raw/master/img/solarized-sym.png)\
+    ![solarized symmetry](https://github.com/altercation/solarized/raw/master/img/solarized-sym.png)
 
     The monotones have symmetric CIELAB lightness differences, so switching
     from dark to light mode retains the same perceived contrast in brightness
@@ -376,9 +376,9 @@ information about optional repository structure and readme formats.
 Solarized flips between light and dark modes. In each mode, four monotones form
 the core values (with an optional fifth for emphasized content).
 
-![value samples - dark](https://github.com/altercation/solarized/raw/master/img/solarized-values-dark.png)\
+![value samples - dark](https://github.com/altercation/solarized/raw/master/img/solarized-values-dark.png)
 
-![value samples - light](https://github.com/altercation/solarized/raw/master/img/solarized-values-light.png)\
+![value samples - light](https://github.com/altercation/solarized/raw/master/img/solarized-values-light.png)
 
 Thus in the case of a dark background colorscheme, the normal relationship for
 background and body text is `base03:base0` (please note that body text is
