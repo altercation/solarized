@@ -1,0 +1,3 @@
+[submodule "xresources"]
+	path = xresources
+	url = git://github.com/solarized/xresources.git
