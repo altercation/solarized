@@ -7,3 +7,6 @@
 [submodule "solarized-gedit"]
 	path = solarized-gedit
 	url = git://github.com/solarized/solarized-gedit.git
+[submodule "solarized-qtcreator"]
+	path = solarized-qtcreator
+	url = git://github.com/solarized/qtcreator-solarized-syntax.git
