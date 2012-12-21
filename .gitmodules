@@ -13,3 +13,6 @@
 [submodule "xchat-colors-solarized"]
 	path = xchat-colors-solarized
 	url = git://github.com/solarized/xchat-colors-solarized.git
+[submodule "solarized-jquerymobile"]
+	path = solarized-jquerymobile
+	url = git@github.com:kimslawson/solarized-jquerymobile
