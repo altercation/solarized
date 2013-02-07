@@ -198,56 +198,56 @@ Click to view.
 
 ### Mutt
 
-[![mutt dark](../img/solarized-screen-mutt-dark-th.png)](../img/solarized-screen-mutt-dark.png)
-[![mutt light](../img/solarized-screen-mutt-light-th.png)](../img/solarized-screen-mutt-light.png)
+[![mutt dark](../img/screen-mutt-dark-th.png)](../img/screen-mutt-dark.png)
+[![mutt light](../img/screen-mutt-light-th.png)](../img/screen-mutt-light.png)
 
 ### C (Vim)
 
-[![c dark](../img/solarized-screen-c-dark-th.png)](../img/solarized-screen-c-dark.png)
-[![c light](../img/solarized-screen-c-light-th.png)](../img/solarized-screen-c-light.png)
+[![c dark](../img/screen-c-dark-th.png)](../img/screen-c-dark.png)
+[![c light](../img/screen-c-light-th.png)](../img/screen-c-light.png)
 
 ### Haskell (Vim)
 
-[![haskell dark](../img/solarized-screen-haskell-dark-th.png)](../img/solarized-screen-haskell-dark.png)
-[![haskell light](../img/solarized-screen-haskell-light-th.png)](../img/solarized-screen-haskell-light.png)
+[![haskell dark](../img/screen-haskell-dark-th.png)](../img/screen-haskell-dark.png)
+[![haskell light](../img/screen-haskell-light-th.png)](../img/screen-haskell-light.png)
 
 ### HTML (Vim)
 
-[![html dark](../img/solarized-screen-html-dark-th.png)](../img/solarized-screen-html-dark.png)
-[![html light](../img/solarized-screen-html-light-th.png)](../img/solarized-screen-html-light.png)
+[![html dark](../img/screen-html-dark-th.png)](../img/screen-html-dark.png)
+[![html light](../img/screen-html-light-th.png)](../img/screen-html-light.png)
 
 ### Java (Vim)
 
-[![java dark](../img/solarized-screen-java-dark-th.png)](../img/solarized-screen-java-dark.png)
-[![java light](../img/solarized-screen-java-light-th.png)](../img/solarized-screen-java-light.png)
+[![java dark](../img/screen-java-dark-th.png)](../img/screen-java-dark.png)
+[![java light](../img/screen-java-light-th.png)](../img/screen-java-light.png)
 
 ### Pandoc Markdown (Vim)
 
 These screen shots show Vim running with my own [Pandoc Kit 
 Syntax](/pandockit).
 
-[![pandoc dark](../img/solarized-screen-pandoc-dark-th.png)](../img/solarized-screen-pandoc-dark.png)
-[![pandoc light](../img/solarized-screen-pandoc-light-th.png)](../img/solarized-screen-pandoc-light.png)
+[![pandoc dark](../img/screen-pandoc-dark-th.png)](../img/screen-pandoc-dark.png)
+[![pandoc light](../img/screen-pandoc-light-th.png)](../img/screen-pandoc-light.png)
 
 ### Perl (Vim)
 
-[![perl dark](../img/solarized-screen-perl-dark-th.png)](../img/solarized-screen-perl-dark.png)
-[![perl light](../img/solarized-screen-perl-light-th.png)](../img/solarized-screen-perl-light.png)
+[![perl dark](../img/screen-perl-dark-th.png)](../img/screen-perl-dark.png)
+[![perl light](../img/screen-perl-light-th.png)](../img/screen-perl-light.png)
 
 ### Python (Vim)
 
-[![python dark](../img/solarized-screen-python-dark-th.png)](../img/solarized-screen-python-dark.png)
-[![python light](../img/solarized-screen-python-light-th.png)](../img/solarized-screen-python-light.png)
+[![python dark](../img/screen-python-dark-th.png)](../img/screen-python-dark.png)
+[![python light](../img/screen-python-light-th.png)](../img/screen-python-light.png)
 
 ### Ruby (Vim)
 
-[![ruby dark](../img/solarized-screen-ruby-dark-th.png)](../img/solarized-screen-ruby-dark.png)
-[![ruby light](../img/solarized-screen-ruby-light-th.png)](../img/solarized-screen-ruby-light.png)
+[![ruby dark](../img/screen-ruby-dark-th.png)](../img/screen-ruby-dark.png)
+[![ruby light](../img/screen-ruby-light-th.png)](../img/screen-ruby-light.png)
 
 ### TeX (Vim)
 
-[![tex dark](../img/solarized-screen-tex-dark-th.png)](../img/solarized-screen-tex-dark.png)
-[![tex light](../img/solarized-screen-tex-light-th.png)](../img/solarized-screen-tex-light.png)
+[![tex dark](../img/screen-tex-dark-th.png)](../img/screen-tex-dark.png)
+[![tex light](../img/screen-tex-light-th.png)](../img/screen-tex-light.png)
 
 
 The Values
