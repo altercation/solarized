@@ -152,6 +152,8 @@
 	ZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KSlJabpq+3usPV2N0AAAAAAAAB
 	AQAAAAAAAAAZAAAAAAAAAAAAAAAAAAAA3w==
 	</data>
+	<key>Bell</key>
+	<false/>
 	<key>BlinkText</key>
 	<false/>
 	<key>CursorColor</key>
@@ -167,10 +169,10 @@
 	<data>
 	YnBsaXN0MDDUAQIDBAUGGBlYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
 	AAGGoKQHCBESVSRudWxs1AkKCwwNDg8QVk5TU2l6ZVhOU2ZGbGFnc1ZOU05hbWVWJGNs
-	YXNzI0AmAAAAAAAAEBCAAoADXU1lbmxvLVJlZ3VsYXLSExQVFlokY2xhc3NuYW1lWCRj
-	bGFzc2VzVk5TRm9udKIVF1hOU09iamVjdF8QD05TS2V5ZWRBcmNoaXZlctEaG1Ryb290
-	gAEIERojLTI3PEJLUltiaXJ0dniGi5afpqmyxMfMAAAAAAAAAQEAAAAAAAAAHAAAAAAA
-	AAAAAAAAAAAAAM4=
+	YXNzI0AoAAAAAAAAEBCAAoADWENvbnNvbGFz0hMUFRZaJGNsYXNzbmFtZVgkY2xhc3Nl
+	c1ZOU0ZvbnSiFRdYTlNPYmplY3RfEA9OU0tleWVkQXJjaGl2ZXLRGhtUcm9vdIABCBEa
+	Iy0yNzxCS1JbYmlydHZ4gYaRmqGkrb/CxwAAAAAAAAEBAAAAAAAAABwAAAAAAAAAAAAA
+	AAAAAADJ
 	</data>
 	<key>FontAntialias</key>
 	<true/>
@@ -187,6 +189,8 @@
 	Y2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KPkZOYo6y0t8DS1doAAAAAAAABAQAA
 	AAAAAAAZAAAAAAAAAAAAAAAAAAAA3A==
 	</data>
+	<key>ShowDimensionsInTitle</key>
+	<false/>
 	<key>ShowWindowSettingsNameInTitle</key>
 	<false/>
 	<key>TerminalType</key>
@@ -210,6 +214,8 @@
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
 	<key>UseBrightBold</key>
+	<true/>
+	<key>VisualBell</key>
 	<true/>
 	<key>blackColour</key>
 	<data>
@@ -276,6 +282,31 @@
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
 	ZmZmg/4CRz+DBTzdPYMgzt4+AYY=
 	</data>
+	<key>mouseLeftClick</key>
+	<data>
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2Jq
+	ZWN0AIWEASqEhAFjlwGG
+	</data>
+	<key>mouseMiddleClick</key>
+	<data>
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2Jq
+	ZWN0AIWEASqEhAFjlwGG
+	</data>
+	<key>mouseRightClick</key>
+	<data>
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2Jq
+	ZWN0AIWEASqEhAFjlwGG
+	</data>
+	<key>mouseWheel</key>
+	<data>
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2Jq
+	ZWN0AIWEASqEhAFjlwGG
+	</data>
+	<key>mouseWheelEmulation</key>
+	<data>
+	BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2Jq
+	ZWN0AIWEASqEhAFjlwGG
+	</data>
 	<key>name</key>
 	<string>Solarized Dark xterm-256color</string>
 	<key>redColour</key>
@@ -283,6 +314,8 @@
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
 	ZmZmg6i7UT+DUATePYMl2hA+AYY=
 	</data>
+	<key>shellExitAction</key>
+	<integer>1</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 	<key>whiteColour</key>
