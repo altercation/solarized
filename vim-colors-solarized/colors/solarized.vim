@@ -1003,7 +1003,7 @@ augroup SolarizedHiTrail
     autocmd!
     if g:solarized_hitrail==1
         autocmd! Syntax * call s:SolarizedHiTrail()
-        autocmd! ColorScheme * if g:colors_name == "solarized" | call s:SolarizedHiTrail() | else | augroup! s:SolarizedHiTrail | endif
+        autocmd! ColorScheme * if g:colors_name == "solarized" | call s:SolarizedHiTrail() | else | augroup! SolarizedHiTrail | endif
     endif
 augroup END
 " }}}
