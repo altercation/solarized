@@ -6,41 +6,41 @@ Solarized - iTerm2 Color Presets
 Installation
 ------------
 
-Download current build of iTerm 2 from: <http://sites.google.com/site/iterm2home/>
+Download current build of iTerm 2 from: <http://www.iterm2.com/>
 
-NOTE: Only builds 480 (Jan 11 2011) and later support import of color schemes.  
-If the stable release doesn't include this function, grab the nightly build 
+NOTE: Only builds 480 (Jan 11 2011) and later support import of color schemes.
+If the stable release doesn't include this function, grab the nightly build
 from: <http://code.google.com/p/iterm2/downloads/list>
 
-Open iTerm 2, open Preferences, click on the "Profiles" (formerly Addresses, 
-formerly Bookmarks) icon in the preferences toolbar, then select the "colors" 
-tab. Click on the "load presets" and select "import...". Select the Solaris 
+Open iTerm 2, open Preferences, click on the "Profiles" (formerly Addresses,
+formerly Bookmarks) icon in the preferences toolbar, then select the "colors"
+tab. Click on the "load presets" and select "import...". Select the Solarized
 Light or Dark theme file.
 
-You have now loaded the Solarized color presets into iTerm 2, but haven't yet 
-applied them. To apply them, simply select an existing profile from the profile 
-list window on the left, or create a new profile. Then select the Solarized 
+You have now loaded the Solarized color presets into iTerm 2, but haven't yet
+applied them. To apply them, simply select an existing profile from the profile
+list window on the left, or create a new profile. Then select the Solarized
 Dark or Solarized Light preset from the "Load Presets" drop down.
 
-Ok, I've gone crazy with iTerm2 color management but you are going to be ok.  
+Ok, I've gone crazy with iTerm2 color management but you are going to be ok.
 Just realize two things:
 
-1. Like other apps (Chrome as of this writing) on the Mac, iTerm2 locks in 
-   a target color space when you create a new window. If you switch your 
-   monitor color space, relaunch iTerm2 and it will pick up the new target 
+1. Like other apps (Chrome as of this writing) on the Mac, iTerm2 locks in
+   a target color space when you create a new window. If you switch your
+   monitor color space, relaunch iTerm2 and it will pick up the new target
    color space.
 
-2. The colors in iTerm2 currently cannot be device colors. They are baked in as 
-   generic rgb (which, despite the name, is an actual, specific color space 
-   from Apple and is used as a default just like other systems use sRGB as 
-   a default). I've switch Solarized Apple Color Picker palettes to use tagged 
-   colors by default, so for the most part iTerm2 will match up with other apps 
+2. The colors in iTerm2 currently cannot be device colors. They are baked in as
+   generic rgb (which, despite the name, is an actual, specific color space
+   from Apple and is used as a default just like other systems use sRGB as
+   a default). I've switch Solarized Apple Color Picker palettes to use tagged
+   colors by default, so for the most part iTerm2 will match up with other apps
    where you use Color Picker swatches.
 
 The Values
 ----------
 
-L\*a\*b values are canonical (White D65, Reference D50), other values are 
+L\*a\*b values are canonical (White D65, Reference D50), other values are
 matched in sRGB space.
 
     SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB

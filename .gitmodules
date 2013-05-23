@@ -1,0 +1,15 @@
+[submodule "xresources"]
+	path = xresources
+	url = git://github.com/solarized/xresources.git
+[submodule "xfce4-terminal-colors-solarized"]
+	path = xfce4-terminal-colors-solarized
+	url = git://github.com/solarized/xfce4-terminal-colors-solarized.git
+[submodule "solarized-gedit"]
+	path = solarized-gedit
+	url = git://github.com/solarized/solarized-gedit.git
+[submodule "solarized-qtcreator"]
+	path = solarized-qtcreator
+	url = git://github.com/solarized/qtcreator-solarized-syntax.git
+[submodule "xchat-colors-solarized"]
+	path = xchat-colors-solarized
+	url = git://github.com/solarized/xchat-colors-solarized.git

@@ -9,7 +9,7 @@ Installation
 Terminal.app doesn't have full color modification support without some effort.  
 The following has only been tested on Snow Leopard. See the links below for 
 updates. I make no claims as to the effectiveness of these methods. iTerm2 may 
-be an easier all roung solution (desptie iTerm 2's terrible color management).
+be an easier all-around solution (despite iTerm 2's terrible color management).
 
 1. Install SIMBL from:
 http://www.culater.net/software/SIMBL/SIMBL.php
@@ -29,6 +29,17 @@ http://cloud.github.com/downloads/evanphx/terminalcolours/TerminalColours-SL.tar
 and open in 32 bit mode
 cf
 https://github.com/evanphx/terminalcolours
+
+xterm-256color variant
+----------------------
+
+Terminal.app does not normally support being set to xterm-256color from within 
+its preferences. I have modified the two files in the xterm-256color folder to 
+specify an xterm-256color $TERM value. This will only work if you have an 
+existing terminfo file for xterm-256color.
+
+The advantage of the xterm-256color mode is some better support for background 
+toggling. It does not fully support true 256 color mode however.
 
 The Values
 ----------
