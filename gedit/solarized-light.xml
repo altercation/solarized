@@ -26,7 +26,7 @@
 <style-scheme id="solarizedlight" _name="Solarized Light" version="1.0">
 
   <author>Matthew Cantelon</author>
-  <_description>Port of the Dark Solarized theme by Ethan Schoonover.</_description>
+  <_description>Gedit port of the light version of the Solarized theme. Check https://github.com/mattcan/solarized-gedit for more information.</_description>
 
   <!-- Solarized Palette -->
   <color name="base03"                      value="#002b36"/>

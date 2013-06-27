@@ -41,7 +41,7 @@ do
             ;;
         a)
             INSTALLPATH=/usr/share/gtksourceview-3.0/styles
-            NEEDSUDO=false
+            NEEDSUDO=true
             ;;
         l)
             INSTALLPATH=$HOME/.local/share/gedit/styles

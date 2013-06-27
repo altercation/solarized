@@ -1,6 +1,6 @@
 # Solarized for Gedit
 
-## Precision colors for machines and people - **Now with more Gedit!**
+## Precision colors for machines and people - _Now with more Gedit!_
 
 ---
 
@@ -24,6 +24,8 @@ found at <http://github.com/mattcan/solarized-gedit>.
 
 ### Installation
 
+_Please note that installation has only been tested on Ubuntu 12.10 and Gedit 3_
+
 You can download the files in one of two ways:
 
 * using `git clone git://github.com/mattcan/solarized-gedit.git`
@@ -35,21 +37,27 @@ to one of these folders:
 
 * if you are the only user on your computer
 
-		cp solarized-* ~/.local/share/gedit/styles
+```
+mkdir -p ~/.local/share/gedit/styles
+cp solarized-* ~/.local/share/gedit/styles
+```
 
-* if you want everyone on your PC to be able to use the styles (_path
-  below is for Ubuntu_)
+* if you want everyone on your PC to be able to use the styles ( _path
+  below is for Ubuntu_ )
 
-		sudo cp solarized-* /usr/share/gtksourceview-3.0/styles
-		
-You can also use the built installer (_has only been tested with Ubuntu 12.10_)
-		
-### Roadmap
+```
+sudo mkdir -p /usr/share/gtksourceview-3.0/styles
+sudo cp solarized-* /usr/share/gtksourceview-3.0/styles
+```
 
-There are a few things that still need to be worked out...
+* you can also use the installer ( _has only been tested with Ubuntu 12.10_ )
 
-1. Clean up the **c:** specific style definitions
-1. Add support for further custom style definitions
+```
+cd wherever/you/extracted
+chmod a+x installer
+# -a for all users, -l for local
+./installer [-a | -l]
+```
 	
 [ES]: http://ethanschoonover.com
 [ES-Solarized]: http://ethanschoonover.com/solarized

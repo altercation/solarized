@@ -26,7 +26,7 @@
 <style-scheme id="solarizeddark" _name="Solarized Dark" version="1.0">
 
   <author>Matthew Cantelon</author>
-  <_description>Port of the Dark Solarized theme by Ethan Schoonover.</_description>
+  <_description>Gedit port of the dark version of the Solarized theme. Check https://github.com/mattcan/solarized-gedit for more information.</_description>
 
   <!-- Solarized Palette -->
   <color name="base03"                      value="#002b36"/>
@@ -47,12 +47,12 @@
   <color name="green"                       value="#859900"/>
   
   <!-- Global Settings -->
-  <style name="text"                        foreground="base0" background="base03"/>
+  <style name="text"                        foreground="base1" background="base03"/>
   <style name="selection"                   foreground="base03" background="base0"/>
-  <style name="cursor"                      foreground="base0"/>
+  <style name="cursor"                      foreground="base2"/>
   <style name="current-line"                background="base02"/>
-  <style name="line-numbers"                foreground="base1" background="base02"/>
-  <style name="draw-spaces"                 foreground="base1"/>
+  <style name="line-numbers"                foreground="base0" background="base02"/>
+  <style name="draw-spaces"                 foreground="base0"/>
 
   <!-- Bracket Matching -->
   <style name="bracket-match"               foreground="red" bold="true"/>
@@ -64,7 +64,7 @@
   <style name="def:doc-comment-element"     italic="true"/>
 
   <!-- Right Margin -->
-  <style name="right-margin"                foreground="base1" background="base02"/>
+  <style name="right-margin"                foreground="base0" background="base02"/>
   
   <!-- Search Matching -->
   <style name="search-match"                foreground="yellow"/>
