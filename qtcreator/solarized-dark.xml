@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme version="1.0" name="Solarized (dark)">
+  <!--
+      Solarized theme (dark background)
+  -->
+
+  <style name="Text" foreground="#839496" background="#002b36"/>
+  <style name="LineNumber" foreground="#586e75" background="#073642"/>
+  <style name="CurrentLine" background="#073642"/>
+  <!-- inveted background -->
+  <style name="Selection" foreground="#073642" background="#586e75"/>
+  <style name="Occurrences" background="#586e75"/>
+
+  <!-- non-solarized backgrounds -->
+
+  <style name="SearchResult" background="#555000"/>
+  <style name="SearchScope" background="#222000"/>
+
+
+  <style name="DisabledCode" foreground="#93a1a1"/>
+  <style name="Comment" foreground="#93a1a1"/>
+  <style name="Doxygen.Comment" foreground="#93a1a1"/>
+  <style name="Keyword" foreground="#586e75" bold="true"/>
+  <style name="Operator" foreground="#586e75"/>
+  <style name="Label" foreground="#586e75" bold="true"/>
+  <style name="CurrentLineNumber" foreground="#586e75" bold="true"/>
+
+  <!-- highlights -->
+  <style name="Number" foreground="#2aa198"/>
+  <style name="String" foreground="#2aa198"/>
+  <style name="Type" foreground="#b58900"/>
+  <style name="Link" foreground="#268bd2"/>
+  <style name="Preprocessor" foreground="#6c71c4"/>
+  <style name="Parentheses" foreground="#dc322f"/>
+
+  <!-- WIP -->
+  <style name="Static" foreground="#859900" italic="true"/>
+  <style name="Doxygen.Tag" foreground="#2aa198"/>
+
+  <style name="DiffFile" foreground="#859900"/>
+  <style name="DiffLocation" foreground="#b58900"/>
+  <style name="AddedLine" foreground="#2aa198"/>
+  <style name="RemovedLine" foreground="#dc322f"/>
+
+  <!-- no color / default -->
+  <style name="VirtualMethod" italic="true"/>
+
+  <!-- let QtCreator choose: these colors are composed on top of
+       existing text, I can't find a nice way to stay compatible with
+       Solarized and produce readable results.
+
+  <style name="Occurrences.Rename"/>
+
+  <style name="Field"/>
+  <style name="Local"/>
+   -->
+</style-scheme>
