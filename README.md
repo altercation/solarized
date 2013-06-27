@@ -75,6 +75,8 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 * **OS X Terminal.app**
 * **Putty** courtesy [Brant Bobby](http://www.control-v.net)
     and on [GitHub](https://github.com/brantb)
+* **Xfce terminal** courtesy [Sasha Gerrand](http://sgerrand.com)
+    and on [GitHub](https://github.com/sgerrand)
 
 ### Other Applications
 
