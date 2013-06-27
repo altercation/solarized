@@ -31,10 +31,10 @@ Move `terminalrc` to your `~/.config/Terminal/` directory. The dark or the light
 install the dark version please do the following:
 
         $ cd xfce4-terminal-colors-solarized
-        $ mv dark/terminalrc ~/.config/Terminal/
+        $ cp dark/terminalrc ~/.config/Terminal/terminalrc
 
 To install the light version go with:
 
         $ cd xfce4-terminal-colors-solarized
-        $ mv light/terminalrc ~/.config/Terminal/
+        $ cp light/terminalrc ~/.config/Terminal/terminalrc
 
