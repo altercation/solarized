@@ -4,6 +4,3 @@
 [submodule "solarized-qtcreator"]
 	path = solarized-qtcreator
 	url = git://github.com/solarized/qtcreator-solarized-syntax.git
-[submodule "xchat-colors-solarized"]
-	path = xchat-colors-solarized
-	url = git://github.com/solarized/xchat-colors-solarized.git
