@@ -1,6 +1,3 @@
-[submodule "xfce4-terminal-colors-solarized"]
-	path = xfce4-terminal-colors-solarized
-	url = git://github.com/solarized/xfce4-terminal-colors-solarized.git
 [submodule "solarized-gedit"]
 	path = solarized-gedit
 	url = git://github.com/solarized/solarized-gedit.git
