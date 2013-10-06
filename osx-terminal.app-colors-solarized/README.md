@@ -3,13 +3,22 @@ Solarized - OS X Terminal.App Settings
 
 ### [See official homepage for full content](http://ethanschoonover.com/solarized)
 
+### Note: The high-contrast dark variant has been tested only on Mac OS 10.8
+
 Installation
 ------------
 
-Terminal.app doesn't have full color modification support without some effort.  
-The following has only been tested on Snow Leopard. See the links below for 
-updates. I make no claims as to the effectiveness of these methods. iTerm2 may 
-be an easier all-around solution (despite iTerm 2's terrible color management).
+In the Terminal.app preferences, Settings tab, simply choose "Import..." from
+the dropdown below the profile list.
+
+Installation (Mac OS below 10.8)
+--------------------------------
+
+Prior to 10.8 (Moutain Lion) Terminal.app doesn't have full color modification
+support without some effort.  The following has only been tested on Snow
+Leopard. See the links below for updates. I make no claims as to the
+effectiveness of these methods. iTerm2 may be an easier all-around solution
+(despite iTerm 2's terrible color management).
 
 1. Install SIMBL from:
 http://www.culater.net/software/SIMBL/SIMBL.php
@@ -30,8 +39,7 @@ and open in 32 bit mode
 cf
 https://github.com/evanphx/terminalcolours
 
-xterm-256color variant
-----------------------
+### xterm-256color variant
 
 Terminal.app does not normally support being set to xterm-256color from within 
 its preferences. I have modified the two files in the xterm-256color folder to 
@@ -41,8 +49,7 @@ existing terminfo file for xterm-256color.
 The advantage of the xterm-256color mode is some better support for background 
 toggling. It does not fully support true 256 color mode however.
 
-The Values
-----------
+### The Values
 
 L\*a\*b values are canonical (White D65, Reference D50), other values are 
 matched in sRGB space.
