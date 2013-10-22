@@ -1,0 +1,62 @@
+#!/bin/bash
+
+# shows usage instructions
+usage()
+{
+cat << EOF
+usage: $0 [options]
+
+This script installs the Solarized styles for gedit.
+
+OPTIONS:
+  -h    Shows this message
+  -a    Install for all users
+  -l    Install only for you
+EOF
+}
+
+chkdir()
+{
+if [ ! -d "$INSTALLPATH" ]; then
+    if [ "$NEEDSUDO" == true ]; then
+        sudo mkdir -p "$INSTALLPATH"
+    else
+        mkdir -p "$INSTALLPATH"
+    fi
+fi
+}
+
+# path to install to
+INSTALLPATH=$HOME/.local/share/gedit/styles
+# will need to use sudo to install for all users
+NEEDSUDO=false
+
+# loop through passed arguments
+while getopts "hal" OPTION
+do
+    case $OPTION in
+        h)
+            usage
+            exit 1
+            ;;
+        a)
+            INSTALLPATH=/usr/share/gtksourceview-3.0/styles
+            NEEDSUDO=true
+            ;;
+        l)
+            INSTALLPATH=$HOME/.local/share/gedit/styles
+            ;;
+        ?)
+            INSTALLPATH=$HOME/.local/share/gedit/styles
+            ;;
+    esac
+done
+
+# install for all users when sudo set to true
+if [ "$NEEDSUDO" == true ]; then
+    chkdir
+    sudo cp solarized-*.xml "$INSTALLPATH"
+else
+    chkdir
+    cp solarized-*.xml "$INSTALLPATH"
+fi
