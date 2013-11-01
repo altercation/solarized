@@ -68,13 +68,14 @@ These changes may require you to change your configuration.
 
 *   **VIM : IMPROVEMENT : New Toggle Background Plugin**
     Added new Toggle Background plugin. Will load automatically and show up as 
-    a menu item in the `Window` menu in gui vim. Automatically maps to <F5> if 
-    available (won't clobber that mapping if you're using it). Also available 
-    as a command `:ToggleBG`.  To manually map to something other than <F5>:
+    a menu item in the `Window` menu in gui vim. Automatically maps to
+    `<F5>` if available (won't clobber that mapping if you're using it).
+    Also available as a command `:ToggleBG`.  To manually map to
+    something other than `<F5>`:
 
     To set your own mapping in your .vimrc file, simply add the following line 
-    to support normal, insert and visual mode usage, changing the "<F5>" value 
-    to the key or key combination you wish to use:
+    to support normal, insert and visual mode usage, changing the
+    "`<F5>`" value to the key or key combination you wish to use:
 
         call togglebg#map("<F5>")
 
@@ -86,13 +87,13 @@ These changes may require you to change your configuration.
     displayed using ":set list" can be set to one of three levels depending on 
     your needs.
 
-            g:solarized_visibility =  "normal"|   "high" or "low"
+            let g:solarized_visibility =  "normal"|   "high" or "low"
 
     I'll be honest: I still prefer low visibility. I like them barely there.  
     They show up in lines that are highlighted as by the cursor line, which 
     works for me. If you are with me on this, put the following in your .vimrc:
 
-            g:solarized_visibility =  "low"
+            let g:solarized_visibility =  "low"
 
 ### Non Critical Changes
 

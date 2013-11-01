@@ -1,5 +1,5 @@
-" Toggle background
-" Last Change:  April 7, 2011
+" Toggle Background
+" Modified:     2011 Apr 29
 " Maintainer:   Ethan Schoonover
 " License:      OSI approved MIT license
 
@@ -18,10 +18,18 @@ vnoremap <unique> <script> <Plug>ToggleBackground <ESC><SID>TogBG<ESC>gv
 nnoremenu <script> Window.Toggle\ Background <SID>TogBG
 inoremenu <script> Window.Toggle\ Background <ESC><SID>TogBG<ESC>a
 vnoremenu <script> Window.Toggle\ Background <ESC><SID>TogBG<ESC>gv
+tmenu Window.Toggle\ Background Toggle light and dark background modes
+nnoremenu <script> ToolBar.togglebg <SID>TogBG
+inoremenu <script> ToolBar.togglebg <ESC><SID>TogBG<ESC>a
+vnoremenu <script> ToolBar.togglebg <ESC><SID>TogBG<ESC>gv
+tmenu ToolBar.togglebg Toggle light and dark background modes
 noremap <SID>TogBG  :call <SID>TogBG()<CR>
 
 function! s:TogBG()
-    let &background = ( &background == "dark"? "light" : "dark" ) | exe "colorscheme " . g:colors_name
+    let &background = ( &background == "dark"? "light" : "dark" )
+    if exists("g:colors_name")
+        exe "colorscheme " . g:colors_name
+    endif
 endfunction
 
 if !exists(":ToggleBG")

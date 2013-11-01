@@ -26,10 +26,13 @@ Installation
    the native 16 colors of your terminal emulator or the approximatation 
    provided by the 256 color values. See note below for recommendations.
 
-    source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
+    ```
+    #uncomment the colorscheme you want to use, and comment out the others
+    #source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
     source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
-    source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
-    source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-light-256.muttrc
+    #source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-dark-256.muttrc
+    #source $MAILCONF/mutt-colors-solarized/mutt-colors-solarized-light-256.muttrc
+    ```
 
 Note: You can safely ignore the compile colors script and the template file.  
 They are used only for creating the actual colorscheme files. If you want to 
