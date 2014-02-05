@@ -1,0 +1,92 @@
+/* see README */
+
+/* solarized light */
+
+/*body {
+  font-family: "M+ 1m", monospace;
+  background-color:#fdf6e3;
+  color: #93a1a1;
+}
+
+caret { color: #d33682; }
+selection { background-color: #eee8d5; }
+
+metaruler {
+  color: #586e75;
+  background: #eee8d5;
+  border-right: 2px solid #eee8d5;
+  font-size: 11px;
+}*/
+
+ /*solarized dark */
+ 
+body {
+  font-family: "M+ 1m", monospace;
+  background-color:#002b36;
+  color: #93a1a1;
+}
+
+caret { color: #d33682; }
+selection { background-color: #073642; }
+
+metaruler {
+  color: #586e75;
+  background: 073642;
+  border-right: 2px solid #073642;
+  font-size: 11px;
+}
+
+keyword { color: #268bd2; }
+type { color: #93a1a1; }
+usertype { color: #b58900; }
+classname { color: #268bd2; }
+string { color:#2aa198; }
+specialchar { color: #d30102; }
+regexp { color: #6c71c4; }
+comment { color: #657b83; font-style: italic; }/*base00 looks?*/
+number { color: #2aa198; }
+preproc { color: #cb4b16; }
+symbol { color: #657b83; }
+function { color: #b58900; }
+cbracket { color: #859900; }
+todo { color: #d33682; font-weight: bold; }
+
+/* Internet related */
+url {
+  color: #6c71c4; text-decoration: underline;
+  cursor: pointer;
+}
+
+/* other elements for ChangeLog and Log files */
+date { color: #b58900; font-weight: bold; }
+time, file { color: #6c71c4; font-weight: bold; }
+ip, name { color: #2aa198; }
+
+/* for Prolog, Perl, lang */
+variable { color: #b58900; }
+italics { text-decoration: underline; font-style: italic; }
+bold { color: #93a1a1; font-weight: bold; }
+
+/* for LaTeX, markdown, etc */
+underline { color: #859900; text-decoration: underline; }
+fixed { color: #859900; background-color: #2c2c2c; }
+argument, optionalargument { color: #9194BB; }
+math { color: #cb4b16; }
+bibtex { color: #6c71c4; }
+h1,h2,h3,h4,h5,h6 { color: lightsalmon; }
+ul, ol { color: #b58900; }
+
+/* for diffs */
+oldfile { color: white; background-color:#268bd2; }
+newfile { color: white; background-color:#2aa198; }
+difflines { color: white; background-color:#859900	; }
+
+/* for css */
+selector { color: #b58900; }
+property { color: #b58900; }
+value { color: #cb4b16; }
+
+/* for Oz, Erlang, etc */
+atom { color: #cb4b16; }
+meta { font-style: italic; }
+

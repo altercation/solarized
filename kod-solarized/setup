@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# change this if you want to install the colorscheme some place other
+KOD_DIR="~/.kod/"
+
+if [[ "`pwd`" == *kod-solarized* ]]; then
+    if [ -d $KOD_DIR ]; then cp -P mystyle_solarized.css $KOD_DIR
+        defaults write se.hunch.kod style/url ~/.kod/mystyle_solarized.css
+        if [[ `ps aux | grep -v grep | grep Kod` ]]; then
+            killall Kod
+        fi
+        echo 'solarized is now installed from ' 
+        echo $KOD_DIR
+        echo 'keep that directory intact'
+    else
+        mkdir $KOD_DIR
+        cp -P mystyle_solarized.css $KOD_DIR 
+        defaults write se.hunch.kod style/url ~/.kod/mystyle_solarized.css
+        if [[ `ps aux | grep -v grep | grep Kod` ]]; then
+            killall Kod
+        fi
+        echo 'solarized is now installed from' 
+        echo $KOD_DIR
+        echo 'keep that directory intact'
+    fi
+else
+    echo 'start the script from the git directory'
+fi
