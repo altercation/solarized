@@ -1,0 +1,3 @@
+[submodule "jquerymobile"]
+	path = jquerymobile
+	url = https://github.com/kimslawson/solarized-jquerymobile.git
