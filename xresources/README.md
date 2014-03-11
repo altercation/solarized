@@ -19,3 +19,9 @@ configuration. Please see the fine [Arch Linux wiki](https://wiki.archlinux.org/
 Further information on the .Xresources file and its place in the X Window
 System can of course be found on [Wikipedia](http://en.wikipedia.org/wiki/X_resources).
 
+Installation
+------------
+
+Append the below to ~/.Xresources:
+
+    #include "/path/to/xresources-solarized/solarized"
