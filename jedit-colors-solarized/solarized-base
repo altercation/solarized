@@ -1,0 +1,29 @@
+#jEdit properties
+
+buffer.encoding=UTF-8
+view.font=Menlo
+view.antiAlias=standard
+
+view.style.operator=color\:\#dc322f style\:b
+view.gutter.currentLineColor=\#dc322f
+view.gutter.foldColor=\#859900
+view.style.markup=color\:\#dc322f
+view.style.digit=color\:\#2aa198
+view.status.background=\#fdf6e3
+view.gutter.highlightColor=\#d33682
+view.gutter.selectionAreaBgColor=\#dbdbdb
+view.style.invalid=color\:\#d33682
+view.status.memory.background=\#66699a
+view.selectionColor=\#fdf6e3
+view.style.literal4=color\:\#2aa198
+view.style.literal3=color\:\#2aa198
+view.style.literal2=color\:\#2aa198
+view.style.literal1=color\:\#2aa198
+view.selectionFgColor=\#000000
+view.style.label=color\:\#d33682
+view.wrapGuideColor=\#6c71c4
+view.multipleSelectionColor=\#eee8d5
+view.style.keyword4=color\:\#859900 style\:b
+view.style.keyword3=color\:\#268bd2 style\:b
+view.style.keyword2=color\:\#cb4b16 style\:b
+view.style.keyword1=color\:\#b58900 style\:b
