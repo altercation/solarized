@@ -3,8 +3,15 @@ Solarized - OS X Terminal.App Settings
 
 ### [See official homepage for full content](http://ethanschoonover.com/solarized)
 
-Installation
-------------
+#Installation
+
+OSX Mavericks and up
+--------------------
+
+Download and install Solarized Dark ansi Yosemite.terminal.
+
+Older OSXs
+----------
 
 Terminal.app doesn't have full color modification support without some effort.  
 The following has only been tested on Snow Leopard. See the links below for 
@@ -30,8 +37,7 @@ and open in 32 bit mode
 cf
 https://github.com/evanphx/terminalcolours
 
-xterm-256color variant
-----------------------
+# xterm-256color variant
 
 Terminal.app does not normally support being set to xterm-256color from within 
 its preferences. I have modified the two files in the xterm-256color folder to 
@@ -41,8 +47,7 @@ existing terminfo file for xterm-256color.
 The advantage of the xterm-256color mode is some better support for background 
 toggling. It does not fully support true 256 color mode however.
 
-The Values
-----------
+# The Values
 
 L\*a\*b values are canonical (White D65, Reference D50), other values are 
 matched in sRGB space.
