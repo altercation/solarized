@@ -3,8 +3,25 @@ Solarized - OS X Terminal.App Settings
 
 ### [See official homepage for full content](http://ethanschoonover.com/solarized)
 
-Installation
-------------
+Installation on OS X Yosemite
+-----------------------------
+
+OS X Yosemite Terminal.app comes with 256 colors support (and settings).
+
+Installation is also easy, one simply need to import the profile (see the import
+menu item under the Shell menu of the Terminal.app).
+
+Therefore, to install the solarized theme for OS X Terminal.app, simply import:
+  Solarized Dark Yosemite.terminal
+
+Note: despite the name, this theme supports 256 colors and uses ANSI colors.
+
+You can then create new terminal in new windows or tabs using this theme. And in
+the preferences, you can set this theme as default.
+
+
+Installation on OS X Snow Leopard (and others)
+----------------------------------------------
 
 Terminal.app doesn't have full color modification support without some effort.  
 The following has only been tested on Snow Leopard. See the links below for 
