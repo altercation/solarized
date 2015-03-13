@@ -80,7 +80,7 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 ### Other Applications
 
-*   **Mutt** e-mail client also by [me] (*just* the Mutt colorscheme is
+*   **Mutt** e-mail client also by [me][me] (*just* the Mutt colorscheme is
     [available here][Mutt Repository])
 
 ### Palettes
@@ -406,7 +406,7 @@ background.
 [TextMate Repository]: https://github.com/deplorableword/textmate-solarized
 [TextWrangler-BBEdit Repository]: https://github.com/rcarmo/textwrangler-bbedit-solarized
 [Visual Studio Repository]: https://github.com/leddt/visualstudio-colors-solarized
-[Xcode 3]: https://github.com/shayne/solarized/tree/master/apple-xcode3-solarized
+[Xcode 3]: https://github.com/shayne/apple-xcode3-solarized
 [Xcode 4]: https://github.com/brianmichel/solarized/tree/master/apple-xcode4-solarized
 [me]: http://ethanschoonover.com/colophon
 [changelog]: http://ethanschoonover.com/solarized/CHANGELOG
