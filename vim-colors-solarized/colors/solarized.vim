@@ -134,7 +134,7 @@
 " Allow or disallow certain features based on current terminal emulator or 
 " environment.
 
-" Environment has full color support
+" Environment has truecolor support
 function s:IsTruecolor()
     return has('gui_running') || (has('nvim') && $NVIM_TUI_ENABLE_TRUE_COLOR)
 endfunction
