@@ -18,9 +18,9 @@
 
 
   <style name="DisabledCode" foreground="#93a1a1"/>
-  <style name="Comment" foreground="#93a1a1"/>
+  <style name="Comment" foreground="#586e75"/>
   <style name="Doxygen.Comment" foreground="#93a1a1"/>
-  <style name="Keyword" foreground="#586e75" bold="true"/>
+  <style name="Keyword" foreground="#c4a000" bold="true"/>
   <style name="Operator" foreground="#586e75"/>
   <style name="Label" foreground="#586e75" bold="true"/>
   <style name="CurrentLineNumber" foreground="#586e75" bold="true"/>
@@ -28,19 +28,43 @@
   <!-- highlights -->
   <style name="Number" foreground="#2aa198"/>
   <style name="String" foreground="#2aa198"/>
-  <style name="Type" foreground="#b58900"/>
+  <style name="Type" foreground="#839496"/>
   <style name="Link" foreground="#268bd2"/>
   <style name="Preprocessor" foreground="#6c71c4"/>
   <style name="Parentheses" foreground="#dc322f"/>
+  <style name="Local" foreground="#839496"/>
+  <style name="Field" foreground="#839496"/>
+  <style name="VirtualMethod" italic="true"/>
+  <style name="Function" foreground="#586e75"/>
 
   <!-- WIP -->
+  <style name="Occurrences.Unused" foreground="#808000"/>
+  <style name="Occurrences.Rename" foreground="#000000" background="#ff6464"/>
   <style name="Static" foreground="#859900" italic="true"/>
   <style name="Doxygen.Tag" foreground="#2aa198"/>
+  <style name="VisualWhitespace" foreground="#c0c0c0"/>
+  <style name="QmlLocalId" foreground="#586e75" italic="true"/>
+  <style name="QmlExternalId" foreground="#3465a4" italic="true"/>
+  <style name="QmlTypeId" foreground="#75507b"/>
+  <style name="QmlRootObjectProperty" foreground="#586e75" italic="true"/>
+  <style name="QmlScopeObjectProperty" foreground="#586e75" italic="true"/>
+  <style name="QmlExternalObjectProperty" foreground="#3465a4" italic="true"/>
+  <style name="JsScopeVar" foreground="#2985c7" italic="true"/>
+  <style name="JsImportVar" foreground="#0055af" italic="true"/>
+  <style name="JsGlobalVar" foreground="#0055af" italic="true"/>
+  <style name="QmlStateName" foreground="#586e75" italic="true"/>
+  <style name="Binding" foreground="#586e75"/>
 
   <style name="DiffFile" foreground="#859900"/>
   <style name="DiffLocation" foreground="#b58900"/>
   <style name="AddedLine" foreground="#2aa198"/>
   <style name="RemovedLine" foreground="#dc322f"/>
+  <style name="DiffFileLine" background="#ffff00"/>
+  <style name="DiffContextLine" background="#afd7e7"/>
+  <style name="DiffSourceLine" background="#ffdfdf"/>
+  <style name="DiffSourceChar" background="#ffafaf"/>
+  <style name="DiffDestLine" background="#dfffdf"/>
+  <style name="DiffDestChar" background="#afffaf"/>
 
   <!-- no color / default -->
   <style name="VirtualMethod" italic="true"/>
