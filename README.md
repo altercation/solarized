@@ -1,14 +1,3 @@
----
-title: Solarized
-description: Precision colors for machines and people
-author: Ethan Schoonover
-tags: test, testing, test123
-colors: light yellow
-created:  2011 Mar 15
-modified: 2011 Apr 16
-
----
-
 Solarized
 =========
 
@@ -64,6 +53,7 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 *   **Visual Studio** courtesy of [David Thibault](http://www.leddt.com)
     ([@leddt](http://twitter.com/leddt))
     in the main repo and in a [standalone repository][Visual Studio Repository]
+*   **PhpStorm** by [Koen Lageveen][PhpStorm Repository]
 
 *   **Xcode** work in progress ports are available for [Xcode 3] and [Xcode 4]
     and will be pulled into the main Solarized project soon.
@@ -411,3 +401,4 @@ background.
 [me]: http://ethanschoonover.com/colophon
 [changelog]: http://ethanschoonover.com/solarized/CHANGELOG
 [Vim README]: http://ethanschoonover.com/solarized/vim-colors-solarized
+[PhpStorm Repository]: https://github.com/braver/PhpStorm-Solarized
