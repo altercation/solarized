@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="">
+        <attr name="Services\DiffProviders\org-netbeans-modules-diff-builtin-provider-BuiltInDiffProvider.settings\position" intvalue="100"/>
+        <attr name="Spellcheckers\GSP\Hidden" boolvalue="true"/>
+        <attr name="Spellcheckers\HTML\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\JSP\Hidden" boolvalue="true"/>
+        <attr name="Spellcheckers\PHP\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\Properties\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\XHTML\Hidden" boolvalue="false"/>
+        <attr name="Spellcheckers\XML\Hidden" boolvalue="true"/>
+    </fileobject>
+    <fileobject name="Editors">
+        <attr name="currentFontColorProfile" stringvalue="Netbeans_Solarized_Dark"/>
+    </fileobject>
+</attributes>
