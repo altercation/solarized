@@ -27,6 +27,8 @@ Issues, bug reports, changelogs are centralized at the main [Solarized repositor
 [Solarized repository]: https://github.com/altercation/solarized
 [IntelliJ-only repository]:  https://github.com/jkaving/intellij-colors-solarized
 
+Please note that this repository can be used in any of [JetBrains' IDEs](http://www.jetbrains.com/products.html#IDE_and_editors).
+
 Installation
 ------------
 
@@ -37,7 +39,7 @@ Installation
 
 2. Restart IntelliJ IDEA
 
-3. Go to `Preferences | Editor | Colors & Fonts` and select one of the new 
+3. Go to `File | Settings | Editor | Colors & Fonts` and select one of the new 
 color themes.
 
 ### Option 2: Manual installation
@@ -49,13 +51,13 @@ On Windows it is in `Documents and Settings/<user>/.IntelliJIdea10/config/colors
         
 2. Restart IntelliJ IDEA
 
-3. Go to `Preferences | Editor | Colors & Fonts` and select one of the new 
+3. Go to `File | Settings | Editor | Colors & Fonts` and select one of the new 
 color themes.
 
 Note About Fonts
 -----------------
 Unfortunately, font settings are included in the color settings files.
-You should probably modify these in `Preferences | Editor | Colors & Fonts | Font`
+You should probably modify these in `File | Settings | Editor | Colors & Fonts | Font`
 after adding the color schemes to your IntelliJ IDEA installation.
 
 Note About Committing Changes
