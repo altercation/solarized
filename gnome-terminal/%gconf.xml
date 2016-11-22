@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="alternate_screen_scroll" mtime="1302213339" type="bool" value="true"/>
+	<entry name="title" mtime="1301342164" type="string">
+		<stringvalue>Terminal</stringvalue>
+	</entry>
+	<entry name="bold_color" mtime="1302213339" type="string">
+		<stringvalue>#000000000000</stringvalue>
+	</entry>
+	<entry name="scroll_background" mtime="1301342164" type="bool" value="true"/>
+	<entry name="use_theme_colors" mtime="1302213339" type="bool" value="false"/>
+	<entry name="default_size_columns" mtime="1301342164" type="int" value="80"/>
+	<entry name="font" mtime="1302213339" type="string">
+		<stringvalue>Monospace</stringvalue>
+	</entry>
+	<entry name="use_custom_command" mtime="1301342164" type="bool" value="false"/>
+	<entry name="word_chars" mtime="1301342164" type="string">
+		<stringvalue>-A-Za-z0-9,./?%&amp;#:_=+@~</stringvalue>
+	</entry>
+	<entry name="update_records" mtime="1301342164" type="bool" value="true"/>
+	<entry name="scrollback_unlimited" mtime="1301342164" type="bool" value="false"/>
+	<entry name="use_custom_default_size" mtime="1301342164" type="bool" value="false"/>
+	<entry name="cursor_blink_mode" mtime="1301342164" type="string">
+		<stringvalue>system</stringvalue>
+	</entry>
+	<entry name="allow_bold" mtime="1301342164" type="bool" value="true"/>
+	<entry name="login_shell" mtime="1301342164" type="bool" value="false"/>
+	<entry name="use_theme_background" mtime="1302213339" type="bool" value="false"/>
+	<entry name="custom_command" mtime="1301342164" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="visible_name" mtime="1302213339" type="string">
+		<stringvalue>Solarized</stringvalue>
+	</entry>
+	<entry name="silent_bell" mtime="1301342164" type="bool" value="false"/>
+	<entry name="background_darkness" mtime="1302213339" type="float" value="1"/>
+	<entry name="scrollbar_position" mtime="1302213339" type="string">
+		<stringvalue>hidden</stringvalue>
+	</entry>
+	<entry name="scrollback_lines" mtime="1301342164" type="int" value="512"/>
+	<entry name="use_system_font" mtime="1302213339" type="bool" value="false"/>
+	<entry name="background_color" mtime="1302213339" type="string">
+		<stringvalue>#00002B2B3636</stringvalue>
+	</entry>
+	<entry name="scroll_on_output" mtime="1301342164" type="bool" value="false"/>
+	<entry name="default_size_rows" mtime="1301342164" type="int" value="24"/>
+	<entry name="backspace_binding" mtime="1301342164" type="string">
+		<stringvalue>ascii-del</stringvalue>
+	</entry>
+	<entry name="bold_color_same_as_fg" mtime="1301343253" type="bool" value="true"/>
+	<entry name="background_type" mtime="1301343260" type="string">
+		<stringvalue>solid</stringvalue>
+	</entry>
+	<entry name="foreground_color" mtime="1302213339" type="string">
+		<stringvalue>#65657B7B8383</stringvalue>
+	</entry>
+	<entry name="default_show_menubar" mtime="1302213339" type="bool" value="false"/>
+	<entry name="palette" mtime="1302213339" type="string">
+		<stringvalue>#00002B2B3636:#D3D301010202:#B5B589890000:#CBCB4B4B1616:#2A2AA1A19898:#6C6C7171C4C4:#858599990000:#EEEEE8E8D5D5:#070736364242:#DCDC32322F2F:#58586E6E7575:#65657B7B8383:#838394949696:#26268B8BD2D2:#9393A1A1A1A1:#FDFDF6F6E3E3</stringvalue>
+	</entry>
+	<entry name="background_image" mtime="1301342164" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+	<entry name="delete_binding" mtime="1301342164" type="string">
+		<stringvalue>escape-sequence</stringvalue>
+	</entry>
+	<entry name="exit_action" mtime="1301342164" type="string">
+		<stringvalue>close</stringvalue>
+	</entry>
+	<entry name="title_mode" mtime="1301342164" type="string">
+		<stringvalue>replace</stringvalue>
+	</entry>
+	<entry name="use_skey" mtime="1301342164" type="bool" value="true"/>
+	<entry name="scroll_on_keystroke" mtime="1301342164" type="bool" value="true"/>
+	<entry name="cursor_shape" mtime="1301342164" type="string">
+		<stringvalue>block</stringvalue>
+	</entry>
+</gconf>
