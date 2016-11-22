@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Colors</key>
+	<dict>
+		<key>Background</key>
+		<string>0.990479 0.959736 0.860279</string>
+		<key>InsertionPoint</key>
+		<string>0 0 0</string>
+		<key>Selection</key>
+		<string>0.916959 0.891762 0.794153</string>
+		<key>xcode.syntax.attribute</key>
+		<string>0.445668 0.5457 0.0923001</string>
+		<key>xcode.syntax.character</key>
+		<string>0.798194 0.146808 0.434884</string>
+		<key>xcode.syntax.comment</key>
+		<string>0.445668 0.5457 0.0923001</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>0.445668 0.5457 0.0923001</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>0.445668 0.5457 0.0923001</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>0.755926 0.217402 0.122114</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>0.755926 0.217402 0.122114</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>0.158617 0.454151 0.797312</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>0.158617 0.454151 0.797312</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>0.158617 0.454151 0.797312</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>0.158617 0.454151 0.797312</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>0.344175 0.337389 0.727489</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>0.344175 0.337389 0.727489</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>0.755926 0.217402 0.122114</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>0.755926 0.217402 0.122114</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>0.158617 0.454151 0.797312</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>0.158617 0.454151 0.797312</string>
+		<key>xcode.syntax.keyword</key>
+		<string>0.798194 0.146808 0.434884</string>
+		<key>xcode.syntax.number</key>
+		<string>0.798194 0.146808 0.434884</string>
+		<key>xcode.syntax.plain</key>
+		<string>0.320824 0.402328 0.440308</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>0.344175 0.337389 0.727489</string>
+		<key>xcode.syntax.string</key>
+		<string>0.875 0.027 0</string>
+		<key>xcode.syntax.url</key>
+		<string>0.262 0.286 0.673</string>
+	</dict>
+	<key>Fonts</key>
+	<dict>
+		<key>xcode.syntax.plain</key>
+		<string>Bitstream Vera Sans Mono - 13.0</string>
+	</dict>
+</dict>
+</plist>
