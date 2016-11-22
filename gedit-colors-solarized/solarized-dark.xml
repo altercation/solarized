@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2011 Greg Bair
+    Author: Greg Bair <greg@gregbair.us>
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in
+    all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+    THE SOFTWARE.
+
+-->
+
+<style-scheme id="solarizeddark" _name="Solarized Dark" version="1.0">
+
+    <author>Greg Bair</author>
+    <_description>Dark theme based on Solarized - http://http://ethanschoonover.com/solarized</_description>
+
+    <!-- Color Palette -->
+    <color name="base03"  value="#002b36" />
+    <color name="base02"  value="#073642" />
+    <color name="base01"  value="#586e75" />
+    <color name="base00"  value="#657b83" />
+    <color name="base0"   value="#839496" />
+    <color name="base1"   value="#93a1a1" />
+    <color name="base2"   value="#eee8d5" />
+    <color name="base3"   value="#fdf6e3" />
+    <color name="yellow"  value="#b58900" />
+    <color name="orange"  value="#cb4b16" />
+    <color name="red"     value="#dc322f" />
+    <color name="magenta" value="#d33682" />
+    <color name="violet"  value="#6c71c4" />
+    <color name="blue"    value="#268bd2" />
+    <color name="cyan"    value="#2aa198" />
+    <color name="green"   value="#859900" />
+  
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="base0" background="base03"/>
+  <style name="selection"                   foreground="base03" background="base0"/>
+  <style name="cursor"                      foreground="red" background="blue" />
+  <style name="current-line"                background="base02"/>
+  <style name="line-numbers"                foreground="base1" background="base02"/>
+
+  <!-- Bracket Matching -->
+  <style name="bracket-match"               foreground="base03" background="blue" bold="true"/>
+  <style name="bracket-mismatch"            foreground="base03" background="red" bold="true"/>
+
+  <!-- Comments -->
+  <style name="def:comment"                 foreground="base01"/>
+  <style name="def:sheband"                 foreground="base01" bold="true"/>
+  <style name="def:doc-comment-element"     italic="true"/>
+
+  <!-- Constants -->
+  <style name="def:constant"                foreground="magenta"/>    
+  <style name="def:string"                  foreground="cyan"/>
+  <style name="def:special-char"            foreground="red"/>
+  <style name="def:special-constant"        foreground="magenta"/>
+  <style name="def:floating-point"          foreground="blue"/>
+
+  <!-- Identifiers -->
+  <style name="def:identifier"              foreground="blue"/>
+
+  <!-- Statements -->
+  <style name="def:statement"               foreground="red" bold="false"/>
+
+  <!-- Types -->
+  <style name="def:type"                    foreground="green" bold="true"/> 
+
+  <!-- Others -->
+  <style name="def:preprocessor"            foreground="magenta"/>
+  <style name="def:error"                   foreground="base0" background="red" bold="true"/>
+  <style name="def:note"                    background="base02" foreground="magenta" bold="true"/>
+  <style name="def:underlined"              italic="true" underline="true"/>
+ 
+</style-scheme>
