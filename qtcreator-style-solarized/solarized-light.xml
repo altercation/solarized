@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme version="1.0" name="Solarized (light)">
+  <!--
+      Solarized theme (light background)
+  -->
+
+  <style name="Text" foreground="#657b83" background="#fdf6e3"/>
+  <style name="LineNumber" foreground="#93a1a1" background="#eee8d5"/>
+  <style name="CurrentLine" background="#eee8d5"/>
+  <!-- inveted background -->
+  <style name="Selection" foreground="#eee8d5" background="#93a1a1"/>
+  <style name="Occurrences" background="#93a1a1"/>
+
+  <!-- non-solarized backgrounds -->
+
+  <!-- light yellow overlay that works on solarized background as well as
+       on top of default SearchScope -->
+  <style name="SearchResult" background="#FFFFB0"/>
+
+
+  <style name="DisabledCode" foreground="#93a1a1"/>
+  <style name="Comment" foreground="#93a1a1"/>
+  <style name="Doxygen.Comment" foreground="#93a1a1"/>
+  <style name="Keyword" foreground="#586e75" bold="true"/>
+  <style name="Operator" foreground="#586e75"/>
+  <style name="Label" foreground="#586e75" bold="true"/>
+  <style name="CurrentLineNumber" foreground="#586e75" bold="true"/>
+
+  <!-- highlights -->
+  <style name="Number" foreground="#2aa198"/>
+  <style name="String" foreground="#2aa198"/>
+  <style name="Type" foreground="#b58900"/>
+  <style name="Link" foreground="#268bd2"/>
+  <style name="Preprocessor" foreground="#6c71c4"/>
+  <style name="Parentheses" foreground="#dc322f"/>
+
+  <!-- WIP -->
+  <style name="Static" foreground="#859900" italic="true"/>
+  <style name="Doxygen.Tag" foreground="#2aa198"/>
+
+  <style name="DiffFile" foreground="#859900"/>
+  <style name="DiffLocation" foreground="#b58900"/>
+  <style name="AddedLine" foreground="#2aa198"/>
+  <style name="RemovedLine" foreground="#dc322f"/>
+
+  <!-- no color / default -->
+  <style name="VirtualMethod" italic="true"/>
+
+  <!-- let QtCreator choose: these colors are composed on top of
+       existing text, I can't find a nice way to stay compatible with
+       Solarized and produce readable results.
+
+  <style name="Occurrences.Rename"/>
+
+  <style name="SearchScope"/>
+
+  <style name="Field"/>
+  <style name="Local"/>
+   -->
+</style-scheme>
