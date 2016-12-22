@@ -11,16 +11,16 @@
     <option name="CARET_ROW_COLOR" value="eee8d5" />
     <option name="CONSOLE_BACKGROUND_KEY" value="fdf6e3" />
     <option name="GUTTER_BACKGROUND" value="eee8d5" />
-    <option name="INDENT_GUIDE" value="" />
-    <option name="LINE_NUMBERS_COLOR" value="657b83" />
+    <option name="INDENT_GUIDE" value="eee8d5" />
+    <option name="LINE_NUMBERS_COLOR" value="93a1a1" />
     <option name="METHOD_SEPARATORS_COLOR" value="93a1a1" />
     <option name="MODIFIED_LINES_COLOR" value="" />
     <option name="NOTIFICATION_BACKGROUND" value="2b36" />
     <option name="READONLY_FRAGMENT_BACKGROUND" value="" />
-    <option name="RIGHT_MARGIN_COLOR" value="" />
-    <option name="SELECTED_INDENT_GUIDE" value="" />
-    <option name="SELECTED_TEARLINE_COLOR" value="" />
-    <option name="TEARLINE_COLOR" value="eee8d5" />
+    <option name="RIGHT_MARGIN_COLOR" value="eee8d5" />
+    <option name="SELECTED_INDENT_GUIDE" value="93a1a1" />
+    <option name="SELECTED_TEARLINE_COLOR" value="839496" />
+    <option name="TEARLINE_COLOR" value="93a1a1" />
     <option name="WHITESPACES" value="ffffff" />
   </colors>
   <attributes>
@@ -34,10 +34,40 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
+    <option name="Annotation name">
+      <value>
+        <option name="FOREGROUND" value="6c71c4" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="3" />
+        <option name="EFFECT_COLOR" value="93a1a1" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
     <option name="BREAKPOINT_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" />
         <option name="BACKGROUND" value="eee8d5" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Block comment">
+      <value>
+        <option name="FOREGROUND" value="839496" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="CONSOLE_NORMAL_OUTPUT">
+      <value>
+        <option name="FOREGROUND" value="839496" />
+        <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
@@ -54,6 +84,26 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
+    <option name="CONSOLE_USER_INPUT">
+      <value>
+        <option name="FOREGROUND" value="586e75" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="CUSTOM_NUMBER_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="dc322f" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
     <option name="DUPLICATE_FROM_SERVER">
       <value>
         <option name="FOREGROUND" />
@@ -61,6 +111,16 @@
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="FOLDED_TEXT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="808080" />
+        <option name="BACKGROUND" value="ffffff" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="1" />
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
@@ -81,6 +141,16 @@
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="2" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="HTML_TAG">
+      <value>
+        <option name="FOREGROUND" />
+        <option name="BACKGROUND" value="eee8d5" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
@@ -140,6 +210,16 @@
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Invalid escape in string">
+      <value>
+        <option name="FOREGROUND" value="657b83" />
+        <option name="BACKGROUND" value="ffcccc" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" value="93a1a1" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
       </value>
@@ -234,9 +314,39 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
+    <option name="Keyword">
+      <value>
+        <option name="FOREGROUND" value="586e75" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Line comment">
+      <value>
+        <option name="FOREGROUND" value="839496" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="93a1a1" />
+        <option name="BACKGROUND" value="73642" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="NOT_USED_ELEMENT_ATTRIBUTES">
+      <value>
+        <option name="FOREGROUND" value="ff0000" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
@@ -464,9 +574,289 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
-    <option name="TEXT">
+    <option name="Scala Abstract class">
+      <value>
+        <option name="FOREGROUND" value="268bd2" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="3" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Assign">
+      <value>
+        <option name="FOREGROUND" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Class">
+      <value>
+        <option name="FOREGROUND" value="268bd2" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Class method call">
+      <value>
+        <option name="FOREGROUND" value="2aa198" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Invalid escape in string">
+      <value>
+        <option name="FOREGROUND" value="ff0000" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" value="93a1a1" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Keyword">
       <value>
         <option name="FOREGROUND" value="586e75" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Local lazy val/var">
+      <value>
+        <option name="FOREGROUND" value="b58900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Local method call">
+      <value>
+        <option name="FOREGROUND" value="2aa198" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Local value">
+      <value>
+        <option name="FOREGROUND" value="b58900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Local variable">
+      <value>
+        <option name="FOREGROUND" value="d33682" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Method declaration">
+      <value>
+        <option name="FOREGROUND" value="2aa198" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Number">
+      <value>
+        <option name="FOREGROUND" value="657b83" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Object">
+      <value>
+        <option name="FOREGROUND" value="268bd2" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Object method call">
+      <value>
+        <option name="FOREGROUND" value="2aa198" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Parameter">
+      <value>
+        <option name="FOREGROUND" value="b58900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Parentheses">
+      <value>
+        <option name="FOREGROUND" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Pattern value">
+      <value>
+        <option name="FOREGROUND" value="b58900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Predefined types">
+      <value>
+        <option name="FOREGROUND" value="859900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala String">
+      <value>
+        <option name="FOREGROUND" value="657b83" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Template lazy val/var">
+      <value>
+        <option name="FOREGROUND" value="b58900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Template val">
+      <value>
+        <option name="FOREGROUND" value="b58900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Template var">
+      <value>
+        <option name="FOREGROUND" value="d33682" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Trait">
+      <value>
+        <option name="FOREGROUND" value="268bd2" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Type Alias">
+      <value>
+        <option name="FOREGROUND" value="859900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Type parameter">
+      <value>
+        <option name="FOREGROUND" value="859900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Scala Valid escape in string">
+      <value>
+        <option name="FOREGROUND" value="657b83" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" value="93a1a1" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="ScalaDoc comment">
+      <value>
+        <option name="FOREGROUND" value="6c71c4" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="3" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="ScalaDoc comment tag">
+      <value>
+        <option name="FOREGROUND" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" value="93a1a1" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="TEXT">
+      <value>
+        <option name="FOREGROUND" value="657b83" />
         <option name="BACKGROUND" value="fdf6e3" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
@@ -494,6 +884,36 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
+    <option name="Template lazy val/var">
+      <value>
+        <option name="FOREGROUND" value="b58900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Template val">
+      <value>
+        <option name="FOREGROUND" value="859900" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
+    <option name="Template var">
+      <value>
+        <option name="FOREGROUND" value="d33682" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="2" />
+        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
     <option name="UNMATCHED_BRACE_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" />
@@ -504,9 +924,19 @@
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
+    <option name="Valid escape in string">
+      <value>
+        <option name="FOREGROUND" value="657b83" />
+        <option name="BACKGROUND" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" value="93a1a1" />
+        <option name="EFFECT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" />
+      </value>
+    </option>
     <option name="WARNING_ATTRIBUTES">
       <value>
-        <option name="FOREGROUND" value="73642" />
+        <option name="FOREGROUND" value="dc322f" />
         <option name="BACKGROUND" value="ffdf80" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
@@ -536,9 +966,9 @@
     </option>
     <option name="XML_ATTRIBUTE_NAME">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="6c71c4" />
         <option name="BACKGROUND" />
-        <option name="FONT_TYPE" value="0" />
+        <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
@@ -546,7 +976,7 @@
     </option>
     <option name="XML_ATTRIBUTE_VALUE">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="657b83" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
@@ -556,9 +986,9 @@
     </option>
     <option name="XML_COMMENT">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="839496" />
         <option name="BACKGROUND" />
-        <option name="FONT_TYPE" value="0" />
+        <option name="FONT_TYPE" value="2" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
@@ -566,17 +996,17 @@
     </option>
     <option name="XML_ENTITY_REFERENCE">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="657b83" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="0" />
-        <option name="EFFECT_COLOR" />
+        <option name="EFFECT_COLOR" value="93a1a1" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
       </value>
     </option>
     <option name="XML_PROLOGUE">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="6c71c4" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
@@ -596,7 +1026,7 @@
     </option>
     <option name="XML_TAG_DATA">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="657b83" />
         <option name="BACKGROUND" />
         <option name="FONT_TYPE" value="0" />
         <option name="EFFECT_COLOR" />
@@ -606,9 +1036,9 @@
     </option>
     <option name="XML_TAG_NAME">
       <value>
-        <option name="FOREGROUND" />
+        <option name="FOREGROUND" value="6c71c4" />
         <option name="BACKGROUND" />
-        <option name="FONT_TYPE" value="0" />
+        <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_COLOR" />
         <option name="EFFECT_TYPE" value="0" />
         <option name="ERROR_STRIPE_COLOR" />
