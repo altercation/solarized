@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ooo:color-table xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:ooo="http://openoffice.org/2004/office">
+<!-- http://ethanschoonover.com/solarized -->
+
+<!-- Solarized Palette -->
+<draw:color draw:name="base03"  draw:color="#002b36"/>
+<draw:color draw:name="base02"  draw:color="#073642"/>
+<draw:color draw:name="base01"  draw:color="#586e75"/>
+<draw:color draw:name="base00"  draw:color="#657b83"/>
+<draw:color draw:name="base0"   draw:color="#839496"/>
+<draw:color draw:name="base1"   draw:color="#93a1a1"/>
+<draw:color draw:name="base2"   draw:color="#eee8d5"/>
+<draw:color draw:name="base3"   draw:color="#fdf6e3"/>
+<draw:color draw:name="yellow"  draw:color="#b58900"/>
+<draw:color draw:name="orange"  draw:color="#cb4b16"/>
+<draw:color draw:name="red"     draw:color="#dc322f"/>
+<draw:color draw:name="magenta" draw:color="#d33682"/>
+<draw:color draw:name="violet"  draw:color="#6c71c4"/>
+<draw:color draw:name="blue"    draw:color="#268bd2"/>
+<draw:color draw:name="cyan"    draw:color="#2aa198"/>
+<draw:color draw:name="green"   draw:color="#859900"/>
+</ooo:color-table>
