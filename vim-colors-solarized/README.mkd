@@ -23,7 +23,7 @@ other applications.
 Screenshots
 -----------
 
-![solarized dark](https://github.com/altercation/solarized/raw/master/img/solarized-vim.png)
+![solarized dark](../img/solarized-vim.png)
 
 Downloads
 ---------

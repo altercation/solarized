@@ -18,9 +18,9 @@ PuTTY Tray
 Screenshots
 -----------
 
-![Dark scheme](https://github.com/brantb/solarized/raw/putty/putty-colors-solarized/dark.png)  
+![Dark scheme](dark.png)
 *Dark scheme*
 
-![Light scheme](https://github.com/brantb/solarized/raw/putty/putty-colors-solarized/light.png)  
+![Light scheme](light.png)
 *Light scheme*
 
