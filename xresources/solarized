@@ -15,6 +15,14 @@
 #define S_green         #859900
 
 
+!   Set USE_DARK for preferred colorscheme
+!   0 => Light
+!   1 => Dark
+
+#define USE_DARK 1
+
+#if USE_DARK
+
 ! Dark
 
 #define S_base03        #002b36
@@ -26,17 +34,20 @@
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
 
+#else
 
 ! Light
 
-! #define S_base03        #fdf6e3
-! #define S_base02        #eee8d5
-! #define S_base01        #93a1a1
-! #define S_base00        #839496
-! #define S_base0         #657b83
-! #define S_base1         #586e75
-! #define S_base2         #073642
-! #define S_base3         #002b36
+#define S_base03        #fdf6e3
+#define S_base02        #eee8d5
+#define S_base01        #93a1a1
+#define S_base00        #839496
+#define S_base0         #657b83
+#define S_base1         #586e75
+#define S_base2         #073642
+#define S_base3         #002b36
+
+#endif
 
 
 ! To only apply colors to your terminal, for example, prefix
