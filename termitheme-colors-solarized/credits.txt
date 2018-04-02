@@ -1,0 +1,8 @@
+Solarized color scheme by Ethan Schoonover:
+   http://ethanschoonover.com/solarized
+
+Ported to termitheme by Chad Daelhousen.  For termitheme, see:
+   http://www.sapphirepaw.org/termitheme
+
+Port made available under the license of Solarized:
+   https://github.com/altercation/solarized/blob/master/LICENSE
