@@ -42,6 +42,7 @@ instance).  Issues, bug reports, changelogs are centralized at the main
 [Vim-only repository]:  https://github.com/altercation/vim-colors-solarized
 [vimorg-script]:        http://vim.org/script
 [Pathogen]:             https://github.com/tpope/vim-pathogen
+[vim-addon-manager]:    https://github.com/MarcWeber/vim-addon-manager
 [Vundle]:               https://github.com/gmarik/vundle
 
 Installation
@@ -72,6 +73,19 @@ Installation
         In the parent directory of vim-colors-solarized:
 
             $ mv vim-colors-solarized ~/.vim/bundle/
+
+### Option 2: VAM installation ***(also recommended)***
+
+1.  Download and install [vim-addon-manager].
+
+2.  add to your .vimrc if you want this github repository:
+
+           call vam#ActivateAddons(['github:altercation/vim-colors-solarized'])
+
+    or this if you want to get the version which was uploaded to www.vim.org:
+
+           call vam#ActivateAddons(['Solarized'])
+
 
 ### Modify .vimrc
 
