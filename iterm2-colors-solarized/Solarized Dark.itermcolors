@@ -203,11 +203,11 @@
 	<key>Selection Color</key>
 	<dict>
 		<key>Blue Component</key>
-		<real>0.19370138645172119</real>
+		<real>0.8901960784313725</real>
 		<key>Green Component</key>
-		<real>0.15575926005840302</real>
+		<real>0.96470588235294119</real>
 		<key>Red Component</key>
-		<real>0.0</real>
+		<real>0.99215686274509807</real>
 	</dict>
 </dict>
 </plist>
