@@ -8,12 +8,18 @@ Installation (PuTTY)
 
 Import the `.reg` files to create new sessions using the Solarized color scheme which you can modify/duplicate as you see fit.
 
-To copy the color settings into an existing session, edit `solarized_dark.reg` or `solarized_light.reg` and replace `Solarized%20Dark` in the third line with the name of the session you want to modify.
+To copy the color settings into an existing session, edit `solarized_dark.reg` or `solarized_light.reg` and replace `Solarized%20Dark` in the third line with the name of the session you want to modify. You can view sessions in the Putty's "Saved Session" list or by browsing to `HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\` in Windows' Registry Editor. Obviously only previously saved sessions can have the Solarized themes applied, so create a saved session if one does not yet exist.
+
+![Putty sessions example](https://github.com/brantb/solarized/raw/putty/putty-colors-solarized/putty_saved_sessions.png)
+
+Note: if spaces exist in Windows Registry entries you will need to include a `%20` where ever the space should be (`Saved Session 1` = `Saved%20Session%201`).
 
 PuTTY Tray
 ----------
 
-[PuTTY Tray](http://haanstra.eu/putty/) can store sessions in text files as opposed to the Windows registry. To modify an existing session to use Solarized colors, open the file in a text editor and replace the lines beginning with `Colour##` (0-21) with the version from `solarized_dark_puttytray.txt` or `solarized_light_puttytray.txt`.
+[PuTTY Tray](https://puttytray.goeswhere.com/) can store sessions both in text files and the Windows registry. To modify the saved text files sessions to use Solarized colors, open the respective existing session file in a text editor. These files should be stored in a folder called "sessions" located in the same directly as putty.exe. Replace the lines beginning with `Colour##` (0-21) with the version from `solarized_dark_puttytray.txt` or `solarized_light_puttytray.txt`.
+
+To used Solarized themes to sessions stored in the Windows registry see the steps for "PuTTY" above.
 
 Screenshots
 -----------
