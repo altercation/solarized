@@ -82,6 +82,7 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (custom-link ((t (:foreground ,violet))))
        (custom-state ((t (:foreground ,green))))
        (custom-variable-tag ((t (:foreground ,orange :bold t))))
+       (widget-field ((t (:foreground ,base03 :background ,base0))))
        ;; diff
        (diff-added ((t (:foreground ,green :inverse-video t))))
        (diff-changed ((t (:foreground ,yellow :inverse-video t))))
