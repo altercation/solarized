@@ -109,7 +109,10 @@ Ported to Emacs by Greg Pfeil, http://ethanschoonover.com/solarized."
        (org-done ((t (:foreground ,green :bold t))))
        ;; show-paren
        (show-paren-match-face ((t (:background ,cyan :foreground ,base3))))
-       (show-paren-mismatch-face ((t (:background ,red :foreground ,base3))))))))
+       (show-paren-mismatch-face ((t (:background ,red :foreground ,base3))))
+       ;; yasnippet
+       (yas/field-highlight-face ((t (:background ,base02 :foreground ,base0))))
+       ))))
 
 (defun color-theme-solarized-dark ()
   (interactive)
