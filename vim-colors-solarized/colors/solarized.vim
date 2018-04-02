@@ -221,6 +221,7 @@ call s:SetOption("visibility","normal")
 call s:SetOption("diffmode","normal")
 call s:SetOption("hitrail",0)
 call s:SetOption("menu",1)
+call s:SetOption("specialbg","normal")
 
 "}}}
 " Colorscheme initialization "{{{
@@ -606,7 +607,11 @@ elseif  (g:solarized_visibility=="low")
     exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base02 .s:bg_none
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base02 .s:bg_none
 else
-    exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02
+    if (g:solarized_specialbg=="normal")
+        exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_base02
+    else
+        exe "hi! SpecialKey" .s:fmt_bold   .s:fg_base00 .s:bg_none
+    endif
     exe "hi! NonText"    .s:fmt_bold   .s:fg_base00 .s:bg_none
 endif
 exe "hi! StatusLine"     .s:fmt_none   .s:fg_base1  .s:bg_base02 .s:fmt_revbb
