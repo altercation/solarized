@@ -1,0 +1,16 @@
+Solarized Colorscheme for TaskPaper
+===================================
+
+These are modified versions of the "Standard" TaskPaper theme that use colors from the Solarized colorscheme.
+
+See the [official Solarized homepage](http://ethanschoonover.com/solarized) for full details.
+
+Installation
+------------
+Drop `Solarized Dark.taskpapertheme` and `Solarized Light.taskpapertheme` in `~/Library/Application Support/TaskPaper/Themes/`.
+
+Screenshots
+-----------
+![Dark](https://github.com/brantb/solarized/raw/master/taskpaper-colors-solarized/screenshots/dark.png) 
+![Light](https://github.com/brantb/solarized/raw/master/taskpaper-colors-solarized/screenshots/light.png) 
+
