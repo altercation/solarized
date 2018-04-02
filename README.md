@@ -73,6 +73,7 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 * **Xresources** / Xdefaults
 * **iTerm2**
 * **OS X Terminal.app**
+* **Terminator** courtesy of [Geoffrey Huntley](http://ghuntley.com) via a [standalone repository](https://github.com/ghuntley/terminator-solarized)
 * **Putty** courtesy [Brant Bobby](http://www.control-v.net)
     and on [GitHub](https://github.com/brantb)
 * **Xfce terminal** courtesy [Sasha Gerrand](http://sgerrand.com)
