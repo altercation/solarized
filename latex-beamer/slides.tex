@@ -1,0 +1,61 @@
+\documentclass[french, 10pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{bera}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+
+\usepackage{pgf}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+
+\usetheme{Rochester}
+
+\input{solarized.tex}
+\setbeamercovered{transparent}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[text line]{\insertframenumber/\inserttotalframenumber}
+
+\title{The main title}
+\author{Yves `M'vy` Stadler}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\def\sectitle{Title}
+\section{\sectitle}
+% Frame
+\begin{frame}{\sectitle}
+    % Block
+    \def\subsectitle{Block}
+    \subsection{\subsectitle}
+    \begin{block}{\subsectitle}
+        \begin{itemize}
+            \item Itemize
+        \end{itemize}
+    \end{block}
+    % Block
+    \def\subsectitle{Example Block}
+    \subsection{\subsectitle}
+    \begin{exampleblock}{\subsectitle}
+        \begin{itemize}
+            \item Itemize
+        \end{itemize}
+    \end{exampleblock}
+    % Block
+    \def\subsectitle{Block}
+    \subsection{\subsectitle}
+    \begin{alertblock}{\subsectitle}
+        \begin{itemize}
+            \item Itemize
+        \end{itemize}
+    \end{alertblock}
+\end{frame}
+
+\end{document}
