@@ -1,0 +1,19 @@
+view.bgColor=\#002b36
+view.fgColor=\#839496
+view.lineHighlightColor=\#073642
+view.structureHighlightColor=\#93a1a1
+view.caretColor=\#93a1a1
+
+# gutter / line numbers
+view.gutter.bgColor=\#073642
+view.gutter.focusBorderColor=\#073642
+view.gutter.noFocusBorderColor=\#073642
+view.gutter.fgColor=\#586e75
+view.eolMarkerColor=\#586e75
+
+# comments - base01
+view.style.comment4=color\:\#586e75
+view.style.comment3=color\:\#586e75
+view.style.comment2=color\:\#586e75
+view.style.comment1=color\:\#586e75
+view.style.function=color\:\#839496
