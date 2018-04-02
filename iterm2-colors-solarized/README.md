@@ -14,13 +14,13 @@ from: <http://code.google.com/p/iterm2/downloads/list>
 
 Open iTerm 2, open Preferences, click on the "Profiles" (formerly Addresses,
 formerly Bookmarks) icon in the preferences toolbar, then select the "colors"
-tab. Click on the "load presets" and select "import...". Select the Solarized
+tab. Click on the "Color Presets" ("Load Presets" in earlier versions) menu and select "import...". Select the Solarized
 Light or Dark theme file.
 
 You have now loaded the Solarized color presets into iTerm 2, but haven't yet
 applied them. To apply them, simply select an existing profile from the profile
 list window on the left, or create a new profile. Then select the Solarized
-Dark or Solarized Light preset from the "Load Presets" drop down.
+Dark or Solarized Light preset from the "Color Presets" ("Load Presets" in earlier versions) menu drop down.
 
 Ok, I've gone crazy with iTerm2 color management but you are going to be ok.
 Just realize two things:
