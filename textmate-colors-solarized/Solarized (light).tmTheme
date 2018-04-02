@@ -10,7 +10,7 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#FDF6E3</string>
+				<string>#FDFAF0</string>
 				<key>caret</key>
 				<string>#000000</string>
 				<key>foreground</key>
@@ -30,6 +30,8 @@
 			<string>comment</string>
 			<key>settings</key>
 			<dict>
+				<key>fontStyle</key>
+				<string>italic</string>
 				<key>foreground</key>
 				<string>#93A1A1</string>
 			</dict>
@@ -385,7 +387,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#5A74CF</string>
+				<string>#D12042</string>
 			</dict>
 		</dict>
 		<dict>
@@ -497,7 +499,7 @@
 			<key>name</key>
 			<string>JS: Function Name</string>
 			<key>scope</key>
-			<string>meta.function.js, entity.name.function.js, support.function.dom.js</string>
+			<string>meta.function.js, entity.name.function.js, support.function.dom.js, meta.function-call.generic.js</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -508,13 +510,13 @@
 			<key>name</key>
 			<string>JS: Source</string>
 			<key>scope</key>
-			<string>text.html.basic source.js.embedded.html</string>
+			<string>text.html.basic source.js.embedded.html, source.js</string>
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#A57800</string>
+				<string>#586E75</string>
 			</dict>
 		</dict>
 		<dict>
@@ -525,7 +527,7 @@
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#268BD2</string>
+				<string>#BD3800</string>
 			</dict>
 		</dict>
 		<dict>
@@ -591,7 +593,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string>italic</string>
+				<string></string>
 				<key>foreground</key>
 				<string>#899090</string>
 			</dict>
@@ -604,7 +606,7 @@
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
-				<string>italic</string>
+				<string>bold</string>
 			</dict>
 		</dict>
 		<dict>
@@ -637,11 +639,11 @@
 			<key>name</key>
 			<string>HTML: Tag Start</string>
 			<key>scope</key>
-			<string>punctuation.definition.tag.html</string>
+			<string>punctuation.definition.tag.html, punctuation.definition.tag.begin.html,punctuation.definition.tag.end.html</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
-				<string>#819090</string>
+				<string>#268BD2</string>
 			</dict>
 		</dict>
 		<dict>
@@ -654,7 +656,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#708284</string>
+				<string>#566465</string>
 			</dict>
 		</dict>
 		<dict>
@@ -696,7 +698,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>HTML: &gt;text&lt;</string>
+			<string>HTML: text</string>
 			<key>scope</key>
 			<string>text.html.basic</string>
 			<key>settings</key>
@@ -704,7 +706,7 @@
 				<key>fontStyle</key>
 				<string></string>
 				<key>foreground</key>
-				<string>#BD3800</string>
+				<string>#586E75</string>
 			</dict>
 		</dict>
 		<dict>
@@ -1768,6 +1770,50 @@
 				<key>foreground</key>
 				<string>#536871</string>
 			</dict>
+		</dict>
+		<dict>
+		  <key>name</key>
+		  <string>SASS Variable</string>
+		  <key>scope</key>
+		  <string>variable.scss, source.scss meta.set.variable</string>
+		  <key>settings</key>
+		  <dict>
+		    <key>foreground</key>
+		    <string>#6C71C4</string>
+		  </dict>
+		</dict>
+		<dict>
+		  <key>name</key>
+		  <string>SASS Extend Keyword</string>
+		  <key>scope</key>
+		  <string>source.scss keyword.control.at-rule.import.css</string>
+		  <key>settings</key>
+		  <dict>
+		    <key>foreground</key>
+		    <string>#BC4E60</string>
+		  </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>Hash String</string>
+		    <key>scope</key>
+		    <string>meta.structure.dictionary string</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>foreground</key>
+		        <string>#E6DB74</string>
+		    </dict>
+		</dict>
+		<dict>
+		    <key>name</key>
+		    <string>Hash Key String</string>
+		    <key>scope</key>
+		    <string>string.quoted.double.key, meta.structure.dictionary.key string</string>
+		    <key>settings</key>
+		    <dict>
+		        <key>foreground</key>
+		        <string>#527C8D</string>
+		    </dict>
 		</dict>
 	</array>
 	<key>uuid</key>
