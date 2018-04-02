@@ -23,3 +23,6 @@ Windows Registry Editor Version 5.00
 "Colour19"="147,161,161"
 "Colour20"="238,232,213"
 "Colour21"="253,246,227"
+"LineCodePage"="UTF-8"
+"LinuxFunctionKeys"=dword:00000004
+"TerminalType"="xterm-256color"
