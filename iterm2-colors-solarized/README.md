@@ -22,6 +22,8 @@ applied them. To apply them, simply select an existing profile from the profile
 list window on the left, or create a new profile. Then select the Solarized
 Dark or Solarized Light preset from the "Color Presets" ("Load Presets" in earlier versions) menu drop down.
 
+In order to display dircolors, make sure your ~/.bash_profile contains: `export CLICOLOR=1`.
+
 Ok, I've gone crazy with iTerm2 color management but you are going to be ok.
 Just realize two things:
 
