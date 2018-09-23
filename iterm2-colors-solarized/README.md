@@ -1,23 +1,39 @@
-Solarized - iTerm2 Color Presets
-================================
+# iTerm2
 
-### [See official homepage for full content](http://ethanschoonover.com/solarized)
+> iTerm2 Solarized Color Presets
 
-Installation
-------------
 
-Download current build of iTerm 2 from: <http://www.iterm2.com/>
+See official homepage for full content: [ethanschoonover.com/solarized](http://ethanschoonover.com/solarized)
 
-NOTE: Only builds 480 (Jan 11 2011) and later support import of color schemes.
+## Installation
+
+Download current build of iTerm 2:
+
+|  <img src="https://cdn.abranhe.com/pr/altercation:solarized/iTerm.png" width="50"> |
+| :----------------------------------:  |
+| [iTerm2.com](http://www.iterm2.com/)  |
+
+> ⚠️ **NOTE:** Only builds 480 (Jan 11 2011) and later support import of color schemes.
 If the stable release doesn't include this function, grab the nightly build
-from: <http://code.google.com/p/iterm2/downloads/list>
+from: [code.google.com/p/iterm2/downloads/list](http://code.google.com/p/iterm2/downloads/list)
 
-Open iTerm 2, open Preferences, click on the "Profiles" (formerly Addresses,
-formerly Bookmarks) icon in the preferences toolbar, then select the "colors"
-tab. Click on the "Color Presets" ("Load Presets" in earlier versions) menu and select "import...". Select the Solarized
-Light or Dark theme file.
+## Steps
 
-You have now loaded the Solarized color presets into iTerm 2, but haven't yet
+- Open iTerm 2.
+- Open Preferences. (<kbd>⌘</kbd>+<kbd>,</kbd>)
+
+![Preferences](https://cdn.abranhe.com/pr/altercation:solarized/preferences.png)
+
+- Click on the **Profiles** (formerly Addresses,
+formerly Bookmarks) icon in the preferences toolbar.
+- Select the **Colors** tab.
+- Click on the **Color Presets** ("Load Presets" on earlier versions) menu, and select "import...".
+
+<img src="https://cdn.abranhe.com/pr/altercation:solarized/color-presets.png" width="270">
+
+- Select the Solarized Light or Dark theme file.
+
+You have now loaded the Solarized color presets into **iTerm 2**, but haven't yet
 applied them. To apply them, simply select an existing profile from the profile
 list window on the left, or create a new profile. Then select the Solarized
 Dark or Solarized Light preset from the "Color Presets" ("Load Presets" in earlier versions) menu drop down.
@@ -32,16 +48,15 @@ Just realize two things:
 
 2. The colors in iTerm2 currently cannot be device colors. They are baked in as
    generic rgb (which, despite the name, is an actual, specific color space
-   from Apple and is used as a default just like other systems use sRGB as
+   from Apple and is used as a default just like other systems use `sRGB` as
    a default). I've switch Solarized Apple Color Picker palettes to use tagged
    colors by default, so for the most part iTerm2 will match up with other apps
    where you use Color Picker swatches.
 
-The Values
-----------
+## The Values
 
 L\*a\*b values are canonical (White D65, Reference D50), other values are
-matched in sRGB space.
+matched in `sRGB` space.
 
     SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
     --------- ------- ---- -------  ----------- ---------- ----------- -----------
