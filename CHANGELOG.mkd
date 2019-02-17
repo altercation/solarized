@@ -56,7 +56,7 @@ These changes may require you to change your configuration.
 
 *   **VIM : CHANGE : Default mode now 16 color**
     Default terminal mode is now ***16 colors***. Most of the users of terminal 
-    mode seem comfortabel and capable changing terminal colors. This is the 
+    mode seem comfortable and capable changing terminal colors. This is the 
     preferred method of implementing Solarized in Terminal mode. If you wish to 
     instead use the degraded 256 color palette, you may do so with the 
     following line in your .vimrc:
