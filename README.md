@@ -38,9 +38,9 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 *   **Vim** by [me](https://github.com/altercation) (the Vim-only portion of Solarized is
     [available here](https://github.com/altercation/vim-colors-solarized), for use with
     Pathogen, etc.). See also the [Vim README](http://ethanschoonover.com/solarized/vim-colors-solarized).
-*   **Emacs** courtesy of [Greg Pfeil](http://blog.technomadic.org)
-    ([@sellout](http://twitter.com/sellout))
-    in the main repo and in a [standalone repository][Emacs Repository]
+*   **Emacs** courtesy of [Bozhidar Batsov](https://github.com/bbatsov)
+    ([@bbatsov](https://twitter.com/bbatsov))
+    in a [standalone repository][Emacs Repository]
 *   **IntelliJ IDEA**
     courtesy of [Johan Kaving](https://github.com/jkaving) and
     ([@flangy](http://twitter.com/flangy))
@@ -399,7 +399,7 @@ background.
 
 [Vim Repository]: https://github.com/altercation/vim-colors-solarized
 [Mutt Repository]: https://github.com/altercation/mutt-colors-solarized
-[Emacs Repository]: https://github.com/sellout/emacs-color-theme-solarized
+[Emacs Repository]: https://github.com/bbatsov/solarized-emacs
 [IntelliJ Repository]: https://github.com/jkaving/intellij-colors-solarized
 [NetBeans Repository]: https://github.com/fentie/netbeans-colors-solarized
 [SeeStyle-Coda-SubEthaEdit Repository]: https://github.com/bobthecow/solarized-seestyle
