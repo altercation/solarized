@@ -1,0 +1,41 @@
+//@version=3
+theme = 0 //true 0 false
+transparency = theme*10
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
+//We overload standard colors here
+aqua=cyan,black=Base03,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base3
+//End Color Palette Creation
+//  Function that returns Real Price Oscillator. 
+//      Params:
+//          'lFast':    Type = Integer.     Length of fast ema of hl2 values(midpoints).
+//          'lSlow':    Type = Integer.     Lengthof slow ema of hl2 values. 
+//          'lSmooth':  Type = Integer.     Length of EMA for dividing difference between two midpoint
+//                                          EMA's and actual closing price. 
+//      Returns:
+//          'RPO':      Type = Float.       Real Price Oscillator.
+rpo(lFast, lSlow, lSmooth)=>
+    fast = ema(hl2, lFast)  //EMA of midpoints for previous 'lFast' periods. 
+    slow = ema(hl2, lSlow)  //EMA of midpoints for previous 'lSlow' periods. 
+    diff = (fast - slow) / close    //Compare midpoints to actual closing price for current period.
+    ema(diff*1000, lSmooth) //Return value multiplied by 1000 for scaling purposes(not necessary).
+study("Solarized Real Price Oscillator",shorttitle="SRPO", overlay=false)
+//          INPUTS:
+lenFast = input(9, title="Length of Fast EMA", type=integer, minval=1)
+lenSlow = input(100, title="Length of Slow EMA", type=integer, minval=1)
+lenSmooth = input(18, title="Length of Smoothing EMA", type=integer, minval=1)
+colorCandles = input(true, title="Color candles based on RPO Color (bull. = green, bear. = red")
+r = rpo(lenFast, lenSlow, lenSmooth)
+
+//  Bullish if increasing(otherwise bearish).
+bullish = r >= r[1]
+
+//              PLOTTING: 
+r0 = plot(r, title="RPO", color=bullish ? green : red, transp=0, linewidth=3)
+z0 = plot(0, title="Zero Line", color=yellow)
+barcolor(colorCandles and bullish ? teal : colorCandles and not bullish ? fuchsia : na)

@@ -1,0 +1,174 @@
+//@version=3
+theme = 0
+transparency = theme*1
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
+//We overload standard colors here with accent colors or content tones
+aqua=cyan,black=Base01,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base1
+//End Color Palette Creation
+
+//Create Study
+title="Solarized Bollinger Bliss",shorttitle="SLRZD_BB",overlay=true,precision=3,scale=scale.right//,max_bars_back=610
+study(title, shorttitle, overlay, precision, scale)//, max_bars_back)
+bgcolor(color=Base03, transp=0)
+source = close
+//Place your study code here
+// Bollinger Bands
+//fib13 value
+fib13 = 13
+mult13   = input(2.0, minval=0.001, maxval=50)
+length13 = input(fib13, minval=1)
+basis13  = sma(source,fib13)
+dev13    = mult13 * stdev(source, length13)
+upper13  = (basis13 + dev13)
+lower13  = (basis13 - dev13)
+plot(basis13, color=Base1,transp=0)
+p1_13 = plot(upper13, color=Base02,transp=99)
+p2_13 = plot(lower13, color=Base02,transp=99)
+fill(p1_13, p2_13)
+
+//fib21 value
+fib21 = 21
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult21   = input(2.0, minval=0.001, maxval=50)
+length21 = input(fib21, minval=1)
+basis21  = sma(source,fib21)
+dev21    = mult21 * stdev(source, length21)
+upper21  = (basis21 + dev21)
+lower21  = (basis21 - dev21)
+plot(basis21, color=Base1,transp=0)
+p1_21 = plot(upper21, color=Base02,transp=99)
+p2_21 = plot(lower21, color=Base02,transp=99)
+fill(p1_21, p2_21)
+
+//fib34 value
+fib34 = 34
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult34   = input(2.0, minval=0.001, maxval=50)
+length34 = input(fib34, minval=1)
+basis34  = sma(source,fib34)
+dev34    = mult34 * stdev(source, length34)
+upper34  = (basis34 + dev34)
+lower34  = (basis34 - dev34)
+plot(basis34, color=Base1,transp=0)
+p1_34 = plot(upper34, color=Base02,transp=99)
+p2_34 = plot(lower34, color=Base02,transp=99)
+fill(p1_34, p2_34)
+
+//fib55 value
+fib55 = 55
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult55   = input(2.0, minval=0.001, maxval=50)
+length55 = input(fib55, minval=1)
+basis55  = sma(source,fib55)
+dev55    = mult55 * stdev(source, length55)
+upper55  = (basis55 + dev55)
+lower55  = (basis55 - dev55)
+plot(basis55, color=Base1,transp=0)
+p1_55 = plot(upper55, color=Base02,transp=99)
+p2_55 = plot(lower55, color=Base02,transp=99)
+fill(p1_55, p2_55)
+
+//fib89 value
+fib89 = 89
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult89   = input(2.0, minval=0.001, maxval=50)
+length89 = input(fib89, minval=1)
+basis89  = sma(source,fib89)
+dev89    = mult89 * stdev(source, length89)
+upper89  = (basis89 + dev89)
+lower89  = (basis89 - dev89)
+plot(basis89, color=Base1,transp=0)
+p1_89 = plot(upper89, color=Base02,transp=99)
+p2_89 = plot(lower89, color=Base02,transp=99)
+fill(p1_89, p2_89)
+
+//fib144 value
+fib144 = 144
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult144   = input(2.0, minval=0.001, maxval=50)
+length144 = input(fib144, minval=1)
+basis144  = sma(source,fib144)
+dev144    = mult144 * stdev(source, length144)
+upper144  = (basis144 + dev144)
+lower144  = (basis144 - dev144)
+plot(basis144, color=Base1,transp=0)
+p1_144 = plot(upper144, color=Base02,transp=99)
+p2_144 = plot(lower144, color=Base02,transp=99)
+fill(p1_144, p2_144)
+
+//fib233 value
+fib233 = 233
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult233   = input(2.0, minval=0.001, maxval=50)
+length233 = input(fib233, minval=1)
+basis233  = sma(source,fib233)
+dev233    = mult233 * stdev(source, length233)
+upper233  = (basis233 + dev233)
+lower233  = (basis233 - dev233)
+plot(basis233, color=Base1,transp=0)
+p1_233 = plot(upper233, color=Base02,transp=99)
+p2_233 = plot(lower233, color=Base02,transp=99)
+fill(p1_233, p2_233)
+
+//fib377 value
+fib377 = 377
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult377   = input(2.0, minval=0.001, maxval=50)
+length377 = input(fib377, minval=1)
+basis377  = sma(source,fib377)
+dev377    = mult377 * stdev(source, length377)
+upper377  = (basis377 + dev377)
+lower377  = (basis377 - dev377)
+plot(basis377, color=Base1,transp=0)
+p1_377 = plot(upper377, color=Base02,transp=99)
+p2_377 = plot(lower377, color=Base02,transp=99)
+fill(p1_377, p2_377)
+
+//fib610 value
+fib610 = 610
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult610   = input(2.0, minval=0.001, maxval=50)
+length610 = input(fib610, minval=1)
+basis610  = sma(source,fib610)
+dev610    = mult610 * stdev(source, length610)
+upper610  = (basis610 + dev610)
+lower610  = (basis610 - dev610)
+plot(basis610, color=Base1,transp=0)
+p1_610 = plot(upper610, color=Base02,transp=99)
+p2_610 = plot(lower610, color=Base02,transp=99)
+fill(p1_610, p2_610)
+
+//fib987 value
+fib987 = 987
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult987   = input(2.0, minval=0.001, maxval=50)
+length987 = input(fib987, minval=1)
+basis987  = sma(source,fib987)
+dev987    = mult987 * stdev(source, length987)
+upper987  = (basis987 + dev987)
+lower987  = (basis987 - dev987)
+plot(basis987, color=Base1,transp=0)
+p1_987 = plot(upper987, color=Base02,transp=99)
+p2_987 = plot(lower987, color=Base02,transp=99)
+fill(p1_987, p2_987)
+
+//Alerts
+ma_13 = plot(sma(source, 13),color=maroon, transp=80)
+ma_21 = plot(sma(source, 21),color=maroon, transp=80)
+c = cross(sma(close, 13),sma(close, 21))
+alertcondition(c, title='Cross Condition!', message='SMA(13) crossed SMA(21)!')

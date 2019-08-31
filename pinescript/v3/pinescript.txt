@@ -1,0 +1,33 @@
+//@version=3
+study("Solarized Color Theme")
+theme = 0 //true 0 false
+transparency = theme*10
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
+//We overload standard colors here
+aqua=cyan,black=Base03,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base3
+//End Color Palette Creation
+
+
+//Place your study code here
+//Manual Candle Settings
+palette = close >= open ? lime : red
+wickcolor = palette
+//plotcandle(open, high, low, close, color=palette)
+
+
+
+//ColorPaletteDemo
+plot(close+15,color=Base03,linewidth=3,title="Base03"),plot(close+20,color=Base02,linewidth=3,title="Base02"),plot(close+45,color=Base01,linewidth=3,title="Base01"),plot(close+50,color=Base00,linewidth=3,title="Base00")
+plot(close+60,color=Base0,linewidth=3,title="Base0"),plot(close+65,color=Base1,linewidth=3,title="Base1"),plot(close+92,color=Base2,linewidth=3,title="Base2"),plot(close+97,color=Base3,linewidth=3,title="Base3")
+plot(close+100,color=yellow,linewidth=3,title="yellow"),plot(close+110,color=orange,linewidth=3,title="orange"),plot(close+120,color=red,linewidth=3,title="red"),plot(close+130,color=magenta,linewidth=3,title="magenta")
+plot(close+140,color=violet,linewidth=3,title="violet"),plot(close+150,color=blue,linewidth=3,title="blue"),plot(close+160,color=cyan,linewidth=3,title="cyan"),plot(close+170,color=green,linewidth=3,title="green")
+plot(close+175,title="Overloaded Colors Above",color=black)
+plot(close+180,color=aqua,linewidth=3,title="aqua"),plot(close+190,color=black,linewidth=3,title="black"),plot(close+200,color=fuchsia,linewidth=3,title="fuchsia"),plot(close+210,color=gray,linewidth=3,title="gray")
+plot(close+220,color=lime,linewidth=3,title="lime"),plot(close+230,color=maroon,linewidth=3,title="maroon"),plot(close+240,color=navy,linewidth=3,title="navy"),plot(close+250,color=olive,linewidth=3,title="olive")
+plot(close+260,color=purple,linewidth=3,title="purple"),plot(close+270,color=silver,linewidth=3,title="silver"),plot(close+280,color=teal,linewidth=3,title="teal"),plot(close+290,color=white,linewidth=3,title="white")

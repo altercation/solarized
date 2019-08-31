@@ -1,0 +1,53 @@
+//@version=3
+theme = 0
+transparency = theme*1
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
+//We overload standard colors here with accent colors or content tones
+aqua=cyan,black=Base01,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base1
+//End Color Palette Creation
+
+//Create Study
+title="Solarized Bollinger",shorttitle="SLRZD_BB",overlay=true,precision=3,scale=scale.right//,max_bars_back=610
+study(title, shorttitle, overlay, precision, scale)//, max_bars_back)
+bgcolor(color=Base03, transp=0)
+source = close
+// Bollinger Bands
+//fib13 value
+fib13 = 13
+mult13   = input(2.0, minval=0.001, maxval=50)
+length13 = input(fib13, minval=1)
+basis13  = sma(source,fib13)
+dev13    = mult13 * stdev(source, length13)
+upper13  = (basis13 + dev13)
+lower13  = (basis13 - dev13)
+plot(basis13, color=Base1,linewidth = 1,transp=0)
+p1_13 = plot(upper13, color=blue,linewidth = 1,transp=0)
+p2_13 = plot(lower13, color=blue,linewidth = 1,transp=0)
+fill(p1_13, p2_13)
+
+//fib21 value
+fib21 = 21
+//fib := na(fib[1]) or na(fib[2]) ? 1 : fib[1] + fib[2] % 610
+// Bollinger Bands
+mult21   = input(2.0, minval=0.001, maxval=50)
+length21 = input(fib21, minval=1)
+basis21  = sma(source,fib21)
+dev21    = mult21 * stdev(source, length21)
+upper21  = (basis21 + dev21)
+lower21  = (basis21 - dev21)
+plot(basis21, color=Base1,linewidth = 1,transp=0)
+p1_21 = plot(upper21, color=blue,linewidth = 1,transp=0)
+p2_21 = plot(lower21, color=blue,linewidth = 1,transp=0)
+fill(p1_21, p2_21)
+
+//Alerts
+ma_13 = plot(sma(source, 13),color=black,linewidth = 1, transp=80)
+ma_21 = plot(sma(source, 21),color=white,linewidth = 1, transp=80)
+c = cross(sma(close, 13),sma(close, 21))
+alertcondition(c, title='Cross Condition!', message='SMA(13) crossed SMA(21)!')
