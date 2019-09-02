@@ -20,7 +20,6 @@
 		aqua=cyan,black=Base03,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base3
 		//End Color Palette Creation
 
-
 <!-- TradingView Chart BEGIN -->
 <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 <script type="text/javascript">
