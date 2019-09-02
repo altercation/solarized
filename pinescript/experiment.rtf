@@ -1,0 +1,42 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 //@version=3\
+theme = 0\
+transparency = 0\
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))\
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))\
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)\
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))\
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))\
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)\
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)\
+//We overload standard colors here with accent colors or content tones\
+aqua=cyan,black=Base01,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base1\
+//End Color Palette Creation\
+//Create Study\
+title="SOLARIZED DELTA PLOT",shorttitle="SLRZD_DP",overlay=true,precision=3,scale=scale.right//,max_bars_back=610\
+study(title, shorttitle, overlay, precision, scale)//, max_bars_back)\
+bgcolor(color=Base03, transp=0)\
+source = close\
+delta = ((source-open)/source[1])*100\
+//fib13 value\
+fib13 = 13\
+mult13   = input(2.0, minval=0.001, maxval=50)\
+length13 = input(fib13, minval=1)\
+basis13  = sma(delta,fib13)\
+dev13    = plot(mult13 * stdev(delta, length13))\
+sma_dev13 = plot(sma(stdev(delta, length13),13))\
+//upper13  = (basis13 + dev13)\
+//lower13  = (basis13 - dev13)\
+plot(0)\
+plot(basis13, color=Base1,linewidth = 1,transp=0)\
+//p1_13 = plot(upper13, color=blue,linewidth = 1,transp=0)\
+//p2_13 = plot(lower13, color=blue,linewidth = 1,transp=0)\
+//fill(p1_13, p2_13)\
+\
+}

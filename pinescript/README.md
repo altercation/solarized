@@ -19,16 +19,4 @@
 		//We overload standard colors here
 		aqua=cyan,black=Base03,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base3
 		//End Color Palette Creation
-
-<!-- TradingView Chart BEGIN -->
-<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-<script type="text/javascript">
-var tradingview_embed_options = {};
-tradingview_embed_options.width = '640';
-tradingview_embed_options.height = '400';
-tradingview_embed_options.chart = 'TzK2RtZP';
-new TradingView.chart(tradingview_embed_options);
-</script>
-<p><a href="https://www.tradingview.com/script/TzK2RtZP-Solarized-Color-Theme/">Solarized Color Theme</a> by <a href="https://www.tradingview.com/u/RandyMcMillan/">RandyMcMillan</a> on <a href="https://www.tradingview.com/">TradingView.com</a></p>
-<!-- TradingView Chart END -->
-
+![](images/SLRZD_BB.png)
