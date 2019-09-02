@@ -1,0 +1,87 @@
+//@version=3
+study("S/R", overlay=true, scale=scale.right)
+theme = 0
+transparency = 0
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
+//We overload standard colors here with accent colors or content tones
+aqua=cyan,black=Base01,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base1
+//End Color Palette Creation
+//Support/Resistence Lines
+//Setup some Values
+left = 55
+right = 21
+quick_right = 5 // Used to try and detect a more recent significant swing.
+quicker_right = 3 // Used to try and detect a more recent significant swing.
+
+slow_right = 89 // Used to try and detect a more recent significant swing.
+slower_right = 144 // Used to try and detect a more recent significant swing.
+
+//Find pivots
+pivot_high = pivothigh(high,left,right)
+pivot_lows = pivotlow(low, left,right)
+ 
+quick_pivot_high = pivothigh(high,left,quick_right)
+quick_pivot_lows = pivotlow(low, left,quick_right)
+ 
+quicker_pivot_high = pivothigh(high,left,quicker_right)
+quicker_pivot_lows = pivotlow(low, left,quicker_right)
+
+slow_pivot_high = pivothigh(high,left,slow_right)
+slower_pivot_lows = pivotlow(low, left,slower_right)
+
+
+//Levels
+level1 = valuewhen(quick_pivot_high, high[quick_right], 0)
+level2 = valuewhen(quick_pivot_lows, low[quick_right], 0)
+
+level3 = valuewhen(quicker_pivot_high, high[quicker_right], 0)
+level4 = valuewhen(quicker_pivot_lows, low[quicker_right], 0)
+
+level5 = valuewhen(quicker_pivot_high, high[slow_right], 0)
+level6 = valuewhen(quicker_pivot_lows, low[slower_right], 0)
+
+level7 = valuewhen(pivot_high, high[right], 0)
+level8 = valuewhen(pivot_lows, low[right], 0)
+level9 = valuewhen(pivot_high, high[right], 1)
+level10 = valuewhen(pivot_lows, low[right], 1)
+level11 = valuewhen(pivot_high, high[right], 2)
+level12 = valuewhen(pivot_lows, low[right], 2)
+ 
+ 
+//Set Colors 
+level1_col = close >= level1 ? green : red
+level2_col = close >= level2 ? green : red
+
+level3_col = close >= level3 ? green : red
+level4_col = close >= level4 ? green : red
+
+level5_col = close >= level5 ? green : red
+level6_col = close >= level6 ? green : red
+
+level7_col = close >= level7 ? green : red
+level8_col = close >= level8 ? green : red
+level9_col = close >= level9 ? green : red
+level10_col = close >= level10 ? green : red
+level11_col = close >= level11 ? green : red
+level12_col = close >= level12 ? green : red
+ 
+ 
+//Plot Lines 
+plot(level1,  style=circles, color=level1_col,  show_last=1, linewidth=1, trackprice=true,title="1",transp=80)
+plot(level2,  style=circles, color=level2_col,  show_last=1, linewidth=1, trackprice=true,title="2 ",transp=80)
+plot(level3,  style=circles, color=level3_col,  show_last=1, linewidth=1, trackprice=true,title="3  ",transp=80)
+plot(level4,  style=circles, color=level4_col,  show_last=1, linewidth=1, trackprice=true,title="4   ",transp=80)
+plot(level5,  style=circles, color=level5_col,  show_last=1, linewidth=1, trackprice=true,title="5    ",transp=80)
+plot(level6,  style=circles, color=level6_col,  show_last=1, linewidth=1, trackprice=true,title="6     ",transp=80)
+plot(level7,  style=circles, color=level7_col,  show_last=1, linewidth=1, trackprice=true,title="7      ",transp=80)
+plot(level8,  style=circles, color=level8_col,  show_last=1, linewidth=1, trackprice=true,title="8       ",transp=80)
+plot(level9,  style=circles, color=level9_col,  show_last=1, linewidth=1, trackprice=true,title="9        ",transp=80)
+plot(level10, style=circles, color=level10_col, show_last=1, linewidth=1, trackprice=true,title="10        ",transp=80)
+plot(level11, style=circles, color=level11_col, show_last=1, linewidth=1, trackprice=true,title="11         ",transp=80)
+plot(level12, style=circles, color=level12_col, show_last=1, linewidth=1, trackprice=true,title="12          ",transp=80)

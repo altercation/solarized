@@ -1,5 +1,5 @@
 //@version=3
-theme = 0
+theme = 0 //true 0 false
 transparency = 0
 Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
 Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
@@ -8,12 +8,17 @@ Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparen
 Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
 yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
 violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
-//We overload standard colors here with accent colors or content tones
-aqua=cyan,black=Base01,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base1
+//We overload standard colors here
+aqua=cyan,black=Base03,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base3
 //End Color Palette Creation
-//Create Study
-title="Solarized Basic Plot",shorttitle="SLRZD_BP",overlay=true,precision=3,scale=scale.right//,max_bars_back=610
-study(title, shorttitle, overlay, precision, scale)//, max_bars_back)
-bgcolor(color=Base03, transp=0)
-source = close
-plot(close)
+study(title="SOLARIZED RSI OVERLAY", shorttitle="RSI")
+h0 = hline(80)
+h1 = hline(20)
+band1 = hline(70, linestyle=solid)
+band0 = hline(30, linestyle=solid)
+src = close, len = input(34, minval=1, title="Length")
+up = rma(max(change(src), 0), len)
+down = rma(-min(change(src), 0), len)
+rsi = down == 0 ? 100 : up == 0 ? 0 : 100 - (100 / (1 + up / down))
+plot(rsi, color=blue, linewidth=2)
+fill(band0,band1),fill(h0,h1)

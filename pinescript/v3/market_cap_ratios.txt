@@ -1,0 +1,69 @@
+//@version=3
+study("ALT/BTC MARKET CAP RATIOS",precision=3)
+theme = 0 //true 0 false
+transparency = 0
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
+//We overload standard colors here
+aqua=cyan,black=Base03,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base3
+//End Color Palette Creation
+//DATA SOURCES REF: https://coinmarketcap.com
+//BTC
+BTC_TICKER_POINTER = "CRYPTOCAP:" + "BTC" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+BTC_CAP_DATA = (security(BTC_TICKER_POINTER, period, close))//source must be wrapped in security function
+//ETH
+ETH_TICKER_POINTER = "CRYPTOCAP:" + "ETH" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+ETH_CAP_DATA = (security(ETH_TICKER_POINTER, period, close))//source must be wrapped in security function
+//XRP
+XRP_TICKER_POINTER = "CRYPTOCAP:" + "XRP" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+XRP_CAP_DATA = (security(XRP_TICKER_POINTER, period, close))//source must be wrapped in security function
+//BCH
+BCH_TICKER_POINTER = "CRYPTOCAP:" + "BCH" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+BCH_CAP_DATA = (security(BCH_TICKER_POINTER, period, close))//source must be wrapped in security function
+//LTC
+LTC_TICKER_POINTER = "CRYPTOCAP:" + "LTC" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+LTC_CAP_DATA = (security(LTC_TICKER_POINTER, period, close))//source must be wrapped in security function
+//USDT
+USDT_TICKER_POINTER = "CRYPTOCAP:" + "USDT" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+USDT_CAP_DATA = (security(USDT_TICKER_POINTER, period, close))//source must be wrapped in security function
+//BNB
+BNB_TICKER_POINTER = "CRYPTOCAP:" + "BNB" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+BNB_CAP_DATA = (security(BNB_TICKER_POINTER, period, close))//source must be wrapped in security function
+//EOS
+EOS_TICKER_POINTER = "CRYPTOCAP:" + "EOS" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+EOS_CAP_DATA = (security(EOS_TICKER_POINTER, period, close))//source must be wrapped in security function
+//BSV
+BSV_TICKER_POINTER = "CRYPTOCAP:" + "BSV" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+BSV_CAP_DATA = (security(BSV_TICKER_POINTER, period, close))//source must be wrapped in security function
+//XLM
+XLM_TICKER_POINTER = "CRYPTOCAP:" + "XLM" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+XLM_CAP_DATA = (security(XLM_TICKER_POINTER, period, close))//source must be wrapped in security function
+
+
+//TOTAL
+TOTAL_TICKER_POINTER = "CRYPTOCAP:" + "TOTAL" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+TOTAL_CAP_DATA = (security(TOTAL_TICKER_POINTER, period, close))//source must be wrapped in security function
+//TOTAL2
+TOTAL2_TICKER_POINTER = "CRYPTOCAP:" + "TOTAL2" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+TOTAL2_CAP_DATA = (security(TOTAL2_TICKER_POINTER, period, close))//source must be wrapped in security function
+
+//BTC.D Index
+BTC_D_TICKER_POINTER = "BTC." + "D" //EXAMPLE: "BTCUSD"+"LONGS" Selects BTCUSDLONGS
+BTC_D_DATA = (security(BTC_D_TICKER_POINTER, period, close))//source must be wrapped in security function
+
+//BTC/ETH
+BTC_OVER_BTC_PLOT = plot((BTC_CAP_DATA)/(BTC_CAP_DATA),color=orange,title="BTC/BTC")
+ETH_OVER_BTC_PLOT = plot((ETH_CAP_DATA)/(BTC_CAP_DATA),color=blue,title="ETH/BTC")
+XRP_OVER_BTC_PLOT = plot((XRP_CAP_DATA)/(BTC_CAP_DATA),color=purple,title="XRP/BTC")
+BCH_OVER_BTC_PLOT = plot((BCH_CAP_DATA)/(BTC_CAP_DATA),color=silver,title="BCH/BTC")
+LTC_OVER_BTC_PLOT = plot((LTC_CAP_DATA)/(BTC_CAP_DATA),color=teal,title="LTC/BTC")
+USDT_OVER_BTC_PLOT = plot((USDT_CAP_DATA)/(BTC_CAP_DATA),color=green,title="USDT/BTC")
+BNB_OVER_BTC_PLOT = plot((BNB_CAP_DATA)/(BTC_CAP_DATA),color=yellow,title="BNB/BTC")
+EOS_OVER_BTC_PLOT = plot((EOS_CAP_DATA)/(BTC_CAP_DATA),color=yellow,title="EOS/BTC")
+BSV_OVER_BTC_PLOT = plot((BSV_CAP_DATA)/(BTC_CAP_DATA),color=maroon,title="BSV/BTC")
+XLM_OVER_BTC_PLOT = plot((XLM_CAP_DATA)/(BTC_CAP_DATA),color=teal,title="XLM/BTC")

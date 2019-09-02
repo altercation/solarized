@@ -1,0 +1,34 @@
+//@version=3
+theme = 0
+transparency = 0
+Base03 = iff(theme == 0, color(#002b36, transparency),color(#fdf6e3, transparency))
+Base02 = iff(theme == 0, color(#003743, transparency), color(#eee8d5, transparency))
+Base01 = color(#586e75, transparency),Base00 = color(#657b83, transparency),Base0  = color(#839496, transparency),Base1  = color(#93a1a1, transparency)
+Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparency))
+Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
+yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
+violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
+//We overload standard colors here with accent colors or content tones
+aqua=cyan,black=Base01,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base1
+//End Color Palette Creation
+//study("LONGS/SHORTS", overlay=false, scale=scale.left)
+study("LONGS/SHORTS", overlay=false, scale=scale.right)
+shortSym = ticker + "SHORTS" //concat BTCUSD+SHORTS
+longSym = ticker + "LONGS" //concat BTCUSD+LONGS
+
+longs = security(longSym, period, close)
+shorts = security(shortSym, period, close)
+ls_check = longs > shorts
+ls_plot_color = ls_check ? green : red
+
+LongsOverShortsRatio = (security(longSym, period, close)*1)/(security(shortSym, period, close)*1)//adjust 1 to skew as you see fit
+ShortsOverLongsRatio = (security(shortSym, period, close)*1)/(security(longSym, period, close)*1)//adjust 1 to skew as you see fit
+lsratio_check = LongsOverShortsRatio > ShortsOverLongsRatio
+lsratio_plot_color = lsratio_check ? green : red
+
+LSEqualibrium = ((security(longSym, period, close))+(security(shortSym, period, close)*1))/2
+LSRatioEqualibrium = ((LongsOverShortsRatio)+(ShortsOverLongsRatio))/2
+
+plot(LSEqualibrium, color=white, style=line,linewidth=1,transp=0,title="(L + S)/2")
+plot(longs, color=green, style=line,linewidth=1,transp=0,title="Longs")
+plot(shorts, color=red, style=line,linewidth=1,transp=0,title="Shorts")

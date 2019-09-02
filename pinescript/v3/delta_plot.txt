@@ -8,12 +8,35 @@ Base2  = iff(theme == 0, color(#eee8d5, transparency), color(#003743, transparen
 Base3  = iff(theme == 0, color(#fdf6e3, transparency), color(#002b36, transparency))
 yellow = color(#b58900,transparency) ,orange  = color(#cb4b16,transparency),red     = color(#dc322f,transparency),magenta = color(#d33682,transparency)
 violet = color(#6c71c4,transparency),blue    = color(#268bd2,transparency),cyan    = color(#2aa198,transparency),green   = color(#859900,transparency)
-//We overload standard colors here with accent colors or content tones
 aqua=cyan,black=Base01,fuchsia=magenta,gray=Base1,lime=green,maroon=magenta,navy=blue,olive=green,purple=violet,silver=Base1,teal=cyan,white=Base1
 //End Color Palette Creation
 //Create Study
-title="Solarized Basic Plot",shorttitle="SLRZD_BP",overlay=true,precision=3,scale=scale.right//,max_bars_back=610
+title="SOLARIZED DELTA PLOT",shorttitle="SLRZD_DP",overlay=true,precision=5,scale=scale.right//,max_bars_back=610
 study(title, shorttitle, overlay, precision, scale)//, max_bars_back)
 bgcolor(color=Base03, transp=0)
 source = close
-plot(close)
+delta = ((source-open)/source[1])*100//slope * 100 
+plot(0,title="ZERO",color=Base01)
+
+
+//fib13 value
+fib13 = 13
+mult13   = input(2.0, minval=0.001, maxval=34)
+length13 = input(fib13, minval=1)
+basis13  = sma(delta,fib13)
+dev13    = mult13 * stdev(delta, length13)
+sma_basis13 = plot(sma(sma(basis13, length13),length13),color=blue,offset=-11,title="SMA_BASIS_13")
+upper13  = (basis13 + dev13)
+lower13  = (basis13 - dev13)
+plot_basis13 = plot(basis13,color=yellow,linewidth = 1,transp=0,title="BASIS_13")
+
+//fib21 value
+fib21 = 21
+mult21   = input(2.0, minval=0.001, maxval=34)
+length21 = input(fib21, minval=1)
+basis21  = sma(delta,fib21)
+dev21    = mult21 * stdev(delta, length21)
+sma_basis21 = plot(sma(sma(basis21, length21),length21),color=yellow,offset=-15,title="SMA_BASIS_21")
+upper21  = (basis21 + dev21)
+lower21  = (basis21 - dev21)
+plot_basis21 = plot(basis21,color=blue,linewidth = 1,transp=0,title="BASIS_21")
