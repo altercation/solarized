@@ -1,0 +1,235 @@
+#!/usr/bin/env perl
+
+# This script modifies the Solarized palette to have as high contrast as
+# possible for red-green colorblind people. It keeps the saturation/lightness
+# of all colors the same, as well as the hues of blue & yellow. It simply
+# modifies the hues of the other colors so they are evenly spaced between blue
+# and yellow (on the red side), and green/cyan get flipped back onto the green
+# side. Running the script produces:
+#
+# SOLARIZED HEX
+# --------- -------
+# yellow    #b58900
+# orange    #cb4916
+# red       #dc2f51
+# magenta   #bb36d3
+# violet    #6c76c4
+# blue      #268bd2
+# cyan      #2aa189
+# green     #189900
+#
+# Try to keep the values above up to date!
+
+use strict;
+use warnings;
+
+sub rgb_to_hsl {
+    my ($r, $g, $b) = @_;
+
+    my $max = $r > $g ? $r : $g;
+    $max = $max > $b ? $max : $b;
+
+    my $min = $r < $g ? $r : $g;
+    $min = $min < $b ? $min : $b;
+
+    my $h;
+    if ($max == $min) {
+        $h = 0;
+    } elsif ($max == $r) {
+        $h = (0 + ($g - $b) / ($max - $min)) / 6;
+    } elsif ($max == $g) {
+        $h = (2 + ($b - $r) / ($max - $min)) / 6;
+    } else {
+        $h = (4 + ($r - $g) / ($max - $min)) / 6;
+    }
+    $h += 1 if $h < 0;
+
+    my $l = ($max + $min) / 2;
+
+    my $s;
+    if ($max == 0 || $min == 1) {
+        $s = 0;
+    } else {
+        $s = ($max - $l) / ($l < 0.5 ? $l : 1 - $l);
+    }
+
+    return ($h, $s, $l);
+}
+
+sub fmod2 {
+    my $x = shift;
+    my $x_ = int($x);
+    return $x - $x_ + ($x_ & 1);
+}
+
+sub hsl_to_rgb {
+    my ($h, $s, $l) = @_;
+
+    my $c = (1 - abs(2 * $l - 1)) * $s;
+
+    my $h_ = $h * 6;
+    my $x = $c * (1 - abs(fmod2($h_) - 1));
+    my ($r_, $g_, $b_);
+    if (0 <= $h_ && $h_ < 1) {
+        ($r_, $g_, $b_) = ($c, $x, 0);
+    } elsif (1 <= $h_ && $h_ < 2) {
+        ($r_, $g_, $b_) = ($x, $c, 0);
+    } elsif (2 <= $h_ && $h_ < 3) {
+        ($r_, $g_, $b_) = (0, $c, $x);
+    } elsif (3 <= $h_ && $h_ < 4) {
+        ($r_, $g_, $b_) = (0, $x, $c);
+    } elsif (4 <= $h_ && $h_ < 5) {
+        ($r_, $g_, $b_) = ($x, 0, $c);
+    } else {
+        ($r_, $g_, $b_) = ($c, 0, $x);
+    }
+
+    my $m = $l - $c / 2;
+    return ($r_ + $m, $g_ + $m, $b_ + $m);
+}
+
+sub hex_to_rgb {
+    my $color = shift;
+    die unless $color =~ /^#(?:[0-9A-Fa-f]{3}){1,2}$/;
+    $color = substr $color, 1;
+
+    my $val = hex $color;
+    my ($r, $g, $b);
+    if (length $color == 3) {
+        $b = $val & 0xf; $b |= $b << 4; $val >>= 4;
+        $g = $val & 0xf; $g |= $g << 4; $val >>= 4;
+        $r = $val & 0xf; $r |= $r << 4;
+    } else {
+        $b = $val & 0xff; $val >>= 8;
+        $g = $val & 0xff; $val >>= 8;
+        $r = $val & 0xff;
+    }
+
+    return ($r / 255.0, $g / 255.0, $b / 255.0);
+}
+
+sub hex_to_hsl {
+    rgb_to_hsl(hex_to_rgb(shift));
+}
+
+sub rgb_to_hex {
+    my ($r, $g, $b) = @_;
+    $r = int($r * 255.0 + 0.5);
+    $g = int($g * 255.0 + 0.5);
+    $b = int($b * 255.0 + 0.5);
+    my $val = ($r << 16) | ($g << 8) | $b;
+    sprintf '#%06x', $val;
+}
+
+sub hsl_to_hex {
+    rgb_to_hex(hsl_to_rgb(@_));
+}
+
+# Print the colors using ANSI 24-bit color escapes.
+sub show_colors {
+    for my $color (@_) {
+        my ($r, $g, $b) = hsl_to_rgb(@$color);
+        my $ansi = sprintf '2;%d;%d;%d',
+            int($r * 255.0 + 0.5),
+            int($g * 255.0 + 0.5),
+            int($b * 255.0 + 0.5);
+        print "\e[48;${ansi}m  ";
+    }
+    print "\e[m\n";
+}
+
+# The values are kinda made up. But if the hue is on the green side, it gets
+# flipped to the red side and the saturation is reduced by 50%.
+sub flat_filter {
+    my ($hue, $sat, $lig) = @_;
+    my $yellow = 60.0 / 360.0;
+    my $blue = 240.0 / 360.0;
+
+    if ($hue > $yellow && $hue < $blue) {
+        my $mid_green = ($blue + $yellow) / 2.0;
+        my $mid_red = $mid_green + 0.5;
+        $hue = $mid_red - ($hue - $mid_green);
+        $hue -= 1.0 if $hue >= 1.0;
+        $sat *= 0.5;
+    }
+    ($hue, $sat, $lig);
+}
+
+
+# Note that all components are in [0,1] (Except hue, which won't be 1.).
+my @yellow =  hex_to_hsl('#b58900');
+my @orange =  hex_to_hsl('#cb4b16');
+my @red =     hex_to_hsl('#dc322f');
+my @magenta = hex_to_hsl('#d33682');
+my @violet =  hex_to_hsl('#6c71c4');
+my @blue =    hex_to_hsl('#268bd2');
+my @cyan =    hex_to_hsl('#2aa198');
+my @green =   hex_to_hsl('#859900');
+
+my @spectrum = (
+    \@magenta, \@red,  \@orange, \@yellow,
+    \@green,   \@cyan, \@blue,   \@violet,
+);
+
+# Try to show what the current colors look like, along with what (I think)
+# it'd look like for deuteranopia.
+print "Solarized regular:    ";
+show_colors(@spectrum);
+print "Solarized flat:       ";
+show_colors(map { [flat_filter @$_] } @spectrum);
+
+# Divide hue space into 7 regions.
+my $step = ($yellow[0] - $blue[0] + 1) / 7;
+
+# Generate the six intermediate hues.
+my @hues = ($blue[0]);
+for my $i (1..6) {
+    my $next = $hues[$#hues] + $step;
+    $next -= 1 if $next >= 1;
+    push @hues, $next;
+}
+shift @hues; # Remove blue.
+
+# To flip green/cyan back to the correct side. So pick a line that bisects the
+# hue wheel and adjust based off that. Note that both of these are the same
+# line, just different directions.
+my $yellow = 60.0 / 360.0;
+my $blue = 240.0 / 360.0;
+my $green_mid = ($yellow + $blue) / 2.0;
+my $red_mid = $green_mid + 0.5;
+
+my @ordered = (\@violet, \@cyan, \@magenta, \@green, \@red, \@orange);
+
+# Update the hues of intermediate colors. Note that this produces identical
+# results for HSV because they define hue the same.
+for my $i (0..$#ordered) {
+    my $hue = $ordered[$i][0];
+    if ($hue > $yellow && $hue < $blue) {
+        # green side
+        $hue = $green_mid - ($hues[$i] - $red_mid);
+        $hue -= 1.0 if $hue >= 1.0;
+    } else {
+        # red side
+        $hue = $hues[$i];
+    }
+    $ordered[$i][0] = $hue;
+}
+
+print "Solarized-RG regular: ";
+show_colors(@spectrum);
+print "Solarized-RG flat:    ";
+show_colors(map { [flat_filter @$_] } @spectrum);
+
+print <<END;
+
+SOLARIZED HEX
+--------- -------
+yellow    @{[hsl_to_hex(@yellow )]}
+orange    @{[hsl_to_hex(@orange )]}
+red       @{[hsl_to_hex(@red    )]}
+magenta   @{[hsl_to_hex(@magenta)]}
+violet    @{[hsl_to_hex(@violet )]}
+blue      @{[hsl_to_hex(@blue   )]}
+cyan      @{[hsl_to_hex(@cyan   )]}
+green     @{[hsl_to_hex(@green  )]}
+END
