@@ -92,7 +92,7 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 Don't see the application you want to use it in? Download the palettes (or pull
 the values from the table below) and create your own. Submit it back and I'll
 happily note the contribution and include it on this page.  See also the
-[Usage & Development](#usage-development) section below for details on the
+[Usage & Development](#usage--development) section below for details on the
 specific values to be used in different contexts.
 
 Download
@@ -192,7 +192,7 @@ Features
     themselves, as with the monotone \*a\*b values, have been adjusted within
     a small range to achieve the most pleasing combination of colors.
 
-    See also the [Usage & Development](#usage-development) section below for
+    See also the [Usage & Development](#usage--development) section below for
     details on the specific values to be used in different contexts.
 
     This makes colorscheme inversion trivial. Here, for instance, is a sass
