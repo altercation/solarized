@@ -65,8 +65,7 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
     ([@leddt](http://twitter.com/leddt))
     in the main repo and in a [standalone repository][Visual Studio Repository]
 
-*   **Xcode** work in progress ports are available for [Xcode 3] and [Xcode 4]
-    and will be pulled into the main Solarized project soon.
+*   **Xcode** courtesy of [Stackie Jia](https://stackia.me) in a [standalone repository](https://github.com/stackia/solarized-xcode)
 
 ### Terminal Emulators
 
