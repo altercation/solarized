@@ -82,6 +82,7 @@ Currently available in formats for (cf [screenshots](#screenshots) below):
 
 *   **Mutt** e-mail client also by [me] (*just* the Mutt colorscheme is
     [available here][Mutt Repository])
+*   **FreeTube** courtesy of [DontBlameMe99](https://github.com/DontBlameMe99)
 
 ### Palettes
 
